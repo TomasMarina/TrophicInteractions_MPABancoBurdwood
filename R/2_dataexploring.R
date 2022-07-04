@@ -18,7 +18,7 @@ ipak(packages)
 
 ## Cargar datos ----
 
-load("../data/cleaned-data_mar22.rda")
+load("data/cleaned-data_jun22.rda")
 
 
 ## Lista de Especies ----
@@ -166,11 +166,12 @@ un.prey.sp <- as.data.frame(unique(int_raw$Prey))  # prey spp
 un.pred.sp <- as.data.frame(unique(int_raw$Predator))  # pred spp
 colnames(un.prey.sp) <- "TrophicSpecies"
 colnames(un.pred.sp) <- "TrophicSpecies"
-unique_spp <- unique(bind_rows(un.pred.sp, un.prey.sp))  # 508 spp
-unique_spp$TrophicSpecies <- sub(" .*", "", unique_spp$TrophicSpecies)
+unique_spp <- unique(bind_rows(un.pred.sp, un.prey.sp))  # 510 spp
+unique_spp$TrophicSpecies <- sub(" .*", "", unique_spp$TrophicSpecies)  # neglect *: indicates low taxonomic resolution
 
 sp_FG <- sp_raw[, c("TrophicSpecies", "FunctionalGroup")]
 
+# 
 int_sp <- unique_spp %>% 
   left_join(sp_FG)
 group_sp <- int_sp %>%
