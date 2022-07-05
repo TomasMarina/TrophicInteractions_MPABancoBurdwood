@@ -171,7 +171,7 @@ unique_spp$TrophicSpecies <- sub(" .*", "", unique_spp$TrophicSpecies)  # neglec
 
 sp_FG <- sp_raw[, c("TrophicSpecies", "FunctionalGroup")]
 
-# 
+# Asignar GF a spp
 int_sp <- unique_spp %>% 
   left_join(sp_FG)
 group_sp <- int_sp %>%
@@ -279,8 +279,8 @@ int_need_pred <- int_need %>%
           axis.title.y = element_text(face = "bold", size = 16),
           axis.title.x = element_text(face = "bold", size = 16),
           axis.text.y = element_text(size = 12),
-          axis.text.x = element_text(angle = 45, hjust = 1, size = 12))) # +
-    # annotate("text",  x = Inf, y = Inf, label = paste("presas que necesitan resolución = ", sum(int_need_prey$n), sep = ""), vjust=1, hjust=1))
+          axis.text.x = element_text(angle = 45, hjust = 1, size = 12)) +
+    annotate("text",  x = Inf, y = Inf, label = paste("presas que necesitan resolución = ", sum(int_need_prey$n), sep = ""), vjust=1, hjust=1))
 num_int_prey <- sum(int_need_prey$n)
 
 (plot_need_pred <- ggplot(int_need_pred, aes(x = PredGroup, y = n, fill = PredGroup)) + 
@@ -291,8 +291,8 @@ num_int_prey <- sum(int_need_prey$n)
           axis.title.y = element_text(face = "bold", size = 16),
           axis.title.x = element_text(face = "bold", size = 16),
           axis.text.y = element_text(size = 12),
-          axis.text.x = element_text(angle = 45, hjust = 1, size = 14))) # +
-    # annotate("text",  x = Inf, y = Inf, label = paste("dep que necesitan resolución = ", sum(int_need_pred$n), sep = ""), vjust=1, hjust=1))
+          axis.text.x = element_text(angle = 45, hjust = 1, size = 14)) +
+    annotate("text",  x = Inf, y = Inf, label = paste("dep que necesitan resolución = ", sum(int_need_pred$n), sep = ""), vjust=1, hjust=1))
 num_int_pred <- sum(int_need_pred$n)
 
 

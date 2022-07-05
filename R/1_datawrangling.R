@@ -34,7 +34,8 @@ int_raw <- int_raw %>%
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
                           TRUE ~ Prey))
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
-
+row.names.remove <- c(2078, 2084)  # exclude rows with Prey == "Demospongiae *"
+int_raw <- int_raw[!(row.names(int_raw) %in% row.names.remove), ]
 
 ## Save data ----
 

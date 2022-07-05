@@ -18,12 +18,12 @@ ipak(packages)
 
 ## Cargar datos ----
 
-load("../data/cleaned-data_mar22.rda")
+load("data/cleaned-data_jun22.rda")
 
 
-## Red trofica ----
+## Red trófica ----
 
-# Filtrar lista de interacciones (omitir *)
+# Filtrar Lista de Interacciones (omitir *)
 int_need <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
                                   .vars_predicate = any_vars(str_detect(., "\\*$")))
 int_raw$Prey <- sub(" .*", "", int_raw$Prey)
