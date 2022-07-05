@@ -18,7 +18,7 @@ ipak(packages)
 
 ## Lista de Especies ----
 
-sp_raw <- read.csv("data/ListaEspecies_AMPNBB_jun22.csv")
+sp_raw <- read.csv("data/ListaEspecies_AMPNBB_jul22.csv")
 colnames(sp_raw)
 sp_raw <- sp_raw %>% 
   add_count(FunctionalGroup, name = "Richness") %>% 
@@ -27,18 +27,17 @@ sp_raw <- sp_raw %>%
 
 ## Lista de Interacciones ----
 
-int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jun22.csv")
+int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jul22.csv")
 int_raw <- int_raw %>% 
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
                           TRUE ~ Prey))
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
-row.names.remove <- c(2078, 2084)  # exclude rows with Prey == "Demospongiae *"
+row.names.remove <- c(2077, 2083)  # exclude rows with Prey == "Demospongiae *"
 int_raw <- int_raw[!(row.names(int_raw) %in% row.names.remove), ]
 
 ## Save data ----
 
 save(sp_raw, int_raw, 
-     file = "data/cleaned-data_jun22.rda")
-# write.csv(int_raw, file = "../data/ListaInteracciones_OK_abr22.csv")
+     file = "data/cleaned-data_jul22.rda")

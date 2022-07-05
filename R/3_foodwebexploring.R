@@ -18,7 +18,7 @@ ipak(packages)
 
 ## Cargar datos ----
 
-load("data/cleaned-data_jun22.rda")
+load("data/cleaned-data_jul22.rda")
 
 
 ## Red trófica ----
@@ -108,12 +108,8 @@ plot_fw <- plot.igraph(g_giant,
                        edge.width = .5,
                        edge.arrow.size = 0.15, edge.curved = 0.3)
 
-# load("BalticFW.Rdata")
-# plotfw(g_giant, edge.arrow.size = 0.15, vertex.color = "red", vertex.size = 2,
-#        vertex.label.dist = 1, vertex.label.cex = 0.75)
-
 
 ## Save data ----
 
 save(g, g_giant, int_ok,
-     file = "../data/foodweb-data_mar22.rda")
+     file = "data/foodweb-data_jul22.rda")

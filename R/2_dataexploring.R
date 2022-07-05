@@ -18,7 +18,7 @@ ipak(packages)
 
 ## Cargar datos ----
 
-load("data/cleaned-data_jun22.rda")
+load("data/cleaned-data_jul22.rda")
 
 
 ## Lista de Especies ----
@@ -132,7 +132,7 @@ naniar::gg_miss_upset(sp_raw[,12:16], nsets = 5)
 
 (plot_faltan <- vis_miss(sp_raw[,12:16]) +
   ylab("\nEspecies tróficas") +
-  scale_fill_manual(labels = c("Presentes (7.7%)", "Faltantes (92.3%)"), values = c("green", "black")) +
+  scale_fill_manual(labels = c("Presentes (9.2%)", "Faltantes (90.8%)"), values = c("green", "black")) +
   guides(fill=guide_legend()) +
   theme(legend.title = element_blank(),
         legend.text = element_text(size = 14),
