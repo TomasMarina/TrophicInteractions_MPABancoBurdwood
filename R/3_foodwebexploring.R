@@ -23,18 +23,23 @@ load("data/cleaned-data_jul22.rda")
 
 ## Red trófica ----
 
-# Filtrar Lista de Interacciones (omitir *)
-int_need <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
+# Interacciones de baja resolución (*)
+int_need_res <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
                                   .vars_predicate = any_vars(str_detect(., "\\*$")))
-int_raw$Prey <- sub(" .*", "", int_raw$Prey)
-int_raw$Predator <- sub(" .*", "", int_raw$Predator)
+# int_raw$Prey <- sub(" .*", "", int_raw$Prey)
+# int_raw$Predator <- sub(" .*", "", int_raw$Predator)
 
-int_ok <- int_raw[,1:6] %>% 
+# Omitir interacciones de baja resolución
+int_good_res <- int_raw %>% 
+  filter(!str_detect(Prey, "\\*$")) %>% 
+  filter(!str_detect(Predator, "\\*$"))
+
+int_good_res <- int_good_res[,1:6] %>% 
   relocate(any_of(c("Prey", "Predator", "PreyGroup", "PredGroup", "PredStrategy", "FoodSource")))
 
 # Crear objeto igraph y asignar atributos
 #load("../../IMDEA/R/BalticFW.Rdata")
-g <- graph_from_edgelist(as.matrix(int_ok[,1:2]), directed = TRUE)
+g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
 
 sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
   mutate(across(where(is.factor), as.character)) %>% 
