@@ -56,17 +56,6 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 55,NA,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Diplosoma,Diplosoma_longinquum,Ascidiacea,Benthos,No,NA,NA,NA,NA,NA,Talud,https://www.gbif.org/species/5200402,,,,
 56,NA,Chordata,Ascidiacea,Aplousobranchia,Polycitoridae,Polycitor,Polycitor_glareosus,Ascidiacea,Benthos,No,NA,NA,NA,NA,NA,Talud,Tatian_etal_2005,,,,
 57,NA,Chordata,Ascidiacea,Stolidobrachia,Styelidae,Theodorella,Theodorella_arenosa,Ascidiacea,Benthos,No,NA,NA,NA,NA,NA,Talud,https://www.gbif.org/species/2331892,,,,
-58,Spring,Ochrophyta,Bacillariophyceae,Coscinodiscales,Coscinodiscaceae,Coscinodiscus,Coscinodiscus_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_centric
-59,Spring,Ochrophyta,Bacillariophyceae,Bacillariales,Bacillariaceae,Fragilariopsis,Fragilariopsis_kerguelensis,Diatoms,Phytoplankton,Yes,NA,7,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
-60,Spring,Ochrophyta,Bacillariophyceae,Naviculales,Naviculaceae,Navicula,Navicula_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
-61,Spring,Ochrophyta,Bacillariophyceae,Paraliales,Paraliaceae,Paralia,Paralia_sulcata,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_benthic
-62,Spring,Ochrophyta,Bacillariophyceae,Melosirales,Hyalodiscaceae,Podosira,Podosira_stelliger,Diatoms,Phytoplankton,No,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_centric
-63,Spring,Ochrophyta,Bacillariophyceae,Bacillariales,Bacillariaceae,Pseudo-nitzchia,Pseudonitzschia_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
-64,Spring,Ochrophyta,Bacillariophyceae,Fragilariales,Fragilariaceae,Tabularia,Tabularia_fasciculata,Diatoms,Phytoplankton,No,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
-65,Spring,Ochrophyta,Bacillariophyceae,Thalassionematales,Thalassionemataceae,Thalassionema,Thalassionema_nitzschioides,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_benthic
-66,NA,Ochrophyta,Bacillariophyceae,Rhizosoleniales,Rhizosoleniaceae,Rhizosolenia,Rhizosolenia_crassa,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Bertola&Iachetti_TallerCientifico_2021,,,,Video Bertola&Iachetti
-67,NA,NA,NA,NA,NA,NA,Bacillariophyceae,Diatoms,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-68,NA,NA,NA,NA,NA,NA,Bacillariaceae,Diatoms,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
 69,NA,Bacteria,NA,NA,NA,NA,Bacteria,Bacteria,Bacteria,Yes,NA,NA,NA,NA,NA,Ta/Me,,,,,
 70,Autumn,Arthropoda,Thecostraca,Scalpellomorpha,Scalpellidae,Ornatoscalpellum,Ornatoscalpellum_gibberum,Benthos_Misc,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,Cirripedia
 71,All,Arthropoda,Pycnogonida,Pantopoda,Colossendeidae,Colossendeis,Colossendeis_megalonyx,Benthos_Misc,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Krabbe_etal_2010,,,,
@@ -225,6 +214,20 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 224,Autumn,Arthropoda,Malacostraca,Decapoda,Lithodidae,Paralomis,Paralomis_spinosissima,Decapoda,Benthos,No,NA,NA,NA,100,NA,Talud,Pérez-Barros_etal_2020,,,,
 225,Autumn,Arthropoda,Malacostraca,Decapoda,Nephropidae,Thymops,Thymops_birsteini,Decapoda,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Lovrich_etal_2005,,,,
 226,Autumn,Arthropoda,Malacostraca,Decapoda,Munididae,Munida,Munida_spinosa,Decapoda,Benthos,Yes,NA,NA,NA,50,NA,Talud,Lovrich_etal_2005,,,,
+58,Spring,Ochrophyta,Bacillariophyceae,Coscinodiscales,Coscinodiscaceae,Coscinodiscus,Coscinodiscus_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_centric
+59,Spring,Ochrophyta,Bacillariophyceae,Bacillariales,Bacillariaceae,Fragilariopsis,Fragilariopsis_kerguelensis,Diatoms,Phytoplankton,Yes,NA,7,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
+60,Spring,Ochrophyta,Bacillariophyceae,Naviculales,Naviculaceae,Navicula,Navicula_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
+61,Spring,Ochrophyta,Bacillariophyceae,Paraliales,Paraliaceae,Paralia,Paralia_sulcata,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_benthic
+62,Spring,Ochrophyta,Bacillariophyceae,Melosirales,Hyalodiscaceae,Podosira,Podosira_stelliger,Diatoms,Phytoplankton,No,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_centric
+63,Spring,Ochrophyta,Bacillariophyceae,Bacillariales,Bacillariaceae,Pseudo-nitzchia,Pseudonitzschia_sp,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
+64,Spring,Ochrophyta,Bacillariophyceae,Fragilariales,Fragilariaceae,Tabularia,Tabularia_fasciculata,Diatoms,Phytoplankton,No,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_pennate
+65,Spring,Ochrophyta,Bacillariophyceae,Thalassionematales,Thalassionemataceae,Thalassionema,Thalassionema_nitzschioides,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Diatoms_benthic
+66,NA,Ochrophyta,Bacillariophyceae,Rhizosoleniales,Rhizosoleniaceae,Rhizosolenia,Rhizosolenia_crassa,Diatoms,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Bertola&Iachetti_TallerCientifico_2021,,,,Video Bertola&Iachetti
+67,NA,NA,NA,NA,NA,NA,Bacillariophyceae,Diatoms,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+68,NA,NA,NA,NA,NA,NA,Bacillariaceae,Diatoms,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+566,NA,NA,NA,NA,NA,NA,Diatoms_benthic,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Aggregated: Paralia_sulcata y Thalassionema_nitzschioides
+567,NA,NA,NA,NA,NA,NA,Diatoms_centric,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Aggregated: Podosira_stelliger y Coscinodiscus_sp
+568,NA,NA,NA,NA,NA,NA,Diatoms_pennate,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,"Aggregated: Fragilariopsis_kerguelensis, Navicula_sp, Pseudonitzschia_sp y Tabularia_fasciculata"
 227,Spring,Myzozoa,Dinophyceae,Dinophysiales,Amphidomataceae,Azadinium,Azadinium_sp,Dinoflagellates,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,As Dinoflagellates_auto
 228,Spring,Myzozoa,Dinophyceae,Dinophysiales,Dinophysaceae,Dinophysis,Dinophysis_acuminata,Dinoflagellates,Phytoplankton,Yes,NA,NA,1.7E-08,NA,NA,Meseta,Guinder_etal_2020,,,,Collapsed as Dinoflagellates_heterosol
 229,Spring,Myzozoa,Dinophyceae,Gymnodiniales,Gymnodiniaceae,Gymnodinium,Gymnodinium_sp,Dinoflagellates,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,As Dinoflagellates_heterocol
@@ -505,208 +508,206 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 504,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Abyssianira,Abyssianira_dentifrons,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
 505,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Abyssianira,Abyssianira_sp1,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
 506,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Abyssianira,Abyssianira_sp2,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-507,Spring,Arthropoda,Malacostraca,Isopoda,,,Anthuroidea,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-508,Spring,Arthropoda,Malacostraca,Isopoda,Desmosomatidae,Desmosoma,Desmosoma_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-509,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_granulosus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Pereira_etal_2020,,,,
-510,Spring,Arthropoda,Malacostraca,Isopoda,Gnathiidae,Gnathia,Gnathia_sp,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-511,Spring,Arthropoda,Malacostraca,Isopoda,Acanthaspidiidae,Ianthopsis,Ianthopsis_laevis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-512,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Iathrippa,Iathrippa_multidens,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-513,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_curvicornis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-514,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_intermedius,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-515,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-516,Spring,Arthropoda,Malacostraca,Isopoda,Chaetiliidae,Macrochiridothea,Macrochiridothea_stebbingi,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-517,Spring,Arthropoda,Malacostraca,Isopoda,Sphaeromatidae,Moruloidea,Moruloidea_darwinii,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-518,Spring,Arthropoda,Malacostraca,Isopoda,Munnidae,Munna,Munna_pallida,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-519,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Neasellus,Neasellus_argentinensis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-520,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Neojaera,Neojaera_antarctica,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-521,Spring,Arthropoda,Malacostraca,Isopoda,Serolidae,Neoserolis,Neoserolis_exigua,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-522,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Paramunna,Paramunna_integra,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-523,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Pleurosignum,Pleurosignum_magnum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-524,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Quetzogonium,Quetzogonium_dentatum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-525,Spring,Arthropoda,Malacostraca,Isopoda,Rectarcturidae,Rectarcturus,Rectarcturus_tuberculatus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-526,Spring,Arthropoda,Malacostraca,Isopoda,Munnidae,Uromunna,Uromunna_nana,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
-527,NA,NA,NA,NA,NA,NA,Isopoda,Isopoda,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-528,NA,NA,NA,NA,NA,NA,Peracarida,Isopoda,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-529,Spring,Arthropoda,Malacostraca,Isopoda,Serolidae,Acanthoserolis,Acanthoserolis_schythei,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-530,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp1,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-531,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp2,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-532,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Coperonus,Coperonus_comptus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-533,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Echinozone,Echinozone_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-534,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_argentinensis,Isopoda,Benthos,No,NA,NA,NA,6.65,NA,Talud,Pereira_etal_2020,,,,
-535,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_patagonicus,Isopoda,Benthos,No,NA,NA,NA,7.1,NA,Talud,Doti_etal_2020; Pereira_etal_2020,,,,
-536,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_paxillaris,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Pereira_etal_2020,,,,
-537,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Iathrippa,Iathrippa_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-538,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Meridiosignum,Meridiosignum_undulatum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-539,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Munnogonium,Munnogonium_falklandicum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-540,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Neasellus,Neasellus_bicarinatus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-541,Spring,Arthropoda,Malacostraca,Isopoda,Pseudidotheidae,Pseudidothea,Pseudidothea_miersi,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-542,Spring,Arthropoda,Malacostraca,Isopoda,Stenetriidae,Tenupedunculus,Tenupedunculus_dentimanum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
-543,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_acutorostrata,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,10250,NA,Ta/Me,RayaRey_pers.com.,,,,
-544,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_bonaerensis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,10700,NA,Ta/Me,RayaRey_pers.com.,,,,
-545,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_borealis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,19500,NA,Ta/Me,RayaRey_pers.com.,,,,
-546,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_physalus,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,27100,NA,Ta/Me,RayaRey_pers.com.,,,,
-547,NA,Chordata,Mammalia,Cetartiodactyla,Balaenidae,Eubalaena,Eubalaena_australis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,NA,NA,Ta/Me,RayaRey_pers.com.,,,,
-548,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Lagenorhynchus,Lagenorhynchus_cruciger,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,1870,NA,Meseta,RayaRey_pers.com.; Dellabianca_etal_2012,,,,
-549,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Lagenorhynchus,Lagenorhynchus_australis,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,2100,NA,Meseta,RayaRey_pers.com.,,,,Abundance data available ?
-550,Spring,Chordata,Mammalia,Carnivora,Otariidae,Arctocephalus,Arctocephalus_australis,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,1650,NA,Meseta,RayaRey_pers.com.,,,,Depredadores tope
-551,All,Chordata,Mammalia,Carnivora,Otariidae,Otaria,Otaria_flavescens,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,2500,NA,Meseta,RayaRey_pers.com.,,,,Depredadores tope
-552,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Globicephala,Globicephala_melas,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,5500,NA,Ta/Me,RayaRey_pers.com.,,,,
-553,NA,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Orcinus,Orcinus_orca,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Ta/Me,Riccialdelli_pers.com.,,,,
-554,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Hyperoodon,Hyperoodon_planifrons,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-555,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_layardii,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-556,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_grayi,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-557,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_bowdoini,MarineMammals_3,,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-558,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Ziphius,Ziphius_cavirostris,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-559,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Tasmacetus,Tasmacetus_shepherdi,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
-560,NA,Chordata,Mammalia,Cetartiodactyla,Physeteridae,Physeter,Physeter_macrocephalus,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_pers.com.,,,,
-561,All,,,,,,Detritus,Non-living,Detritus-POM,Yes,NA,NA,NA,NA,NA,Ta/Me,Riccialdelli_pers.com.,,,,Esquema trófico
-562,All,,,,,,Necromass,Non-living,Detritus-POM,Yes,NA,NA,NA,NA,NA,Ta/Me,,,,,
-563,NA,NA,NA,NA,NA,NA,Phytoplankton,Phytoplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-564,NA,NA,NA,NA,NA,NA,EpiphyticPhytoplankton,Phytoplankton,,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
-565,NA,NA,NA,NA,NA,NA,Diatoms_benthic,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Aggregated: Paralia_sulcata y Thalassionema_nitzschioides
-566,NA,NA,NA,NA,NA,NA,Diatoms_centric,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,Aggregated: Podosira_stelliger y Coscinodiscus_sp
-567,NA,NA,NA,NA,NA,NA,Diatoms_pennate,Diatoms,NA,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,"Aggregated: Fragilariopsis_kerguelensis, Navicula_sp, Pseudonitzschia_sp y Tabularia_fasciculata"
-568,Spring,Cyanobacteria,Cyanophyceae,Synechococcales,Synechococcaceae,Synechococcus,Synechococcus_sp,Picophytoplankton,Phytoplankton,Yes,NA,50,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
-569,All,Annelida,Polychaeta,Phyllodocida,Nephtyidae,Aglaophamus,Aglaophamus_virginis,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
-570,All,Annelida,Polychaeta,Terebellida,Ampharetidae,Ampharete,Ampharete_kerguelensis,Polychaeta,Benthos,Yes,NA,NA,NA,80,NA,Meseta,Bremec_etal_2019,,,,
-571,All,Annelida,Polychaeta,Terebellida,Ampharetidae,Anobothrus,Anobothrus_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-572,All,Annelida,Polychaeta,Spionida,Spionidae,Boccardia,Boccardia_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-573,All,Annelida,Polychaeta,,Chaetopteridae,Chaetopterus,Chaetopterus_antarcticus,Polychaeta,Benthos,Yes,NA,NA,NA,250,NA,Meseta,Bremec_etal_2019,,,,
-574,Spring,Annelida,Polychaeta,Terebellida,Cirratulidae,,Cirratulidae,Polychaeta,Zooplankton,Yes,2,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
-575,All,Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone_aurantiaca,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
-576,Autumn,Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-577,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Eucranta,Eucranta_sp,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
-578,All,Annelida,Polychaeta,Eunicida,Eunicidae,Eunice,Eunice_pennata,Polychaeta,Benthos,Yes,NA,NA,NA,150,NA,Meseta,Bremec_etal_2019,,,,
-579,All,Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera_capitata,Polychaeta,Benthos,Yes,NA,NA,NA,51,NA,Meseta,Bremec_etal_2019,,,,
-580,All,Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera_papillosa,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-581,All,Annelida,Polychaeta,,Sabellariidae,Idanthyrsus,Idanthyrsus_macropaleus,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-582,All,Annelida,Polychaeta,Eunicida,Onuphidae,Kinbergonuphis,Kinbergonuphis_dorsalis,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-583,All,Annelida,Polychaeta,Phyllodocida,Aphroditidae,Laetominice,Laetmonice_producta,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-584,All,Annelida,Polychaeta,,,Lanice,Lanice_sp,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
-585,All,Annelida,Polychaeta,,,,Lumbrineriidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-586,Spring,Annelida,Polychaeta,,Magelonidae,Magelona,Magelona_alleni,Polychaeta,Zooplankton,Yes,7,NA,NA,20,NA,Meseta,Spinelli_etal_2020,,,,
-587,All,Annelida,Polychaeta,,Maldaniidae,,Maldaniidae,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
-588,All,Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-589,All,Annelida,Polychaeta,Eunicida,Onuphidae,Nothria,Nothria_anoculata,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-590,Autumn,Annelida,Polychaeta,Eunicida,Oenonidae,,Oenonidae,Polychaeta,Benthos,Yes,NA,NA,NA,81,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-591,All,Annelida,Polychaeta,Eunicida,Onuphidae,Onuphis,Onuphis_pseudoiridescens,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-592,Autumn,Annelida,Polychaeta,,Orbiniidae,,Orbiniidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-593,All,Annelida,Polychaeta,,Paraonidae,,Paraonidae,Polychaeta,Benthos,Yes,NA,NA,NA,21,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-594,Spring,Annelida,Polychaeta,Phyllodocida,Lopadorrhynchidae,Pelagobia,Pelagobia_longicirrata,Polychaeta,Zooplankton,Yes,1,NA,NA,2,NA,Meseta,Spinelli_etal_2020,,,,
-595,All,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_corrientis,Polychaeta,Benthos,Yes,NA,NA,NA,81,NA,Meseta,Bremec_etal_2019,,,,
-596,Autumn,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-597,Spring,Annelida,Polychaeta,Spionida,Spionidae,Polydora,Polydora_sp,Polychaeta,Zooplankton,Yes,1,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
-598,Spring,Annelida,Polychaeta,,Sabellidae,,Sabellidae1,Polychaeta,Benthos,No,7,NA,NA,100,NA,Meseta,Bremec_etal_2019; Spinelli_etal_2020,,,,
-599,All,Annelida,Polychaeta,Sabellida,Sabellidae,,Sabellidae2,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-600,Autumn,Annelida,Polychaeta,Sabellida,Serpulidae,Serpula,Serpula_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-601,Spring,Annelida,Polychaeta,Spionida,Spionidae,Spiophanes,Spiophanes_sp,Polychaeta,Zooplankton,Yes,1,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
-602,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae2,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-603,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae3,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-604,All,Annelida,Polychaeta,Terebellida,Terebellidae,,Terebellidae,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
-605,All,Annelida,Polychaeta,Terebellida,Terebellidae,Terebellides,Terebellides_malvinensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-606,All,Annelida,Polychaeta,,Travisiidae,Travisia,Travisia_kerguelensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
-607,All,Annelida,Polychaeta,Phyllodocida,Nereididae,Eunereis,Eunereis_patagonica,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
-608,Spring,Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe_sp,Polychaeta,Benthos,Yes,2,NA,NA,100,NA,Ta/Me,Bremec_etal_2019; Spinelli_etal_2020,,,,
-609,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Hermadion,Hermadion_magalhaensi,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
-610,All,Annelida,Polychaeta,Terebellida,Terebellidae,Nicolea,Nicolea_chilensis,Polychaeta,Benthos,Yes,NA,NA,NA,50,NA,Ta/Me,Bremec_etal_2019,,,,
-611,All,Annelida,Polychaeta,Phyllodocida,Nereididae,Nicon,Nicon_maculata,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
-612,All,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_mirabilis,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
-613,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Polyeunoa,Polyeunoa_laevis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
-614,Autumn,Annelida,Polychaeta,Sabellida,Sabellidae,,Potamilla_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
-615,All,Annelida,Polychaeta,Sabellida,Sabellidae,,Sabellidae3,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
-616,All,Annelida,Polychaeta,Sabellida,Serpulidae,Serpula,Serpula_narconensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Bremec_etal_2019,,,,
-617,All,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae1,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
-618,All,Annelida,Polychaeta,Terebellida,Terebellidae,Thelepus,Thelepus_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Bremec_etal_2019,,,,
-619,All,Annelida,Polychaeta,Phyllodocida,Syllidae,Trypanosyllis,Trypanosyllis_gigantea,Polychaeta,Benthos,No,NA,NA,NA,120,NA,Ta/Me,Bremec_etal_2019,,Calla_pers.com.,,
-620,NA,NA,NA,NA,NA,NA,Polynoidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-621,NA,NA,NA,NA,NA,NA,Syllidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-622,NA,NA,NA,NA,NA,NA,Polychaeta,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-623,NA,NA,NA,NA,NA,NA,Sabellidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-624,NA,NA,NA,NA,NA,NA,Onuphidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-625,All,Annelida,Polychaeta,Eunicida,Onuphidae,Hyalinoecia,Hyalinoecia_artifex,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Bremec_etal_2019,,,,
-626,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae4,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016; Bremec_etal_2019,,,,
-627,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae5,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016; Bremec_etal_2019,,,,
-628,All,Mollusca,Polyplacophora,Chitonida,Mopaliidae,Nuttallochiton,Nuttallochiton_martiali,Polyplacophora,Benthos,Yes,NA,NA,NA,40,NA,Meseta,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
-629,All,Mollusca,Polyplacophora,Chitonida,Chitonidae,Tonicia,Tonicia_lebruni,Polyplacophora,Benthos,Yes,NA,NA,0.76,25,NA,Meseta,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
-630,All,Mollusca,Polyplacophora,Callochitonida,Callochitonidae,Callochiton,Callochiton_puniceus,Polyplacophora,Benthos,Yes,NA,NA,2.04,25,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
-631,All,Mollusca,Polyplacophora,Lepidopleurina,Leptochitonidae,Leptochiton,Leptochiton_kerguelensis,Polyplacophora,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Teso_etal_2019,,,,Info from Sup Info (Teso_etal_2019)
-632,All,Mollusca,Polyplacophora,Lepidopleurina,Leptochitonidae,Leptochiton,Leptochiton_medinae,Polyplacophora,Benthos,Yes,NA,NA,NA,10,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
-633,All,Mollusca,Polyplacophora,Chitonida,Mopaliidae,Nuttallochiton,Nuttallochiton_hyadesi,Polyplacophora,Benthos,Yes,NA,NA,NA,40,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
-634,NA,NA,NA,NA,NA,NA,Chitons,Polyplacophora,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-635,Autumn,Porifera,Demospongiae,Halichondrida,,,Halichondrida,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-636,Autumn,Porifera,Demospongiae,Haplosclerida,,,Haplosclerida1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-637,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-638,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-639,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-640,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-641,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp3,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-642,Autumn,Porifera,Calcarea,Leucosolenida,Sycettidae,Sycon,Sycon_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-643,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_massa,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-644,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_mucosa,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-645,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
-646,NA,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Clathria)_toxipraedita,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2017b,,,,Original description Topsent (1913)
-647,Autumn,Porifera,Demospongiae,Haplosclerida,Chalinidae,Haliclona,Haliclona_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
-648,Autumn,Porifera,Demospongiae,Poecilosclerida,Mycalidae,Mycale,Mycale_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
-649,NA,NA,NA,NA,NA,NA,Porifera,Porifera,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-650,Autumn,Porifera,Demospongiae,Poecilosclerida,Cladorhizidae,Asbestopluma,Asbestopluma_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2019; 2020a,,,,AMPNBB-II
-651,Autumn,Porifera,Demospongiae,Tetractinellida,Tetillidae,Craniella,Craniella_leptoderma,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-652,Autumn,Porifera,Demospongiae,Haplosclerida,,,Haplosclerida2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-653,Autumn,Porifera,Hexactinellida,,,,Hexactinellida,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-654,Autumn,Porifera,Demospongiae,Poecilosclerida,Isodictyidae,Isodictya,Isodictya_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-655,Autumn,Porifera,Demospongiae,Poecilosclerida,Latrunculiidae,Latrunculia,Latrunculia_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-656,Autumn,Porifera,Demospongiae,Poecilosclerida,Coelosphaeridae,Lissodendoryx,Lissodendoryx_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-657,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp3,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-658,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,,Myxillina_indet,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-659,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_charcoti,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
-660,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Antho,Antho_(Plocamia)_bremecae,Porifera,Benthos,No,NA,NA,NA,45,NA,Talud,Schejter_etal_2017b,,,,
-661,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Axosuberites)_nidificata,Porifera,Benthos,No,NA,NA,NA,40,NA,Talud,Schejter_etal_2017b,,,,
-662,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Microciona)_antarctica,Porifera,Benthos,No,NA,NA,NA,64,NA,Talud,Schejter_etal_2017b,,,,
-663,All,Chordata,Aves,Procellariiformes,Procellariidae,Ardenna,Ardenna_gravis,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-664,All,Chordata,Aves,Procellariiformes,Procellariidae,Ardenna,Ardenna_grisea,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-665,All,Chordata,Aves,Procellariiformes,Procellariidae,Daption,Daption_capense,SeaBirds,SeaBirds,Yes,NA,NA,409,NA,NA,NA,RayaRey_pers.com.,,,,
-666,All,Chordata,Aves,Procellariiformes,Diomedeidae,Diomedea,Diomedea_sp,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-667,Spring,Chordata,Aves,Sphenisciformes,Spheniscidae,Eudyptes,Eudyptes_chrysocome,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-668,All,Chordata,Aves,Procellariiformes,Procellariidae,Fulmarus,Fulmarus_glacialoides,SeaBirds,SeaBirds,Yes,NA,NA,29,NA,NA,NA,RayaRey_pers.com.,,,,
-669,All,Chordata,Aves,Procellariiformes,Procellariidae,Macronectes,Macronectes_giganteus,SeaBirds,SeaBirds,Yes,NA,NA,3697,NA,NA,NA,RayaRey_pers.com.,,,,
-670,All,Chordata,Aves,Procellariiformes,Procellariidae,Macronectes,Macronectes_halli,SeaBirds,SeaBirds,Yes,NA,NA,3624,NA,NA,NA,RayaRey_pers.com.,,,,
-671,All,Chordata,Aves,Procellariiformes,Hydrobatidae,Oceanites,Oceanites_sp,SeaBirds,SeaBirds,Yes,NA,NA,15,NA,NA,NA,RayaRey_pers.com.,,,,Taken from Oceanites_oceanicus
-672,All,Chordata,Aves,Procellariiformes,Procellariidae,Pachyptila,Pachyptila_sp,SeaBirds,SeaBirds,Yes,NA,NA,22,NA,NA,NA,RayaRey_pers.com.,,,,Taken from Pachyptila_belcheri
-673,All,Chordata,Aves,Procellariiformes,Pelecanoididae,Pelecanoides,Pelecanoides_sp,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-674,All,Chordata,Aves,Pelecaniformes,Phalacrocoracidae,Phalacrocorax,Phalacrocorax_atriceps,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-675,All,Chordata,Aves,Procellariiformes,Procellariidae,Procellaria,Procellaria_aequinoctialis,SeaBirds,SeaBirds,Yes,NA,NA,31,NA,NA,NA,RayaRey_pers.com.,,,,
-676,Spring,Chordata,Aves,Sphenisciformes,Spheniscidae,Spheniscus,Spheniscus_magellanicus,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
-677,All,Chordata,Aves,Procellariiformes,Diomedeidae,Thalassarche,Thalassarche_chrysostoma,SeaBirds,SeaBirds,Yes,NA,NA,3753,NA,NA,NA,RayaRey_pers.com.,,,,
-678,All,Chordata,Aves,Procellariiformes,Diomedeidae,Thalassarche,Thalassarche_melanophris,SeaBirds,SeaBirds,Yes,NA,NA,3232,NA,NA,NA,RayaRey_pers.com.,,,,
-679,Spring,Ochrophyta,Dictyochophyceae,Dictyochales,Dictyochaceae,Dictyocha,Dictyocha_speculum,Silicoflagellates,Phytoplankton,Yes,NA,10,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
-680,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_australis,Zooplankton,Zooplankton,Yes,26,NA,NA,3.6,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Calanus_spp
-681,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_simillimus,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Calanus_spp
-682,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_brevipes,Zooplankton,Zooplankton,Yes,18,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
-683,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_laticeps,Zooplankton,Zooplankton,Yes,8,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
-684,Spring,Arthropoda,Hexanauplia,Calanoida,,,Calanus_spp,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Calanus_australis y C._australis
-685,Spring,Arthropoda,Hexanauplia,Calanoida,,,Clausocalanus_spp,Zooplankton,Zooplankton,Yes,13,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Clausocalanus_brevipes y Cl._laticeps
-686,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Ctenocalanus,Ctenocalanus_vanus,Zooplankton,Zooplankton,Yes,34,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
-687,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Drepanopus,Drepanopus_forcipatus,Zooplankton,Zooplankton,Yes,299,7.68,NA,1.92,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
-688,Spring,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Euphausia,Euphausia_lucens,Zooplankton,Zooplankton,Yes,16.75,NA,NA,10,NA,Meseta,Spinelli_etal_2020,,Temperoni_etal_2013,,Collapsed as Euphausia_spp
-689,Spring,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Euphausia,Euphausia_vallentini,Zooplankton,Zooplankton,Yes,16.75,NA,NA,20,NA,Meseta,Spinelli_etal_2020,,Gonzalez_etal_2016,,Collapsed as Euphausia_spp
-690,Spring,Arthropoda,NA,NA,NA,NA,Larvae_Nauplii,Zooplankton,Zooplankton,Yes,2000,1.33,NA,0.28,NA,Meseta,Spinelli_etal_2020,,,,
-691,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Neocalanus,Neocalanus_tonsus,Zooplankton,Zooplankton,Yes,20,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
-692,Spring,Arthropoda,Hexanauplia,Cyclopoida,Oithonidae,Oithona,Oithona_atlantica,Zooplankton,Zooplankton,Yes,32,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Oithona_spp
-693,Spring,Arthropoda,Hexanauplia,Cyclopoida,Oithonidae,Oithona,Oithona_similis,Zooplankton,Zooplankton,Yes,93,1.4,NA,0.95,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Oithona_spp
-694,NA,NA,NA,NA,NA,NA,Oithona_spp,Zooplankton,Zooplankton,Yes,62.5,1.4,NA,0.95,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Oithona_atlantica y O._similis
-695,Spring,Arthropoda,Hexanauplia,Calanoida,Rhincalanoidae,Rhincalanus,Rhincalanus_gigas,Zooplankton,Zooplankton,Yes,66,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
-696,Spring,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,Pseudosagitta,Pseudosagitta_gazellae,Zooplankton,Zooplankton,Yes,0.4,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
-697,Spring,Chordata,Appendicularia,Copelata,Fritillariidae,Fritillaria,Fritillaria_borealis,Zooplankton,Zooplankton,Yes,NA,NA,NA,0.585,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,Collapsed as Appendicularia_spp
-698,Spring,Chordata,Appendicularia,Copelata,Oikopleuridae,Oikopleura,Oikopleura_fusiformis,Zooplankton,Zooplankton,Yes,67.6,NA,NA,0.734,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,Collapsed as Appendicularia_spp
-699,Spring,Chordata,Appendicularia,,,,Appendicularia_spp,Zooplankton,Zooplankton,Yes,67.6,NA,NA,0.660,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,
-700,Spring,Ctenophora,Tentaculata,Cydippida,Pleurobrachiidae,Tinerfe,Tinerfe_cyanea,Zooplankton,Zooplankton,Yes,0.2,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
-701,NA,Arthropoda,Hexanauplia,NA,NA,NA,Copepodite,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Bruno_pers.com.,,,,
-702,NA,Chaetognatha,Sagittoidea,Phragmophora,Eukrohniidae,Eukrohnia,Eukrohnia_hamata,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Tesista_Capitanio_GarciaAlonso,,,,
-703,NA,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,Serratosagitta,Serratosagitta_tasmanica,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Tesista_Capitanio_GarciaAlonso,,,,
-704,All,Chordata,NA,NA,NA,NA,SmallLarvae_Fish,Zooplankton,Zooplankton,ToBeAdded,228,NA,NA,5,0.30,Ta/Me,GarciaAlonso_etal_2018; 2020,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fuegensis
-705,All,Chordata,NA,NA,NA,NA,LargeLarvae_Fish,Zooplankton,,ToBeAdded,228,NA,NA,33,0.06,Ta/Me,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fuegensis
-706,All,Chordata,NA,NA,NA,NA,Larvae_Fish,Zooplankton,,Yes,NA,NA,NA,NA,NA,Ta/Me,GarciaAlonso_etal_2018; 2020,https://doi.org/10.1007/s00300-018-2352-z,,,
-707,Spring,NA,NA,NA,NA,NA,Eggs_Fish,Zooplankton,Zooplankton,Yes,2500,NA,NA,NA,NA,Ta/Me,GarciaAlonso_etal_2018; Vazquez_etal_2017,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fueguensis; Schroedericthys_bivius
-708,NA,NA,NA,NA,NA,NA,Zooplankton,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
-709,NA,NA,NA,NA,NA,NA,Calanoida,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
-710,NA,NA,NA,NA,NA,NA,Copepoda,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
-711,NA,NA,NA,NA,NA,NA,Euphausia_spp,Zooplankton,NA,Yes,16.75,NA,NA,15,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: E._lucens y E._vallentini
+507,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Abyssianira,Abyssianira_spp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,Aggregated: Abyssianira_spp
+508,Spring,Arthropoda,Malacostraca,Isopoda,,,Anthuroidea,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+509,Spring,Arthropoda,Malacostraca,Isopoda,Desmosomatidae,Desmosoma,Desmosoma_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+510,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_granulosus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Pereira_etal_2020,,,,
+511,Spring,Arthropoda,Malacostraca,Isopoda,Gnathiidae,Gnathia,Gnathia_sp,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+512,Spring,Arthropoda,Malacostraca,Isopoda,Acanthaspidiidae,Ianthopsis,Ianthopsis_laevis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+513,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Iathrippa,Iathrippa_multidens,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+514,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_curvicornis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+515,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_intermedius,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+516,Spring,Arthropoda,Malacostraca,Isopoda,Joeropsididae,Joeropsis,Joeropsis_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+517,Spring,Arthropoda,Malacostraca,Isopoda,Chaetiliidae,Macrochiridothea,Macrochiridothea_stebbingi,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+518,Spring,Arthropoda,Malacostraca,Isopoda,Sphaeromatidae,Moruloidea,Moruloidea_darwinii,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+519,Spring,Arthropoda,Malacostraca,Isopoda,Munnidae,Munna,Munna_pallida,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+520,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Neasellus,Neasellus_argentinensis,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+521,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Neojaera,Neojaera_antarctica,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+522,Spring,Arthropoda,Malacostraca,Isopoda,Serolidae,Neoserolis,Neoserolis_exigua,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+523,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Paramunna,Paramunna_integra,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+524,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Pleurosignum,Pleurosignum_magnum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+525,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Quetzogonium,Quetzogonium_dentatum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+526,Spring,Arthropoda,Malacostraca,Isopoda,Rectarcturidae,Rectarcturus,Rectarcturus_tuberculatus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+527,Spring,Arthropoda,Malacostraca,Isopoda,Munnidae,Uromunna,Uromunna_nana,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Doti_etal_2020,,,,
+528,NA,NA,NA,NA,NA,NA,Isopoda,Isopoda,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+529,NA,NA,NA,NA,NA,NA,Peracarida,Isopoda,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+530,Spring,Arthropoda,Malacostraca,Isopoda,Serolidae,Acanthoserolis,Acanthoserolis_schythei,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+531,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp1,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+532,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp2,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+533,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Coperonus,Coperonus_comptus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+534,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Echinozone,Echinozone_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+535,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_argentinensis,Isopoda,Benthos,No,NA,NA,NA,6.65,NA,Talud,Pereira_etal_2020,,,,
+536,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_patagonicus,Isopoda,Benthos,No,NA,NA,NA,7.1,NA,Talud,Doti_etal_2020; Pereira_etal_2020,,,,
+537,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_paxillaris,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Pereira_etal_2020,,,,
+538,Spring,Arthropoda,Malacostraca,Isopoda,Janiridae,Iathrippa,Iathrippa_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+539,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Meridiosignum,Meridiosignum_undulatum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+540,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Munnogonium,Munnogonium_falklandicum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+541,Spring,Arthropoda,Malacostraca,Isopoda,Paramunnidae,Neasellus,Neasellus_bicarinatus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+542,Spring,Arthropoda,Malacostraca,Isopoda,Pseudidotheidae,Pseudidothea,Pseudidothea_miersi,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+543,Spring,Arthropoda,Malacostraca,Isopoda,Stenetriidae,Tenupedunculus,Tenupedunculus_dentimanum,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+544,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_acutorostrata,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,10250,NA,Ta/Me,RayaRey_pers.com.,,,,
+545,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_bonaerensis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,10700,NA,Ta/Me,RayaRey_pers.com.,,,,
+546,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_borealis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,19500,NA,Ta/Me,RayaRey_pers.com.,,,,
+547,Spring,Chordata,Mammalia,Cetartiodactyla,Balaenopteridae,Balaenoptera,Balaenoptera_physalus,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,27100,NA,Ta/Me,RayaRey_pers.com.,,,,
+548,NA,Chordata,Mammalia,Cetartiodactyla,Balaenidae,Eubalaena,Eubalaena_australis,MarineMammals_1,MarineMammals_1,Yes,NA,NA,NA,NA,NA,Ta/Me,RayaRey_pers.com.,,,,
+549,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Lagenorhynchus,Lagenorhynchus_cruciger,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,1870,NA,Meseta,RayaRey_pers.com.; Dellabianca_etal_2012,,,,
+550,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Lagenorhynchus,Lagenorhynchus_australis,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,2100,NA,Meseta,RayaRey_pers.com.,,,,Abundance data available ?
+551,Spring,Chordata,Mammalia,Carnivora,Otariidae,Arctocephalus,Arctocephalus_australis,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,1650,NA,Meseta,RayaRey_pers.com.,,,,Depredadores tope
+552,All,Chordata,Mammalia,Carnivora,Otariidae,Otaria,Otaria_flavescens,MarineMammals_2,MarineMammals_2,Yes,NA,NA,NA,2500,NA,Meseta,RayaRey_pers.com.,,,,Depredadores tope
+553,Spring,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Globicephala,Globicephala_melas,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,5500,NA,Ta/Me,RayaRey_pers.com.,,,,
+554,NA,Chordata,Mammalia,Cetartiodactyla,Delphinidae,Orcinus,Orcinus_orca,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Ta/Me,Riccialdelli_pers.com.,,,,
+555,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Hyperoodon,Hyperoodon_planifrons,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+556,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_layardii,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+557,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_grayi,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+558,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Mesoplodon,Mesoplodon_bowdoini,MarineMammals_3,,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+559,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Ziphius,Ziphius_cavirostris,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+560,NA,Chordata,Mammalia,Cetartiodactyla,Ziphiidae,Tasmacetus,Tasmacetus_shepherdi,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_etal_2017,,,,
+561,NA,Chordata,Mammalia,Cetartiodactyla,Physeteridae,Physeter,Physeter_macrocephalus,MarineMammals_3,MarineMammals_3,Yes,NA,NA,NA,NA,NA,Talud,Riccialdelli_pers.com.,,,,
+562,All,,,,,,Detritus,Non-living,Detritus-POM,Yes,NA,NA,NA,NA,NA,Ta/Me,Riccialdelli_pers.com.,,,,Esquema trófico
+563,All,,,,,,Necromass,Non-living,Detritus-POM,Yes,NA,NA,NA,NA,NA,Ta/Me,,,,,
+564,NA,NA,NA,NA,NA,NA,Phytoplankton,Phytoplankton_Misc,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+565,NA,NA,NA,NA,NA,NA,EpiphyticPhytoplankton,Phytoplankton_Misc,,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
+569,Spring,Cyanobacteria,Cyanophyceae,Synechococcales,Synechococcaceae,Synechococcus,Synechococcus_sp,Phytoplankton_Misc,Phytoplankton,Yes,NA,50,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
+570,All,Annelida,Polychaeta,Phyllodocida,Nephtyidae,Aglaophamus,Aglaophamus_virginis,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
+571,All,Annelida,Polychaeta,Terebellida,Ampharetidae,Ampharete,Ampharete_kerguelensis,Polychaeta,Benthos,Yes,NA,NA,NA,80,NA,Meseta,Bremec_etal_2019,,,,
+572,All,Annelida,Polychaeta,Terebellida,Ampharetidae,Anobothrus,Anobothrus_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+573,All,Annelida,Polychaeta,Spionida,Spionidae,Boccardia,Boccardia_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+574,All,Annelida,Polychaeta,,Chaetopteridae,Chaetopterus,Chaetopterus_antarcticus,Polychaeta,Benthos,Yes,NA,NA,NA,250,NA,Meseta,Bremec_etal_2019,,,,
+575,Spring,Annelida,Polychaeta,Terebellida,Cirratulidae,,Cirratulidae,Polychaeta,Zooplankton,Yes,2,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+576,All,Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone_aurantiaca,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
+577,Autumn,Annelida,Polychaeta,Phyllodocida,Phyllodocidae,Eteone,Eteone_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+578,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Eucranta,Eucranta_sp,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
+579,All,Annelida,Polychaeta,Eunicida,Eunicidae,Eunice,Eunice_pennata,Polychaeta,Benthos,Yes,NA,NA,NA,150,NA,Meseta,Bremec_etal_2019,,,,
+580,All,Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera_capitata,Polychaeta,Benthos,Yes,NA,NA,NA,51,NA,Meseta,Bremec_etal_2019,,,,
+581,All,Annelida,Polychaeta,Phyllodocida,Glyceridae,Glycera,Glycera_papillosa,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+582,All,Annelida,Polychaeta,,Sabellariidae,Idanthyrsus,Idanthyrsus_macropaleus,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+583,All,Annelida,Polychaeta,Eunicida,Onuphidae,Kinbergonuphis,Kinbergonuphis_dorsalis,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+584,All,Annelida,Polychaeta,Phyllodocida,Aphroditidae,Laetominice,Laetmonice_producta,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+585,All,Annelida,Polychaeta,,,Lanice,Lanice_sp,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
+586,All,Annelida,Polychaeta,,,,Lumbrineriidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+587,Spring,Annelida,Polychaeta,,Magelonidae,Magelona,Magelona_alleni,Polychaeta,Zooplankton,Yes,7,NA,NA,20,NA,Meseta,Spinelli_etal_2020,,,,
+588,All,Annelida,Polychaeta,,Maldaniidae,,Maldaniidae,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Meseta,Bremec_etal_2019,,,,
+589,All,Annelida,Polychaeta,Phyllodocida,Nephtyidae,Nephtys,Nephtys_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+590,All,Annelida,Polychaeta,Eunicida,Onuphidae,Nothria,Nothria_anoculata,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+591,Autumn,Annelida,Polychaeta,Eunicida,Oenonidae,,Oenonidae,Polychaeta,Benthos,Yes,NA,NA,NA,81,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+592,All,Annelida,Polychaeta,Eunicida,Onuphidae,Onuphis,Onuphis_pseudoiridescens,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+593,Autumn,Annelida,Polychaeta,,Orbiniidae,,Orbiniidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+594,All,Annelida,Polychaeta,,Paraonidae,,Paraonidae,Polychaeta,Benthos,Yes,NA,NA,NA,21,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+595,Spring,Annelida,Polychaeta,Phyllodocida,Lopadorrhynchidae,Pelagobia,Pelagobia_longicirrata,Polychaeta,Zooplankton,Yes,1,NA,NA,2,NA,Meseta,Spinelli_etal_2020,,,,
+596,All,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_corrientis,Polychaeta,Benthos,Yes,NA,NA,NA,81,NA,Meseta,Bremec_etal_2019,,,,
+597,Autumn,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+598,Spring,Annelida,Polychaeta,Spionida,Spionidae,Polydora,Polydora_sp,Polychaeta,Zooplankton,Yes,1,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+599,Spring,Annelida,Polychaeta,,Sabellidae,,Sabellidae1,Polychaeta,Benthos,No,7,NA,NA,100,NA,Meseta,Bremec_etal_2019; Spinelli_etal_2020,,,,
+600,All,Annelida,Polychaeta,Sabellida,Sabellidae,,Sabellidae2,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+601,Autumn,Annelida,Polychaeta,Sabellida,Serpulidae,Serpula,Serpula_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+602,Spring,Annelida,Polychaeta,Spionida,Spionidae,Spiophanes,Spiophanes_sp,Polychaeta,Zooplankton,Yes,1,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+603,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae2,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+604,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae3,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+605,All,Annelida,Polychaeta,Terebellida,Terebellidae,,Terebellidae,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016; Bremec_etal_2019,,,,
+606,All,Annelida,Polychaeta,Terebellida,Terebellidae,Terebellides,Terebellides_malvinensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+607,All,Annelida,Polychaeta,,Travisiidae,Travisia,Travisia_kerguelensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Bremec_etal_2019,,,,
+608,All,Annelida,Polychaeta,Phyllodocida,Nereididae,Eunereis,Eunereis_patagonica,Polychaeta,Benthos,No,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
+609,Spring,Annelida,Polychaeta,Phyllodocida,Polynoidae,Harmothoe,Harmothoe_sp,Polychaeta,Benthos,Yes,2,NA,NA,100,NA,Ta/Me,Bremec_etal_2019; Spinelli_etal_2020,,,,
+610,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Hermadion,Hermadion_magalhaensi,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
+611,All,Annelida,Polychaeta,Terebellida,Terebellidae,Nicolea,Nicolea_chilensis,Polychaeta,Benthos,Yes,NA,NA,NA,50,NA,Ta/Me,Bremec_etal_2019,,,,
+612,All,Annelida,Polychaeta,Phyllodocida,Nereididae,Nicon,Nicon_maculata,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
+613,All,Annelida,Polychaeta,Terebellida,Terebellidae,Pista,Pista_mirabilis,Polychaeta,Benthos,Yes,NA,NA,NA,100,NA,Ta/Me,Bremec_etal_2019,,,,
+614,All,Annelida,Polychaeta,Phyllodocida,Polynoidae,Polyeunoa,Polyeunoa_laevis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
+615,Autumn,Annelida,Polychaeta,Sabellida,Sabellidae,,Potamilla_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
+616,All,Annelida,Polychaeta,Sabellida,Sabellidae,,Sabellidae3,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
+617,All,Annelida,Polychaeta,Sabellida,Serpulidae,Serpula,Serpula_narconensis,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Bremec_etal_2019,,,,
+618,All,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae1,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; Bremec_etal_2019,,,,
+619,All,Annelida,Polychaeta,Terebellida,Terebellidae,Thelepus,Thelepus_sp,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Bremec_etal_2019,,,,
+620,All,Annelida,Polychaeta,Phyllodocida,Syllidae,Trypanosyllis,Trypanosyllis_gigantea,Polychaeta,Benthos,No,NA,NA,NA,120,NA,Ta/Me,Bremec_etal_2019,,Calla_pers.com.,,
+621,NA,NA,NA,NA,NA,NA,Polynoidae,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+622,NA,NA,NA,NA,NA,NA,Syllidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+623,NA,NA,NA,NA,NA,NA,Polychaeta,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+624,NA,NA,NA,NA,NA,NA,Sabellidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+625,NA,NA,NA,NA,NA,NA,Onuphidae,Polychaeta,Benthos,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+626,All,Annelida,Polychaeta,Eunicida,Onuphidae,Hyalinoecia,Hyalinoecia_artifex,Polychaeta,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Bremec_etal_2019,,,,
+627,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae4,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016; Bremec_etal_2019,,,,
+628,Autumn,Annelida,Polychaeta,Phyllodocida,Syllidae,,Syllidae5,Polychaeta,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016; Bremec_etal_2019,,,,
+629,All,Mollusca,Polyplacophora,Chitonida,Mopaliidae,Nuttallochiton,Nuttallochiton_martiali,Polyplacophora,Benthos,Yes,NA,NA,NA,40,NA,Meseta,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
+630,All,Mollusca,Polyplacophora,Chitonida,Chitonidae,Tonicia,Tonicia_lebruni,Polyplacophora,Benthos,Yes,NA,NA,0.76,25,NA,Meseta,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
+631,All,Mollusca,Polyplacophora,Callochitonida,Callochitonidae,Callochiton,Callochiton_puniceus,Polyplacophora,Benthos,Yes,NA,NA,2.04,25,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
+632,All,Mollusca,Polyplacophora,Lepidopleurina,Leptochitonidae,Leptochiton,Leptochiton_kerguelensis,Polyplacophora,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Teso_etal_2019,,,,Info from Sup Info (Teso_etal_2019)
+633,All,Mollusca,Polyplacophora,Lepidopleurina,Leptochitonidae,Leptochiton,Leptochiton_medinae,Polyplacophora,Benthos,Yes,NA,NA,NA,10,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
+634,All,Mollusca,Polyplacophora,Chitonida,Mopaliidae,Nuttallochiton,Nuttallochiton_hyadesi,Polyplacophora,Benthos,Yes,NA,NA,NA,40,NA,Ta/Me,Teso_etal_2019,https://doi.org/10.1186/s12898-019-0263-7,Urteaga_pers.com.,,Info from Sup Info (Teso_etal_2019)
+635,NA,NA,NA,NA,NA,NA,Chitons,Polyplacophora,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+636,Autumn,Porifera,Demospongiae,Halichondrida,,,Halichondrida,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+637,Autumn,Porifera,Demospongiae,Haplosclerida,,,Haplosclerida1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+638,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+639,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+640,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp1,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+641,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+642,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,Myxilla,Myxilla_sp3,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+643,Autumn,Porifera,Calcarea,Leucosolenida,Sycettidae,Sycon,Sycon_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+644,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_massa,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+645,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_mucosa,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+646,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,,,,
+647,NA,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Clathria)_toxipraedita,Porifera,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2017b,,,,Original description Topsent (1913)
+648,Autumn,Porifera,Demospongiae,Haplosclerida,Chalinidae,Haliclona,Haliclona_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
+649,Autumn,Porifera,Demospongiae,Poecilosclerida,Mycalidae,Mycale,Mycale_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
+650,NA,NA,NA,NA,NA,NA,Porifera,Porifera,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
+651,Autumn,Porifera,Demospongiae,Poecilosclerida,Cladorhizidae,Asbestopluma,Asbestopluma_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2019; 2020a,,,,AMPNBB-II
+652,Autumn,Porifera,Demospongiae,Tetractinellida,Tetillidae,Craniella,Craniella_leptoderma,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+653,Autumn,Porifera,Demospongiae,Haplosclerida,,,Haplosclerida2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+654,Autumn,Porifera,Hexactinellida,,,,Hexactinellida,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+655,Autumn,Porifera,Demospongiae,Poecilosclerida,Isodictyidae,Isodictya,Isodictya_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+656,Autumn,Porifera,Demospongiae,Poecilosclerida,Latrunculiidae,Latrunculia,Latrunculia_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+657,Autumn,Porifera,Demospongiae,Poecilosclerida,Coelosphaeridae,Lissodendoryx,Lissodendoryx_sp,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+658,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,,Microcionidae_sp3,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+659,Autumn,Porifera,Demospongiae,Poecilosclerida,Myxillidae,,Myxillina_indet,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+660,Autumn,Porifera,Demospongiae,Poecilosclerida,Tedaniidae,Tedania,Tedania_charcoti,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
+661,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Antho,Antho_(Plocamia)_bremecae,Porifera,Benthos,No,NA,NA,NA,45,NA,Talud,Schejter_etal_2017b,,,,
+662,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Axosuberites)_nidificata,Porifera,Benthos,No,NA,NA,NA,40,NA,Talud,Schejter_etal_2017b,,,,
+663,Autumn,Porifera,Demospongiae,Poecilosclerida,Microcionidae,Clathria,Clathria_(Microciona)_antarctica,Porifera,Benthos,No,NA,NA,NA,64,NA,Talud,Schejter_etal_2017b,,,,
+664,All,Chordata,Aves,Procellariiformes,Procellariidae,Ardenna,Ardenna_gravis,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+665,All,Chordata,Aves,Procellariiformes,Procellariidae,Ardenna,Ardenna_grisea,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+666,All,Chordata,Aves,Procellariiformes,Procellariidae,Daption,Daption_capense,SeaBirds,SeaBirds,Yes,NA,NA,409,NA,NA,NA,RayaRey_pers.com.,,,,
+667,All,Chordata,Aves,Procellariiformes,Diomedeidae,Diomedea,Diomedea_sp,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+668,Spring,Chordata,Aves,Sphenisciformes,Spheniscidae,Eudyptes,Eudyptes_chrysocome,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+669,All,Chordata,Aves,Procellariiformes,Procellariidae,Fulmarus,Fulmarus_glacialoides,SeaBirds,SeaBirds,Yes,NA,NA,29,NA,NA,NA,RayaRey_pers.com.,,,,
+670,All,Chordata,Aves,Procellariiformes,Procellariidae,Macronectes,Macronectes_giganteus,SeaBirds,SeaBirds,Yes,NA,NA,3697,NA,NA,NA,RayaRey_pers.com.,,,,
+671,All,Chordata,Aves,Procellariiformes,Procellariidae,Macronectes,Macronectes_halli,SeaBirds,SeaBirds,Yes,NA,NA,3624,NA,NA,NA,RayaRey_pers.com.,,,,
+672,All,Chordata,Aves,Procellariiformes,Hydrobatidae,Oceanites,Oceanites_sp,SeaBirds,SeaBirds,Yes,NA,NA,15,NA,NA,NA,RayaRey_pers.com.,,,,Taken from Oceanites_oceanicus
+673,All,Chordata,Aves,Procellariiformes,Procellariidae,Pachyptila,Pachyptila_sp,SeaBirds,SeaBirds,Yes,NA,NA,22,NA,NA,NA,RayaRey_pers.com.,,,,Taken from Pachyptila_belcheri
+674,All,Chordata,Aves,Procellariiformes,Pelecanoididae,Pelecanoides,Pelecanoides_sp,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+675,All,Chordata,Aves,Pelecaniformes,Phalacrocoracidae,Phalacrocorax,Phalacrocorax_atriceps,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+676,All,Chordata,Aves,Procellariiformes,Procellariidae,Procellaria,Procellaria_aequinoctialis,SeaBirds,SeaBirds,Yes,NA,NA,31,NA,NA,NA,RayaRey_pers.com.,,,,
+677,Spring,Chordata,Aves,Sphenisciformes,Spheniscidae,Spheniscus,Spheniscus_magellanicus,SeaBirds,SeaBirds,Yes,NA,NA,NA,NA,NA,NA,RayaRey_pers.com.,,,,
+678,All,Chordata,Aves,Procellariiformes,Diomedeidae,Thalassarche,Thalassarche_chrysostoma,SeaBirds,SeaBirds,Yes,NA,NA,3753,NA,NA,NA,RayaRey_pers.com.,,,,
+679,All,Chordata,Aves,Procellariiformes,Diomedeidae,Thalassarche,Thalassarche_melanophris,SeaBirds,SeaBirds,Yes,NA,NA,3232,NA,NA,NA,RayaRey_pers.com.,,,,
+680,Spring,Ochrophyta,Dictyochophyceae,Dictyochales,Dictyochaceae,Dictyocha,Dictyocha_speculum,Silicoflagellates,Phytoplankton,Yes,NA,10,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
+681,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_australis,Zooplankton,Zooplankton,Yes,26,NA,NA,3.6,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Calanus_spp
+682,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_simillimus,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Calanus_spp
+683,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_brevipes,Zooplankton,Zooplankton,Yes,18,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
+684,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_laticeps,Zooplankton,Zooplankton,Yes,8,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
+685,Spring,Arthropoda,Hexanauplia,Calanoida,,,Calanus_spp,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Calanus_australis y C._australis
+686,Spring,Arthropoda,Hexanauplia,Calanoida,,,Clausocalanus_spp,Zooplankton,Zooplankton,Yes,13,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Clausocalanus_brevipes y Cl._laticeps
+687,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Ctenocalanus,Ctenocalanus_vanus,Zooplankton,Zooplankton,Yes,34,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
+688,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Drepanopus,Drepanopus_forcipatus,Zooplankton,Zooplankton,Yes,299,7.68,NA,1.92,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
+689,Spring,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Euphausia,Euphausia_lucens,Zooplankton,Zooplankton,Yes,16.75,NA,NA,10,NA,Meseta,Spinelli_etal_2020,,Temperoni_etal_2013,,Collapsed as Euphausia_spp
+690,Spring,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Euphausia,Euphausia_vallentini,Zooplankton,Zooplankton,Yes,16.75,NA,NA,20,NA,Meseta,Spinelli_etal_2020,,Gonzalez_etal_2016,,Collapsed as Euphausia_spp
+691,Spring,Arthropoda,NA,NA,NA,NA,Larvae_Nauplii,Zooplankton,Zooplankton,Yes,2000,1.33,NA,0.28,NA,Meseta,Spinelli_etal_2020,,,,
+692,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Neocalanus,Neocalanus_tonsus,Zooplankton,Zooplankton,Yes,20,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
+693,Spring,Arthropoda,Hexanauplia,Cyclopoida,Oithonidae,Oithona,Oithona_atlantica,Zooplankton,Zooplankton,Yes,32,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Oithona_spp
+694,Spring,Arthropoda,Hexanauplia,Cyclopoida,Oithonidae,Oithona,Oithona_similis,Zooplankton,Zooplankton,Yes,93,1.4,NA,0.95,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Oithona_spp
+695,NA,NA,NA,NA,NA,NA,Oithona_spp,Zooplankton,Zooplankton,Yes,62.5,1.4,NA,0.95,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Oithona_atlantica y O._similis
+696,Spring,Arthropoda,Hexanauplia,Calanoida,Rhincalanoidae,Rhincalanus,Rhincalanus_gigas,Zooplankton,Zooplankton,Yes,66,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
+697,Spring,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,Pseudosagitta,Pseudosagitta_gazellae,Zooplankton,Zooplankton,Yes,0.4,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+698,Spring,Chordata,Appendicularia,Copelata,Fritillariidae,Fritillaria,Fritillaria_borealis,Zooplankton,Zooplankton,Yes,NA,NA,NA,0.585,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,Collapsed as Appendicularia_spp
+699,Spring,Chordata,Appendicularia,Copelata,Oikopleuridae,Oikopleura,Oikopleura_fusiformis,Zooplankton,Zooplankton,Yes,67.6,NA,NA,0.734,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,Collapsed as Appendicularia_spp
+700,Spring,Chordata,Appendicularia,,,,Appendicularia_spp,Zooplankton,Zooplankton,Yes,67.6,NA,NA,0.660,NA,Meseta,Spinelli_etal_2020,,Fernandez_etal_2004,,
+701,Spring,Ctenophora,Tentaculata,Cydippida,Pleurobrachiidae,Tinerfe,Tinerfe_cyanea,Zooplankton,Zooplankton,Yes,0.2,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+702,NA,Arthropoda,Hexanauplia,NA,NA,NA,Copepodite,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Bruno_pers.com.,,,,
+703,NA,Chaetognatha,Sagittoidea,Phragmophora,Eukrohniidae,Eukrohnia,Eukrohnia_hamata,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Tesista_Capitanio_GarciaAlonso,,,,
+704,NA,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,Serratosagitta,Serratosagitta_tasmanica,Zooplankton,,Yes,NA,NA,NA,NA,NA,Meseta,Tesista_Capitanio_GarciaAlonso,,,,
+705,All,Chordata,NA,NA,NA,NA,SmallLarvae_Fish,Zooplankton,Zooplankton,ToBeAdded,228,NA,NA,5,0.30,Ta/Me,GarciaAlonso_etal_2018; 2020,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fuegensis
+706,All,Chordata,NA,NA,NA,NA,LargeLarvae_Fish,Zooplankton,,ToBeAdded,228,NA,NA,33,0.06,Ta/Me,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fuegensis
+707,All,Chordata,NA,NA,NA,NA,Larvae_Fish,Zooplankton,,Yes,NA,NA,NA,NA,NA,Ta/Me,GarciaAlonso_etal_2018; 2020,https://doi.org/10.1007/s00300-018-2352-z,,,
+708,Spring,NA,NA,NA,NA,NA,Eggs_Fish,Zooplankton,Zooplankton,Yes,2500,NA,NA,NA,NA,Ta/Me,GarciaAlonso_etal_2018; Vazquez_etal_2017,https://doi.org/10.1007/s00300-018-2352-z,GarciaAlonso_etal_2018,https://doi.org/10.1007/s00300-018-2352-z,Taken from Sprattus_fueguensis; Schroedericthys_bivius
+709,NA,NA,NA,NA,NA,NA,Zooplankton,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
+710,NA,NA,NA,NA,NA,NA,Calanoida,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
+711,NA,NA,NA,NA,NA,NA,Copepoda,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
+712,NA,NA,NA,NA,NA,NA,Euphausia_spp,Zooplankton,NA,Yes,16.75,NA,NA,15,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: E._lucens y E._vallentini
