@@ -3,10 +3,9 @@
 # Fecha: 09/11/2021
 
 
-## Paquetes ----
+# Paquetes ----
 
-packages <- c("tidyverse", "ggplot2", "naniar", "igraph", "multiweb",
-              "NetIndices", "ggjoy")
+packages <- c("tidyverse", "ggplot2", "igraph", "multiweb", "NetIndices")
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
@@ -16,12 +15,12 @@ ipak <- function(pkg){
 ipak(packages)
 
 
-## Cargar datos ----
+# Cargar datos ----
 
-load("data/cleaned-data_jul22.rda")
+load("data/cleaned-data_ago_22.rda")
 
 
-## Red trófica ----
+# Red trófica ----
 
 # Interacciones de baja resolución (*)
 int_need_res <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
@@ -37,8 +36,8 @@ int_good_res <- int_raw %>%
 int_good_res <- int_good_res[,1:6] %>% 
   relocate(any_of(c("Prey", "Predator", "PreyGroup", "PredGroup", "PredStrategy", "FoodSource")))
 
-# Crear objeto igraph y asignar atributos
-#load("../../IMDEA/R/BalticFW.Rdata")
+## Objeto igraph ----
+
 g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
 
 sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
@@ -46,10 +45,11 @@ sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>%
   relocate(any_of(c("FunctionalGroup", "Zone", "TrophicSpecies"))) %>% rename(id = TrophicSpecies)
 
 g <- g %>% 
-  set_edge_attr("Prey Group", value = int_ok[,3]) %>% 
-  set_edge_attr("Pred Group", value = int_ok[,4]) %>% 
-  set_edge_attr("Pred Strategy", value = int_ok[,5]) %>% 
-  set_edge_attr("Food Source", value = int_ok[,6])
+  set_edge_attr("Prey Group", value = int_good_res[,3]) %>% 
+  set_edge_attr("Pred Group", value = int_good_res[,4]) %>% 
+  set_edge_attr("Pred Strategy", value = int_good_res[,5]) %>% 
+  set_edge_attr("Food Source", value = int_good_res[,6])
+edge.attributes(g)
 
 df_g <- igraph::as_data_frame(g, 'both')
 df_g$vertices <- df_g$vertices %>% 

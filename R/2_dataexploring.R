@@ -3,10 +3,9 @@
 # Fecha: 09/11/2021
 
 
-## Paquetes ----
+# Paquetes ----
 
-packages <- c("tidyverse", "ggplot2", "naniar", "igraph", "multiweb",
-              "NetIndices", "ggjoy")
+packages <- c("tidyverse")
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
@@ -16,18 +15,20 @@ ipak <- function(pkg){
 ipak(packages)
 
 
-## Cargar datos ----
+# Cargar datos ----
 
-load("data/cleaned-data_julv2_22.rda")
+load("data/cleaned-data_ago_22.rda")
 
 
-## Lista de Especies ----
+# Lista de Especies ----
 
-# Resolución taxonómica de sp
+## Resolución taxonómica de sp ----
+
 sp_count <- sum(str_detect(sp_raw$TrophicSpecies, "_"))
 sp_res <- sp_count/nrow(sp_raw)
 
-# Grupos funcionales
+## Grupos funcionales ----
+
 unique(sp_raw$FunctionalGroup)
 
 # Distribución de especies en GF
@@ -53,7 +54,8 @@ FGColors <- setNames(col_palette, levels(sp_raw$FunctionalGroup))
 # Zonas
 unique(sp_raw$Zone)
 
-# Distribución de especies en Z
+## Distribución de especies en Zonas ----
+
 zone_count <- sp_raw %>%
   count(Zone) %>%
   mutate(Zone = fct_reorder(Zone, n, .desc = TRUE))
@@ -67,7 +69,8 @@ zone_count <- sp_raw %>%
           axis.title.x = element_text(face = "bold", size = 16),
           axis.title.y = element_text(face = "bold", size = 16)))
 
-# Meseta
+### Meseta ----
+
 sp_mes <- sp_raw %>% 
   filter(Zone == "Meseta") %>% 
   count(FunctionalGroup) %>% 
@@ -87,7 +90,8 @@ sum(sp_mes$n)
           plot.title = element_text(size = 16)) +
     annotate("text",  x = Inf, y = Inf, label = paste("especies tróficas = ", sum(sp_mes$n), sep = ""), vjust=1, hjust=1))
 
-# Ta/Me
+### Talud/Meseta ----
+
 sp_talmes <- sp_raw %>% 
   filter(Zone == "Ta/Me") %>% 
   count(FunctionalGroup) %>% 
@@ -107,7 +111,8 @@ sum(sp_talmes$n)
           plot.title = element_text(size = 16)) +
     annotate("text",  x = Inf, y = Inf, label = paste("especies tróficas = ", sum(sp_talmes$n), sep = ""), vjust=1, hjust=1))
 
-# Talud
+### Talud ----
+
 sp_tal <- sp_raw %>% 
   filter(Zone == "Talud") %>% 
   count(FunctionalGroup) %>% 
@@ -127,7 +132,8 @@ sum(sp_tal$n)
           plot.title = element_text(size = 16)) +
     annotate("text",  x = Inf, y = Inf, label = paste("especies tróficas = ", sum(sp_tal$n), sep = ""), vjust=1, hjust=1))
 
-# Datos biológicos faltantes
+## Datos biológicos faltantes ----
+
 naniar::gg_miss_upset(sp_raw[,12:16], nsets = 5)
 
 (plot_faltan <- vis_miss(sp_raw[,12:16]) +
@@ -145,7 +151,25 @@ naniar::gg_miss_upset(sp_raw[,12:16], nsets = 5)
 gg_miss_var(sp_raw[,12:16], show_pct = TRUE) + ylim(0, 100)
 
 
-## Lista de Interacciones ----
+# Lista de Interacciones ----
+
+## Revision bibliografica ----
+
+biblio <- data.frame(unique(int_raw$Reference))
+colnames(biblio) <- "Reference"
+biblio <- biblio %>% 
+  mutate(Type = case_when(str_detect(Reference, "pers.com.") ~ "PersComm",
+                          str_detect(Reference, "etal") ~ "Article",
+                          str_detect(Reference, "&") ~ "Article",
+                          str_detect(Reference, "Encyclopedia of Life") ~ "DataBase",
+                          str_detect(Reference, "GloBI") ~ "DataBase",
+                          str_detect(Reference, "GATEWAy") ~ "DataBase",
+                          str_detect(Reference, "PhDTesis") ~ "Thesis",
+                          TRUE ~ "Article"))
+ggplot(biblio) +
+  geom_bar(aes(x = Type, fill = Type)) +
+  theme_bw() +
+  annotate("text", x = Inf, y = Inf, label = paste("Total = ", nrow(biblio), sep = ""), vjust=1, hjust=1)
 
 # Cantidad total de interacciones
 tot_int <- nrow(int_raw)
@@ -161,12 +185,13 @@ unique_FG <- unique(bind_rows(un.pred, un.prey))  # 35 groups
 col_palette <- scales::hue_pal()(nrow(unique_FG))
 FGColors <- setNames(col_palette, levels(unique_FG$Group))
 
-# Distribucion de spp en GF
+## Distribucion en grupos funcionales ----
+
 un.prey.sp <- as.data.frame(unique(int_raw$Prey))  # prey spp
 un.pred.sp <- as.data.frame(unique(int_raw$Predator))  # pred spp
 colnames(un.prey.sp) <- "TrophicSpecies"
 colnames(un.pred.sp) <- "TrophicSpecies"
-unique_spp <- unique(bind_rows(un.pred.sp, un.prey.sp))  # 510 spp
+unique_spp <- unique(bind_rows(un.pred.sp, un.prey.sp))  # 507 spp
 unique_spp$TrophicSpecies <- sub(" .*", "", unique_spp$TrophicSpecies)  # neglect *: indicates low taxonomic resolution
 
 sp_FG <- sp_raw[, c("TrophicSpecies", "FunctionalGroup")]
@@ -188,7 +213,8 @@ sum(group_sp$n)
           axis.text.y = element_text(size = 12),
           axis.text.x = element_text(angle = 45, hjust = 1, size = 14)))
 
-# Estrategia de alimentacion
+## Estrategia de alimentacion ----
+
 strategy_count <- int_raw %>% 
   count(PredStrategy) %>% 
   mutate(PredStrategy = fct_reorder(PredStrategy, n, .desc = TRUE))
@@ -212,7 +238,8 @@ int_susp <- int_raw %>%
   count(PredGroup) %>% 
   mutate(PredGroup = fct_reorder(PredGroup, n, .desc = TRUE))
 
-# Fuente de alimentacion
+## Fuente de alimentacion ----
+
 source_count <- int_raw %>% 
   count(FoodSource) %>% 
   mutate(FoodSource = fct_reorder(FoodSource, n, .desc = TRUE))
@@ -255,8 +282,9 @@ int_pp <- int_raw %>%
   count(PredGroup) %>% 
   mutate(PredGroup = fct_reorder(PredGroup, n, .desc = TRUE))
 
-# Interacciones baja resolucion
+## Interacciones baja resolucion ----
 # Necesitan especificacion
+
 int_need <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
                                   .vars_predicate = any_vars(str_detect(., "\\*$")))
 
@@ -280,7 +308,7 @@ int_need_pred <- int_need %>%
           axis.title.x = element_text(face = "bold", size = 16),
           axis.text.y = element_text(size = 12),
           axis.text.x = element_text(angle = 45, hjust = 1, size = 12)) +
-    annotate("text",  x = Inf, y = Inf, label = paste("presas que necesitan resolución = ", sum(int_need_prey$n), sep = ""), vjust=1, hjust=1))
+    annotate("text",  x = Inf, y = Inf, label = paste("presas de baja resolución = ", sum(int_need_prey$n), sep = ""), vjust=1, hjust=1))
 num_int_prey <- sum(int_need_prey$n)
 
 (plot_need_pred <- ggplot(int_need_pred, aes(x = PredGroup, y = n, fill = PredGroup)) + 
@@ -292,11 +320,11 @@ num_int_prey <- sum(int_need_prey$n)
           axis.title.x = element_text(face = "bold", size = 16),
           axis.text.y = element_text(size = 12),
           axis.text.x = element_text(angle = 45, hjust = 1, size = 14)) +
-    annotate("text",  x = Inf, y = Inf, label = paste("dep que necesitan resolución = ", sum(int_need_pred$n), sep = ""), vjust=1, hjust=1))
+    annotate("text",  x = Inf, y = Inf, label = paste("depredadores de baja resolución = ", sum(int_need_pred$n), sep = ""), vjust=1, hjust=1))
 num_int_pred <- sum(int_need_pred$n)
 
 
-## Listas por GF ----
+## Guardar listas grupo funcional ----
 
 sort(unique(int_raw$PredGroup))
 sort(unique(int_raw$PreyGroup))
