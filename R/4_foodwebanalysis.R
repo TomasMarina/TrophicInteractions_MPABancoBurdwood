@@ -3,10 +3,10 @@
 # Fecha: 09/11/2021
 
 
-## Paquetes ----
+# Paquetes ----
 
-packages <- c("tidyverse", "ggplot2", "naniar", "igraph", "multiweb",
-              "NetIndices", "ggjoy", "univariateML", "fitdistrplus", "gamlss")
+packages <- c("tidyverse", "ggplot2", "igraph", "multiweb", "cheddar",
+              "NetIndices", "univariateML", "fitdistrplus", "gamlss")
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
@@ -16,58 +16,29 @@ ipak <- function(pkg){
 ipak(packages)
 
 
-## Cargar datos ----
+# Cargar datos ----
 
-load("../data/cleaned-data_mar22.rda")
-load("../data/foodweb-data_mar22.rda")
-
-
-## Analisis topologico ----
-
-# Complejidad
-topol <- calc_topological_indices(g_giant)
-
-# Tipos de especies
-# Basales
-nBas <-length(V(g_giant)[indegree == 0])
-prop_Bas <- nBas/vcount(g_giant)
-# Tope
-nTop <- length(V(g_giant)[outdegree == 0])
-prop_Top <- nTop/vcount(g_giant)
-# Intermedias
-nInt <- vcount(g_giant) - nBas - nTop
-prop_Int <- 1 - prop_Bas - prop_Top
-
-nTot <- nBas + nInt + nTop  # tiene que ser = V(g_giant)
-
-# Omnivoria (prop)
-omn <- sum(V(g_giant)$Omn > 0)/vcount(g_giant)
+load("data/cleaned-data_ago22.rda")
+load("data/foodweb-data_ago22.rda")
 
 
-## Atributos de spp ----
+# Análisis ----
 
-data_id <- as.data.frame(1:topol$Size)
-data_name <- as.data.frame(V(g_giant)$name)
-data_fg <- as.data.frame(V(g_giant)$FunctionalGroup)
-data_degree <- as.data.frame(V(g_giant)$totdegree)
-data_indegree <- as.data.frame(V(g_giant)$indegree)
-data_outdegree <- as.data.frame(V(g_giant)$outdegree)
-data_tl <- as.data.frame(V(g_giant)$TL)
-data_omn <- as.data.frame(V(g_giant)$Omn)
-data_total <- bind_cols(data_id, data_name, data_fg, data_degree, data_indegree, 
-                        data_outdegree, data_tl, data_omn)
-colnames(data_total) <- c("ID", "TrophicSpecies", "FunctionalGroup", "Degree", 
-                          "NumPrey", "NumPred", "TL", "Omn")
+## Escala global ----
 
-# write.csv(data_total, file = "../results/data_foodweb_sp_mar22.csv")
+# Propiedades topológicas
+prop.topol <- multiweb::calc_topological_indices(g)
 
+# Prop. sp B, I y T
+prop.bas <- prop.topol$Basal/prop.topol$Size
+prop.top <- prop.topol$Top/prop.topol$Size
+prop.int <- 1 - (prop.bas + prop.top)
+prop.bas+prop.top+prop.int  # chequear sum(prop)=1
 
-## Distribución de grado ----
-
+# Distribución de grado
 # Histograma
-degree <- degree(g_giant, mode = "total")
-(plot_distdegree <- ggplot(as.data.frame(degree), aes(degree)) +
-    geom_histogram(stat = "count") +
+(plot_distdegree <- ggplot(as.data.frame(V(g)$TotalDegree), aes(V(g)$TotalDegree)) +
+    geom_histogram(stat = "count", bins = 100, alpha = 0.3, color = "black") +
     labs(x = "Cantidad de interacciones", y = "Frecuencia") +
     theme(legend.position = "none",
           axis.text.x = element_text(size = 14),
@@ -76,44 +47,86 @@ degree <- degree(g_giant, mode = "total")
           axis.title.y = element_text(face = "bold", size = 16)))
 
 # Función para evaluar ajuste con AIC y BIC
-aic.bic <- function(x){
-  
-  aic.result <- c(AIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x)))
-  
-  bic.result <- c(BIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x)))
-  
-  aic.result <- aic.result$AIC
-  bic.result <- bic.result$BIC
-  names(aic.result) <- c("uniform", "exp", "power", "lnorm", "norm")
-  names(bic.result) <- c("uniform", "exp", "power", "lnorm", "norm")
-  
-  result <- c(names(aic.result)[which.min(aic.result)], names(bic.result)[which.min(bic.result)])
-  
-  return(result)
-}
-
-dist_trof <- as.data.frame(V(g_giant)$totdegree)
-colnames(dist_trof) <- "degree"
-
-aic.bic(dist_trof[,1])
-descdist(dist_trof[,1], discrete = TRUE)
+x <- V(g)$TotalDegree
+aic.result <- c(AIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x), mlgamma(x)))
+deg_dist_fit <- bind_cols(aic.result) %>% 
+  mutate(Model = c("Uniform", "Exponential", "Power-law", "log-Normal", "Normal", "Gamma"),
+         deltaAIC = AIC - min(AIC)) %>% 
+  arrange(deltaAIC) %>% 
+  dplyr::select(Model, df, AIC, deltaAIC)
+deg_dist_fit
 
 # Comparar gráficamente datos y distribución
-ggplot(data = dist_trof) +
-  geom_histogram(aes(x = degree, y = after_stat(density)), bins = 100, alpha = 0.3, color = "black") +
-  geom_rug(aes(x = degree)) +
-  stat_function(fun = function(.x){dml(x = .x, obj = mlnorm(dist_trof[,1]))},
+degree <- as.data.frame(V(g)$TotalDegree)
+colnames(degree) <- "Degree"
+ggplot(data = degree) +
+  geom_histogram(aes(x = Degree, y = after_stat(density)), bins = 100, alpha = 0.3, color = "black") +
+  geom_rug(aes(x = Degree)) +
+  stat_function(fun = function(.x){dml(x = .x, obj = mlnorm(degree[,1]))},
                 aes(color = "Normal"), size = 1) +
-  stat_function(fun = function(.x){dml(x = .x, obj = mlexp(dist_trof[,1]))},
+  stat_function(fun = function(.x){dml(x = .x, obj = mlexp(degree[,1]))},
                 aes(color = "Exponential"), size = 1) +
-  stat_function(fun = function(.x){dml(x = .x, obj = mlunif(dist_trof[,1]))},
+  stat_function(fun = function(.x){dml(x = .x, obj = mlunif(degree[,1]))},
                 aes(color = "Uniform"), size = 1) +
-  stat_function(fun = function(.x){dml(x = .x, obj = mllnorm(dist_trof[,1]))},
+  stat_function(fun = function(.x){dml(x = .x, obj = mllnorm(degree[,1]))},
                 aes(color = "Log-Normal"), size = 1) +
-  stat_function(fun = function(.x){dml(x = .x, obj = mlpower(dist_trof[,1]))},
+  stat_function(fun = function(.x){dml(x = .x, obj = mlpower(degree[,1]))},
                 aes(color = "Power-law"), size = 1) +
-  labs(title = "Degree Distribution Trophic (trophic)", color = "Model",
-       x = "Degree (K)", y = "p(K)")
+  stat_function(fun = function(.x){dml(x = .x, obj = mlgamma(degree[,1]))},
+                aes(color = "Gamma"), size = 1) +
+  labs(title = "Degree Distribution", color = "Model",
+       x = "Degree (k)", y = "p(k)")
+
+
+## Escala subgrupos ----
+
+# Modularidad
+# SEGUIR ACÁ ----
+
+## Escala especie ----
+
+# Nivel trófico y Omnivoría
+adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
+tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
+V(g)$TL <- tl$TL
+V(g)$Omn <- tl$OI
+
+# Degree
+V(g)$TotalDegree <- degree(g, mode = "total")
+V(g)$InDegree <- degree(g, mode = "in")
+V(g)$OutDegree <- degree(g, mode = "out")
+
+vertex.attributes(g)
+vertex_attr_names(g)
+
+# Similitud trófica (Trophic similarity)
+source("R/igraph_cheddar.R")  # load function to convert igraph to cheddar object
+igraph_to_cheddar(g)
+
+cc <- LoadCommunity("Community")
+ts <- TrophicSimilarity(cc)
+mts <- tibble(TrophicSpecies = rownames(ts), meanTrophicSimil = colMeans(ts))  # data frame
+
+# Guardar como data frame y .csv
+spp_id <- as.data.frame(1:prop.topol$Size)
+spp_name <- as.data.frame(V(g)$name)
+spp_fg <- as.data.frame(V(g)$FunctionalGroup)
+spp_totdegree <- as.data.frame(V(g)$TotalDegree)
+spp_indegree <- as.data.frame(V(g)$InDegree)
+spp_outdegree <- as.data.frame(V(g)$OutDegree)
+spp_tl <- as.data.frame(V(g)$TL)
+spp_omn <- as.data.frame(V(g)$Omn)
+spp_total <- bind_cols(spp_id, spp_name, spp_fg, spp_totdegree, spp_indegree, 
+                        spp_outdegree, spp_tl, spp_omn)
+colnames(spp_total) <- c("ID", "TrophicSpecies", "FunctionalGroup", "TotalDegree", 
+                          "NumPrey", "NumPred", "TL", "Omn")
+spp_total <- spp_total %>% 
+  left_join(mts)
+
+#write_csv(spp_total, file = "results/spp_prop_ago22.csv")
+
+
+
 
 # Distribución de grado por sp y NT
 spp_nt_12 <- length(data_total$TL[data_total$TL < 2])

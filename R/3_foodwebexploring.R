@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_ago_22.rda")
+load("data/cleaned-data_ago22.rda")
 
 
 # Red trófica ----
@@ -31,10 +31,10 @@ int_need_res <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
 # Omitir interacciones de baja resolución
 int_good_res <- int_raw %>% 
   filter(!str_detect(Prey, "\\*$")) %>% 
-  filter(!str_detect(Predator, "\\*$"))
+  filter(!str_detect(Predator, "\\*$")) %>% 
+  dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
+  distinct(Prey, Predator, .keep_all = TRUE)
 
-int_good_res <- int_good_res[,1:6] %>% 
-  relocate(any_of(c("Prey", "Predator", "PreyGroup", "PredGroup", "PredStrategy", "FoodSource")))
 
 ## Objeto igraph ----
 
@@ -57,10 +57,13 @@ df_g$vertices <- df_g$vertices %>%
 g <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
 vertex.attributes(g)
 
-g_dec <- decompose(g, mode = "weak")
-g_giant <- g_dec[[1]]  # 1 sola componente
+# Chequear número componentes
+g_dec <- decompose(g, mode = "weak")  # 1 sola componente
+g_dec
 
-# Distribucion de spp en GF
+
+## Distribucion de spp en GF ----
+
 group_sp <- as.data.frame((V(g)$name)) %>% 
   mutate(as.data.frame(V(g)$FunctionalGroup)) %>%
   rename("TrophicSpecies" = 1, "FunctionalGroup" = 2)
@@ -68,7 +71,7 @@ group_sp <- as.data.frame((V(g)$name)) %>%
 group_sp <- group_sp %>%
   count(FunctionalGroup) %>%
   mutate(FunctionalGroup = fct_reorder(FunctionalGroup, n, .desc = TRUE))
-sum(group_sp$n)
+sum(group_sp$n)  # spp totales
 (plot_group <- ggplot(group_sp, aes(x = FunctionalGroup, y = n, fill = FunctionalGroup)) + 
     geom_bar(stat = "identity") +
     labs(x = "Grupos funcionales", y = "Especies tróficas") +
@@ -78,43 +81,21 @@ sum(group_sp$n)
           axis.text.y = element_text(size = 12),
           axis.text.x = element_text(angle = 45, hjust = 1, size = 14)))
 
-# Resolución de la red: spp e interacciones
-res_sp <- as.data.frame(V(g_giant)$name)
+
+## Resolución de la red ----
+
+res_sp <- as.data.frame(V(g)$name)
 sp_count <- sum(str_detect(res_sp[,1], "_"))
-sp_prop <- sp_count/vcount(g_giant)  # spp
-int_prop <- ((nrow(int_raw) - nrow(int_need))/nrow(int_raw))  # interacciones
-
-# Calcular NT y Omn
-adj_mat <- get.adjacency(g_giant, sparse = FALSE)
-tl <- round(TrophInd(adj_mat), digits = 3)
-degree <- degree(g_giant, mode = "total")
-V(g_giant)$TL <- tl$TL
-V(g_giant)$Omn <- tl$OI
-V(g_giant)$totdegree <- degree
-vertex.attributes(g_giant)
-
-# Calcular presas y depredadores por sp
-out.deg <- degree(g_giant, mode = "out")
-V(g_giant)$outdegree <-  out.deg
-in.deg <- degree(g_giant, mode = "in")
-V(g_giant)$indegree <-  in.deg
-
-# Graficar
-
-plotTrophLevel(g_giant)
-
-layout_trophic <- matrix(nrow = length(V(g_giant)), ncol = 2)
-layout_trophic[, 1] <- runif(length(V(g_giant)))
-layout_trophic[, 2] <- tl$TL
-plot_fw <- plot.igraph(g_giant,
-                       vertex.size = degree*0.25,
-                       vertex.label = NA,
-                       layout = layout_trophic,
-                       edge.width = .5,
-                       edge.arrow.size = 0.15, edge.curved = 0.3)
+sp_prop <- sp_count/vcount(g)  # spp
+int_prop <- ((nrow(int_raw) - nrow(int_need_res))/nrow(int_raw))  # interacciones
 
 
-## Save data ----
+## Graficar ----
 
-save(g, g_giant, int_ok,
-     file = "data/foodweb-data_jul22.rda")
+plotTrophLevel(g)
+
+
+# Save data ----
+
+save(g, int_need_res, int_good_res,
+     file = "data/foodweb-data_ago22.rda")
