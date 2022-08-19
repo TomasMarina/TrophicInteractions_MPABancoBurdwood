@@ -37,8 +37,9 @@ prop.bas+prop.top+prop.int  # chequear sum(prop)=1
 
 # Distribución de grado
 # Histograma
-(plot_distdegree <- ggplot(as.data.frame(V(g)$TotalDegree), aes(V(g)$TotalDegree)) +
-    geom_histogram(stat = "count", bins = 100, alpha = 0.3, color = "black") +
+degree <- as.data.frame(degree(g, mode = "total"))
+(plot_distdegree <- ggplot(degree, aes(degree[,1])) +
+    geom_histogram(bins = 100, alpha = 0.3, color = "black") +
     labs(x = "Cantidad de interacciones", y = "Frecuencia") +
     theme(legend.position = "none",
           axis.text.x = element_text(size = 14),
@@ -47,7 +48,7 @@ prop.bas+prop.top+prop.int  # chequear sum(prop)=1
           axis.title.y = element_text(face = "bold", size = 16)))
 
 # Función para evaluar ajuste con AIC y BIC
-x <- V(g)$TotalDegree
+x <- degree[,1]
 aic.result <- c(AIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x), mlgamma(x)))
 deg_dist_fit <- bind_cols(aic.result) %>% 
   mutate(Model = c("Uniform", "Exponential", "Power-law", "log-Normal", "Normal", "Gamma"),
@@ -57,11 +58,9 @@ deg_dist_fit <- bind_cols(aic.result) %>%
 deg_dist_fit
 
 # Comparar gráficamente datos y distribución
-degree <- as.data.frame(V(g)$TotalDegree)
-colnames(degree) <- "Degree"
 ggplot(data = degree) +
-  geom_histogram(aes(x = Degree, y = after_stat(density)), bins = 100, alpha = 0.3, color = "black") +
-  geom_rug(aes(x = Degree)) +
+  geom_histogram(aes(x = degree[,1], y = after_stat(density)), bins = 100, alpha = 0.3, color = "black") +
+  geom_rug(aes(x = degree[,1])) +
   stat_function(fun = function(.x){dml(x = .x, obj = mlnorm(degree[,1]))},
                 aes(color = "Normal"), size = 1) +
   stat_function(fun = function(.x){dml(x = .x, obj = mlexp(degree[,1]))},
@@ -81,7 +80,13 @@ ggplot(data = degree) +
 ## Escala subgrupos ----
 
 # Modularidad
-# SEGUIR ACÁ ----
+mod <- multiweb::calc_modularity(g, weights = NULL)
+modulos <- cluster_spinglass(g)  # módulos
+# Roles topológicos
+top.role <- multiweb::calc_topological_roles(g, nsim = 100, ncores = 4)
+clas.role <- multiweb::classify_topological_roles(top.role, g, plt = TRUE)
+top.role.df <- clas.role %>% mutate(module = modulos$membership[node])
+
 
 ## Escala especie ----
 
@@ -126,6 +131,10 @@ spp_total <- spp_total %>%
 #write_csv(spp_total, file = "results/spp_prop_ago22.csv")
 
 
+# Guardar datos ----
+
+save(g, deg_dist_fit, prop.topol, top.role, top.role.df, spp_total,
+     file = "results/summary_results.rda")
 
 
 # Distribución de grado por sp y NT
