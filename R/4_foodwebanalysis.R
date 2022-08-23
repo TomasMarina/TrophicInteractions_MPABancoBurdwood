@@ -85,28 +85,44 @@ modulos <- cluster_spinglass(g)  # módulos
 # Roles topológicos
 top.role <- multiweb::calc_topological_roles(g, nsim = 100, ncores = 4)
 clas.role <- multiweb::classify_topological_roles(top.role, g, plt = TRUE)
-top.role.df <- clas.role %>% mutate(module = modulos$membership[node])
+top.role.df <- clas.role %>% 
+  mutate(Module = modulos$membership[node]) %>% 
+  rename(TrophicSpecies = name, TopRole = type) %>% 
+  dplyr::select(TrophicSpecies, TopRole)
+# Incluir en objeto g
+df_g <- igraph::as_data_frame(g, 'both')
+df_g$vertices <- df_g$vertices %>% 
+  left_join(top.role.df, c('name' = 'TrophicSpecies'))
+g_up <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
+
+vertex_attr_names(g_up)
+vertex_attr(g_up)
 
 
 ## Escala especie ----
 
 # Nivel trófico y Omnivoría
-adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
+adj_mat <- as_adjacency_matrix(g_up, sparse = TRUE)
 tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
-V(g)$TL <- tl$TL
-V(g)$Omn <- tl$OI
+V(g_up)$TL <- tl$TL
+V(g_up)$Omn <- tl$OI
 
 # Degree
-V(g)$TotalDegree <- degree(g, mode = "total")
-V(g)$InDegree <- degree(g, mode = "in")
-V(g)$OutDegree <- degree(g, mode = "out")
+V(g_up)$TotalDegree <- degree(g_up, mode = "total")
+V(g_up)$InDegree <- degree(g_up, mode = "in")
+V(g_up)$OutDegree <- degree(g_up, mode = "out")
 
-vertex.attributes(g)
-vertex_attr_names(g)
+# Betweenness
+V(g_up)$Btw <- betweenness(g_up, directed = TRUE, cutoff = -1)
+
+# Closeness
+V(g_up)$Close <- closeness(g_up, mode = "all", cutoff = -1)
+
+vertex_attr_names(g_up)
 
 # Similitud trófica (Trophic similarity)
 source("R/igraph_cheddar.R")  # load function to convert igraph to cheddar object
-igraph_to_cheddar(g)
+igraph_to_cheddar(g_up)
 
 cc <- LoadCommunity("Community")
 ts <- TrophicSimilarity(cc)
@@ -114,25 +130,28 @@ mts <- tibble(TrophicSpecies = rownames(ts), meanTrophicSimil = colMeans(ts))  #
 
 # Guardar como data frame y .csv
 spp_id <- as.data.frame(1:prop.topol$Size)
-spp_name <- as.data.frame(V(g)$name)
-spp_fg <- as.data.frame(V(g)$FunctionalGroup)
-spp_totdegree <- as.data.frame(V(g)$TotalDegree)
-spp_indegree <- as.data.frame(V(g)$InDegree)
-spp_outdegree <- as.data.frame(V(g)$OutDegree)
-spp_tl <- as.data.frame(V(g)$TL)
-spp_omn <- as.data.frame(V(g)$Omn)
+spp_name <- as.data.frame(V(g_up)$name)
+spp_fg <- as.data.frame(V(g_up)$FunctionalGroup)
+spp_totdegree <- as.data.frame(V(g_up)$TotalDegree)
+spp_indegree <- as.data.frame(V(g_up)$InDegree)
+spp_outdegree <- as.data.frame(V(g_up)$OutDegree)
+spp_btw <- as.data.frame(V(g_up)$Btw)
+spp_cls <- as.data.frame(V(g_up)$Close)
+spp_tl <- as.data.frame(V(g_up)$TL)
+spp_omn <- as.data.frame(V(g_up)$Omn)
 spp_total <- bind_cols(spp_id, spp_name, spp_fg, spp_totdegree, spp_indegree, 
-                        spp_outdegree, spp_tl, spp_omn)
+                        spp_outdegree, spp_btw, spp_cls, spp_tl, spp_omn)
 colnames(spp_total) <- c("ID", "TrophicSpecies", "FunctionalGroup", "TotalDegree", 
-                          "NumPrey", "NumPred", "TL", "Omn")
+                          "NumPrey", "NumPred", "Between", "Close", "TL", "Omn")
 spp_total <- spp_total %>% 
-  left_join(mts)
+  left_join(mts) %>% 
+  left_join(top.role.df)
 
 #write_csv(spp_total, file = "results/spp_prop_ago22.csv")
 
 
 # Guardar datos ----
 
-save(g, deg_dist_fit, prop.topol, top.role, top.role.df, spp_total,
+save(g_up, deg_dist_fit, prop.topol, top.role, top.role.df, spp_total,
      file = "results/summary_results.rda")
 
