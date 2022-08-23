@@ -26,7 +26,7 @@ load("results/summary_results.rda")
 ## Escala global ----
 
 # Red trófica por degree
-plot_troph_level(g)
+plot_troph_level(g_up)
 
 # Generality (generalistas vs especialistas)
 (plot_indeg <- spp_total %>% 
@@ -91,14 +91,17 @@ plot_distdegree_fg
 
 # Red trófica por grupo funcional 'FG'
 spp_total <- spp_total %>% 
-  select(FunctionalGroup, everything()) %>% 
+  dplyr::select(FunctionalGroup, everything()) %>% 
   left_join(unique_FG)
-g <- g %>% 
+g_up <- g_up %>% 
   set_vertex_attr("FGColor", value = spp_total$FGColor)
 #vertex_attr_names(g)
-plot_troph_level(g, vertex.color = V(g)$FGColor)
+plot_troph_level(g_up, vertex.color = V(g_up)$FGColor)
 legend("bottom", legend=unique_FG$FunctionalGroup, col = unique_FG$FGColor, ncol = 5,
        bty = "n", pch=20 , pt.cex = 3, cex = 1, inset=c(-0.2,0))
+
+# Roles topológicos
+plot_troph_level(g_up, weights = NA, vertex.color = as.factor(V(g_up)$TopRole.y))
 
 
 ## Escala especie ----
