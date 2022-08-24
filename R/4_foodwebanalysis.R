@@ -95,8 +95,6 @@ df_g$vertices <- df_g$vertices %>%
   left_join(top.role.df, c('name' = 'TrophicSpecies'))
 g_up <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
 
-vertex_attr_names(g_up)
-vertex_attr(g_up)
 
 
 ## Escala especie ----
@@ -146,6 +144,23 @@ colnames(spp_total) <- c("ID", "TrophicSpecies", "FunctionalGroup", "TotalDegree
 spp_total <- spp_total %>% 
   left_join(mts) %>% 
   left_join(top.role.df)
+
+# Agregar Habitat
+spp_total <- spp_total %>% 
+  mutate(Habitat = case_when(FunctionalGroup == "SeaBirds" ~ "Land-based",
+                             TrophicSpecies %in% c("Arctocephalus_australis", "Otaria_flavescens") ~ "Land-based",
+                             FunctionalGroup %in% c("Porifera", "Polyplacophora",
+                                                  "Polychaeta", "Echinodermata",
+                                                  "Gastropoda", "Cnidaria",
+                                                  "Ascidiacea", "Bryozoa",
+                                                  "Brachiopoda", "Benthos_Misc") ~ "Benthic",
+                             FunctionalGroup %in% c("Zooplankton", "Ciliates",
+                                                  "Cephalopoda", "Fish_Pel",
+                                                  "MarineMammals_1", "MarineMammals_3") ~ "Pelagic",
+                             TrophicSpecies %in% c("Lagenorhynchus_australis", 
+                                                   "Lagenorhynchus_cruciger", "Fish_BenPel") ~ "Benthopelagic",
+                             FunctionalGroup %in% c("Fish_Demersal") ~ "Demersal"))
+
 
 #write_csv(spp_total, file = "results/spp_prop_ago22.csv")
 
