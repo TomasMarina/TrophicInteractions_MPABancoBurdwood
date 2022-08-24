@@ -36,17 +36,7 @@ prop.int <- 1 - (prop.bas + prop.top)
 prop.bas+prop.top+prop.int  # chequear sum(prop)=1
 
 # Distribución de grado
-# Histograma
-degree <- as.data.frame(degree(g, mode = "total"))
-(plot_distdegree <- ggplot(degree, aes(degree[,1])) +
-    geom_histogram(bins = 100, alpha = 0.3, color = "black") +
-    labs(x = "Cantidad de interacciones", y = "Frecuencia") +
-    theme(legend.position = "none",
-          axis.text.x = element_text(size = 14),
-          axis.text.y = element_text(size = 14),
-          axis.title.x = element_text(face = "bold", size = 16),
-          axis.title.y = element_text(face = "bold", size = 16)))
-
+degree <- as.data.frame(degree(g_up, mode = "total"))
 # Función para evaluar ajuste con AIC y BIC
 x <- degree[,1]
 aic.result <- c(AIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x), mlgamma(x)))
@@ -55,7 +45,6 @@ deg_dist_fit <- bind_cols(aic.result) %>%
          deltaAIC = AIC - min(AIC)) %>% 
   arrange(deltaAIC) %>% 
   dplyr::select(Model, df, AIC, deltaAIC)
-deg_dist_fit
 
 # Comparar gráficamente datos y distribución
 ggplot(data = degree) +
@@ -73,8 +62,12 @@ ggplot(data = degree) +
                 aes(color = "Power-law"), size = 1) +
   stat_function(fun = function(.x){dml(x = .x, obj = mlgamma(degree[,1]))},
                 aes(color = "Gamma"), size = 1) +
-  labs(title = "Degree Distribution", color = "Model",
-       x = "Degree (k)", y = "p(k)")
+  labs(color = "Model", x = "Degree (k)", y = "p(k)") +
+  theme_bw() +
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 14),
+        axis.title.x = element_text(face = "bold", size = 16),
+        axis.title.y = element_text(face = "bold", size = 16))
 
 
 ## Escala subgrupos ----
@@ -163,6 +156,16 @@ spp_total <- spp_total %>%
 
 
 #write_csv(spp_total, file = "results/spp_prop_ago22.csv")
+
+
+
+# Resolución de la red ----
+
+res_sp <- as.data.frame(V(g_up)$name)
+good_res_sp <- sum(str_detect(res_sp[,1], "_"))
+gen_count <- sum(str_detect(res_sp[,1], "_sp"))
+sp_count <- good_res_sp - gen_count
+sp_prop <- sp_count/vcount(g_up)  # spp6
 
 
 # Guardar datos ----
