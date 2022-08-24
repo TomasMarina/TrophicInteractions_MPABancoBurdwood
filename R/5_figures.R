@@ -95,13 +95,24 @@ spp_total <- spp_total %>%
   left_join(unique_FG)
 g_up <- g_up %>% 
   set_vertex_attr("FGColor", value = spp_total$FGColor)
-#vertex_attr_names(g)
+
 plot_troph_level(g_up, vertex.color = V(g_up)$FGColor)
 legend("bottom", legend=unique_FG$FunctionalGroup, col = unique_FG$FGColor, ncol = 5,
        bty = "n", pch=20 , pt.cex = 3, cex = 1, inset=c(-0.2,0))
 
 # Roles topológicos
-plot_troph_level(g_up, weights = NA, vertex.color = as.factor(V(g_up)$TopRole.y))
+
+top.role.col <- hcl.colors(4, palette = "Purple-Green")
+TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
+TRColor <- as.data.frame(TRColor) %>% 
+  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+data_TRColor <- spp_total %>% 
+  dplyr::select(TopRole, everything()) %>% 
+  left_join(TRColor)
+g_up_c <- g_up %>% 
+  set_vertex_attr("TRColor", value = data_TRColor$TRColor)
+
+plot_troph_level(g_up_c, weights = NA, vertex.color = V(g_up_c)$TRColor)
 
 
 ## Escala especie ----
