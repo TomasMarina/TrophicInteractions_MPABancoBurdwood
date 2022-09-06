@@ -31,6 +31,7 @@ int_raw <- int_raw %>%
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
+                          Prey %in% c("Dinophysis_acuminata", "Gyrodinium_sp", "Gyrodinium_spirale", "Protoperidinium_sp") ~ "Dinoflagellates_heterosol",
                           TRUE ~ Prey)) %>% 
   mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
                                Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup))  # low-resolved Phytoplankton
@@ -41,4 +42,4 @@ int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with P
 ## Save data ----
 
 save(sp_raw, int_raw, 
-     file = "data/cleaned-data_agos22.rda")
+     file = "data/cleaned-data_sep22.rda")

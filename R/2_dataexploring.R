@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_ago22.rda")
+load("data/cleaned-data_sep22.rda")
 
 
 # Lista de Especies ----
@@ -169,6 +169,7 @@ biblio <- biblio %>%
 ggplot(biblio) +
   geom_bar(aes(x = Type, fill = Type)) +
   theme_bw() +
+  labs(x = "Reference", y = "Count") +
   annotate("text", x = Inf, y = Inf, label = paste("Total = ", nrow(biblio), sep = ""), vjust=1, hjust=1)
 
 # Cantidad total de interacciones
