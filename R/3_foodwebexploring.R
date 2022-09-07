@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_ago22.rda")
+load("data/cleaned-data_sep22.rda")
 
 
 # Red trófica ----
@@ -82,14 +82,6 @@ sum(group_sp$n)  # spp totales
           axis.text.x = element_text(angle = 45, hjust = 1, size = 14)))
 
 
-## Resolución de la red ----
-
-res_sp <- as.data.frame(V(g)$name)
-sp_count <- sum(str_detect(res_sp[,1], "_"))
-sp_prop <- sp_count/vcount(g)  # spp
-int_prop <- ((nrow(int_raw) - nrow(int_need_res))/nrow(int_raw))  # interacciones
-
-
 ## Graficar ----
 
 plotTrophLevel(g)
@@ -98,4 +90,4 @@ plotTrophLevel(g)
 # Save data ----
 
 save(g, int_need_res, int_good_res,
-     file = "data/foodweb-data_ago22.rda")
+     file = "data/foodweb-data_sep22.rda")

@@ -5,8 +5,7 @@
 
 # Paquetes ----
 
-packages <- c("tidyverse", "ggplot2", "igraph", "multiweb", "scales",
-              "ggjoy", "ggpubr")
+packages <- c("tidyverse", "ggplot2", "ggjoy", "ggpubr", "scales")
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
@@ -79,7 +78,7 @@ gen_vul_plot
 
 # Distribución interacciones por GF
 
-load("data/foodweb-data_ago22.rda")
+load("data/foodweb-data_sep22.rda")
 
 # Definir colores para cada GF
 un.prey <- as.data.frame(unique(int_good_res$PreyGroup))  # prey groups
@@ -176,6 +175,7 @@ top.role.col <- hcl.colors(4, palette = "Purple-Green")
 TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
 TRColor <- as.data.frame(TRColor) %>% 
   mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+show_col(top.role.col)  # shows color & code
 data_TRColor <- spp_total %>% 
   dplyr::select(TopRole, everything()) %>% 
   left_join(TRColor)

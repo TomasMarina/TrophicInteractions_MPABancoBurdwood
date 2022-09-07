@@ -18,8 +18,8 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_ago22.rda")
-load("data/foodweb-data_ago22.rda")
+load("data/cleaned-data_sep22.rda")
+load("data/foodweb-data_sep22.rda")
 
 
 # Análisis ----
@@ -36,7 +36,7 @@ prop.int <- 1 - (prop.bas + prop.top)
 prop.bas+prop.top+prop.int  # chequear sum(prop)=1
 
 # Distribución de grado
-degree <- as.data.frame(degree(g_up, mode = "total"))
+degree <- as.data.frame(degree(g, mode = "total"))
 # Función para evaluar ajuste con AIC y BIC
 x <- degree[,1]
 aic.result <- c(AIC(mlunif(x), mlexp(x), mlpower(x), mllnorm(x), mlnorm(x), mlgamma(x)))
@@ -82,12 +82,13 @@ top.role.df <- clas.role %>%
   mutate(Module = modulos$membership[node]) %>% 
   rename(TrophicSpecies = name, TopRole = type) %>% 
   dplyr::select(TrophicSpecies, TopRole)
+top.role.count <- top.role.df %>% 
+  count(TopRole)
 # Incluir en objeto g
 df_g <- igraph::as_data_frame(g, 'both')
 df_g$vertices <- df_g$vertices %>% 
   left_join(top.role.df, c('name' = 'TrophicSpecies'))
 g_up <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
-
 
 
 ## Escala especie ----
@@ -151,11 +152,12 @@ spp_total <- spp_total %>%
                                                   "Cephalopoda", "Fish_Pel",
                                                   "MarineMammals_1", "MarineMammals_3") ~ "Pelagic",
                              TrophicSpecies %in% c("Lagenorhynchus_australis", 
-                                                   "Lagenorhynchus_cruciger", "Fish_BenPel") ~ "Benthopelagic",
+                                                   "Lagenorhynchus_cruciger") ~ "Benthopelagic",
+                             FunctionalGroup %in% c("Fish_BenPel") ~ "Benthopelagic",
                              FunctionalGroup %in% c("Fish_Demersal") ~ "Demersal"))
 
 
-#write_csv(spp_total, file = "results/spp_prop_ago22.csv")
+#write_csv(spp_total, file = "results/spp_prop_sep22.csv")
 
 
 
@@ -165,7 +167,7 @@ res_sp <- as.data.frame(V(g_up)$name)
 good_res_sp <- sum(str_detect(res_sp[,1], "_"))
 gen_count <- sum(str_detect(res_sp[,1], "_sp"))
 sp_count <- good_res_sp - gen_count
-sp_prop <- sp_count/vcount(g_up)  # spp6
+sp_prop <- sp_count/vcount(g_up)
 
 
 # Guardar datos ----
