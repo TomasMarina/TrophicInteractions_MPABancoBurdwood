@@ -160,7 +160,6 @@ spp_total <- spp_total %>%
 #write_csv(spp_total, file = "results/spp_prop_sep22.csv")
 
 
-
 # Resolución de la red ----
 
 res_sp <- as.data.frame(V(g_up)$name)
