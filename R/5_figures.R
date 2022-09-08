@@ -5,7 +5,8 @@
 
 # Paquetes ----
 
-packages <- c("tidyverse", "ggplot2", "ggjoy", "ggpubr", "scales")
+packages <- c("tidyverse", "ggplot2", "ggjoy", "ggpubr", "scales", 
+              "multiweb", "igraph")
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg))
@@ -107,6 +108,12 @@ plot_distdegree_fg <- spp_total %>%
           axis.title.y = element_text(face = "bold", size = 16))
 plot_distdegree_fg
 
+
+# Especies más conectadas por grupo
+spp_group <- spp_total %>% 
+  group_by(FunctionalGroup) %>% 
+  slice_max(TotalDegree, n = 3)
+
 # Red trófica por grupo funcional 'FG'
 # spp_total <- spp_total %>% 
 #   dplyr::select(FunctionalGroup, everything()) %>% 
@@ -168,6 +175,46 @@ pr_pred_int <- spp_total %>%
   layout(yaxis = list(title = 'Number of interactions'), 
          xaxis = list(title = 'Species'), barmode = 'stack')
 pr_pred_int
+
+
+### Betweenness & Closeness ----
+
+plot_sp_bt <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = Between)) +
+  geom_point() +
+  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Species (increasing TL)", y = "Betweenness") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.title = element_text(size = 18, face = "bold"),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 15))
+plot_sp_bt
+
+plot_sp_cl <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = Close)) +
+  geom_point() +
+  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Species (increasing TL)", y = "Closeness") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.title = element_text(size = 18, face = "bold"),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 15))
+plot_sp_cl
+
+
+### Trophic similarity ----
+
+plot_sp_ts <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = meanTrophicSimil)) +
+  geom_point() +
+  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Species (increasing TL)", y = "Trophic similarity") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.title = element_text(size = 18, face = "bold"),
+        axis.text.x = element_blank(),
+        axis.text.y = element_text(size = 15))
+plot_sp_ts
+
 
 ### Roles topológicos ----
 
