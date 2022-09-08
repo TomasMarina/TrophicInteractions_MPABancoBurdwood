@@ -369,9 +369,7 @@
 342,Dissostichus_eleginoides,Fish_BenPel,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 343,Munida_gregaria,Decapoda,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 344,Munida_spinosa,Decapoda,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-345,Myxine_australis,Fish_Demersal,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-346,Myxine_debueni,Fish_Demersal,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-347,Myxine_sp,Fish_Demersal,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
+345,Myxine_spp,Fish_Demersal,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 348,Ophiuroidea *,Echinodermata,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,* need to be more specific (which Ophiuroidea?)
 349,Patagonotothen_ramsayi,Fish_BenPel,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 350,Polychaeta *,Polychaeta,Bathyraja_albomaculata,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,* need to be more specific (which Polychaeta?)
@@ -401,9 +399,7 @@
 374,Munida_gregaria,Decapoda,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 375,Munida_spinosa,Decapoda,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003; Belleggia_etal_2008,https://doi.org/10.1017/S0025315403008373h; https://doi.org/10.3989/scimar.2008.72n4701,
 376,Munida_spinosa,Decapoda,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-377,Myxine_australis,Fish_Demersal,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-378,Myxine_debueni,Fish_Demersal,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-379,Myxine_sp,Fish_Demersal,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
+377,Myxine_spp,Fish_Demersal,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 380,Nephtys_sp,Polychaeta,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Belleggia_etal_2008,https://doi.org/10.3989/scimar.2008.72n4701,Inferred from Nephtyidae
 381,Odontocymbiola_magellanica,Gastropoda,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Belleggia_etal_2008,https://doi.org/10.3989/scimar.2008.72n4701,
 382,Ophiuroidea *,Echinodermata,Bathyraja_brachyurops,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,* need to be more specific (which Ophiuroidea?)
@@ -428,9 +424,7 @@
 401,Micromesistius_australis,Fish_Pel,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 402,Munida_gregaria,Decapoda,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 403,Munida_spinosa,Decapoda,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-404,Myxine_australis,Fish_Demersal,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-405,Myxine_debueni,Fish_Demersal,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
-406,Myxine_sp,Fish_Demersal,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
+404,Myxine_spp,Fish_Demersal,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 407,Patagonotothen_cornucola,Fish_BenPel,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 408,Patagonotothen_elegans,Fish_BenPel,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
 409,Patagonotothen_guntheri,Fish_BenPel,Bathyraja_griseocauda,Fish_Demersal,Hunter,Heterotroph,Brickle_etal_2003,https://doi.org/10.1017/S0025315403008373h,
@@ -1335,16 +1329,11 @@
 1258,Detritus,Non-living,Mycale_sp,Porifera,Suspension-feeder,Detritus,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,Inferred from Potter Cove FW (Antarctic Peninsula)
 2157,Diatoms_pennate,Diatoms,Mycale_sp,Porifera,Suspension-feeder,Primary producer,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,Inferred from Potter Cove FW (Antarctic Peninsula); * need to be more specific (which Bacillariophyceae?)
 2158,Diatoms_benthic,Diatoms,Mycale_sp,Porifera,Suspension-feeder,Primary producer,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,Inferred from Potter Cove FW (Antarctic Peninsula); * need to be more specific (which Bacillariophyceae?)
-1259,Detritus,Non-living,Myxine_australis,Fish_Demersal,Deposit-feeder,Detritus,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1260,Myxine_sp,Fish_Demersal,Myxine_australis,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1261,Osteichthyes *,Fish_Demersal,Myxine_australis,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1262,Pagurus_comptus,Decapoda,Myxine_australis,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1263,Pagurus_forceps,Decapoda,Myxine_australis,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1264,Detritus,Non-living,Myxine_debueni,Fish_Demersal,Deposit-feeder,Detritus,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1265,Myxine_sp,Fish_Demersal,Myxine_debueni,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1266,Osteichthyes *,Fish_Demersal,Myxine_debueni,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1267,Pagurus_comptus,Decapoda,Myxine_debueni,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
-1268,Pagurus_forceps,Decapoda,Myxine_debueni,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Inferred from Myxine_sp
+1259,Detritus,Non-living,Myxine_spp,Fish_Demersal,Deposit-feeder,Detritus,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Aggregated: Myxine_affinis and Myxine_debueni
+,Necromass,Non-living,Myxine_spp,Fish_Demersal,Deposit-feeder,Detritus,FishBase,https://www.fishbase.de/summary/Myxine-glutinosa.html,Aggregated: Myxine_affinis and Myxine_debueni
+1261,Osteichthyes *,Fish_Demersal,Myxine_spp,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Aggregated: Myxine_affinis and Myxine_debueni
+1262,Pagurus_comptus,Decapoda,Myxine_spp,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Aggregated: Myxine_affinis and Myxine_debueni
+1263,Pagurus_forceps,Decapoda,Myxine_spp,Fish_Demersal,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Myxine,Aggregated: Myxine_affinis and Myxine_debueni
 1269,Necromass,Non-living,Natatolana_pastorei,Isopoda,Scavenger,Necromass,Poore&Bruce_2012,https://doi.org/10.1371/journal.pone.0043529,Inferred from Cirolanidae
 1270,Detritus,Non-living,Neasellus_argentinensis,Isopoda,Deposit-feeder,Detritus,Doti_pers.com.,NA,
 1271,Detritus,Non-living,Neasellus_bicarinatus,Isopoda,Deposit-feeder,Detritus,Doti_pers.com.,NA,
@@ -1884,10 +1873,7 @@
 1773,Iluocoetes_fimbriatus,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
 1774,Isosicyonis_alba,Cnidaria,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
 1775,Munida_gregaria,Decapoda,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
-1776,Myxine_affinis,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
-1777,Myxine_australis,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
-1778,Myxine_debueni,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
-1779,Myxine_sp,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
+1776,Myxine_spp,Fish_Demersal,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
 1780,Neoserolis_exigua,Isopoda,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,Inferred from Serolis_sp
 1781,Ophiuroidea *,Echinodermata,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
 1782,Paractis_laevis,Cnidaria,Psychrolutes_marmoratus,Fish_Demersal,Hunter,Heterotroph,Laptikhovsky&Brickle_2011,https://doi.org/10.1007/s00300-011-0992-3,
