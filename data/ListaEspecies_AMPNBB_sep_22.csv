@@ -65,7 +65,7 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 59,Autumn,Arthropoda,Thecostraca,Scalpellomorpha,Scalpellidae,Ornatoscalpellum,Ornatoscalpellum_gibberum,Benthos_Misc,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2016,https://doi.org/10.1007/s00300-016-1913-2,,,Cirripedia
 60,All,Arthropoda,Pycnogonida,Pantopoda,Colossendeidae,Colossendeis,Colossendeis_megalonyx,Benthos_Misc,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Krabbe_etal_2010,,,,
 61,Autumn,Mollusca,Bivalvia,Venerida,Veneridae,Eurhomalea,Eurhomalea_sp,Bivalvia,Benthos,Yes,NA,NA,10.3,57,NA,Meseta,Schejter_etal_2016,https://doi.org/10.1007/s00300-016-1913-2,,,Taken from Eurhomalea_exalbida
-62,Autumn,Mollusca,Bivalvia,,Pectinidae,Zygochlamys,Zygochlamys_patagonica,Bivalvia,Benthos,Yes,NA,NA,19.7,53,NA,Meseta,Schejter_etal_2020a,,,,
+62,Autumn,Mollusca,Bivalvia,Pectinida,Pectinidae,Zygochlamys,Zygochlamys_patagonica,Bivalvia,Benthos,Yes,NA,NA,19.7,53,NA,Meseta,Schejter_etal_2020a,,,,
 63,Spring,Mollusca,Bivalvia,,Cyamiidae,Cyamiocardium,Cyamiocardium_namuncurense,Bivalvia,Benthos,No,NA,NA,NA,5.1,NA,Ta/Me,Urcola&Zelaya_2018,,,,
 64,All,Mollusca,Bivalvia,Adapedonta,Hiatellidae,Hiatella,Hiatella_sp,Bivalvia,Benthos,Yes,NA,NA,1.5,50,NA,Ta/Me,Güller_etal_2020,,,,Taken from Hiatella_arctica
 65,Autumn,Mollusca,Bivalvia,Limida,Limopsidae,Limopsis,Limopsis_sp,Bivalvia,Benthos,Yes,NA,NA,1.1,15.3,NA,Ta/Me,Schejter_etal_2016,,,,Taken from Limopsis_hirtella
