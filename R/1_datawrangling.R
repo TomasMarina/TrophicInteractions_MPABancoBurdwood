@@ -28,15 +28,61 @@ sp_raw <- sp_raw %>%
 
 int_raw <- read.csv("data/ListaInteracciones_AMPNBB_sep_22.csv")
 int_raw <- int_raw %>% 
+  # collapse diatom species
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
                           Prey %in% c("Dinophysis_acuminata", "Gyrodinium_sp", "Gyrodinium_spirale", "Protoperidinium_sp") ~ "Dinoflagellates_heterosol",
                           TRUE ~ Prey)) %>% 
+  # low-resolved Phytoplankton
   mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
-                               Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup))  # low-resolved Phytoplankton
+                               Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup)) %>% 
+  # collapse Ascidians by genus
+  mutate(Prey = case_when(Prey %in% c("Aplidium_falklandicum","Aplidium_fuegiense","Aplidium_meridianum","Aplidium_globosum","Aplidium_polarsterni") ~ "Aplidium_spp",
+                          Prey %in% c("Cnemidocarpa_verrucosa","Cnemidocarpa_nordenskjöldi","Cnemidocarpa_drygalskii") ~ "Cnemidocarpa_spp",
+                          Prey %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
+                          Prey %in% c("Polyzoa_opuntia","Polyzoa_reticulata") ~ "Polyzoa_spp",
+                          Prey %in% c("Pyura_paessleri","Pyura_pilosa") ~ "Pyura_spp",
+                          TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Aplidium_falklandicum","Aplidium_fuegiense","Aplidium_meridianum","Aplidium_globosum","Aplidium_polarsterni") ~ "Aplidium_spp",
+                              Predator %in% c("Cnemidocarpa_verrucosa","Cnemidocarpa_nordenskjöldi","Cnemidocarpa_drygalskii") ~ "Cnemidocarpa_spp",
+                              Predator %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
+                              Predator %in% c("Polyzoa_opuntia","Polyzoa_reticulata") ~ "Polyzoa_spp",
+                              Predator %in% c("Pyura_paessleri","Pyura_pilosa") ~ "Pyura_spp",
+                              TRUE ~ Predator))
+
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
 int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with Prey == "Demospongiae *"
+
+
+# Check ----
+
+int_good_res <- int_raw %>% 
+  filter(!str_detect(Prey, "\\*$")) %>% 
+  filter(!str_detect(Predator, "\\*$")) %>% 
+  dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
+  distinct(Prey, Predator, .keep_all = TRUE)
+
+g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
+sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
+  mutate(across(where(is.factor), as.character)) %>% 
+  relocate(any_of(c("FunctionalGroup", "Zone", "TrophicSpecies"))) %>% rename(id = TrophicSpecies)
+df_g <- igraph::as_data_frame(g, 'both')
+df_g$vertices <- df_g$vertices %>% 
+  left_join(sp_raw_fg, c('name' = 'id'))
+g <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
+
+adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
+tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
+V(g)$TL <- tl$TL
+V(g)$Omn <- tl$OI
+
+spp_name <- as.data.frame(V(g)$name)
+spp_fg <- as.data.frame(V(g)$FunctionalGroup)
+spp_tl <- as.data.frame(V(g)$TL)
+spp_db <- bind_cols(spp_name, spp_fg, spp_tl)
+colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL")
+
 
 
 ## Save data ----
