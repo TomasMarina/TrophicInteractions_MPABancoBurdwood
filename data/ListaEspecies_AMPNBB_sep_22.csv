@@ -91,6 +91,7 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 85,Spring,Ciliophora,Oligotrichea,Chorotrichida,Strombidinopsidae,Strombidinopsis,Strombidinopsis_sp,Ciliates,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
 86,Spring,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,Strombidium,Strombidium_conicum,Ciliates,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
 87,Spring,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,Strombidium,Strombidium_sp,Ciliates,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
+,Spring,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,Strombidium,Strombidium_spp,Ciliates,Zooplankton,Artefact,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
 88,NA,NA,NA,NA,NA,NA,Ciliophora,Ciliates,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
 89,NA,NA,NA,NA,NA,NA,Ciliates,Ciliates,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
 90,Autumn,Cnidaria,Anthozoa,Actiniaria,Actinostolidae,Actinostola,Actinostola_crassicornis,Cnidaria,Benthos,No,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,AMPNBB-II
