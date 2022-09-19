@@ -27,17 +27,19 @@ sp_raw <- sp_raw %>%
 ## Lista de Interacciones ----
 
 int_raw <- read.csv("data/ListaInteracciones_AMPNBB_sep_22.csv")
+
 int_raw <- int_raw %>% 
-  # collapse diatom species
+  # collapse phytoplankton species
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
                           Prey %in% c("Dinophysis_acuminata", "Gyrodinium_sp", "Gyrodinium_spirale", "Protoperidinium_sp") ~ "Dinoflagellates_heterosol",
+                          Prey %in% c("Strombidium_conicum", "Strombidium_sp") ~ "Strombidium_spp",
                           TRUE ~ Prey)) %>% 
   # low-resolved Phytoplankton
   mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
                                Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup)) %>% 
-  # collapse Ascidians by genus
+  # collapse Ascidians by Genus
   mutate(Prey = case_when(Prey %in% c("Aplidium_falklandicum","Aplidium_fuegiense","Aplidium_meridianum","Aplidium_globosum","Aplidium_polarsterni") ~ "Aplidium_spp",
                           Prey %in% c("Cnemidocarpa_verrucosa","Cnemidocarpa_nordenskjöldi","Cnemidocarpa_drygalskii") ~ "Cnemidocarpa_spp",
                           Prey %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
@@ -49,9 +51,14 @@ int_raw <- int_raw %>%
                               Predator %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
                               Predator %in% c("Polyzoa_opuntia","Polyzoa_reticulata") ~ "Polyzoa_spp",
                               Predator %in% c("Pyura_paessleri","Pyura_pilosa") ~ "Pyura_spp",
-                              TRUE ~ Predator))
+                              TRUE ~ Predator)) %>% 
+  # collapse Porifera by Class and Order
+  mutate(Prey == "Haliclona_sp" ~ "Haplosclerida",
+         Prey %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
+         TRUE ~ Prey)
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
+
 int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with Prey == "Demospongiae *"
 
 
@@ -83,6 +90,10 @@ spp_tl <- as.data.frame(V(g)$TL)
 spp_db <- bind_cols(spp_name, spp_fg, spp_tl)
 colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL")
 
+spp_tl_1 <- spp_db %>% 
+  filter(TL == 1, !FunctionalGroup %in% c("Diatoms", "Bacteria", "Coccolithophorids",
+                                          "Non-living", "Phytoplankton_Misc", "Silicoflagellates",
+                                          "Zooplankton"))
 
 
 ## Save data ----

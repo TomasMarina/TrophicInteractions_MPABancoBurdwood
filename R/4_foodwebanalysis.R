@@ -94,27 +94,27 @@ g_up <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$verti
 ## Escala especie ----
 
 # Nivel trófico y Omnivoría
-adj_mat <- as_adjacency_matrix(g_up, sparse = TRUE)
+adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
 tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
-V(g_up)$TL <- tl$TL
-V(g_up)$Omn <- tl$OI
+V(g)$TL <- tl$TL
+V(g)$Omn <- tl$OI
 
 # Degree
-V(g_up)$TotalDegree <- degree(g_up, mode = "total")
-V(g_up)$InDegree <- degree(g_up, mode = "in")
-V(g_up)$OutDegree <- degree(g_up, mode = "out")
+V(g)$TotalDegree <- degree(g, mode = "total")
+V(g)$InDegree <- degree(g, mode = "in")
+V(g)$OutDegree <- degree(g, mode = "out")
 
 # Betweenness
-V(g_up)$Btw <- betweenness(g_up, directed = TRUE, cutoff = -1)
+V(g)$Btw <- betweenness(g, directed = TRUE, cutoff = -1)
 
 # Closeness
-V(g_up)$Close <- closeness(g_up, mode = "all", cutoff = -1)
+V(g)$Close <- closeness(g, mode = "all", cutoff = -1)
 
-vertex_attr_names(g_up)
+vertex_attr_names(g)
 
 # Similitud trófica (Trophic similarity)
 source("R/igraph_cheddar.R")  # load function to convert igraph to cheddar object
-igraph_to_cheddar(g_up)
+igraph_to_cheddar(g)
 
 cc <- LoadCommunity("Community")
 ts <- TrophicSimilarity(cc)
@@ -122,15 +122,15 @@ mts <- tibble(TrophicSpecies = rownames(ts), meanTrophicSimil = colMeans(ts))  #
 
 # Guardar como data frame y .csv
 spp_id <- as.data.frame(1:prop.topol$Size)
-spp_name <- as.data.frame(V(g_up)$name)
-spp_fg <- as.data.frame(V(g_up)$FunctionalGroup)
-spp_totdegree <- as.data.frame(V(g_up)$TotalDegree)
-spp_indegree <- as.data.frame(V(g_up)$InDegree)
-spp_outdegree <- as.data.frame(V(g_up)$OutDegree)
-spp_btw <- as.data.frame(V(g_up)$Btw)
-spp_cls <- as.data.frame(V(g_up)$Close)
-spp_tl <- as.data.frame(V(g_up)$TL)
-spp_omn <- as.data.frame(V(g_up)$Omn)
+spp_name <- as.data.frame(V(g)$name)
+spp_fg <- as.data.frame(V(g)$FunctionalGroup)
+spp_totdegree <- as.data.frame(V(g)$TotalDegree)
+spp_indegree <- as.data.frame(V(g)$InDegree)
+spp_outdegree <- as.data.frame(V(g)$OutDegree)
+spp_btw <- as.data.frame(V(g)$Btw)
+spp_cls <- as.data.frame(V(g)$Close)
+spp_tl <- as.data.frame(V(g)$TL)
+spp_omn <- as.data.frame(V(g)$Omn)
 spp_total <- bind_cols(spp_id, spp_name, spp_fg, spp_totdegree, spp_indegree, 
                         spp_outdegree, spp_btw, spp_cls, spp_tl, spp_omn)
 colnames(spp_total) <- c("ID", "TrophicSpecies", "FunctionalGroup", "TotalDegree", 
@@ -173,4 +173,10 @@ sp_prop <- sp_count/vcount(g_up)
 
 save(g_up, deg_dist_fit, prop.topol, top.role, top.role.df, spp_total,
      file = "results/summary_results.rda")
+
+
+library(dplyr)
+spp_tl1 <- spp_total %>% 
+  filter(TL == 1)
+  
 
