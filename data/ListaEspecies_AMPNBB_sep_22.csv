@@ -185,7 +185,6 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 178,NA,Cnidaria,Anthozoa,NA,NA,NA,Octocorals,Cnidaria,,Artefact,NA,NA,NA,NA,NA,Talud,NA,,,,
 179,Spring,Haptophyta,Prymnesiophyceae,Isochrysidales,Noelaerhabdaceae,Emiliana,Emiliania_huxleyi,Coccolithophorids,Phytoplankton,Yes,NA,NA,NA,0.0093,NA,Meseta,Guinder_etal_2020,,,,
 180,Spring,Haptophyta,Prymnesiophyceae,Phaeocystales,Phaeocystaceae,Phaeocystis,Phaeocystis_antarctica,Coccolithophorids,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
-181,NA,NA,NA,NA,NA,NA,Coccolithophorids,Coccolithophorids,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
 182,Spring,Arthropoda,Crustacea,Cumacea,Nannastacidae,Campylaspis,Campylaspis_bacescui,Cumacea,Benthos,No,NA,NA,NA,4,NA,Meseta,Doti_etal_2020,,Roccatagliata_pers.com.,,
 183,Spring,Arthropoda,Crustacea,Cumacea,Nannastacidae,Campylaspis,Campylaspis_frigida,Cumacea,Benthos,No,NA,NA,NA,4,NA,Meseta,Doti_etal_2020,,Roccatagliata_pers.com.,,
 184,Spring,Arthropoda,Crustacea,Cumacea,Nannastacidae,Cumella,Cumella_argentinae,Cumacea,Benthos,No,NA,NA,NA,2,NA,Meseta,Doti_etal_2020,,Roccatagliata_pers.com.,,
@@ -656,7 +655,7 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 649,Autumn,Porifera,Demospongiae,Haplosclerida,Chalinidae,Haliclona,Haliclona_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
 650,Autumn,Porifera,Demospongiae,Poecilosclerida,Mycalidae,Mycale,Mycale_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016,,,,
 651,NA,NA,NA,NA,NA,NA,Porifera,Porifera,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
-652,Autumn,Porifera,Demospongiae,Poecilosclerida,Cladorhizidae,Asbestopluma,Asbestopluma_sp,Porifera,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2019; 2020a,,,,AMPNBB-II
+652,Autumn,Porifera,Demospongiae,Poecilosclerida,Cladorhizidae,Asbestopluma,Asbestopluma_sp,Porifera,Benthos,Yes,NA,NA,NA,400,NA,Talud,Schejter_etal_2019; 2020a,,Lopes_etal_2011,https://doi.org/10.1071/IS11015,AMPNBB-II
 653,Autumn,Porifera,Demospongiae,Tetractinellida,Tetillidae,Craniella,Craniella_leptoderma,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
 654,Autumn,Porifera,Demospongiae,Haplosclerida,,,Haplosclerida2,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
 655,Autumn,Porifera,Hexactinellida,,,,Hexactinellida,Porifera,Benthos,No,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
