@@ -53,9 +53,14 @@ int_raw <- int_raw %>%
                               Predator %in% c("Pyura_paessleri","Pyura_pilosa") ~ "Pyura_spp",
                               TRUE ~ Predator)) %>% 
   # collapse Porifera by Class and Order
-  mutate(Prey == "Haliclona_sp" ~ "Haplosclerida",
+  mutate(Prey = case_when(Prey == "Haliclona_sp" ~ "Haplosclerida",
          Prey %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
-         TRUE ~ Prey)
+         Prey == "Craniella_leptoderma" ~ "Tetractinellida",
+         TRUE ~ Prey),
+         Predator = case_when(Predator == "Haliclona_sp" ~ "Haplosclerida",
+                              Predator %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
+                              Predator == "Craniella_leptoderma" ~ "Tetractinellida",
+                              TRUE ~ Predator))
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
 
