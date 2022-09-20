@@ -26,7 +26,9 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 25,NA,Arthropoda,Malacostraca,Amphipoda,Stenothoidae,Torometopa,Torometopa_crassicornis,Amphipoda,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Lopez-Gappa_etal_2006; Chiesa_pers.com.,https://doi.org/10.11646/ZOOTAXA.1342.1.1,,,Collapsed as Stenothoidae
 26,NA,NA,NA,NA,NA,NA,Stenothoidae,Amphipoda,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Lopez-Gappa_etal_2006; Chiesa_pers.com.,https://doi.org/10.11646/ZOOTAXA.1342.1.1,,,"Aggregated: Thaumatelson_herdmani, Metopoides_longicornis, Probolisca_ovata y Torometopa_crassicornis"
 27,NA,Arthropoda,Malacostraca,Amphipoda,Tryphosidae,Tryphosites,Tryphosites_chevreuxi,Amphipoda,Zooplankton,No,NA,NA,NA,NA,NA,Meseta,Lopez-Gappa_etal_2006; Chiesa_pers.com.,https://doi.org/10.11646/ZOOTAXA.1342.1.1,,,
+,All,Arthropoda,Malacostraca,Amphipoda,Tryphosidae,Tryphosella,Tryphosella_sp,Amphipoda,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,,,
 28,NA,Arthropoda,Malacostraca,Amphipoda,Aristiidae,Aristias,Aristias_antarcticus,Amphipoda,Zooplankton,No,NA,NA,NA,NA,NA,Ta/Me,Lopez-Gappa_etal_2006; Chiesa_pers.com.,https://doi.org/10.11646/ZOOTAXA.1342.1.1,,,
+,All,Arthropoda,Malacostraca,Amphipoda,Phoxocephalidae,Phoxocephalus,Phoxocephalus_sp,Amphipoda,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,,,
 29,NA,NA,NA,NA,NA,NA,Amphipoda,Amphipoda,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
 30,Autumn,Chordata,Ascidiacea,Stolidobrachia,Styelidae,Cnemidocarpa,Cnemidocarpa_verrucosa,Ascidiacea,Benthos,Yes,NA,NA,550,140,NA,Meseta,Taverna_etal_2018; Ruiz_etal_2020,https://doi.org/10.1007/s00300-018-2272-y; https://doi.org/10.1002/ece3.6504,McClintock_etal_1991,https://doi.org/10.1016/0022-0981(91)90180-5,
 31,NA,Chordata,Ascidiacea,Stolidobrachia,Styelidae,Cnemidocarpa,Cnemidocarpa_nordenskjöldi,Ascidiacea,Benthos,No,NA,NA,NA,50,NA,Meseta,Taverna_etal_2018,https://doi.org/10.1007/s00300-018-2272-y,Lagger_etal_2009,http://www.pfeil-verlag.de/wp-content/uploads/2015/05/spix32_2_03.pdf,
@@ -199,6 +201,7 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 193,Spring,Arthropoda,Crustacea,Cumacea,Leuconidae,Leucon,Leucon_septemdentatus,Cumacea,Benthos,No,NA,NA,NA,4,NA,Meseta,Doti_etal_2020,,Roccatagliata_pers.com.,,
 194,NA,NA,NA,NA,NA,NA,Cumacea,Cumacea,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
 195,Autumn,Arthropoda,Crustacea,Cumacea,Lampropidae,Platytyphlops,Platytyphlops_sarahae,Cumacea,Benthos,No,NA,NA,NA,6,NA,Talud,Roccatagliata_2020,,Roccatagliata_pers.com.,,
+,All,Arthropoda,Malacostraca,Decapoda,Epialtidae,Libidoclaea,Libidoclaea_granaria,Decapoda,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,,,
 196,Autumn,Arthropoda,Malacostraca,Decapoda,Campylonotidae,Campylonotus,Campylonotus_vagans,Decapoda,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Lovrich_etal_2005; Schejter_etal_2016,,,,
 197,Autumn,Arthropoda,Malacostraca,Decapoda,Inachidae,Eurypodius,Eurypodius_latreillii,Decapoda,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Lovrich_etal_2005; Schejter_etal_2017a,,,,
 198,Autumn,Arthropoda,Malacostraca,Decapoda,Inachidae,Eurypodius,Eurypodius_longirostris,Decapoda,Benthos,No,NA,NA,NA,NA,NA,Meseta,Lovrich_etal_2005; Schejter_etal_2016,,,,
@@ -689,8 +692,8 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 683,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_simillimus,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Calanus_spp
 684,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_brevipes,Zooplankton,Zooplankton,Yes,18,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
 685,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_laticeps,Zooplankton,Zooplankton,Yes,8,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda; collapsed as Clausocalanus_spp
-686,Spring,Arthropoda,Hexanauplia,Calanoida,,,Calanus_spp,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Calanus_australis y C._australis
-687,Spring,Arthropoda,Hexanauplia,Calanoida,,,Clausocalanus_spp,Zooplankton,Zooplankton,Yes,13,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Clausocalanus_brevipes y Cl._laticeps
+686,Spring,Arthropoda,Hexanauplia,Calanoida,Calanoidae,Calanus,Calanus_spp,Zooplankton,Zooplankton,Yes,26,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Calanus_australis y C._australis
+687,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Clausocalanus,Clausocalanus_spp,Zooplankton,Zooplankton,Yes,13,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: Clausocalanus_brevipes y Cl._laticeps
 688,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Ctenocalanus,Ctenocalanus_vanus,Zooplankton,Zooplankton,Yes,34,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
 689,Spring,Arthropoda,Hexanauplia,Calanoida,Clausocalanoidae,Drepanopus,Drepanopus_forcipatus,Zooplankton,Zooplankton,Yes,299,7.68,NA,1.92,NA,Meseta,Spinelli_etal_2020,,,,Copepoda
 690,Spring,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,Euphausia,Euphausia_lucens,Zooplankton,Zooplankton,Yes,16.75,NA,NA,10,NA,Meseta,Spinelli_etal_2020,,Temperoni_etal_2013,,Collapsed as Euphausia_spp
