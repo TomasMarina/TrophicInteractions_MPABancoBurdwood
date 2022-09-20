@@ -543,6 +543,7 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 534,Spring,Arthropoda,Malacostraca,Isopoda,Serolidae,Acanthoserolis,Acanthoserolis_schythei,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
 535,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp1,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
 536,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Chaetarcturus,Chaetarcturus_sp2,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
+,Spring,Arthropoda,Malacostraca,Isopoda,Antarcturidae,,Antarcturidae,Isopoda,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Doti_etal_2020,,,,
 537,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Coperonus,Coperonus_comptus,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
 538,Spring,Arthropoda,Malacostraca,Isopoda,Munnopsidae,Echinozone,Echinozone_sp,Isopoda,Benthos,No,NA,NA,NA,NA,NA,Talud,Doti_etal_2020,,,,
 539,Autumn,Arthropoda,Malacostraca,Isopoda,Antarcturidae,Fissarcturus,Fissarcturus_argentinensis,Isopoda,Benthos,No,NA,NA,NA,6.65,NA,Talud,Pereira_etal_2020,,,,
