@@ -1763,22 +1763,18 @@
 1565,Liothyrella_uva,Brachiopoda,Patagonotothen_kreffti,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
 1566,Magellania_venosa,Brachiopoda,Patagonotothen_kreffti,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
 1567,Terebratella_dorsata,Brachiopoda,Patagonotothen_kreffti,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
-,,,,,,,,,
 1596,Themisto_gaudichaudii,Amphipoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Laptikhovsky_2004; Padovani_etal_2012; Fischer_etal_2022,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-003-0573-1; https://doi.org/10.1016/j.seares.2011.10.007; https://doi.org/10.1007/s00300-022-03082-9,
 ,Tryphosella_sp,Amphipoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Leucothoe_spinicarpa,Amphipoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Phoxocephalus_sp,Amphipoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Jassa_alonsoae,Amphipoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
-,,,,,,,,,
-,,,,,,,,,
-,,,,,,,,,
+,Aspidostoma_giganteum,Bryozoa,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Bryozoa
+,Burdwoodipora_paguricola,Bryozoa,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Bryozoa
 1582,Liothyrella_uva,Brachiopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
 1583,Magellania_venosa,Brachiopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
 1595,Terebratella_dorsata,Brachiopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,
-,,,,,,,,,
-,,,,,,,,,
+,Zygochlamys_patagonica,Bivalvia,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Eudorella_sp,Cumacea,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Cumacea
-,,,,,,,,,
 ,Lithodes_sp,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Eurypodius_latreillii,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Libidoclaea_granaria,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
@@ -1786,13 +1782,15 @@
 1584,Munida_gregaria,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Vinuesa&Varisco_2007; Fischer_etal_2022,http://dx.doi.org/10.4067/S0717-71782007000200003; https://doi.org/10.1007/s00300-022-03082-9,
 1588,Pagurus_comptus,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 1589,Pagurus_forceps,Decapoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
-,,,,,,,,,
-1587,Ophiuroidea *,Echinodermata,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Laptikhovsky_2004,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-003-0573-1,* need to be more specific (which Ophiuroidea?)
+,Sprattus_fuegensis,Fish_Pel,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
+,Gorgonocephalus_chilensis,Echinodermata,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
+1587,Ophiura_lymani,Echinodermata,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,* need to be more specific (which Ophiuroidea?)
 1580,Iluocoetes_fimbriatus,Fish_Demersal,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982,http://www.vliz.be/en/imis?refid=76833,
+,Austrodoris_sp,Gastropoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Nudibranchia
 1581,Acanthoserolis_schythei,Isopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,* need to be more specific (which Isopoda?)
 ,Natatolana_pastorei,Isopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 ,Antarcturidae,Isopoda,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
-,,,,,,,,,
+,Parborlasia_corrugatus,Benthos_Misc,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 1568,Ampharete_kerguelensis,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982,http://www.vliz.be/en/imis?refid=76833,Inferred from Ampharetidae
 1569,Anobothrus_sp,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982,http://www.vliz.be/en/imis?refid=76833,Inferred from Ampharetidae
 1575,Eucranta_sp,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982,http://www.vliz.be/en/imis?refid=76833,Inferred from Polynoidae
@@ -1805,7 +1803,7 @@
 ,Terebellides_malvinensis,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Terebellidae
 ,Nicolea_chilensis,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Terebellidae
 ,Thelepus_sp,Polychaeta,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,Inferred from Terebellidae
-,,,,,,,,,
+,Salpidae,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,
 1570,Calanus_spp,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Fischer_etal_2022,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-022-03082-9,Aggregated: Calanus_australis and Calanus_simillimus
 1572,Clausocalanus_spp,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Fischer_etal_2022,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-022-03082-9,Aggregated: Clausocalanus_brevipes and Clausocalanus_laticeps
 1573,Ctenocalanus_vanus,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Fischer_etal_2022,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-022-03082-9,Inferred from Calanoida
@@ -1817,7 +1815,6 @@
 1593,Rhincalanus_gigas,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Ekau_1982; Fischer_etal_2022,http://www.vliz.be/en/imis?refid=76833; https://doi.org/10.1007/s00300-022-03082-9,Inferred from Calanoida
 1594,Serratosagitta_tasmanica,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Laptikhovsky_2004,https://doi.org/10.1007/s00300-003-0573-1,
 1598,Tinerfe_cyanea,Zooplankton,Patagonotothen_ramsayi,Fish_BenPel,Hunter,Heterotroph,Mianzan_etal_1996,https://doi.org/10.1016/0165-7836(95)00459-9,
-,,,,,,,,,
 1599,Coscinodiscus_sp,Bacillariophyceae,Pelagobia_longicirrata,Polychaeta,Deposit-feeder,Primary producer,Jumars_etal_2015,https://doi.org/10.1146/annurev-marine-010814-020007,
 1600,Dictyocha_speculum,Silicoflagellates,Pelagobia_longicirrata,Polychaeta,Deposit-feeder,Primary producer,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Pelagobia%20longicirrata,
 1601,Dinophyceae *,Dinoflagellates,Pelagobia_longicirrata,Polychaeta,Deposit-feeder,Primary producer,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Pelagobia%20longicirrata,

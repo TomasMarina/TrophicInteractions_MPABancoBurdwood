@@ -720,3 +720,5 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 711,NA,NA,NA,NA,NA,NA,Calanoida,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
 712,NA,NA,NA,NA,NA,NA,Copepoda,Zooplankton,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,
 713,NA,NA,NA,NA,NA,NA,Euphausia_spp,Zooplankton,NA,Yes,16.75,NA,NA,15,NA,Meseta,Spinelli_etal_2020,,,,Aggregated: E._lucens y E._vallentini
+,All,Nemertea,Pilidiophora,Heteronemertea,Lineidae,Parborlasia,Parborlasia_corrugatus,Benthos_Misc,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,,,
+,All,Chordata,Thaliacea,Salpida,Salpidae,,Salpidae,Zooplankton,Zooplankton,Yes,NA,NA,NA,NA,NA,Meseta,Fischer_etal_2022,https://doi.org/10.1007/s00300-022-03082-9,,,
