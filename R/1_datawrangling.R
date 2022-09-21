@@ -52,13 +52,17 @@ int_raw <- int_raw %>%
   # collapse Porifera by Class and Order
   mutate(Prey = case_when(Prey == "Haliclona_sp" ~ "Haplosclerida",
          Prey %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
-         Prey == "Craniella_leptoderma" ~ "Tetractinellida", TRUE ~ Prey),
+         Prey == "Craniella_leptoderma" ~ "Tetractinellida", 
+         Prey %in% c("Clathria_(Clathria)_toxipraedita", "Clathria_(Axosuberites)_nidificata", "Clathria_(Microciona)_antarctica") ~ "Clathria_spp",
+         TRUE ~ Prey),
          Predator = case_when(Predator == "Haliclona_sp" ~ "Haplosclerida",
                               Predator %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
-                              Predator == "Craniella_leptoderma" ~ "Tetractinellida", TRUE ~ Predator)) %>% 
+                              Predator == "Craniella_leptoderma" ~ "Tetractinellida", 
+                              Predator %in% c("Clathria_(Clathria)_toxipraedita", "Clathria_(Axosuberites)_nidificata", "Clathria_(Microciona)_antarctica") ~ "Clathria_spp",
+                              TRUE ~ Predator)) %>% 
   # collapse Polychaeta
   mutate(Prey = case_when(Prey %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Prey),
-         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp"), TRUE ~ Predator)
+         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Predator))
 
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
@@ -74,6 +78,7 @@ int_good_res <- int_raw %>%
   dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
   distinct(Prey, Predator, .keep_all = TRUE)
 
+library(igraph)
 g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
 sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
   mutate(across(where(is.factor), as.character)) %>% 
@@ -83,6 +88,7 @@ df_g$vertices <- df_g$vertices %>%
   left_join(sp_raw_fg, c('name' = 'id'))
 g <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
 
+library(NetIndices)
 adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
 tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
 V(g)$TL <- tl$TL
@@ -95,9 +101,9 @@ spp_db <- bind_cols(spp_name, spp_fg, spp_tl)
 colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL")
 
 spp_tl_1 <- spp_db %>% 
-  filter(TL == 1, !FunctionalGroup %in% c("Diatoms", "Bacteria", "Coccolithophorids",
-                                          "Non-living", "Phytoplankton_Misc", "Silicoflagellates",
-                                          "Zooplankton"))
+  filter(TL == 1)
+# It should only comprise "Bacteria", "	"Coccolithophorids", "Diatoms", "Dinoflagellates" (Azadinium_sp)
+# "Non-living", "Phytoplankton_Misc", "Silicoflagellates" & "Zooplankton" (Eggs_Fish)
 
 
 ## Save data ----
