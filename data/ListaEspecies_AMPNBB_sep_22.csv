@@ -99,8 +99,8 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 98,Autumn,Cnidaria,Hydrozoa,Leptothecata,Haleciidae,Halecium,Halecium_delicatulum,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,
 99,Autumn,Cnidaria,Hydrozoa,Leptothecata,Hebellidae,Hebella,Hebella_striata,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,
 100,Autumn,Cnidaria,Hydrozoa,Leptothecata,Tiarannidae,Modeeria,Modeeria_rotunda,Cnidaria,Benthos,Yes,NA,NA,NA,1.75,NA,Meseta,Schejter_etal_2020b,,,,
-101,Autumn,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,Odelia,Obelia_longissima,Cnidaria,Benthos,Yes,NA,NA,NA,350,NA,Meseta,Schejter_etal_2020b,,,,
-102,All,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,Odelia,Obelia_sp,Cnidaria,Benthos,Yes,0.7,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
+101,Autumn,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,Obelia,Obelia_longissima,Cnidaria,Benthos,Yes,NA,NA,NA,350,NA,Meseta,Schejter_etal_2020b,,,,
+102,All,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,Obelia,Obelia_sp,Cnidaria,Benthos,Yes,0.7,NA,NA,NA,NA,Meseta,Spinelli_etal_2020,,,,
 103,Autumn,Cnidaria,Hydrozoa,Leptothecata,Phialellidae,Phialella,Phialella_chilensis,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,
 104,Autumn,Cnidaria,Hydrozoa,Leptothecata,Plumulariidae,Plumularia,Plumularia_setacea,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,
 105,Autumn,Cnidaria,Anthozoa,Alcyonacea,Isididae,Primnoisis,Primnoisis_antarctica,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Meseta,Schejter_etal_2020b,,,,
@@ -130,10 +130,10 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 129,Autumn,Cnidaria,Hydrozoa,Leptothecata,Sertularellidae,Sertularella,Sertularella_sp2,Cnidaria,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; 2020a,,,,
 130,Autumn,Cnidaria,Hydrozoa,Leptothecata,Symplectoscyphidae,Symplectoscyphus,Symplectoscyphus_subdichotomus,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2016; 2020a; b,,,,AMPNBB-II
 131,Autumn,Cnidaria,Hydrozoa,Leptothecata,Syntheciidae,Synthecium,Synthecium_protectum,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020a; b,,,,AMPNBB-II
-132,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_antarctica,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
-133,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_chilensis,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
-134,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_sp,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020a; b,,,,AMPNBB-II
-135,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_sp1,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
+132,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thouarella,Thouarella_antarctica,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
+133,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thouarella,Thouarella_chilensis,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
+134,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thouarella,Thouarella_sp,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020a; b,,,,AMPNBB-II
+135,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thouarella,Thouarella_sp1,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
 136,Autumn,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,Tulpa,Tulpa_tulipifera,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020a; b,,,,AMPNBB-II
 137,Autumn,Cnidaria,Anthozoa,Zoantharia,,,Zoantharia,Cnidaria,Benthos,No,NA,NA,NA,NA,NA,Ta/Me,Schejter_etal_2020b,,,,AMPNBB-II
 138,NA,NA,NA,NA,NA,NA,Anthozoa,Cnidaria,NA,Artefact,NA,NA,NA,NA,NA,Ta/Me,NA,,,,NA
@@ -176,7 +176,6 @@ ID,Season,Phylum,Class,Order,Family,Genus,TrophicSpecies,FunctionalGroup,Trophic
 175,Autumn,Cnidaria,Hydrozoa,Leptothecata,Symplectoscyphidae,Symplectoscyphus,Symplectoscyphus_sp,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2016,,,,
 176,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_variabilis,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2020b,,,,AMPNBB-II
 177,Autumn,Cnidaria,Anthozoa,Alcyonacea,Primnoidea,Thourella,Thouarella_viridis,Cnidaria,Benthos,Yes,NA,NA,NA,NA,NA,Talud,Schejter_etal_2020b,,,,AMPNBB-II
-178,NA,Cnidaria,Anthozoa,NA,NA,NA,Octocorals,Cnidaria,,Artefact,NA,NA,NA,NA,NA,Talud,NA,,,,
 179,Spring,Haptophyta,Prymnesiophyceae,Isochrysidales,Noelaerhabdaceae,Emiliana,Emiliania_huxleyi,Coccolithophorids,Phytoplankton,Yes,NA,NA,NA,0.0093,NA,Meseta,Guinder_etal_2020,,,,
 180,Spring,Haptophyta,Prymnesiophyceae,Phaeocystales,Phaeocystaceae,Phaeocystis,Phaeocystis_antarctica,Coccolithophorids,Phytoplankton,Yes,NA,NA,NA,NA,NA,Meseta,Guinder_etal_2020,,,,
 181,Spring,Arthropoda,Crustacea,Cumacea,Nannastacidae,Campylaspis,Campylaspis_bacescui,Cumacea,Benthos,No,NA,NA,NA,4,NA,Meseta,Doti_etal_2020,,Roccatagliata_pers.com.,,

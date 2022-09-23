@@ -62,7 +62,14 @@ int_raw <- int_raw %>%
                               TRUE ~ Predator)) %>% 
   # collapse Polychaeta
   mutate(Prey = case_when(Prey %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Prey),
-         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Predator))
+         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Predator)) %>% 
+  # collapse Cnidaria
+  mutate(Prey = case_when(Prey %in% c("Thouarella_antarctica", "Thouarella_chilensis", "Thouarella_sp", "Thouarella_variabilis", "Thouarella_viridis") ~ "Thouarella_spp", 
+                          Prey %in% c("Obelia_longissima", "Obelia_sp") ~ "Obelia_spp", 
+                          Prey %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Thouarella_antarctica", "Thouarella_chilensis", "Thouarella_sp", "Thouarella_variabilis", "Thouarella_viridis") ~ "Thouarella_spp", 
+                              Predator %in% c("Obelia_longissima", "Obelia_sp") ~ "Obelia_spp", 
+                              Predator %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Predator))
 
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
