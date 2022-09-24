@@ -104,11 +104,12 @@ V(g)$Omn <- tl$OI
 spp_name <- as.data.frame(V(g)$name)
 spp_fg <- as.data.frame(V(g)$FunctionalGroup)
 spp_tl <- as.data.frame(V(g)$TL)
-spp_db <- bind_cols(spp_name, spp_fg, spp_tl)
-colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL")
+spp_zone <- as.data.frame(V(g)$Zone)
+spp_db <- bind_cols(spp_name, spp_fg, spp_tl, spp_zone)
+colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL", "Zone")
 
 spp_tl_1 <- spp_db %>% 
-  filter(TL == 1)
+  filter(TL == 1, Zone != "Talud")
 # It should only comprise "Bacteria", "	"Coccolithophorids", "Diatoms", "Dinoflagellates" (Azadinium_sp)
 # "Non-living", "Phytoplankton_Misc", "Silicoflagellates" & "Zooplankton" (Eggs_Fish)
 
