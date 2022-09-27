@@ -29,7 +29,7 @@ sp_raw <- sp_raw %>%
 int_raw <- read.csv("data/ListaInteracciones_AMPNBB_sep_22.csv")
 
 int_raw <- int_raw %>% 
-  # collapse phytoplankton species
+  # collapse Phytoplankton species
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
@@ -38,6 +38,9 @@ int_raw <- int_raw %>%
   # low-resolved Phytoplankton
   mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
                                Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup)) %>% 
+  # collapse Zooplankton
+  mutate(Prey = case_when(Prey %in% c("Euphausia_lucens", "Euphausia_vallentini") ~ "Euphausia_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Euphausia_lucens", "Euphausia_vallentini") ~ "Euphausia_spp", TRUE ~ Predator)) %>% 
   # collapse Ascidians by Genus
   mutate(Prey = case_when(Prey %in% c("Aplidium_falklandicum","Aplidium_fuegiense","Aplidium_meridianum","Aplidium_globosum","Aplidium_polarsterni") ~ "Aplidium_spp",
                           Prey %in% c("Cnemidocarpa_verrucosa","Cnemidocarpa_nordenskjöldi","Cnemidocarpa_drygalskii") ~ "Cnemidocarpa_spp",
@@ -69,7 +72,15 @@ int_raw <- int_raw %>%
                           Prey %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Prey),
          Predator = case_when(Predator %in% c("Thouarella_antarctica", "Thouarella_chilensis", "Thouarella_sp", "Thouarella_variabilis", "Thouarella_viridis") ~ "Thouarella_spp", 
                               Predator %in% c("Obelia_longissima", "Obelia_sp") ~ "Obelia_spp", 
-                              Predator %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Predator))
+                              Predator %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Predator)) %>% 
+  # collapse Gastropoda
+  mutate(Prey = case_when(Prey %in% c("Eatoniella_denticula","Eatoniella_occulta","Eatoniella_strebeli") ~ "Eatoniella_spp", 
+                          Prey %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Eatoniella_denticula","Eatoniella_occulta","Eatoniella_strebeli") ~ "Eatoniella_spp", 
+                              Predator %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", TRUE ~ Predator)) %>% 
+  # collapse Fish
+  mutate(Prey = case_when(Prey %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Predator))
 
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
@@ -116,5 +127,5 @@ spp_tl_1 <- spp_db %>%
 
 ## Save data ----
 
-save(sp_raw, int_raw, 
-     file = "data/cleaned-data_sep22.rda")
+# save(sp_raw, int_raw, 
+#      file = "data/cleaned-data_sep22.rda")
