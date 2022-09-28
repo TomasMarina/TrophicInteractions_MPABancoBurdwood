@@ -84,7 +84,7 @@ sum(group_sp$n)  # spp totales
 
 ## Graficar ----
 
-plotTrophLevel(g)
+plotTrophLevel(g, ylab = "Trophic level")
 
 
 # Save data ----

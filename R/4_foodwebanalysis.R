@@ -157,7 +157,7 @@ spp_total <- spp_total %>%
                              FunctionalGroup %in% c("Fish_Demersal") ~ "Demersal"))
 
 
-#write_csv(spp_total, file = "results/spp_prop_sep22.csv")
+write_csv(spp_total, file = "results/spp_prop_sep22.csv")
 
 
 # Resolución de la red ----
@@ -171,12 +171,5 @@ sp_prop <- sp_count/vcount(g_up)
 
 # Guardar datos ----
 
-save(g_up, deg_dist_fit, prop.topol, top.role, top.role.df, spp_total,
-     file = "results/summary_results.rda")
-
-
-library(dplyr)
-spp_tl1 <- spp_total %>% 
-  filter(TL == 1)
-  
-
+save(g_up, deg_dist_fit, prop.topol, spp_total, top.role, top.role.df,
+     file = "results/summary_results_sep22.rda")

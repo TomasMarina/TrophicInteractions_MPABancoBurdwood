@@ -18,7 +18,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("results/summary_results.rda")
+load("results/summary_results_sep22.rda")
 
 
 # Figuras ----
@@ -26,11 +26,11 @@ load("results/summary_results.rda")
 ## Escala global ----
 
 # Red trófica por degree
-plot_troph_level(g_up)
+plot_troph_level(g_up, ylab = "Trophic level")
 
 # Distribución de grado
 # Histograma
-degree <- as.data.frame(degree(g_up, mode = "total"))
+degree <- as.data.frame(degree(g, mode = "total"))
 (plot_distdegree <- ggplot(degree, aes(degree[,1])) +
     geom_histogram(bins = 100, alpha = 0.3, color = "black") +
     labs(x = "Degree", y = "Frequency") +
@@ -61,7 +61,7 @@ plot_indeg
 plot_outdeg <- spp_total %>% 
     filter(NumPred != 0) %>% 
     ggplot(., aes(x = NumPred)) +
-    geom_histogram(stat = "count", bins = 50) +
+    geom_histogram(stat = "count") +
     labs(x = "Prey", y = "Number of predators") +
     theme_bw() +
     theme(legend.position = "none",
@@ -146,6 +146,9 @@ plot_sp_tl <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = TotalDe
           axis.text.y = element_text(size = 15))
 plot_sp_tl
 
+ggplot(spp_total, aes(x = TL, y = TotalDegree)) +
+  geom_point()
+
 
 ### Presas y depredadores ----
 
@@ -179,39 +182,43 @@ pr_pred_int
 
 ### Betweenness & Closeness ----
 
-plot_sp_bt <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = Between)) +
+plot_sp_bt <- ggplot(spp_total, aes(x = TL, y = Between)) +
   geom_point() +
-  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
-  labs(x = "Species (increasing TL)", y = "Betweenness") +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Betweenness") +
   theme_bw() +
   theme(panel.grid = element_blank(),
         axis.title = element_text(size = 18, face = "bold"),
-        axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 15),
         axis.text.y = element_text(size = 15))
 plot_sp_bt
 
-plot_sp_cl <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = Close)) +
+plot_sp_cl <- ggplot(spp_total, aes(x = TL, y = Close)) +
   geom_point() +
-  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
-  labs(x = "Species (increasing TL)", y = "Closeness") +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Closeness") +
   theme_bw() +
   theme(panel.grid = element_blank(),
         axis.title = element_text(size = 18, face = "bold"),
-        axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 15),
         axis.text.y = element_text(size = 15))
 plot_sp_cl
+
+btw_clo_plot <- ggarrange(plot_sp_bt, plot_sp_cl,
+                          labels = c("A", "B"), ncol=2, nrow=1)
+btw_clo_plot
 
 
 ### Trophic similarity ----
 
-plot_sp_ts <- ggplot(spp_total, aes(x = reorder(TrophicSpecies, TL), y = meanTrophicSimil)) +
+plot_sp_ts <- ggplot(spp_total, aes(x = TL, y = meanTrophicSimil)) +
   geom_point() +
-  geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
-  labs(x = "Species (increasing TL)", y = "Trophic similarity") +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Trophic similarity") +
   theme_bw() +
   theme(panel.grid = element_blank(),
         axis.title = element_text(size = 18, face = "bold"),
-        axis.text.x = element_blank(),
+        axis.text.x = element_text(size = 15),
         axis.text.y = element_text(size = 15))
 plot_sp_ts
 
@@ -231,5 +238,7 @@ g_up_c <- g_up %>%
 
 plot_troph_level(g_up_c, weights = NA, vertex.color = V(g_up_c)$TRColor)
 
+sp_con <- spp_total %>% 
+  filter(TopRole == "hubcon" | TopRole == "modcon")
 
 

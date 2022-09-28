@@ -64,8 +64,14 @@ int_raw <- int_raw %>%
                               Predator %in% c("Clathria_(Clathria)_toxipraedita", "Clathria_(Axosuberites)_nidificata", "Clathria_(Microciona)_antarctica") ~ "Clathria_spp",
                               TRUE ~ Predator)) %>% 
   # collapse Polychaeta
-  mutate(Prey = case_when(Prey %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Prey),
-         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", TRUE ~ Predator)) %>% 
+  mutate(Prey = case_when(Prey %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", 
+                          Prey %in% c("Eteone_aurantiaca","Eteone_sp") ~ "Eteone_spp", 
+                          Prey %in% c("Glycera_capitata","Glycera_papillosa") ~ "Glycera_spp", 
+                          Prey %in% c("Serpula_narconensis","Serpula_sp") ~ "Serpula_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Pista_corrientis", "Pista_mirabilis", "Pista_sp") ~ "Pista_spp", 
+                              Predator %in% c("Eteone_aurantiaca","Eteone_sp") ~ "Eteone_spp", 
+                              Predator %in% c("Glycera_capitata","Glycera_papillosa") ~ "Glycera_spp", 
+                              Predator %in% c("Serpula_narconensis","Serpula_sp") ~ "Serpula_spp", TRUE ~ Predator)) %>% 
   # collapse Cnidaria
   mutate(Prey = case_when(Prey %in% c("Thouarella_antarctica", "Thouarella_chilensis", "Thouarella_sp", "Thouarella_variabilis", "Thouarella_viridis") ~ "Thouarella_spp", 
                           Prey %in% c("Obelia_longissima", "Obelia_sp") ~ "Obelia_spp", 
@@ -75,9 +81,15 @@ int_raw <- int_raw %>%
                               Predator %in% c("Flabellum_apertum", "Flabellum_curvatum", "Flabellum_areum", "Flabellum_thouarsi") ~ "Flabellum_spp", TRUE ~ Predator)) %>% 
   # collapse Gastropoda
   mutate(Prey = case_when(Prey %in% c("Eatoniella_denticula","Eatoniella_occulta","Eatoniella_strebeli") ~ "Eatoniella_spp", 
-                          Prey %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", TRUE ~ Prey),
+                          Prey %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", 
+                          Prey %in% c("Pareuthria_atrata","Pareuthria_fuscata","Pareuthria_venustula") ~ "Pareuthria_spp", 
+                          Prey %in% c("Calliostoma_modestulum","Calliostoma_moebiusi") ~ "Calliostoma_spp", 
+                          Prey %in% c("Margarella_expansa","Margarella_violacea") ~ "Margarella_spp", TRUE ~ Prey),
          Predator = case_when(Predator %in% c("Eatoniella_denticula","Eatoniella_occulta","Eatoniella_strebeli") ~ "Eatoniella_spp", 
-                              Predator %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", TRUE ~ Predator)) %>% 
+                              Predator %in% c("Onoba_algida","Onoba_fuegoensis","Onoba_antleri") ~ "Onoba_spp", 
+                              Predator %in% c("Pareuthria_atrata","Pareuthria_fuscata","Pareuthria_venustula") ~ "Pareuthria_spp", 
+                              Predator %in% c("Calliostoma_modestulum","Calliostoma_moebiusi") ~ "Calliostoma_spp", 
+                              Predator %in% c("Margarella_expansa","Margarella_violacea") ~ "Margarella_spp", TRUE ~ Predator)) %>% 
   # collapse Fish
   mutate(Prey = case_when(Prey %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Prey),
          Predator = case_when(Predator %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Predator))
@@ -127,5 +139,5 @@ spp_tl_1 <- spp_db %>%
 
 ## Save data ----
 
-# save(sp_raw, int_raw, 
-#      file = "data/cleaned-data_sep22.rda")
+save(sp_raw, int_raw,
+     file = "data/cleaned-data_sep22.rda")
