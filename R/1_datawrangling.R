@@ -29,19 +29,19 @@ sp_raw <- sp_raw %>%
 int_raw <- read.csv("data/ListaInteracciones_AMPNBB_sep_22.csv")
 
 int_raw <- int_raw %>% 
-  # collapse Phytoplankton species
+  # low-resolved Phytoplankton
+  mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
+                               Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup)) %>% 
+  # collapse Phytoplankton
   mutate(Prey = case_when(Prey %in% c("Coscinodiscus_sp", "Podosira_stelligera") ~ "Diatoms_centric",
                           Prey %in% c("Fragilariopsis_kerguelensis", "Navicula_sp", "Pseudonitzschia_sp", "Tabularia_fasciculata") ~ "Diatoms_pennate",
                           Prey %in% c("Paralia_sulcata", "Thalassionema_nitzschioides") ~ "Diatoms_benthic",
                           Prey %in% c("Dinophysis_acuminata", "Gyrodinium_sp", "Gyrodinium_spirale", "Protoperidinium_sp") ~ "Dinoflagellates_heterosol",
                           Prey %in% c("Strombidium_conicum", "Strombidium_sp") ~ "Strombidium_spp", TRUE ~ Prey)) %>% 
-  # low-resolved Phytoplankton
-  mutate(PreyGroup = case_when(Prey == "Phytoplankton *" ~ "Phytoplankton_Misc", 
-                               Prey == "EpiphyticPhytoplankton *" ~ "Phytoplankton_Misc", TRUE ~ PreyGroup)) %>% 
   # collapse Zooplankton
   mutate(Prey = case_when(Prey %in% c("Euphausia_lucens", "Euphausia_vallentini") ~ "Euphausia_spp", TRUE ~ Prey),
          Predator = case_when(Predator %in% c("Euphausia_lucens", "Euphausia_vallentini") ~ "Euphausia_spp", TRUE ~ Predator)) %>% 
-  # collapse Ascidians by Genus
+  # collapse Ascidians
   mutate(Prey = case_when(Prey %in% c("Aplidium_falklandicum","Aplidium_fuegiense","Aplidium_meridianum","Aplidium_globosum","Aplidium_polarsterni") ~ "Aplidium_spp",
                           Prey %in% c("Cnemidocarpa_verrucosa","Cnemidocarpa_nordenskjöldi","Cnemidocarpa_drygalskii") ~ "Cnemidocarpa_spp",
                           Prey %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
@@ -52,7 +52,7 @@ int_raw <- int_raw %>%
                               Predator %in% c("Molgula_malvinensis","Molgula_pulchra","Molgula_setigera") ~ "Molgula_spp",
                               Predator %in% c("Polyzoa_opuntia","Polyzoa_reticulata") ~ "Polyzoa_spp",
                               Predator %in% c("Pyura_paessleri","Pyura_pilosa") ~ "Pyura_spp", TRUE ~ Predator)) %>% 
-  # collapse Porifera by Class and Order
+  # collapse Porifera
   mutate(Prey = case_when(Prey == "Haliclona_sp" ~ "Haplosclerida",
          Prey %in% c("Isodictya_sp", "Mycale_sp") ~ "Poecilosclerida",
          Prey == "Craniella_leptoderma" ~ "Tetractinellida", 
@@ -92,8 +92,13 @@ int_raw <- int_raw %>%
                               Predator %in% c("Margarella_expansa","Margarella_violacea") ~ "Margarella_spp", TRUE ~ Predator)) %>% 
   # collapse Fish
   mutate(Prey = case_when(Prey %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Prey),
-         Predator = case_when(Predator %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Predator))
-
+         Predator = case_when(Predator %in% c("Muraenolepis_orangiensis","Muraenolepis_marmorata","Muraenolepis_sp") ~ "Muraenolepis_spp", TRUE ~ Predator)) %>% 
+  # collapse Cumacea
+  mutate(Prey = case_when(Prey %in% c("Campylaspis_bacescui","Campylaspis_frigida") ~ "Campylaspis_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Campylaspis_bacescui","Campylaspis_frigida") ~ "Campylaspis_spp", TRUE ~ Predator)) %>% 
+  # collapse Brachiopoda
+  mutate(Prey = case_when(Prey %in% c("Liothyrella_uva","Magellania_venosa","Terebratella_dorsata") ~ "Brachiopoda_spp", TRUE ~ Prey),
+         Predator = case_when(Predator %in% c("Liothyrella_uva","Magellania_venosa","Terebratella_dorsata") ~ "Brachiopoda_spp", TRUE ~ Predator))
 
 int_raw <- unique(int_raw[2:10])  # exclude repeated interactions
 

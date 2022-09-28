@@ -76,7 +76,9 @@ ggplot(data = degree) +
 mod <- multiweb::calc_modularity(g, weights = NULL)
 modulos <- cluster_spinglass(g)  # módulos
 # Roles topológicos
+tictoc::tic()
 top.role <- multiweb::calc_topological_roles(g, nsim = 100, ncores = 4)
+tictoc::toc()
 clas.role <- multiweb::classify_topological_roles(top.role, g, plt = TRUE)
 top.role.df <- clas.role %>% 
   mutate(Module = modulos$membership[node]) %>% 
