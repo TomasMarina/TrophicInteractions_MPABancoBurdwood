@@ -5,29 +5,68 @@ output: pdf_document
 bibliography: "AMPBancoBurdwood.bib"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-## R Markdown
-@Schejter2016
+## Abstract
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Introduction
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+The objective of the present work was to build the network of predator-prey interactions (food web) for the Marine Protected Area Namuncurá - Banco Burdwood I, and characterize it in terms of complexity and structure.
 
-```{r cars}
-summary(cars)
-```
+## Methodology
 
-## Including Plots
+### Study area
 
-You can also embed plots, for example:
+### Food web construction
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+### Food web analysis
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+We analyzed the MPA food web at 2 levels: 1) global, network-level properties (considers all species and interactions), and 2) species, species-level properties (considers the species’ role in the food web).
+GLOBAL
+Complexity: # trophic species, # interactions, link density, connectance
+Degree distribution
+Mean shortest path length
+Omnivory
+Distribution of prey and predator
+Distribution of interactions by functional group
+
+SPECIES
+Centrality indices (betweenness, closeness)
+Trophic similarity
+Topological role
+
+## Results
+
+### Network-level properties
+
+Most Functional groups show an asymmetric distribution of interactions: few species are relatively more connected than the rest.
+
+Most consumers have a narrow potential diet, few have a broad diet.
+Few prey are consumed by many predators, most prey have few predators.
+Consumers w/ broad diet: Patagonotothen guntheri, P. ramsayi, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
+Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia spp., Foraminifera.
+
+### Species-level properties
+
+‘Network connector’ and ‘module connector’ species are responsible for linking modules and maintaining the connectivity of the food web. TL range for these species: 1 - 3.86.
+
+Betweenness = Species at mid-trophic levels (3-4) present more shortest paths between species than any other species: ‘bridge’ role.
+Closeness = Low-trophic level species are relatively closer to other species in the food web.
+
+Trophic similarity: Species are more similar at mid-trophic levels (2-3) than in lower or higher ones. Basal and top species present a higher uniqueness in terms of trophic role.
+
+## Discussion
+
+The distribution of the interactions is asymmetric, where few species concentrate most of the interactions: Detritus, Diatoms (x3), Patagonotothen ramsayi & P. guntheri, Euphausia spp. The same happens within each functional group.
+
+The most demanded food sources are: Detritus, Diatoms (x3), Euphausia spp., & Foraminifera.
+Almost half of the consumers (47.64 %) are omnivores. Those with the broadest diets are: Patagonotothen ramsayi, P. guntheri, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
+
+Low and mid-trophic level species are responsible for maintaining the connectivity of the food web. The functional groups represented are: Amphipoda, Bivalvia, Bryozoa, Cnidaria, Cumacea, Decapoda, Detritus, Diatoms, Echinodermata, Fish (bentho-pelagic, demersal, chondrichthyes), Foraminifera, Polychaeta, Porifera, Zooplankton.
+
+Low and mid-trophic level species present the highest betweenness and closeness values. These species have an important ‘bridge’ role and are close to other species.
+Mid-trophic level species are more redundant than those at low and high trophic levels.
 
 ## References
