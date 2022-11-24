@@ -13,11 +13,13 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ## Introduction
 
-The objective of the present work was to build the network of predator-prey interactions (food web) for the Marine Protected Area Namuncurá - Banco Burdwood I, and characterize it in terms of complexity and structure.
+The objective of the present work was to build the network of predator-prey interactions (food web) for the Marine Protected Area Namuncurá - Banco Burdwood I (MPAN-BB), and characterize it in terms of complexity and structure.
 
 ## Methodology
 
 ### Study area
+
+The MPAN-BB is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019] and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8 ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
 
 ### Food web construction
 
