@@ -1,0 +1,124 @@
+---
+title: "Supplementary material for 'The complex network of trophic interactions in a subAntarctic Marine Protected Area'"
+author: "Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli"
+output: pdf_document
+bibliography: "AMPBancoBurdwood.bib"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+## Food web construction
+
+The following figure and tables summarize the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).
+Figure 1 resumes the type and number of references reviewed. Table 1 is the complete list of trophic interactions and the references that confirm each of them. Table 2 is the species list with details on trophospecies cases (aggregated taxa).
+
+
+```{r ref-plot, echo=FALSE, fig.cap="Summary of the references used to build the network of trophic (predator-prey) interactions for the MPAN-BB ecosystem."}
+
+# Load packages
+library(tidyverse)
+library(ggplot2)
+
+# Load data
+load("../data/cleaned-data_sep22.rda")
+
+# Discard low resolution interactions
+int_good_res <- int_raw %>% 
+  filter(!str_detect(Prey, "\\*$")) %>% 
+  filter(!str_detect(Predator, "\\*$")) %>% 
+  dplyr::select(Prey, Predator, PreyGroup, PredGroup, Reference) %>% 
+  distinct(Prey, Predator, .keep_all = TRUE)
+
+# Figure 1. Plot resuming references
+biblio <- data.frame(unique(int_good_res$Reference))
+colnames(biblio) <- "Reference"
+biblio <- biblio %>% 
+  mutate(Type = case_when(str_detect(Reference, "pers.com.") ~ "PersComm",
+                          str_detect(Reference, "etal") ~ "Article",
+                          str_detect(Reference, "&") ~ "Article",
+                          str_detect(Reference, "Encyclopedia of Life") ~ "DataBase",
+                          str_detect(Reference, "GloBI") ~ "DataBase",
+                          str_detect(Reference, "GATEWAy") ~ "DataBase",
+                          str_detect(Reference, "PhDTesis") ~ "Thesis",
+                          TRUE ~ "Article"))
+ggplot(biblio) +
+  geom_bar(aes(x = Type, fill = Type)) +
+  theme_bw() +
+  labs(x = "Reference", y = "Count") +
+  annotate("text", x = Inf, y = Inf, label = paste("Total = ", nrow(biblio), sep = ""), vjust=1, hjust=1)
+
+```
+
+\newpage
+
+```{r echo=FALSE, results='asis'}
+
+# Load packages
+library(knitr)
+library(dplyr)
+library(kableExtra)
+
+# Load data
+load("../data/cleaned-data_sep22.rda")
+
+# Discard low resolution interactions
+int_good_res <- int_raw %>% 
+  filter(!str_detect(Prey, "\\*$")) %>% 
+  filter(!str_detect(Predator, "\\*$")) %>% 
+  dplyr::select(Prey, Predator, PreyGroup, PredGroup, Reference) %>% 
+  distinct(Prey, Predator, .keep_all = TRUE)
+
+# Table 1. List of interactions
+knitr::kable(int_good_res %>% arrange(., (Predator)), format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE,
+             caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>%
+  column_spec(5, width = "0.5in") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
+
+```
+
+\newpage
+
+```{r echo=FALSE, results='asis'}
+
+# Load packages
+library(knitr)
+library(dplyr)
+library(kableExtra)
+
+# Load data
+load("../data/cleaned-data_sep22.rda")
+load("../data/foodweb-data_jan23.rda")
+
+# Tidy data
+df_g <- igraph::as_data_frame(g, 'both')
+sp_list <- df_g[["vertices"]] %>% 
+  rename("TrophicSpecies" = "name") %>% 
+  left_join(sp_raw) %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, Reference_pres, Observation) %>% 
+  rename("Species" = "TrophicSpecies", "Reference" = "Reference_pres") %>% 
+  mutate(Observation = case_when(Observation %in% c("Registrado Psolus_sp; Martinez sugiere presencia de P. segregatus", "Registrado Psolus_sp; Martinez sugiere presencia de P. patagonicus", "Registrado Psolus_sp; Martinez sugiere presencia de P. antarcticus", "Lista de sp no publicada provista por Díaz de Astarloa", "Info from Sup Info (Teso_etal_2019)", "AMPNBB-II", "Abundance data available ?", "Esquema trófico", "Depredadores tope", "Copepoda", "Benthic. Not recorded", "Cirripedia") ~ "", 
+                                 Species == "Campylaspis_spp" ~ "Aggregated: Campylaspis_frigida y Campylaspis_bacescui",
+                                 Species == "Ophiactis_sp" ~ "Aggregated: Ophiactis_asperula y Ophiactis_spp",
+                                 Species == "Brachiopoda_spp" ~ "Aggregated: Magellania_venosa, Liothyrella_uva y Terebratella_dorsata",
+                                 TRUE ~ Observation),
+         Reference = case_when(Species == "Bacteria" ~ "Guinder_etal_2020",
+                               Species == "Necromass" ~ "Riccialdelli_etal_2017", 
+                               Species == "Syllidae" ~ "Schejter_etal_2016; Bremec_etal_2019",
+                               Species == "Sabellidae" ~ "Schejter_etal_2016; Bremec_etal_2019; Spinelli_etal_2020",
+                               Species == "Ophiactis_sp" ~ "Schejter_etal_2016; 2020a; Brogger_pers.com.",
+                               Species == "Campylaspis_spp" ~ "Doti_etal_2020",
+                               Species == "Brachiopoda_spp" ~ "Schejter_etal_2016", TRUE ~ Reference),
+         FunctionalGroup = case_when(Species == "Campylaspis_spp" ~ "Cumacea",
+                                     Species == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ FunctionalGroup)) %>% 
+  arrange(., (Species))
+
+# Table 2. List of species
+knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE,
+             caption = "List of species for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>%
+  column_spec(4, width = "0.5in") %>%
+  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
+
+
+```

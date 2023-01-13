@@ -32,8 +32,29 @@ int_need_res <- int_raw %>% filter_at(.vars = vars(Prey, Predator),
 int_good_res <- int_raw %>% 
   filter(!str_detect(Prey, "\\*$")) %>% 
   filter(!str_detect(Predator, "\\*$")) %>% 
-  dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
+  dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource, Reference) %>% 
   distinct(Prey, Predator, .keep_all = TRUE)
+
+## Referencias ----
+
+## Revision bibliografica ----
+
+biblio <- data.frame(unique(int_good_res$Reference))
+colnames(biblio) <- "Reference"
+biblio <- biblio %>% 
+  mutate(Type = case_when(str_detect(Reference, "pers.com.") ~ "PersComm",
+                          str_detect(Reference, "etal") ~ "Article",
+                          str_detect(Reference, "&") ~ "Article",
+                          str_detect(Reference, "Encyclopedia of Life") ~ "DataBase",
+                          str_detect(Reference, "GloBI") ~ "DataBase",
+                          str_detect(Reference, "GATEWAy") ~ "DataBase",
+                          str_detect(Reference, "PhDTesis") ~ "Thesis",
+                          TRUE ~ "Article"))
+ggplot(biblio) +
+  geom_bar(aes(x = Type, fill = Type)) +
+  theme_bw() +
+  labs(x = "Bibliography", y = "Count") +
+  annotate("text", x = Inf, y = Inf, label = paste("Total = ", nrow(biblio), sep = ""), vjust=1, hjust=1)
 
 
 ## Objeto igraph ----
@@ -90,4 +111,4 @@ plotTrophLevel(g, ylab = "Trophic level")
 # Save data ----
 
 save(g, int_need_res, int_good_res,
-     file = "data/foodweb-data_sep22.rda")
+     file = "data/foodweb-data_jan23.rda")

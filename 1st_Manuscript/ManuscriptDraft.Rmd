@@ -1,5 +1,5 @@
 ---
-title: "The complex network of trophic interactions in the Marine Protected Area Namuncurá-Banco Burdwood"
+title: "The complex network of trophic interactions in a subAntarctic Marine Protected Area"
 author: "Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli"
 output: pdf_document
 bibliography: "AMPBancoBurdwood.bib"
@@ -13,17 +13,22 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ## Introduction
 
-The objective of the present work was to build the network of predator-prey interactions (food web) for the Marine Protected Area Namuncurá - Banco Burdwood I (MPAN-BB), and characterize it in terms of complexity and structure.
+The objective of the present work was to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I (MPAN-BB), and characterize it in terms of complexity and structure using a network approach.
 
 ## Methodology
 
 ### Study area
 
-The MPAN-BB is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019] and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8 ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
+The MPAN-BB is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
 
-### Food web construction
+### Network construction
 
-### Food web analysis
+In order to build the network of predator-prey interactions we reviewed more than 150 references considering published articles, databases and doctoral theses. Furthermore, we took into account personal communications from experts belonging to the working group of the study area (https://www.pampazul.gob.ar/tag/banco-burdwood/). The diversity of the expertise of the authors contributing to the present study was a key factor in generating the quality of the network, and inherently improved the network representation of the MPAN-BB ecosystem. A list of the bibliography used to build the network is presented in Supplementary Material (Table S1).
+
+Due to a lack of trophic data resolution for some species inhabiting the MPAN-BB, we follow the concept of trophospecies, here defined as aggregated groups of taxa. In most cases we followed this when data on specific biological species were not available, but for some cases we collapsed species when taxa shared the same set of predators and prey (trophic similarity criteria). Details about this can be found in Supplementary Material (Table S2).
+
+
+### Network analysis
 
 We analyzed the MPA food web at 2 levels: 1) global, network-level properties (considers all species and interactions), and 2) species, species-level properties (considers the species’ role in the food web).
 GLOBAL
@@ -38,6 +43,47 @@ SPECIES
 Centrality indices (betweenness, closeness)
 Trophic similarity
 Topological role
+
+
+
+All analyses and graphs were performed in R version 4.2.2 [@RCoreTeam2022], mainly using 'igraph' [@Csardi2006] and ‘multiweb’ [@Saravia2022a] packages.
+
+```{r table1, echo=FALSE, results='asis'}
+
+# Load packages
+library(knitr)
+library(tidyverse)
+library(pander)
+
+# Build Table 1. Network metrics
+ti_des <- tibble(Name="Connectance",
+                 Description="Directed connectance describes the proportion of directed links realized out of the maximum number of possible links.",
+                 Implications = "It measures the probability of interactions, it is a fundamental measure of network complexity. Connectance can be negatively or positively associated with food-web robustness, depending on the network structure (random vs non-random) or how the strength of the interactions are distributed.",
+                 Reference = "")
+
+ti_des <- add_row(ti_des, Name="Link density", Description="Number of trophic interactions (links) per species.", Implications = "The average number of links per species informs about how connected species are in the food-web", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Proportion of basal species", Description="Proportion of taxa with no prey.", Implications = "The proportion of basal species is often under-represented in marine food webs. The few basal species impart a funnel shape at the base of the food web.", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Proportion of intermediate species", Description="Proportion of taxa that are both prey and predators to other species.", Implications = "The proportion of intermediate species influence the connectivity of a food web between lower and upper trophic levels. The proportion of intermediate species is positively associated with connectance and level of omnivory.", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Proportion of top species", Description="Proportion of taxa with no predators.", Implications = "Top predators may induce indirect, top down effects such as trophic cascades through lower trophic", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Trophic Level", Description="Mean of all short-weighted paths from base to each species.", 
+                  Implications = "The number of trophic levels is a central feature of the vertical structure of food webs and is related to the length of food chains. The height of trophic levels reflects ecological processes that sustain top predators.", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Omnivory", Description="Level of omnivory of each species is the standard deviation of the short-weighted trophic level of its resources.", Implications = "Omnivory can negatively or positively influence the stability of communities, depending on the interaction strength. Intermediate levels of omnivory may stabilize communities, and may diffuse top-down influences through the food webs and thereby reduce the probability of trophic cascades.", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Modularity", Description="Modularity describes how densely sub-groups of species interact with one another compared to species from other sub-groups.", Implications = "Modularity is positively associated with robustness, because perturbations can be retained within modules, preventing them to spread to the whole network.", Reference = "")
+
+ti_des <- add_row(ti_des, Name="Mean maximum eingenvalue", Description="The mean of the maximum eigenvalue of the community matrix. This matrix is based on the adjacency matrix of the food web with the magnitudes randomized.", Implications = "This metric is directly related with network local stability, which can reveal the amplification of small perturbations near the equilibrium point; values closer to zero indicate a more stable food web.", Reference = "")
+
+pandoc.table(ti_des, digits = 4, colnames("Metric","Definition","Implication","Reference"), style="multiline", split.tables = Inf, justify = c('left','left','left','right'),
+             caption = "List of network metrics analyzed, definitions, and relevant ecological implication related to food web complexity and structure.")
+
+
+```
+
 
 ## Results
 
