@@ -13,7 +13,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ## Introduction
 
-The objective of the present work was to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I (MPAN-BB), and characterize it in terms of complexity and structure using a network approach.
+The objective of the present work was to characterize the trophic (predator-prey) interactions of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB) in terms of complexity and structure using a network approach.
 
 ## Methodology
 

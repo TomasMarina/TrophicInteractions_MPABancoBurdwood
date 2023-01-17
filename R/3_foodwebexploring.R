@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_sep22.rda")
+load("data/cleaned-data_jan23.rda")
 
 
 # Red trófica ----
@@ -87,7 +87,10 @@ g_dec
 
 group_sp <- as.data.frame((V(g)$name)) %>% 
   mutate(as.data.frame(V(g)$FunctionalGroup)) %>%
-  rename("TrophicSpecies" = 1, "FunctionalGroup" = 2)
+  rename("TrophicSpecies" = 1, "FunctionalGroup" = 2) %>% 
+  mutate(FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
+                                     TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
+                                     TRUE ~ FunctionalGroup))
 
 group_sp <- group_sp %>%
   count(FunctionalGroup) %>%

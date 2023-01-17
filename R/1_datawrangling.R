@@ -26,7 +26,7 @@ sp_raw <- sp_raw %>%
 
 ## Lista de Interacciones ----
 
-int_raw <- read.csv("data/ListaInteracciones_AMPNBB_sep_22.csv")
+int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jan23.csv")
 
 int_raw <- int_raw %>% 
   # low-resolved Phytoplankton
@@ -145,4 +145,4 @@ spp_tl_1 <- spp_db %>%
 ## Save data ----
 
 save(sp_raw, int_raw,
-     file = "data/cleaned-data_sep22.rda")
+     file = "data/cleaned-data_jan23.rda")

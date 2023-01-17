@@ -22,7 +22,7 @@ library(tidyverse)
 library(ggplot2)
 
 # Load data
-load("../data/cleaned-data_sep22.rda")
+load("../data/cleaned-data_jan23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -59,22 +59,27 @@ ggplot(biblio) +
 library(knitr)
 library(dplyr)
 library(kableExtra)
+library(pander)
 
 # Load data
-load("../data/cleaned-data_sep22.rda")
+load("../data/cleaned-data_jan23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
   filter(!str_detect(Prey, "\\*$")) %>% 
   filter(!str_detect(Predator, "\\*$")) %>% 
-  dplyr::select(Prey, Predator, PreyGroup, PredGroup, Reference) %>% 
+  dplyr::select(Prey, Predator, Reference, Reference_link) %>% 
   distinct(Prey, Predator, .keep_all = TRUE)
 
 # Table 1. List of interactions
-knitr::kable(int_good_res %>% arrange(., (Predator)), format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE,
-             caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>%
-  column_spec(5, width = "0.5in") %>%
-  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
+knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", longtable = T, col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>% 
+  column_spec(1:3, width="2cm") %>% 
+  column_spec(4, width="14cm") %>% 
+  kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4) %>% 
+  landscape()
+
+# pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link)) %>% rename("Link"="Reference_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","right"),
+#              caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
 
 ```
 
@@ -88,7 +93,7 @@ library(dplyr)
 library(kableExtra)
 
 # Load data
-load("../data/cleaned-data_sep22.rda")
+load("../data/cleaned-data_jan23.rda")
 load("../data/foodweb-data_jan23.rda")
 
 # Tidy data
@@ -96,7 +101,7 @@ df_g <- igraph::as_data_frame(g, 'both')
 sp_list <- df_g[["vertices"]] %>% 
   rename("TrophicSpecies" = "name") %>% 
   left_join(sp_raw) %>% 
-  dplyr::select(TrophicSpecies, FunctionalGroup, Reference_pres, Observation) %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, Reference_pres, Reference_pres_link, Observation) %>% 
   rename("Species" = "TrophicSpecies", "Reference" = "Reference_pres") %>% 
   mutate(Observation = case_when(Observation %in% c("Registrado Psolus_sp; Martinez sugiere presencia de P. segregatus", "Registrado Psolus_sp; Martinez sugiere presencia de P. patagonicus", "Registrado Psolus_sp; Martinez sugiere presencia de P. antarcticus", "Lista de sp no publicada provista por Díaz de Astarloa", "Info from Sup Info (Teso_etal_2019)", "AMPNBB-II", "Abundance data available ?", "Esquema trófico", "Depredadores tope", "Copepoda", "Benthic. Not recorded", "Cirripedia") ~ "", 
                                  Species == "Campylaspis_spp" ~ "Aggregated: Campylaspis_frigida y Campylaspis_bacescui",
@@ -115,10 +120,11 @@ sp_list <- df_g[["vertices"]] %>%
   arrange(., (Species))
 
 # Table 2. List of species
-knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE,
-             caption = "List of species for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>%
-  column_spec(4, width = "0.5in") %>%
-  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 6)
+knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).") %>%
+  column_spec(1:3, width="3cm") %>%
+  column_spec(4:5, width="5cm") %>% 
+  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
+  landscape()
 
 
 ```
