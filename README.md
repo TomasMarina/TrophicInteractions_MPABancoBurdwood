@@ -1,2 +1,5 @@
-# Red trófica del Área Marina Protegida Namuncurá - Banco Burdwood I
-Base de datos y análisis de la red trófica del AMP Namuncurá - Banco Burdwood
+# The complex network of trophic interactions in a subAntarctic Marine Protected Area
+Manuscript in construction
+
+Authors: Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli
+Centro Austral de Investigaciones Científicas (CADIC-CONICET), Argentina
