@@ -17,7 +17,7 @@ ipak(packages)
 
 ## Lista de Especies ----
 
-sp_raw <- read.csv("data/ListaEspecies_AMPNBB_sep_22.csv")
+sp_raw <- read.csv("data/ListaEspecies_AMPNBB_jan23.csv")
 colnames(sp_raw)
 sp_raw <- sp_raw %>% 
   add_count(FunctionalGroup, name = "Richness") %>% 
