@@ -18,8 +18,8 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_sep22.rda")
-load("data/foodweb-data_sep22.rda")
+load("data/cleaned-data_jan23.rda")
+load("data/foodweb-data_jan23.rda")
 
 
 # Análisis ----
@@ -27,11 +27,11 @@ load("data/foodweb-data_sep22.rda")
 ## Escala global ----
 
 # Propiedades topológicas
-prop.topol <- multiweb::calc_topological_indices(g)
+prop_topol <- multiweb::calc_topological_indices(g)
 
 # Prop. sp B, I y T
-prop.bas <- prop.topol$Basal/prop.topol$Size
-prop.top <- prop.topol$Top/prop.topol$Size
+prop.bas <- prop_topol$Basal/prop_topol$Size
+prop.top <- prop_topol$Top/prop_topol$Size
 prop.int <- 1 - (prop.bas + prop.top)
 prop.bas+prop.top+prop.int  # chequear sum(prop)=1
 
@@ -123,7 +123,7 @@ ts <- TrophicSimilarity(cc)
 mts <- tibble(TrophicSpecies = rownames(ts), meanTrophicSimil = colMeans(ts))  # data frame
 
 # Guardar como data frame y .csv
-spp_id <- as.data.frame(1:prop.topol$Size)
+spp_id <- as.data.frame(1:prop_topol$Size)
 spp_name <- as.data.frame(V(g)$name)
 spp_fg <- as.data.frame(V(g)$FunctionalGroup)
 spp_totdegree <- as.data.frame(V(g)$TotalDegree)
@@ -159,7 +159,7 @@ spp_total <- spp_total %>%
                              FunctionalGroup %in% c("Fish_Demersal") ~ "Demersal"))
 
 
-write_csv(spp_total, file = "results/spp_prop_sep22.csv")
+write_csv(spp_total, file = "results/spp_prop_jan23.csv")
 
 
 # Resolución de la red ----
@@ -173,5 +173,5 @@ sp_prop <- sp_count/vcount(g_up)
 
 # Guardar datos ----
 
-save(g_up, deg_dist_fit, prop.topol, spp_total, top.role, top.role.df,
-     file = "results/summary_results_sep22.rda")
+save(g_up, g, deg_dist_fit, prop_topol, spp_total, top.role, top.role.df,
+     file = "results/summary_results_jan23.rda")
