@@ -3,6 +3,9 @@ title: "The complex network of trophic interactions in a subAntarctic Marine Pro
 author: "Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli"
 output: pdf_document
 bibliography: "AMPBancoBurdwood.bib"
+header-includes:
+  - \usepackage[left]{lineno}
+  - \linenumbers
 ---
 
 ```{r setup, include=FALSE, echo=FALSE} 
@@ -13,6 +16,12 @@ library(tidyverse)
 library(pander)
 library(ggplot2)
 library(kableExtra)
+library(multiweb)
+library(ggjoy)
+library(ggpubr)
+library(igraph)
+library(gridExtra)
+library(grid)
 
 ```
 
@@ -20,15 +29,17 @@ library(kableExtra)
 
 ## Introduction
 
-The objective of the present work was twofold: characterize the network of trophic interactions in terms of complexity and structure for the MPAN-BB ecosystem, and describe the species' role in such network framework.
+Brief description and ecological importance of MPAN-BB
+
+The objective of the present work was twofold: characterize the network of trophic interactions in terms of complexity and structure for the MPA Namuncurá-Banco Burdwood ecosystem, and describe the species' role in such network framework.
 
 ## Methodology
 
 ### Study area
 
-The MPAN-BB is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
+The MPA Namuncurá-Banco Burdwood is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
 
-```{r figure1}
+```{r figure1, echo=FALSE}
 # Map of MPAN-BB provided by Lu R. (?)
 
 ```
@@ -36,21 +47,21 @@ The MPAN-BB is a shallow submarine plateau called Burdwood Bank (BB) located 150
 
 ### Network construction
 
-In order to build the network of predator-prey interactions we reviewed more than 150 references considering published articles, databases and doctoral theses. Furthermore, we took into account personal communications from experts belonging to the working group of the study area (https://www.pampazul.gob.ar/tag/banco-burdwood/). The diversity of the expertise of the authors contributing to the present study was a key factor in generating the quality of the network, and inherently improved the network representation of the MPAN-BB ecosystem. A list of the bibliography used to build the network is presented in Supplementary Material (Table S1).
+In order to build the network of predator-prey interactions we reviewed more than 150 references considering published articles, databases and doctoral theses. Furthermore, we took into account personal communications from experts belonging to the working group of the study area (https://www.pampazul.gob.ar/tag/banco-burdwood/). The diversity of the expertise of the authors contributing to the present study was a key factor in generating the quality of the network, and inherently improved the network representation of the MPA Namuncurá-Banco Burdwood ecosystem. A list of the bibliography used to build the network is presented in Supplementary Material (Table S1).
 
-Due to a lack of trophic data resolution for some species inhabiting the MPAN-BB, we follow the concept of trophic species, here defined as aggregated groups of taxa. In most cases we followed this when data on specific biological species were not available, but for some cases we collapsed species when taxa shared the same set of predators and prey (trophic similarity criteria). Details about this can be found in Supplementary Material (Table S2).
+Due to a lack of trophic data resolution for some species inhabiting the MPA Namuncurá-Banco Burdwood, we follow the concept of trophic species, here defined as aggregated groups of taxa. In most cases we followed this when data on specific biological species were not available, but for some cases we collapsed species when taxa shared the same set of predators and prey (trophic similarity criteria). Details about this can be found in Supplementary Material (Table S2).
 
 With the gathered trophic data we constructed an interaction matrix of pairwise interactions; a value of 1 or 0 was assigned to each element a_ij of the matrix depending on whether the j-species preyed or not on the i-species. Then we transformed such matrix into an oriented graph with L trophic interactions between S nodes or species. The orientation or direction of the graph follows the flow of energy and matter in the network, from prey to predator.
 
 ### Network analysis
 
-We analyzed the MPAN-BB network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the entire network; and 2) species, considering interactions and species related to a particular species.
-For the global-level analysis we calculated several network properties commonly used to describe the complexity and structure in food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the entire network, for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Seabirds, etc.), and for prey and predators (Table 1). The functional group's degree distributions show the most-connected species; the prey's distribution indicates the amount of predators per prey; and the predator's distribution represents the amount of prey per predator.
-For the species-level analysis we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic level TL; (4) trophic similarity TS; and (5) topological role TR (Table 1). These properties provide a general appropriate description of species' role in food webs [@Cirtwill2018].
+We analyzed the MPA Namuncurá-Banco Burdwood network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the entire network; and 2) species, considering interactions and species related to a particular species.
+For the global-level analysis we calculated several network properties commonly used to describe the complexity and structure in food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Seabirds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
+For the species-level analysis we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic level TL; (4) trophic similarity TS; and (5) topological role TR (Table 1). These properties provide a general appropriate description of species' role in empirical complex food webs [@Cirtwill2018].
 
 All network analyses and graphs were performed in R version 4.2.2 [@RCoreTeam2022], mainly using 'igraph' [@Csardi2006] and ‘multiweb’ [@Saravia2022a] packages. The source code and data are available at https://github.com/TomasMarina/Banco-Burdwood.
 
-```{r table1, results='asis'}
+```{r table1, echo=FALSE, results='asis'}
 
 # Table 1. Network metrics
 table1 <- tibble(Name="Number of species", Definition="Number of trophic species in a food web.", Implications="It represents the species diversity and has implications for the persistence of the ecosystem.", Reference = "May 1973, Tilman 1996")
@@ -88,21 +99,132 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ### Network-level properties
 
-```{r figure2&table2}
-# Food web graph and table
+```{r figure2, echo=FALSE, fig.align='center', fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent the species and arrows the trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
+# Food web graph
 
-load()
+load("../results/summary_results_jan23.rda")
 
-plot_troph_level(vertexLabel = F, modules = F, ylab = "Trophic level")
-
-knitr::kable(prop_topol %>% select())
+plot <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
 
 ```
 
-```{r figure3}
-# Degree distributions: network, prey, predator & group
+```{r table2, echo=FALSE}
+
+load("../results/summary_results_jan23.rda")
+
+knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength), col.names = c("Species","Interactions","Density","Connectance","Omnivory","Path length"),
+                      caption = "Global-level properties of the food web of MPA Namuncurá-Banco Burdwood. See table 1 for definitions and ecological relevance.")
+
+```
+
+```{r figure3, echo=FALSE, fig.height = 28, fig.width = 20, fig.cap="Degree distributions for the (A) food web, for (B) prey among predators, (C) predators among prey, and (D) for each functional group."}
+# Degree distributions: network, predator, prey & group
 # above row (network, prey, predator), below row (group)
 
+load("../data/foodweb-data_jan23.rda")
+load("../results/summary_results_jan23.rda")
+
+# Network Degree
+degree <- as.data.frame(degree(g, mode = "total"))
+plot_totdeg <- ggplot(degree, aes(degree[,1])) +
+    geom_histogram(bins = 100, alpha = 0.3, color = "black") +
+    labs(x = "Number of interactions (Degree)", y = "Frequency") +
+    theme_bw() +
+    theme(legend.position = "none",
+          axis.text.x = element_text(size = 26),
+          axis.text.y = element_text(size = 26),
+          axis.title.x = element_text(face = "bold", size = 26),
+          axis.title.y = element_text(face = "bold", size = 26))
+
+# Predator Degree
+# Generality (generalistas vs especialistas)
+plot_preddeg <- spp_total %>% 
+    filter(NumPrey != 0) %>% 
+    ggplot(., aes(x = NumPrey)) +
+    geom_histogram(stat = "count") +
+    labs(x = "Predators", y = "Number of prey") +
+    theme_bw() +
+    theme(legend.position = "none",
+          axis.text.x = element_text(size = 26),
+          axis.text.y = element_text(size = 26),
+          axis.title.x = element_text(face = "bold", size = 26),
+          axis.title.y = element_text(face = "bold", size = 26)) #+
+# annotate("text", x = Inf, y = Inf, label = paste("Prey per predator = ", round(prop_topol$Generality, 2), sep = ""),
+#          size = 5, vjust=1, hjust=1))
+
+# Prey Degree
+# Vulnerability (energy flows)
+plot_preydeg <- spp_total %>% 
+    filter(NumPred != 0) %>% 
+    ggplot(., aes(x = NumPred)) +
+    geom_histogram(stat = "count") +
+    labs(x = "Prey", y = "Number of predators") +
+    theme_bw() +
+    theme(legend.position = "none",
+          axis.text.x = element_text(size = 26),
+          axis.text.y = element_text(size = 26),
+          axis.title.x = element_text(face = "bold", size = 26),
+          axis.title.y = element_text(face = "bold", size = 26)) #+
+# annotate("text", x = Inf, y = Inf, label = paste("Predators per prey = ", round(prop_topol$Vulnerability, 2), sep = ""),
+#          size = 5, vjust=1, hjust=1))
+
+# Group Degree
+un.prey <- as.data.frame(unique(int_good_res$PreyGroup))  # prey groups
+un.pred <- as.data.frame(unique(int_good_res$PredGroup))  # pred groups
+colnames(un.prey) <- "Group"
+colnames(un.pred) <- "Group"
+unique_FG <- unique(bind_rows(un.pred, un.prey))  # 35 groups
+
+col_palette <- scales::hue_pal()(nrow(unique_FG))
+FGColors <- setNames(col_palette, levels(unique_FG$Group))
+unique_FG <- cbind(unique_FG, as.data.frame(FGColors))
+colnames(unique_FG) <- c("FunctionalGroup", "FGColor")
+
+plot_grpdeg <- spp_total %>% 
+    add_count(FunctionalGroup) %>% 
+    filter(n > 2) %>% 
+    group_by(FunctionalGroup) %>% 
+    mutate(TL_fg = mean(TL)) %>% 
+    ggplot(., aes(x = TotalDegree, y = reorder(FunctionalGroup, TL_fg), fill = FunctionalGroup)) + 
+    geom_joy(scale = 3.75) +
+    scale_fill_manual(values = FGColors) +
+    labs(x = "Number of interactions", y = "Functional group", tag="D") +
+    theme_joy(grid = FALSE) +
+    theme(legend.position = "none",
+          axis.text.x = element_text(size = 26),
+          axis.text.y = element_text(size = 20),
+          axis.title.x = element_text(face = "bold", size = 26),
+          axis.title.y = element_text(face = "bold", size = 26),
+          plot.tag = element_text(face = "bold", size = 32),
+          plot.tag.position = c(0.05, 1))
+
+# Figure
+a <- plot_totdeg
+b <- plot_preddeg
+c <- plot_preydeg
+d <- plot_grpdeg
+
+
+# Move to a new page
+grid.newpage()
+# Nested ggarrange
+ggarrange(a,                                                                                         # First row
+          ggarrange(b, c, ncol = 2, labels = c("B", "C"), font.label=list(color="black",size=30)),   # Second row
+          ggarrange(d, ncol = 1),                                                                    # Third row
+          nrow = 3, labels = "A",
+          font.label=list(color="black",size=30))
+
+# # Create layout : nrow = 2, ncol = 2
+# pushViewport(viewport(layout = grid.layout(3, 2)))
+# # A helper function to define a region on the layout
+# define_region <- function(row, col){
+#   viewport(layout.pos.row = row, layout.pos.col = col)
+# } 
+# # Arrange the plots
+# print(a, vp = define_region(1, 1:2))
+# print(b, vp = define_region(2, 1))
+# print(c, vp = define_region(2, 2))
+# print(d, vp = define_region(3, 1:2))
 
 
 ```
@@ -117,12 +239,12 @@ Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia
 
 ### Species-level properties
 
-```{r figure4}
+```{r figure4, echo=FALSE}
 # Betweenness, Closeness & Trophic similarity by Trophic level
 
 ```
 
-```{r figure5}
+```{r figure5, echo=FALSE}
 # Topological roles
 
 ```
