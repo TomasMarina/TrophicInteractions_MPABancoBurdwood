@@ -198,21 +198,21 @@ plot_grpdeg <- spp_total %>%
           plot.tag = element_text(face = "bold", size = 32),
           plot.tag.position = c(0.05, 1))
 
-# Figure
+# Arrange figure
 a <- plot_totdeg
 b <- plot_preddeg
 c <- plot_preydeg
 d <- plot_grpdeg
 
-
 # Move to a new page
 grid.newpage()
 # Nested ggarrange
-ggarrange(a,                                                                                         # First row
+figure_3 <- ggarrange(a,                                                                                         # First row
           ggarrange(b, c, ncol = 2, labels = c("B", "C"), font.label=list(color="black",size=30)),   # Second row
           ggarrange(d, ncol = 1),                                                                    # Third row
           nrow = 3, labels = "A",
           font.label=list(color="black",size=30))
+figure_3
 
 # # Create layout : nrow = 2, ncol = 2
 # pushViewport(viewport(layout = grid.layout(3, 2)))
@@ -226,7 +226,6 @@ ggarrange(a,                                                                    
 # print(c, vp = define_region(2, 2))
 # print(d, vp = define_region(3, 1:2))
 
-
 ```
 
 
@@ -239,13 +238,80 @@ Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia
 
 ### Species-level properties
 
-```{r figure4, echo=FALSE}
-# Betweenness, Closeness & Trophic similarity by Trophic level
+```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betwenness, (B) closeness, and (C) trophic similarity by trophic level (equal or greater than 2). See table 1 for definitions and ecological relevance."}
+# Betweenness, Closeness & Trophic similarity by Trophic level (>= 2)
+
+# Betweenness
+plot_sp_bt <- spp_total %>% 
+  filter(TL >= 2) %>% 
+  ggplot(., aes(x = TL, y = Between)) +
+  geom_point() +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Betweenness") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(size = 26),
+        axis.text.y = element_text(size = 26),
+        axis.title = element_text(size = 26, face = "bold"))
+
+# Closeness
+plot_sp_cl <- spp_total %>% 
+  filter(TL >= 2) %>%
+  ggplot(., aes(x = TL, y = Close)) +
+  geom_point() +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Closeness") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(size = 26),
+        axis.text.y = element_text(size = 26),
+        axis.title = element_text(size = 26, face = "bold"))
+
+# Trophic similarity
+plot_sp_ts <- spp_total %>% 
+  filter(TL >= 2) %>%
+  ggplot(., aes(x = TL, y = meanTrophicSimil)) +
+  geom_point() +
+  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  labs(x = "Trophic level", y = "Trophic similarity") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(size = 26),
+        axis.text.y = element_text(size = 26),
+        axis.title = element_text(size = 26, face = "bold"))
+
+# Move to a new page
+grid.newpage()
+# Arrange figure
+figure_4 <- ggarrange(plot_sp_bt + rremove("xlab"), plot_sp_cl + rremove("xlab"), plot_sp_ts + rremove("xlab"),
+                      labels = c("A","B","C"), ncol=2, nrow=2,
+                      font.label = list(size = 30, color = "black"))
+annotate_figure(figure_4, bottom = textGrob("Trophic level", gp = gpar(fontface="bold", col="black", fontsize=26)))
 
 ```
 
 ```{r figure5, echo=FALSE}
 # Topological roles
+
+top.role.col <- hcl.colors(4, palette = "Purple-Green")
+TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
+TRColor <- as.data.frame(TRColor) %>% 
+  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+#show_col(top.role.col)  # shows color & code
+data_TRColor <- spp_total %>% 
+  dplyr::select(TopRole, everything()) %>% 
+  left_join(TRColor)
+g_up_c <- g_up %>% 
+  set_vertex_attr("TRColor", value = data_TRColor$TRColor)
+
+# Filter network connectors ('hubcon') & module connectors ('modcon'). Violet & pink respectively
+sp_con <- spp_total %>% 
+  filter(TopRole == "hubcon" | TopRole == "modcon")
+
+# Move to a new page
+grid.newpage()
+# Arrange figure
+figure_5 <- plot_troph_level(g_up_c, vertexLabel = F, modules = F, ylab = "Trophic level", vertex.color = V(g_up_c)$TRColor)
 
 ```
 
