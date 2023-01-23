@@ -59,7 +59,7 @@ With the gathered trophic data we constructed an interaction matrix of pairwise 
 
 ### Network analysis
 
-We analyzed the MPA Namuncurá-Banco Burdwood network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the entire network; and 2) species, considering interactions and species related to a particular species.
+We analyzed the MPA Namuncurá-Banco Burdwood network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the whole network; and 2) species, considering interactions and species related to a particular species.
 For the global-level analysis we calculated several network properties commonly used to describe the complexity and structure in food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Seabirds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
 For the species-level analysis we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic level TL; (4) trophic similarity TS; and (5) topological role TR (Table 1). These properties provide a general appropriate description of species' role in empirical complex food webs [@Cirtwill2018].
 
@@ -104,6 +104,8 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ### Network-level properties
 
+In terms of complexity, the MPA Namuncurá-Banco Burdwood food web consisted of 379 species and 1778 predator-prey interactions (Figure 2). The food web presents a link density of 4.69, meaning the average number of interactions per species, and a connectance of 0.01 (Table 1). Almost half of the consumers are omnivores, feeding on sources of different trophic levels. The food web shows a path length of 2.99, which implies that nearly three interactions are needed to connect any pair of species of the network.
+
 ```{r figure2, echo=FALSE, fig.align='center', fig.width = 20, fig.height=20, fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent the species and arrows the trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
 # Food web graph
 
@@ -122,6 +124,15 @@ knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance,
                       caption = "Global-level properties of the food web of MPA Namuncurá-Banco Burdwood. See table 1 for definitions and ecological relevance.")
 
 ```
+
+The degree distribution of the food web shows an asymmetric frequency in the number of interactions, where most of the species have relatively low interactions and few species concentrate the majority of them (Figure 2A). If we consider the distribution of prey among predators, most of the consumers feed on a low number of prey whereas few of them have multiple preys (Figure 2B). These are the top-five predators in number of prey: *Patagonotothen guntheri* (Notothenioid fish, 52 prey), *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), *Dissostichus eleginoides* (Notothenioid fish, 30 prey), *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey are fed by multiple predators (Figure 2C). These are the top-five prey in number of predators:...
+Finally, if we take into account the interactions within each functional group, the situation is the same as in the whole food web (Figure 2D). Overall, there is an evident asymmetry in the distribution of interactions among species in the MPA Namuncurá-Banco Burdwood food web.
+
+Most Functional groups show an asymmetric distribution of interactions: few species are relatively more connected than the rest.
+Most consumers have a narrow potential diet, few have a broad diet.
+Few prey are consumed by many predators, most prey have few predators.
+Consumers w/ broad diet: Patagonotothen guntheri, P. ramsayi, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
+Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia spp., Foraminifera.
 
 \newpage
 
@@ -237,14 +248,9 @@ figure_3
 ```
 
 
-Most Functional groups show an asymmetric distribution of interactions: few species are relatively more connected than the rest.
-
-Most consumers have a narrow potential diet, few have a broad diet.
-Few prey are consumed by many predators, most prey have few predators.
-Consumers w/ broad diet: Patagonotothen guntheri, P. ramsayi, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
-Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia spp., Foraminifera.
-
 ### Species-level properties
+
+The majority of the species of the food web are consumers, 336 out of 379; the rest are primary producers, such as phytoplankton, and non-living food sources like detritus and necromass.
 
 \newpage
 
@@ -310,7 +316,7 @@ Trophic similarity: Species are more similar at mid-trophic levels (2-3) than in
 
 ## Discussion
 
-### Food web complexity and structure
+### The MPA Namuncurá-Banco Burdwood food web
 
 ### Species' role
 
@@ -323,6 +329,8 @@ Low and mid-trophic level species are responsible for maintaining the connectivi
 
 Low and mid-trophic level species present the highest betweenness and closeness values. These species have an important ‘bridge’ role and are close to other species.
 Mid-trophic level species are more redundant than those at low and high trophic levels.
+
+### Caveats and future perspectives
 
 \newpage
 
