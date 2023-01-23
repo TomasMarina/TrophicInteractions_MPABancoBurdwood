@@ -27,11 +27,15 @@ library(grid)
 
 ## Abstract
 
+\newpage
+
 ## Introduction
 
 Brief description and ecological importance of MPAN-BB
 
 The objective of the present work was twofold: characterize the network of trophic interactions in terms of complexity and structure for the MPA Namuncurá-Banco Burdwood ecosystem, and describe the species' role in such network framework.
+
+\newpage
 
 ## Methodology
 
@@ -94,16 +98,18 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ```
 
+\newpage
 
 ## Results
 
 ### Network-level properties
 
-```{r figure2, echo=FALSE, fig.align='center', fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent the species and arrows the trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
+```{r figure2, echo=FALSE, fig.align='center', fig.width = 20, fig.height=20, fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent the species and arrows the trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
 # Food web graph
 
 load("../results/summary_results_jan23.rda")
 
+par(cex.axis=1.5, cex.lab=1.5)
 plot <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
 
 ```
@@ -117,7 +123,9 @@ knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance,
 
 ```
 
-```{r figure3, echo=FALSE, fig.height = 28, fig.width = 20, fig.cap="Degree distributions for the (A) food web, for (B) prey among predators, (C) predators among prey, and (D) for each functional group."}
+\newpage
+
+```{r figure3, echo=FALSE, fig.height = 28, fig.width = 20, fig.cap="Degree distributions for the (A) food web, for (B) prey among predators, (C) predators among prey, and (D) for each functional group. Groups are vertically ordered by trophic level."}
 # Degree distributions: network, predator, prey & group
 # above row (network, prey, predator), below row (group)
 
@@ -238,6 +246,8 @@ Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia
 
 ### Species-level properties
 
+\newpage
+
 ```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betwenness, (B) closeness, and (C) trophic similarity by trophic level (equal or greater than 2). See table 1 for definitions and ecological relevance."}
 # Betweenness, Closeness & Trophic similarity by Trophic level (>= 2)
 
@@ -290,30 +300,6 @@ annotate_figure(figure_4, bottom = textGrob("Trophic level", gp = gpar(fontface=
 
 ```
 
-```{r figure5, echo=FALSE}
-# Topological roles
-
-top.role.col <- hcl.colors(4, palette = "Purple-Green")
-TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
-TRColor <- as.data.frame(TRColor) %>% 
-  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
-#show_col(top.role.col)  # shows color & code
-data_TRColor <- spp_total %>% 
-  dplyr::select(TopRole, everything()) %>% 
-  left_join(TRColor)
-g_up_c <- g_up %>% 
-  set_vertex_attr("TRColor", value = data_TRColor$TRColor)
-
-# Filter network connectors ('hubcon') & module connectors ('modcon'). Violet & pink respectively
-sp_con <- spp_total %>% 
-  filter(TopRole == "hubcon" | TopRole == "modcon")
-
-# Move to a new page
-grid.newpage()
-# Arrange figure
-figure_5 <- plot_troph_level(g_up_c, vertexLabel = F, modules = F, ylab = "Trophic level", vertex.color = V(g_up_c)$TRColor)
-
-```
 
 ‘Network connector’ and ‘module connector’ species are responsible for linking modules and maintaining the connectivity of the food web. TL range for these species: 1 - 3.86.
 
@@ -337,5 +323,7 @@ Low and mid-trophic level species are responsible for maintaining the connectivi
 
 Low and mid-trophic level species present the highest betweenness and closeness values. These species have an important ‘bridge’ role and are close to other species.
 Mid-trophic level species are more redundant than those at low and high trophic levels.
+
+\newpage
 
 ## References
