@@ -9,9 +9,11 @@ bibliography: "AMPBancoBurdwood.bib"
 knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
 ```
 
-## Food web construction
+## Methodology
 
-The following figure and tables summarize the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).
+### Food web construction
+
+The following figure and tables summarize the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.
 Figure 1 resumes the type and number of references reviewed. Table 1 is the complete list of trophic interactions and the references that confirm each of them. Table 2 is the species list with details on trophospecies cases (aggregated taxa).
 
 
@@ -126,5 +128,59 @@ knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable
   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
   landscape()
 
+
+```
+
+\newpage
+
+## Results
+
+### Species-level properties
+
+Figure 2 shows the species topological roles of the food web for the MPA Namuncurá-Banco Burdwood ecosystem. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 5 species; module connector = 35 species; module hub = 7 species; and module specialist = 332 species.
+
+```{r toprole, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green)."}
+
+# Load packages
+library(igraph)
+library(multiweb)
+library(grid)
+library(dplyr)
+library(ggplot2)
+
+# Load data
+load("../results/summary_results_jan23.rda")
+
+# Topological roles
+top.role.col <- hcl.colors(4, palette = "Purple-Green")
+TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
+TRColor <- as.data.frame(TRColor) %>% 
+  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+#show_col(top.role.col)  # shows color & code
+data_TRColor <- spp_total %>% 
+  dplyr::select(TopRole, everything()) %>% 
+  left_join(TRColor)
+g_up_c <- g_up %>% 
+  set_vertex_attr("TRColor", value = data_TRColor$TRColor)
+
+# Number of species by Role
+TR_table <- spp_total %>% 
+  group_by(TopRole) %>% 
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>% 
+  mutate(TopRole = case_when(TopRole == "hubcon" ~ "Network connector",
+                             TopRole == "modcon" ~ "Module connector",
+                             TopRole == "modhub" ~ "Module hub",
+                             TopRole == "modspe" ~ "Module specialist"))
+
+# Filter network connectors ('hubcon') & module connectors ('modcon'). Violet & pink respectively
+sp_con <- spp_total %>% 
+  filter(TopRole == "hubcon" | TopRole == "modcon")
+
+# Move to a new page
+grid.newpage()
+# Arrange figure
+par(cex.axis=1.5, cex.lab=1.5)
+plot_troph_level(g_up_c, vertexLabel = F, modules = F, vertex.color = V(g_up_c)$TRColor, ylab = "Trophic level")
 
 ```
