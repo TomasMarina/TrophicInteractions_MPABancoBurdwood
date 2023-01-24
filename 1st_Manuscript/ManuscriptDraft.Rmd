@@ -41,10 +41,11 @@ The objective of the present work was twofold: characterize the network of troph
 
 ### Study area
 
-The MPA Namuncurá-Banco Burdwood is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2 circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
+The MPA Namuncurá-Banco Burdwood is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2^ circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
 
-```{r figure1, echo=FALSE}
+```{r figure1, echo=FALSE, out.width = '100%', fig.cap="Map of the Marine Protected Area Namuncurá-Banco Burdwood. Taken from https://www.argentina.gob.ar/parquesnacionales/areasmarinas/namuncura-burdwood."}
 # Map of MPAN-BB provided by Lu R. (?)
+knitr::include_graphics("MPABurdwood_map.jpeg")
 
 ```
 
@@ -59,9 +60,9 @@ With the gathered trophic data we constructed an interaction matrix of pairwise 
 
 ### Network analysis
 
-We analyzed the MPA Namuncurá-Banco Burdwood network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the whole network; and 2) species, considering interactions and species related to a particular species.
-For the global-level analysis we calculated several network properties commonly used to describe the complexity and structure in food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Seabirds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
-For the species-level analysis we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic level TL; (4) trophic similarity TS; and (5) topological role TR (Table 1). These properties provide a general appropriate description of species' role in empirical complex food webs [@Cirtwill2018].
+We analysed the MPA Namuncurá-Banco Burdwood network of trophic interactions, hereafter food web, at two levels: 1) global, considering species and interactions of the whole network; and 2) species, considering interactions and species related to a particular species. The global-level analysis aims to characterize the network of trophic interactions in terms of complexity and structure. For this we calculated several network properties commonly used to describe empirical food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Seabirds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
+The species-level analysis aims to describe the species' role in the food web. For this we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic similarity TS; (4) topological role TR; and (5) trophic level TL (Table 1). We also studied the relationship between species trophic level and the other species properties by performing linear regression analyses. Thus, we considered the IS as the dependent variable and the given unweighted property as the independent variable, and obtained the coefficients (slope and intercept) for the linear model. Models were fitted using the least squares approach. We also explored the mean IS distribution with the species habitat.
+These properties provide a general appropriate description of species' role in empirical complex food webs [@Cirtwill2018].
 
 All network analyses and graphs were performed in R version 4.2.2 [@RCoreTeam2022], mainly using 'igraph' [@Csardi2006] and ‘multiweb’ [@Saravia2022a] packages. The source code and data are available at https://github.com/TomasMarina/Banco-Burdwood.
 
@@ -93,7 +94,7 @@ table1 <- add_row(table1, Name="Trophic similarity", Definition="Trophic overlap
 table1 <- add_row(table1, Name="Topological role", Definition="Species role according to interactions within and across modules (subgroups of species).", Implications="Four roles are defined: module hub, module specialist, module connector and network connector. Species with the same role are expected to have similar topological properties.", Reference="Guimera 2005")
 
 pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication","Reference"), style="multiline", split.tables = Inf, justify = c('left','left','left','right'),
-             caption = "List of network properties analyzed, definitions, and relevant ecological implications related to food web complexity and structure.")
+             caption = "List of network properties analysed, definitions, and relevant ecological implications related to food web complexity and structure.")
 
 
 ```
@@ -104,15 +105,15 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ### Network-level properties
 
-In terms of complexity, the MPA Namuncurá-Banco Burdwood food web consisted of 379 species and 1778 predator-prey interactions (Figure 2). The food web presents a link density of 4.69, meaning the average number of interactions per species, and a connectance of 0.01 (Table 1). Almost half of the consumers are omnivores, feeding on sources of different trophic levels. The food web shows a path length of 2.99, which implies that nearly three interactions are needed to connect any pair of species of the network.
+In terms of complexity, the MPA Namuncurá-Banco Burdwood food web consisted of 379 species and 1778 predator-prey interactions (Figure 2). The food web presented a link density of 4.69, meaning the average number of interactions per species, and a connectance of 0.01. Almost half of the consumers were omnivores, feeding on sources at different trophic levels. The food web showed a path length of 2.99, which implies that nearly three interactions are needed to connect any pair of species of the network (Table 1).
 
-```{r figure2, echo=FALSE, fig.align='center', fig.width = 20, fig.height=20, fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent the species and arrows the trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
+```{r figure2, echo=FALSE, fig.align='center', fig.width = 20, fig.height=20, fig.cap="Graph of the food web of MPA Namuncurá-Banco Burdwood. Circles represent species and arrows trophic interactions. Colour gradient indicate the trophic level. Circle diameter is relative to the number of interactions."}
 # Food web graph
 
 load("../results/summary_results_jan23.rda")
 
 par(cex.axis=1.5, cex.lab=1.5)
-plot <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
+figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
 
 ```
 
@@ -121,22 +122,15 @@ plot <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level"
 load("../results/summary_results_jan23.rda")
 
 knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength), col.names = c("Species","Interactions","Density","Connectance","Omnivory","Path length"),
-                      caption = "Global-level properties of the food web of MPA Namuncurá-Banco Burdwood. See table 1 for definitions and ecological relevance.")
+                      caption = "Global-level properties of the MPA Namuncurá-Banco Burdwood food web. See table 1 for definitions and ecological relevance.")
 
 ```
 
-The degree distribution of the food web shows an asymmetric frequency in the number of interactions, where most of the species have relatively low interactions and few species concentrate the majority of them (Figure 2A). If we consider the distribution of prey among predators, most of the consumers feed on a low number of prey whereas few of them have multiple preys (Figure 2B). These are the top-five predators in number of prey: *Patagonotothen guntheri* (Notothenioid fish, 52 prey), *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), *Dissostichus eleginoides* (Notothenioid fish, 30 prey), *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey are fed by multiple predators (Figure 2C). These are the top-five prey in number of predators:...
-Finally, if we take into account the interactions within each functional group, the situation is the same as in the whole food web (Figure 2D). Overall, there is an evident asymmetry in the distribution of interactions among species in the MPA Namuncurá-Banco Burdwood food web.
+The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated the majority of them (Figure 3A). If we consider the distribution of prey among predators, most of the consumers fed on a low number of prey whereas few of them had multiple preys (Figure 3B). These were the top-five predators in terms of prey: *Patagonotothen guntheri* (Notothenioid fish, 52 prey), *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), *Dissostichus eleginoides* (Notothenioid fish, 30 prey), *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). These were the top-five prey in number of predators: Detritus (Non-living, predators), the three categories of Diatoms considered (benthic, centric and pennate, 72 predators on average), and species of genus *Euphausia* (Zooplankton, 46 predators). Finally, taking into account the interactions within each functional group, the situation is the same as in the whole food web (Figure 3D). Overall, there is an evident asymmetry in the distribution of interactions among species in the MPA Namuncurá-Banco Burdwood food web.
 
-Most Functional groups show an asymmetric distribution of interactions: few species are relatively more connected than the rest.
-Most consumers have a narrow potential diet, few have a broad diet.
-Few prey are consumed by many predators, most prey have few predators.
-Consumers w/ broad diet: Patagonotothen guntheri, P. ramsayi, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
-Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia spp., Foraminifera.
+A list of the distribution of interactions per species is presented in Supplementary Material (Table S3).
 
-\newpage
-
-```{r figure3, echo=FALSE, fig.height = 28, fig.width = 20, fig.cap="Degree distributions for the (A) food web, for (B) prey among predators, (C) predators among prey, and (D) for each functional group. Groups are vertically ordered by trophic level."}
+```{r figure3, echo=FALSE, fig.height = 25, fig.width = 20, fig.cap="Degree distributions for the (A) food web, for (B) prey among predators, (C) predators among prey, and (D) for each functional group. Groups are vertically ordered by increasing trophic level."}
 # Degree distributions: network, predator, prey & group
 # above row (network, prey, predator), below row (group)
 
@@ -247,22 +241,28 @@ figure_3
 
 ```
 
+\newpage
 
 ### Species-level properties
 
-The majority of the species of the food web are consumers, 336 out of 379; the rest are primary producers, such as phytoplankton, and non-living food sources like detritus and necromass.
+The majority of the species of the food web were consumers, 336 out of 379; the rest were primary producers, such as diatoms (phytoplankton), and non-living food sources like detritus and necromass.
 
-\newpage
+We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). In this regard, the most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C).
+There was also a negative significant relationship with closeness, however less strong: low-TL species were relatively closer to any other species in the food web than high-TL ones (Figure 4B).
+It's noteworthy that betweenness highest values were presented in species of mid-TLs (3-4), meaning that those species participated in the highest number of shortest paths between species: ‘bridge’ role (Figure 4A).
+Taking into account the topological role, 'module specialist' species were the most frequent and presented a wide TL range (1 - 4.77); 'module hub' was constrained to mid-TL species (2.48 - 3.92); 'module connector' from low to mid-TLs (1 - 3.86); and 'network connector', the least frequent, had all of its species in TL = 1, except for one with TL = 3.47 (Figure 4D, see Figure S2 for species' topological roles in a food web graph framework). Here it's important to highlight species of the latter two topological roles, because they are responsible for linking modules and maintaining the connectivity of the food web: 40 species (5 network connectors + 35 module connectors) from 20 different functional groups with a TL range = 1 - 3.86.
 
-```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betwenness, (B) closeness, and (C) trophic similarity by trophic level (equal or greater than 2). See table 1 for definitions and ecological relevance."}
-# Betweenness, Closeness & Trophic similarity by Trophic level (>= 2)
+An exhaustive list of the species-level properties is presented in Supplementary Material (Table S3).
+
+```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role by trophic level. Linear regressions for betweenness ($y = 72.48x - 111.98, R^2 = 0.04, p-value < 3.38e-05$), closeness ($y = 5.78e-06x - 9.37e-04, R^2 = -0.0005, p-value = 0.37$) and trophic similarity ($y = -0.01x - 0.11, R^2 = 0.07, p-value = 6.76e-08$). Note that for A, B and C panels only species with TLs equal or greater than 2 were considered."}
+# Betweenness, Closeness, Trophic similarity & Topological role by Trophic level
 
 # Betweenness
 plot_sp_bt <- spp_total %>% 
   filter(TL >= 2) %>% 
   ggplot(., aes(x = TL, y = Between)) +
   geom_point() +
-  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  geom_smooth(method = "lm") +
   labs(x = "Trophic level", y = "Betweenness") +
   theme_bw() +
   theme(panel.grid = element_blank(),
@@ -275,7 +275,7 @@ plot_sp_cl <- spp_total %>%
   filter(TL >= 2) %>%
   ggplot(., aes(x = TL, y = Close)) +
   geom_point() +
-  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  geom_smooth(method = "lm") +
   labs(x = "Trophic level", y = "Closeness") +
   theme_bw() +
   theme(panel.grid = element_blank(),
@@ -288,7 +288,7 @@ plot_sp_ts <- spp_total %>%
   filter(TL >= 2) %>%
   ggplot(., aes(x = TL, y = meanTrophicSimil)) +
   geom_point() +
-  #geom_vline(xintercept = c(spp_nt_12+1, spp_nt_12+spp_nt_13+1, spp_nt_14+1), linetype = "longdash", colour = "red") +
+  geom_smooth(method = "lm") +
   labs(x = "Trophic level", y = "Trophic similarity") +
   theme_bw() +
   theme(panel.grid = element_blank(),
@@ -296,27 +296,54 @@ plot_sp_ts <- spp_total %>%
         axis.text.y = element_text(size = 26),
         axis.title = element_text(size = 26, face = "bold"))
 
+# Topological role
+top.role.col <- hcl.colors(4, palette = "Purple-Green")
+TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
+TRColor <- as.data.frame(TRColor) %>% 
+  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+data_TRColor <- spp_total %>% 
+  dplyr::select(TopRole, everything()) %>% 
+  left_join(TRColor)
+
+plot_sp_tr <- data_TRColor %>% 
+  mutate(TopRole = case_when(TopRole == "hubcon" ~ "netcon", TRUE ~ TopRole)) %>% 
+  ggplot(., aes(x = TopRole, y = TL)) +
+  geom_violin(fill = "grey90") +
+  geom_point(size=3, aes(color=TRColor)) +
+  labs(x = "Topological role", y = "Trophic level") +
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(size = 26),
+        axis.text.y = element_text(size = 26),
+        axis.title = element_text(size = 26, face = "bold"),
+        legend.position = "none")
+
 # Move to a new page
 grid.newpage()
 # Arrange figure
-figure_4 <- ggarrange(plot_sp_bt + rremove("xlab"), plot_sp_cl + rremove("xlab"), plot_sp_ts + rremove("xlab"),
-                      labels = c("A","B","C"), ncol=2, nrow=2,
+figure_ab <- ggarrange(plot_sp_bt + rremove("xlab"), plot_sp_cl + rremove("xlab"),
+                      labels = c("A","B"), ncol=2,
                       font.label = list(size = 30, color = "black"))
-annotate_figure(figure_4, bottom = textGrob("Trophic level", gp = gpar(fontface="bold", col="black", fontsize=26)))
+figure_ab <- annotate_figure(figure_ab, bottom = textGrob("Trophic level", gp = gpar(fontface="bold", col="black", fontsize=26)))
+figure_4 <- ggarrange(figure_ab,                                                                                         # First row
+          ggarrange(plot_sp_ts, plot_sp_tr, ncol = 2, labels = c("C", "D"), font.label=list(color="black",size=30)),                                            
+          nrow = 2)
+figure_4
 
 ```
 
 
-‘Network connector’ and ‘module connector’ species are responsible for linking modules and maintaining the connectivity of the food web. TL range for these species: 1 - 3.86.
-
-Betweenness = Species at mid-trophic levels (3-4) present more shortest paths between species than any other species: ‘bridge’ role.
-Closeness = Low-trophic level species are relatively closer to other species in the food web.
-
-Trophic similarity: Species are more similar at mid-trophic levels (2-3) than in lower or higher ones. Basal and top species present a higher uniqueness in terms of trophic role.
+\newpage
 
 ## Discussion
 
 ### The MPA Namuncurá-Banco Burdwood food web
+
+Most Functional groups show an asymmetric distribution of interactions: few species are relatively more connected than the rest. This coincides w/ previous studies on empirical complex food webs.
+Most consumers have a narrow potential diet, few have a broad diet.
+Few prey are consumed by many predators, most prey have few predators.
+Consumers w/ broad diet: Patagonotothen guntheri, P. ramsayi, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
+Prey w/ many predators: Detritus, Diatoms (benthic, centric, pennate), Euphausia spp., Foraminifera.
 
 ### Species' role
 
@@ -324,6 +351,13 @@ The distribution of the interactions is asymmetric, where few species concentrat
 
 The most demanded food sources are: Detritus, Diatoms (x3), Euphausia spp., & Foraminifera.
 Almost half of the consumers (47.64 %) are omnivores. Those with the broadest diets are: Patagonotothen ramsayi, P. guntheri, Dissostichus eleginoides, Bathyraja brachyurops, B. griseocauda.
+
+‘Network connector’ (netcon) and ‘module connector’ (modcon) species are responsible for linking modules and maintaining the connectivity of the food web. TL range for these species: 1 - 3.86.
+
+Betweenness = Species at mid-trophic levels (3-4) present more shortest paths between species than any other species: ‘bridge’ role.
+Closeness = Low-trophic level species are relatively closer to other species in the food web.
+
+Trophic similarity: Species are more similar at mid-trophic levels (2-3) than in lower or higher ones. Basal and top species present a higher uniqueness in terms of trophic role.
 
 Low and mid-trophic level species are responsible for maintaining the connectivity of the food web. The functional groups represented are: Amphipoda, Bivalvia, Bryozoa, Cnidaria, Cumacea, Decapoda, Detritus, Diatoms, Echinodermata, Fish (bentho-pelagic, demersal, chondrichthyes), Foraminifera, Polychaeta, Porifera, Zooplankton.
 
