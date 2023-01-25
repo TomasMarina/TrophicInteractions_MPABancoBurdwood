@@ -1,14 +1,19 @@
 ---
-title: "The complex network of trophic interactions in a subAntarctic Marine Protected Area"
+title: The complex network of trophic interactions in a subAntarctic Marine Protected
+  Area
 author: "Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli"
-output: pdf_document
-bibliography: "AMPBancoBurdwood.bib"
+output:
+  pdf_document: default
+  word_document: default
+bibliography: AMPBancoBurdwood.bib
+csl: "marine-ecology-progress-series.csl"
+nocite: '@*'
 header-includes:
-  - \usepackage[left]{lineno}
-  - \linenumbers
+- \usepackage[left]{lineno}
+- \linenumbers
 ---
 
-```{r setup, include=FALSE, echo=FALSE} 
+```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 library(knitr)
@@ -33,7 +38,12 @@ library(grid)
 
 Brief description and ecological importance of MPAN-BB
 
-The objective of the present work was twofold: characterize the network of trophic interactions in terms of complexity and structure for the MPA Namuncurá-Banco Burdwood ecosystem, and describe the species' role in such network framework.
+Trophic ecology & keystone spp knowledge of B Burdwood
+
+Benefits of studying complex ecosystems using network approach
+
+Objective
+In the present work we present the first, detailed analysis of the food web for the MPA Namuncurá - Banco Burdwood ecosystem. For this we applied a network approach to a highly-resolved food web. The objective was twofold: characterise the food web in terms of complexity and structure, and describe the species' role in such network framework.
 
 \newpage
 
@@ -75,7 +85,7 @@ table1 <- add_row(table1, Name="Number of interactions", Definition="Total numbe
 
 table1 <- add_row(table1, Name="Link density", Definition="Ratio of interactions to species in a food web", Implications="It represents the average number of interactions per species; informs about how connected species are in the food-web.", Reference="Dunne et al. 2002")
 
-table1 <- add_row(table1, Name="Connectance", Definition="Proportion of potential links among species that are actually realized.", Implications="It measures the probability of interactions; it is a fundamental measure of network complexity. Connectance can be negatively or positively associated with food web robustness, depending on the network structure (random vs non-random) or how the strength of the interactions are distributed.", Reference = "Martinez 1991")
+table1 <- add_row(table1, Name="Connectance", Definition="Proportion of potential links among species that are actually realized.", Implications="It measures the probability of interactions; it is a fundamental measure of network complexity. Connectance can be negatively or positively associated with food web robustness, depending on the network structure (random vs non-random) or how the strength of the interactions are distributed.", Reference = "Martinez 1992")
 
 table1 <- add_row(table1, Name="Degree distribution", Definition="Probability of trophic species P(k) that have k or more interactions (both predator and prey links).", Implications="It suggests on the vulnerability of complex food webs against random failures and intentional attacks (i.e. species extinctions).", Reference="Albert & Barabási 2002")
 
@@ -83,19 +93,19 @@ table1 <- add_row(table1, Name="Omnivory", Definition="Species feeding on prey f
 
 table1 <- add_row(table1, Name="Shortest path length", Definition="Average shortest path length between all pairs of species.", Implications="A short path length imply a rapid spread of an impact (e.g. invasion, population fluctuation, local extinction) throughout the food web.", Reference="Watts & Strogatz 1998")
 
-table1 <- add_row(table1, Name="Betweenness", Definition="Number of shortest paths going through a species.", Implications=" Species with high betweenness act as “bridges”; if removed, would have rapidly spreading effects in the food web.", Reference="Freeman 1979")
+table1 <- add_row(table1, Name="Betweenness", Definition="Number of shortest paths going through a species.", Implications=" Species with high betweenness act as “bridges”; if removed, would have rapidly spreading effects in the food web.", Reference="Freeman 1978, Lai et al. 2012")
 
-table1 <- add_row(table1, Name="Closeness", Definition="Number of steps required to reach every other species from a given species.", Implications="The removal of a species with high closeness will affect the most other species in the food web.", Reference="Freeman 1979")
+table1 <- add_row(table1, Name="Closeness", Definition="Number of steps required to reach every other species from a given species.", Implications="The removal of a species with high closeness will affect the most other species in the food web.", Reference="Freeman 1978, Lai et al. 2012")
 
 tabble1 <- add_row(table1, Name="Trophic level", Definition="It represents the number of interactions that separates a species from the base of the food web.", Implications="It indicates the position the species occupies in the food web; commonly categorized as producer, intermediate consumer and top predator.", Reference="Borelli & Ginzburg 2014")
 
-table1 <- add_row(table1, Name="Trophic similarity", Definition="Trophic overlap based on shared and unique resources (prey) and consumers (predators).", Implications="It measures one of the most important aspects of species’ niches, the trophic niche, and functional aspects of biodiversity.", Reference="Martinez 1991")
+table1 <- add_row(table1, Name="Trophic similarity", Definition="Trophic overlap based on shared and unique resources (prey) and consumers (predators).", Implications="It measures one of the most important aspects of species’ niches, the trophic niche, and functional aspects of biodiversity.", Reference="Martinez 1992")
 
-table1 <- add_row(table1, Name="Topological role", Definition="Species role according to interactions within and across modules (subgroups of species).", Implications="Four roles are defined: module hub, module specialist, module connector and network connector. Species with the same role are expected to have similar topological properties.", Reference="Guimera 2005")
+table1 <- add_row(table1, Name="Topological role", Definition="Species role according to interactions within and across modules (subgroups of species).", Implications="Four roles are defined: module hub, module specialist, module connector and network connector. Species with the same role are expected to have similar topological properties.", Reference="Guimera & Nunes Amaral 2005")
 
-pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication","Reference"), style="multiline", split.tables = Inf, justify = c('left','left','left','right'),
+names(table1) <- pandoc.strong.return(names(table1))
+pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication","Reference"), style="multiline", split.tables = Inf, justify = c('left','left','left','right'), emphasize.strong.cols = 1, emphasize.rownames = 1,
              caption = "List of network properties analysed, definitions, and relevant ecological implications related to food web complexity and structure.")
-
 
 ```
 
@@ -122,7 +132,7 @@ figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic le
 load("../results/summary_results_jan23.rda")
 
 knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength), col.names = c("Species","Interactions","Density","Connectance","Omnivory","Path length"),
-                      caption = "Global-level properties of the MPA Namuncurá-Banco Burdwood food web. See table 1 for definitions and ecological relevance.")
+                      caption = "Global-level properties of the MPA Namuncurá-Banco Burdwood food web. See table 1 for definitions and ecological relevance.") %>% row_spec(0,bold=TRUE)
 
 ```
 
@@ -254,8 +264,10 @@ Taking into account the topological role, 'module specialist' species were the m
 
 An exhaustive list of the species-level properties is presented in Supplementary Material (Table S3).
 
-```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role by trophic level. Linear regressions for betweenness ($y = 72.48x - 111.98, R^2 = 0.04, p-value < 3.38e-05$), closeness ($y = 5.78e-06x - 9.37e-04, R^2 = -0.0005, p-value = 0.37$) and trophic similarity ($y = -0.01x - 0.11, R^2 = 0.07, p-value = 6.76e-08$). Note that for A, B and C panels only species with TLs equal or greater than 2 were considered."}
+```{r figure4, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Species-level properties (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role by trophic level. Each point represents a species. Linear regressions for betweenness ($y = 72.48x - 111.98, R^2 = 0.04, p-value < 3.38e-05$), closeness ($y = 5.78e-06x - 9.37e-04, R^2 = -0.0005, p-value = 0.37$) and trophic similarity ($y = -0.01x - 0.11, R^2 = 0.07, p-value = 6.76e-08$). Note that for A, B and C panels only species with TLs equal or greater than 2 were considered."}
 # Betweenness, Closeness, Trophic similarity & Topological role by Trophic level
+
+load("../results/summary_results_jan23.rda")
 
 # Betweenness
 plot_sp_bt <- spp_total %>% 
@@ -305,11 +317,13 @@ data_TRColor <- spp_total %>%
   dplyr::select(TopRole, everything()) %>% 
   left_join(TRColor)
 
-plot_sp_tr <- data_TRColor %>% 
+cols <- c("netcon"="#492050", "modspe"="#023903", "modhub"="#A5CEA5", "modcon"="#DAB8E2")
+plot_sp_tr <- spp_total %>% 
   mutate(TopRole = case_when(TopRole == "hubcon" ~ "netcon", TRUE ~ TopRole)) %>% 
   ggplot(., aes(x = TopRole, y = TL)) +
-  geom_violin(fill = "grey90") +
-  geom_point(size=3, aes(color=TRColor)) +
+  geom_boxplot(aes(color = factor(TopRole), fill = factor(TopRole)), alpha=0.9) +
+  geom_jitter(aes(color = factor(TopRole), fill = factor(TopRole))) +
+  scale_fill_manual(values=cols) +
   labs(x = "Topological role", y = "Trophic level") +
   theme_bw() +
   theme(panel.grid = element_blank(),
@@ -317,6 +331,7 @@ plot_sp_tr <- data_TRColor %>%
         axis.text.y = element_text(size = 26),
         axis.title = element_text(size = 26, face = "bold"),
         legend.position = "none")
+
 
 # Move to a new page
 grid.newpage()
