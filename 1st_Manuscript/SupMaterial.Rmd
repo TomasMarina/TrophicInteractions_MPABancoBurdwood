@@ -74,7 +74,7 @@ int_good_res <- int_raw %>%
   distinct(Prey, Predator, .keep_all = TRUE)
 
 # Table 1. List of interactions
-knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", longtable = T, col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.") %>% 
+knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", longtable = T, col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by predator.") %>% 
   column_spec(1:3, width="2cm") %>% 
   column_spec(4, width="14cm") %>% 
   kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4) %>% 
@@ -119,12 +119,25 @@ sp_list <- df_g[["vertices"]] %>%
                                Species == "Brachiopoda_spp" ~ "Schejter_etal_2016", TRUE ~ Reference),
          FunctionalGroup = case_when(Species == "Campylaspis_spp" ~ "Cumacea",
                                      Species == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ FunctionalGroup)) %>% 
+  mutate(TaxLevel = case_when(str_detect(Species, "_") | str_detect(Species, "_spp") ~ "Species",
+                              str_detect(Species, "_sp") ~ "Genus",
+                              str_detect(Species, "dae$") ~ "Family",
+                              Species %in% c("Detritus","Necromass") ~ "NA",
+                              Species %in% c("Bacteria","Foraminifera") ~ "Phylum",
+                              Species %in% c("Calcarea","Copepodite","Hexactinellida") ~ "Class",
+                              Species %in% c("Halichondrida","Haplosclerida","Poecilosclerida","Tetractinellida") ~ "Order",
+                              TRUE ~ "Other")) %>% 
+  dplyr::select(Species, TaxLevel, FunctionalGroup, Reference, Reference_pres_link, Observation) %>% 
   arrange(., (Species))
 
+# Food web resolution
+res_sp <- sum(sp_list$TaxLevel == "Species") / nrow(sp_list)
+
 # Table 2. List of species
-knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.") %>%
-  column_spec(1:3, width="3cm") %>%
-  column_spec(4:5, width="5cm") %>% 
+knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Taxonomy","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by species.") %>%
+  column_spec(1:3, width="2cm") %>%
+  column_spec(4, width="3cm") %>% 
+  column_spec(5:6, width="5cm") %>% 
   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
   landscape()
 
@@ -148,7 +161,7 @@ knitr::kable(spp_total %>%
                dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree, NumPrey, NumPred, Between, Close, TL, meanTrophicSimil, TopRole) %>% 
                arrange(., desc(TotalDegree)) %>% 
                mutate(across(where(is.numeric), round, 4)), 
-             format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Degree","NumPrey","NumPred","Between","Close","TL","TS","TR"), align = "llcccccccc", caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Degree: total number of interactions; Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).") %>%
+             format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Degree","NumPrey","NumPred","Between","Close","TL","TS","TR"), align = "llcccccccc", caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).") %>%
   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4.5)
 
 ```
