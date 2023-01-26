@@ -54,13 +54,18 @@ library(grid)
 
 # Introduction
 
-Introduction to MPAs and MPA N-BB
+* Introduction to MPAs and MPA N-BB
 
-Ecological importance of MPA N-BB to the region
+Globally, the total area of the world ocean designated under marine protection adds up to nearly 29,600,000 km^2^, distributed across nearly 18,444 Marine Protected Areas (MPAs) and covering 8.16% of the ocean’s surface [@IUCN2023], and therefore approaching the 10% goal of the Convention of Biological Diversity [@ConventiononBiologicalDiversity2004].
+Latin America & Polar region status and growth.
 
-Trophic ecology & keystone spp knowledge of B Burdwood
+Approximately 42 countries with marine territories (27.3%) have above the global average of ocean area designated under protected areas, and 36 countries (23.4%; UNEP-WCMC, 2020; www.protectedplanet.net) exceed the 10% international commitment. Despite this progress, recent reports have shown that effective protection has been overestimated because it includes areas that are not yet effectively protected (only declared) as well as areas that allow significant extractive activities, such as fishing (Lubchenco & Grorud-Colvert, 2015; Sala et al., 2018). According to Sala et al. (2018), only 3.6% of the ocean should be currently considered as protected by implemented MPAs, and only 2% is strongly or fully protected by MPAs.
 
-Why using a network approach
+* Ecological importance of MPA N-BB to the region
+
+* Trophic ecology & keystone spp knowledge of B Burdwood
+
+* Why using a network approach
 
 In the present work we present the first, detailed analysis of the food web for the MPA Namuncurá - Banco Burdwood ecosystem. For this we applied a network approach to a highly-resolved food web. The objective was twofold: characterise the food web in terms of complexity and structure, and describe the species' role in such network framework.
 
@@ -69,7 +74,7 @@ In the present work we present the first, detailed analysis of the food web for 
 
 ## Study area
 
-The MPA Namuncurá - Banco Burdwood is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34.000 km^2^ circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
+The MPA Namuncurá - Banco Burdwood is a shallow submarine plateau called Burdwood Bank (BB) located 150 km east of Isla de los Estados and 200 km south from Malvinas/Falkland Islands (Figure 1). It comprises nearly 34,000 km^2^ circumscribed by the 200 m isobath, between 54º–55ºS and 56º–62ºW, with a slight slope extended nearly 370 km east–west. The BB is surrounded by steep flanks of more than 3000 m depth through which strong currents circulate [@Piola1989; @Reta2014; @Matano2019]. Intense upwelling and mixing occur over it, entraining deep nutrient rich waters into the photic layer [@Piola2009; @Matano2019], and resulting in a fairly homogeneous water column both spatially and temporally [@Glorioso1995; @Guerrero1999; @Matano2019]. Physical features in the MPAN-BB are fairly stable, with salinity averaging 34 all year round and temperature ranging between 4 and 8ºC overall [@Guerrero1999; @Acha2004; @Piola2009].
 
 ```{r figure1, echo=FALSE, fig.width = 5, fig.height = 10, out.width = '100%', fig.cap="Map of the Marine Protected Area Namuncurá - Banco Burdwood. Taken from https://www.argentina.gob.ar/parquesnacionales/areasmarinas/namuncura-burdwood."}
 # Map of MPAN-BB provided by Lu R. (?)
