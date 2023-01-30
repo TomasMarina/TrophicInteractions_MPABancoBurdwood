@@ -20,7 +20,7 @@ keywords:
   - Structure
   - Marine Protected Area
   - Southwest Atlantic
-journal: "MEPS, Oikos, Polar Biology (?)"
+journal: "MEPS, Oikos, Ecological Applications, J of Applied Ecology (?)"
 date: "`r Sys.Date()`"
 classoption: preprint, 3p, authoryear
 bibliography: AMPBancoBurdwood.bib
@@ -54,32 +54,20 @@ library(grid)
 
 # Introduction
 
-* Introduction to MPAs and MPA N-BB
-
 The evidence of benefits provided by Marine Protected Areas (MPAs) as well as the urgent need for ocean protection have driven an unprecedented increase in the number of MPAs worldwide in recent years [@Roberts2017; @Sala2018]. Globally, the total area of the world ocean designated under marine protection adds up to nearly 29,600,000 km^2^, distributed across nearly 18,444 MPAs and covering 8.16% of the ocean’s surface [@IUCN2023], and therefore approaching the 10% goal of the Convention of Biological Diversity [@CBD2004]. Despite this progress, recent reports have shown that effective protection has been overestimated because it includes areas that are not yet effectively protected (only declared) as well as areas that allow significant extractive activities [@Sala2018].
 
 In the subAntarctic region, the level of protection is mainly associated to oceanic islands, such as South Georgia and the South Sandwich, Bouvet, Prince Edward, and Macquarie [@IUCN2023]. Interestingly, the case of the MPA Namuncurá - Banco Burdwood I (MPA N-BB), which forms the focus of this work, is unique since it is associated to a submarine plateau [@Reta2014]. Added to this, such MPA is part of a network of protected areas in the subAntarctic (i.e joining MPAs Namuncurá - Banco Burdwood II and Yaganes), that contribute to protect and strengthen the functioning of this southern region to maintain global ocean health.
 
-* Ecological importance of MPA N-BB to the region
+Many of these MPAs centre on the presence of particularly vulnerable, keystone, or charismatic species; the presence of large numbers (or proportions) of endemic species; and the presence of high biodiversity across taxonomic levels [@Hogg2016]. Indeed, the MPA N-BB was created because it is considered a biodiversity hotspot, mostly of its benthic community [@Schejter2016; @Falabella2017]. This community is featured by a high biomass of vulnerable and fragile species (mainly Porifera and Cnidaria) that meet the characteristics of vulnerable marine ecosystems [@Schejter2021], here defined as sites that present taxa with a minimum biomass of 10 kg per 1200 m^2^ [@CommissionfortheConservationofAntarcticMarineLivingResources2009]. Also, it provides habitat to several small-sized species [@Lopez-Gappa2018; @MartinSirito2019; @Schejter2019], and has an important role in the life history of fishes as a food source, refuge, or nursery area [@GarciaAlonso2018; @Delpiani2020; @Troccoli2020]. The maintenance of this singular community is related to the oceanographic processes, including the circulation of the rich Malvinas (Falkland) current in the area [@Piola1989; @Guerrero1999] and the upwelling and mixing phenomena [@Matano2019]. The input of nutrients coming from the Malvinas (Falkland) current also supports a diverse plankton community [@Guinder2020]. Overall, 811 benthic and plankton species have been identified for the MPA N-BB ecosystem, where 349 were reported for the first time for the area [@APN2022].
 
-Many of these MPAs centre on the presence of particularly vulnerable, keystone, or charismatic species; the presence of large numbers (or proportions) of endemic species; and the presence of high biodiversity across taxonomic levels [@Hogg2016]. Indeed, the MPA N-BB has been created because it is considered a biodiversity hotspot, mostly of its benthic community [@Schejter2016; @Falabella2017]. It is characterized by a high biomass of vulnerable and fragile species (mainly Porifera and Cnidaria) that meet the characteristics of vulnerable marine ecosystems [@Schejter2021], here defined as sites that present taxa with a minimum biomass of 10 kg per 1200 m^2^ [@CommissionfortheConservationofAntarcticMarineLivingResources2009]. Also, the benthic community provides habitat to several small-sized species [@Lopez-Gappa2018; @MartinSirito2019; @Schejter2019], and has an important role in the life history of fishes as a food source, refuge, or nursery area [@GarciaAlonso2018; @Delpiani2020; @Troccoli2020]. The maintenance of this singular community is related to the oceanographic processes, including the circulation of the rich Malvinas (Falkland) current in the area [@Piola1989; @Guerrero1999] and the upwelling and mixing phenomena [@Matano2019]. The input of nutrients coming from the Malvinas (Falkland) current also supports a diverse plankton community [@Guinder2020]. Overall, 811 benthic and planktonic species have been identified for the MPA N-BB ecosystem, where 349 were reported for the first time for the MPA [@APN2022]. At the ecosystem level the MPA N-BB is ascribed as a carbon-sinker [@Bergagna2019].
+Recently, the identification of the most influential species has become a crucial task for conservation purposes in local and regional contexts to maintain ecosystem integrity and the supply of ecosystem services for the southwestern South Atlantic Ocean [@Franco2020; @Bergagna2020; @Riccialdelli2020].
+In this regard, the structure of the southwestern South Atlantic Ocean has been proposed to be under a 'wasp-waist' control, meaning that the structure and dynamics of the ecosystem is regulated primarily by mid-trophic level species (e.g. fishes, crustaceans) [@Padovani2012; @Saporiti2015; @Riccialdelli2020]. In particular, the ecosystem of the MPA N-BB shows a more pronounced 'wasp-waist' structure than other subAntarctic areas, like the Atlantic coast of Tierra del Fuego, where the Fuegian sprat *Sprattus fuegensis* and longtail southern cod *Patagonotothen ramsayi* are considered the most plausible 'wasp-waist' species [@Riccialdelli2020].
 
-* Trophic ecology & keystone spp knowledge of B Burdwood
+High-latitude marine ecosystems, such as the MPA N-BB, are characterised by an unexpected complexity in terms of biodiversity and ecological interactions [@Day2013; @Kortsch2019; @Cordone2020; @Trathan2021]. Although there is a robust knowledge about the complexity considering the richness of the benthic and plankton communities in the MPA N-BB ecosystem [e.g. @Schejter2016; @Guinder2020; @APN2022], there is a need for a better understanding of species interactions' complexity and structure.
+This aspect can be tackled by analysing one of the most-frequent relationships occurring between species: the predator-prey interaction [@Bascompte2009]. The sum of predator-prey or trophic interactions of a particular region is referred to as a food web, which represents the roadmap for matter and energy flow in an ecosystem.
+In recent years, network approaches have been successfully applied to study complex high-latitude marine ecosystems, improving our knowledge on structure, functioning, and respond to environmental/anthropogenic changes [e.g. @Kortsch2015; @Cordone2018; @Funes2022; @Marina2023]. Here it is worth mentioning that anthropogenic threats have been recently reported for the MPA N-BB region [@Cossi2021; @Fioramonti2022].
 
-The structure and functioning of ecosystems can be successfully described by studying one of the most-frequent interactions occurring between species: the predator-prey relationship [@Bascompte2009]. The predator-prey or trophic interactions of a particular region are commonly referred as the food web, that represents the roadmap for matter and energy flow in an ecosystem.
-The trophic structure of the southwestern South Atlantic Ocean has been proposed to be under a 'wasp-waist' control, meaning that the structure and dynamics of the ecosystem is regulated primarily by mid-trophic level species (e.g. fishes, crustaceans) [@Padovani2012; @Saporiti2015; @Riccialdelli2020]. In particular, the ecosystem of the MPA N-BB shows a more pronounced 'wasp-waist' structure than other subAntarctic areas, like the Atlantic coast of Tierra del Fuego, where the Fuegian sprat *Sprattus fuegensis* and longtail southern cod *Patagonotothen ramsayi* are considered the most plausible 'wasp-waist' species [@Riccialdelli2020].
-Recently, the identification of the most influential species within food webs has become a crucial task for conservation purposes in local and regional contexts to maintain ecosystem integrity and the supply of ecosystem services for the southwestern South Atlantic Ocean [@Franco2020; @Bergagna2020; @Riccialdelli2020].
-
-* Why using a network approach
-
-In the past decades, several researches have shown that high-latitude marine ecosystems, such as the MPA N-BB, are characterised by an unexpected complexity in terms of biodiversity and ecological interactions [@Day2013; @Kortsch2019; @Cordone2020; @Trathan2021].
-
-Anthropogenic and climate-induced impacts are known to affect individual species, but they can also change the interactions that each species has with its prey and predators (Constable et al. 2014, Lynam et al. 2017).
-
-
-* Objective
-
-In the present work we present the first, detailed analysis of the food web for the MPA N-BB ecosystem. For this we applied a network approach to a highly-resolved food web. The objective was twofold: characterise the food web in terms of complexity and structure, and describe the species' role in such network framework.
+In the present work we present the first, detailed analysis of the network of predator-prey interactions, hereafter food web, for the MPA N-BB ecosystem. For this we applied a network approach to a highly-resolved food web. The objective was twofold: characterise the food web in terms of complexity and structure, and identify the species' role in such network framework.
 
 
 # Methodology
@@ -290,11 +278,11 @@ figure_3
 
 The majority of the species of the food web were consumers, 336 out of 379; the rest were primary producers, such as diatoms (phytoplankton), and non-living food sources like detritus and necromass.
 
-We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). In this regard, the most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it's noteworthy to highlight high-trophic level species with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Phalacrocorax_atriceps* and *Eudyptes chrysocome* (sea birds), and *Lagenorhynchus cruciger* and *Mesoplodon bowdoini* (marine mammals) (Table S3).
+We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). In this regard, the most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it is noteworthy to highlight high-trophic level species with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Phalacrocorax_atriceps* and *Eudyptes chrysocome* (sea birds), and *Lagenorhynchus cruciger* and *Mesoplodon bowdoini* (marine mammals) (Table S3).
 
 We also found a negative significant relationship with closeness, however less evident, meaning that low-TL species are relatively closer to any other species in the food web (Figure 4B). Species of genera *Calanus* and *Euphausia*, and species of Brachiopoda, all of them with TL < 3, registered the highest values of closeness (Table S3).
 
-It's noteworthy that the highest values of betweenness were shown by species of mid-TLs (3-4), meaning that those species participated in the highest number of shortest paths between species (Figure 4A). These were the species with the highest values: *Patagonotothen ramsayi*, *Dissostichus eleginoides*, *Salilota australis* (fishes), *Doryteuthis gahi* (Cephalopoda), and *Patagonotothen guntheri* (Notothenioid fish) (Table S3).
+It is noteworthy that the highest values of betweenness were shown by species of mid-TLs (3-4), meaning that those species participated in the highest number of shortest paths between species (Figure 4A). These were the species with the highest values: *Patagonotothen ramsayi*, *Dissostichus eleginoides*, *Salilota australis* (fishes), *Doryteuthis gahi* (Cephalopoda), and *Patagonotothen guntheri* (Notothenioid fish) (Table S3).
 
 Taking into account the topological role, 'module specialist' species were the most frequent and presented a wide TL range (1 - 4.77); 'module hub' was constrained to mid-TL species (2.48 - 3.92); 'module connector' from low to mid-TLs (1 - 3.86); and 'network connector', the least frequent, had all of its species in TL = 1, except for one with TL = 3.47 (Figure 4D, see Figure S2 for species' topological roles in a food web graph framework). Here it's important to highlight species of the two latter topological roles, because they are responsible for linking modules and maintaining the connectivity of the food web: 40 species (5 network connectors + 35 module connectors) from 20 different functional groups with a TL range = 1 - 3.86.
 
@@ -431,6 +419,6 @@ Perspectives:
 
 # Acknowledgements
 
-This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617). This work is contribution no. XX of the MPA Namuncurá (Law 26875).
+This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617), Argentina. This work is contribution no. XX of the MPA Namuncurá (Law 26875).
 
 # References
