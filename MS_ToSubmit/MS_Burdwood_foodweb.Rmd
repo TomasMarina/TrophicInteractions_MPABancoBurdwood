@@ -28,7 +28,7 @@ nocite: '@*'
 linenumbers: true
 numbersections: true
 # Use a CSL with `citation_package = "default"`
-csl: "apa-old-doi-prefix.csl"
+csl: "apa.csl"
 output: 
   rticles::elsevier_article:
     keep_tex: true
@@ -63,9 +63,9 @@ Many of these MPAs centre on the presence of particularly vulnerable, keystone, 
 Recently, the identification of the most influential species has become a crucial task for conservation purposes in local and regional contexts to maintain ecosystem integrity and the supply of ecosystem services for the southwestern South Atlantic Ocean [@Franco2020; @Bergagna2020; @Riccialdelli2020].
 In this regard, the structure of the southwestern South Atlantic Ocean has been proposed to be under a 'wasp-waist' control, meaning that the structure and dynamics of the ecosystem is regulated primarily by mid-trophic level species (e.g. fishes, crustaceans) [@Padovani2012; @Saporiti2015; @Riccialdelli2020]. In particular, the ecosystem of the MPA N-BB shows a more pronounced 'wasp-waist' structure than other subAntarctic areas, like the Atlantic coast of Tierra del Fuego, where the Fuegian sprat *Sprattus fuegensis* and longtail southern cod *Patagonotothen ramsayi* are considered the most plausible 'wasp-waist' species [@Riccialdelli2020].
 
-High-latitude marine ecosystems, such as the MPA N-BB, are characterised by an unexpected complexity in terms of biodiversity and ecological interactions [@Day2013; @Kortsch2019; @Cordone2020; @Trathan2021]. Although there is a robust knowledge about the complexity considering the richness of the benthic and plankton communities in the MPA N-BB ecosystem [e.g. @Schejter2016; @Guinder2020; @APN2022], there is a need for a better understanding of species interactions' complexity and structure.
+High-latitude marine ecosystems, such as the MPA N-BB, are characterised by an unexpected complexity in terms of biodiversity and ecological interactions [@Day2013; @Kortsch2019; @Cordone2020; @Trathan2021]. Although there is a robust knowledge about the complexity considering the richness of the benthic and plankton communities in the MPA N-BB ecosystem [@Schejter2016; @Guinder2020; @APN2022], there is a need for a better understanding of species interactions' complexity and structure.
 This aspect can be tackled by analysing one of the most-frequent relationships occurring between species: the predator-prey interaction [@Bascompte2009]. The sum of predator-prey or trophic interactions of a particular region is referred to as a food web, which represents the roadmap for matter and energy flow in an ecosystem.
-In recent years, network approaches have been successfully applied to study complex high-latitude marine ecosystems, improving our knowledge on structure, functioning, and respond to environmental/anthropogenic changes [e.g. @Kortsch2015; @Cordone2018; @Funes2022; @Marina2023]. Here it is worth mentioning that anthropogenic threats have been recently reported for the MPA N-BB region [@Cossi2021; @Fioramonti2022].
+In recent years, network approaches have been successfully applied to study complex high-latitude marine ecosystems, improving our knowledge on structure, functioning, and respond to environmental/anthropogenic changes [@Kortsch2015; @Cordone2018; @Funes2022; @Marina2023]. Here it is worth mentioning that anthropogenic threats have been recently reported for the MPA N-BB region [@Cossi2021; @Fioramonti2022].
 
 In the present work we present the first, detailed analysis of the network of predator-prey interactions, hereafter food web, for the MPA N-BB ecosystem. For this we applied a network approach to a highly-resolved food web. The objective was twofold: characterise the food web in terms of complexity and structure, and identify the species' role in such network framework.
 
@@ -376,6 +376,22 @@ figure_4
 
 ## The MPA Namuncurá - Banco Burdwood food web
 
+The food web for the MPA Namuncurá - Banco Burdwood is one of the most highly-resolved networks of trophic interactions not only for high-latitude marine ecosystems but also for marine protected areas. It is of paramount importance to consider the complexity of species interactions in order to gain insights into the structure of the ecosystem, since the aggregation of species might mask food web properties and/or generate artifacts [@Martinez1993; @Gauzens2013].
+
+Compare network-level properties with other subpolar and polar food webs
+Complexity, connectance
+
+The structure of species interactions influences the opportunities for multiple species to persist in the long term and, therefore, their coexistence [@Godoy2018].
+The food web for the MPA N-BB ecosystem, as we showed in this study, presents an asymmetric degree (interaction) distribution. This is a pattern that we have identified at different levels of analysis: food web, predator, prey, and functional group. Such asymmetry is a well-known feature in empirical complex food webs in particular [@Dunne2002a; @Montoya2003; @Stouffer2005], and has received great attention in complex networks in general [@Albert2002; @Newman2003].
+The degree distribution pattern affects the resilience of complex food webs against random failures and intentional attacks: more-skewed distributions, like the one described in this study, are more vulnerable to the removal of the most-connected species or hubs with the potential of producing a catastrophic fragmentation of the network [@Albert2000; @Dunne2002].
+
+
+
+
+Considering the relevance of DD in network robustness we have considered this parameter in our analysis of food webs vulnerability to species loss. In particular we are interested in the intentional removal of certain species in the food web more than in the random extinction of species. As Dunne et al. (2002b) have correctly pointed out the anthropogenically caused species and population extinctions are far from being random as human have historically tended to impact higher trophic levels in the ecosystems.
+
+
+
 * The MPA Namuncurá - Banco Burdwood food web is one of the most highly-resolved networks of trophic interactions described for subpolar and polar regions.
 Compare network-level properties with other subpolar and polar food webs.
 
@@ -402,17 +418,21 @@ Furthermore, our study points out species of high-trophic levels due to its uniq
 
 Caveats:
 
-* Seasonal variation in predators' diet due to food source availability.
+Seasonal variation in predators' diet due to food source availability.
+@Brose2019
 
-* Spatial variation of study area: Banco Burdwood west-east gradient.
+Spatial variation of study area: Banco Burdwood west-east gradient.
+@Kortsch2019
 
-* The lack of density or biomass data might have neglected well-known important species for the structure of the food web: *Sprattus fuegensis*.
+The lack of density or biomass data might have neglected well-known important species for the structure of the food web: *Sprattus fuegensis*.
 
 Perspectives:
 
-* Estimation of interaction strength to gain insights into food web stability and response to anthropogenic and environmental perturbations.
+Estimation of interaction strength considering species and interaction traits (i.e. body size, body mass, dimensionality) to gain insights into food web stability and response to anthropogenic and environmental perturbations.
+@Nilsson2016; @Cirtwill2018; @Kortsch2021
 
-* Simulate perturbations on food web and target species: mercury transfer, microplastic pollution, fisheries.
+Simulate perturbations on food web and target species: mercury transfer, microplastic pollution, fisheries.
+@Cossi2021; @Fioramonti2022
 
 
 # Conclusion
