@@ -80,8 +80,8 @@ The MPA Namuncurá - Banco Burdwood I comprises nearly 34,000 km^2^ circumscribe
 Given the evidence collected during several research cruises about the oceanographic and ecological processes connecting MPAs Namuncurá - Banco Burdwood I and II [references in @APN2022], a joint management plan was recently proposed [@APN2022]. Three categories were defined according to the authorized activities: 1) Marine National Reserve (MNR), an area with the objective of conserving marine biodiversity, landscape quality and large-scale ecological processes, allowing scientific, educational, recreational uses and the sustainable use of one or more of its natural resources; 2) Marine National Park, an area with the objective of conserving marine biodiversity, landscape quality and large-scale ecological processes (MNP); and 3) Restricted Marine National Reserve (RMNR), an area of maximum permanent or temporary protection with the objective to preserve marine biodiversity and ecological processes in the long term, minimizing anthropogenic impact, and allowing scientific research and monitoring, as well as control and surveillance activities. Figure 1 shows the geographic location of these categories within MPAs Namuncurá - Banco Burdwood I and II.
 
 ```{r figure1, echo=FALSE, fig.width = 5, fig.height = 10, out.width = '100%', fig.cap="Map of the Marine Protected Areas Namuncurá - Banco Burdwood I (MNR and MNP, northern section) and II (MNR and SMNR, southern section). Acronyms indicate categories according to the management plan: MNR - Marine National Reserve, MNP - Marine National Park and RMNR - Restricted Marine National Reserve."}
-# Map of MPAN-BB provided by Lu R. (?)
-knitr::include_graphics("MPABurdwood_map.jpeg")
+
+knitr::include_graphics("MPABurdwood_map.jpg")
 
 ```
 
@@ -89,13 +89,14 @@ knitr::include_graphics("MPABurdwood_map.jpeg")
 
 In order to build the network of predator-prey interactions we reviewed more than 150 references considering published articles, databases and doctoral theses. Furthermore, we took into account personal communications from experts belonging to the working group of the study area (https://www.pampazul.gob.ar/tag/banco-burdwood/). The diversity of the expertise of the authors contributing to the present study was a key factor in enhancing the quality of the network, and inherently improved the network representation. A list of the references used to build the network is presented in Supplementary Material (Table S1).
 
-Due to a lack of trophic data resolution for some species inhabiting the study area, we followed the concept of trophic species, here defined as aggregated groups of taxa. In most cases we followed it when specific data on biological species were not available, but for some cases we collapsed species when taxa shared the same set of predators and prey (trophic similarity criterion, @Martinez1991). Details about this can be found in Supplementary Material (Table S2).
+Due to a lack of trophic data resolution for some species inhabiting the study area, we followed the concept of trophic species, here defined as aggregated groups of taxa. In most cases we followed it when specific data on species, in the taxonomic sense, were not available. In some cases we collapsed species when taxa shared the same set of predators and prey (trophic similarity, @Martinez1991), one of the aggregation methods that better preserves food web functional properties [@Gauzens2013]. Details about this can be found in Supplementary Material (Table S2).
 
 With the gathered trophic data we constructed an interaction matrix of pairwise interactions; a value of 1 or 0 was assigned to each element a_ij of the matrix depending on whether the j-species preyed or not on the i-species. Then we transformed such matrix into an oriented graph with L trophic interactions between S nodes or species. The orientation or direction of the graph follows the flow of energy and matter in the network, from prey to predator.
 
 ## Network analysis
 
-We analysed the MPA Namuncurá - Banco Burdwood network of trophic interactions, hereafter food web, at two levels: A) network, considering species and interactions of the whole network; and B) species, considering interactions and species related to a particular species. The network-level analysis aims to characterise the network of trophic interactions in terms of complexity and structure. For this we calculated several network properties commonly used to describe empirical food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) shortest path length SPL. Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Sea birds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
+We analysed the MPA Namuncurá - Banco Burdwood network of trophic interactions, hereafter food web, at two levels: A) network, considering species and interactions of the whole network; and B) species, considering interactions and species related to a particular species. The network-level analysis aims to characterise the network of trophic interactions in terms of complexity and structure. For this we calculated several network properties commonly used to describe empirical food webs [@Pascual2005]: (1) number of species S; (2) number of interactions or links L; (3) link density L/S; (4) Connectance L/S^2; (5) omnivory Omn; and (6) small-world pattern. For the latter property, we calculated the characteristic path length and the clustering coefficient of the network, and we compared it to 1000 random networks generated with the same number of species and interactions [@Marina2018a].
+Also, we estimated the (7) degree distributions for the food web, for prey and predators, and for each functional group (e.g. Amphipoda, Ascidiacea, Bivalvia, Fish, Marine mammals, Sea birds, etc.) (Table 1). The prey and predator distributions indicate the frequency of prey among predators, and viceversa; the functional group's degree shows the distribution of interactions within groups.
 The species-level analysis aims to describe the species' role in the food web. For this we considered the following properties: (1) betweenness Btw; (2) closeness Cl; (3) trophic similarity TS; (4) topological role TR; and (5) trophic level TL (Table 1). We also studied the relationship between species TL and the other species properties by performing linear regression analyses. Thus, we considered the TL as the dependent variable and the given property as the independent variable, and obtained the coefficients (slope and intercept) for the linear model. Models were fitted using the least squares approach. We also explored the topological role categories with the species TL.
 These species-level properties provide a general appropriate description of species' role in empirical complex food webs [@Cirtwill2018].
 
@@ -110,13 +111,13 @@ table1 <- add_row(table1, Name="Number of interactions", Definition="Total numbe
 
 table1 <- add_row(table1, Name="Link density", Definition="Ratio of interactions to species in a food web", Implications="It represents the average number of interactions per species; informs about how connected species are in the food-web.", Reference="Dunne et al. 2002")
 
-table1 <- add_row(table1, Name="Connectance", Definition="Proportion of potential links among species that are actually realized.", Implications="It measures the probability of interactions; it is a fundamental measure of network complexity. Connectance can be negatively or positively associated with food web robustness, depending on the network structure (random vs non-random) or how the strength of the interactions are distributed.", Reference = "Martinez 1992")
+table1 <- add_row(table1, Name="Connectance", Definition="Proportion of potential links among species that are actually realized. Range = 0 - 1.", Implications="It measures the probability of interactions and is a fundamental measure of network complexity. Connectance can be negatively or positively associated with food web robustness, depending on the network structure (random vs non-random) or how the strength of the interactions are distributed.", Reference = "Martinez 1992")
 
 table1 <- add_row(table1, Name="Degree distribution", Definition="Frequency of trophic species that have k or more interactions.", Implications="It suggests on the vulnerability of complex food webs against random failures and intentional attacks (i.e. species extinctions).", Reference="Albert & Barabási 2002")
 
 table1 <- add_row(table1, Name="Omnivory", Definition="Species feeding on prey from more than one trophic level.", Implications="It influences food web's stability; intermediate levels of omnivory may stabilize it and may diffuse top-down effects thus reduce the probability of trophic cascades.", Reference = "McCann & Hastings 1997")
 
-table1 <- add_row(table1, Name="Shortest path length", Definition="Average shortest path length between all pairs of species.", Implications="A short path length imply a rapid spread of an impact (e.g. invasion, population fluctuation, local extinction) throughout the food web.", Reference="Watts & Strogatz 1998")
+table1 <- add_row(table1, Name="Small-world pattern", Definition="A network with short path length (distance between nodes) and high clustering coefficient (formation of compartments) compared to random networks.", Implications="Consequences of this structural pattern in food webs are of great importance in recognizing evolutionary paths and the vulnerability to perturbations.", Reference="Watts & Strogatz 1998, Montoya & Solé 2002")
 
 table1 <- add_row(table1, Name="Betweenness", Definition="Number of shortest paths going through a species.", Implications=" Species with high betweenness act as “bridges”; if removed, would have rapidly spreading effects in the food web.", Reference="Freeman 1978, Lai et al. 2012")
 
@@ -138,7 +139,7 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ## Network-level properties
 
-In terms of complexity, the MPA Namuncurá - Banco Burdwood food web consisted of 1778 predator-prey interactions and 379 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density of 4.69, meaning the average number of interactions per species, and a connectance of 0.01. Almost half of the consumers were omnivores, feeding on sources at different trophic levels. The food web showed a path length of 2.99, which implies that nearly three interactions are needed to connect any pair of species of the network (Table 1).
+In terms of complexity, the MPA Namuncurá - Banco Burdwood food web consisted of 1778 predator-prey interactions and 379 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density of 4.69, meaning the average number of interactions per species, and a connectance of 0.01. Almost half of the consumers were omnivores, feeding on sources at different trophic levels. The food web displayed a small-world pattern, meaning that the path length was lower and the clustering coefficient was higher than the random networks (Table 1).
 
 \newpage
 
@@ -156,8 +157,8 @@ figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic le
 
 load("../results/summary_results_jan23.rda")
 
-knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength), col.names = c("Species","Interactions","Density","Connectance","Omnivory","Path length"),
-                      caption = "Network-level properties of the MPA Namuncurá - Banco Burdwood food web. See table 1 for definitions and ecological relevance.") %>% row_spec(0,bold=TRUE)
+knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength, Clustering) %>% mutate(SW = "True"), col.names = c("Species","Interactions","Density","Connectance","Omnivory","Path length", "Clustering", "SW"),
+                      caption = "Network-level properties of the MPA Namuncurá - Banco Burdwood food web. SW: small-world pattern. See table 1 for definitions and ecological relevance.") %>% row_spec(0,bold=TRUE)
 
 ```
 
@@ -377,19 +378,30 @@ figure_4
 
 # Discussion
 
-## The MPA Namuncurá - Banco Burdwood food web
+## The food web of the MPA Namuncurá - Banco Burdwood ecosystem
 
-The food web for the MPA Namuncurá - Banco Burdwood, analysed in this study, is one of the most highly-resolved networks of trophic interactions not only for a high-latitude marine ecosystem but also for a marine protected area worldwide. It is of paramount importance to consider the complexity of species interactions in order to gain insights into the structure and functioning of the ecosystem, since the aggregation of species might mask food web properties and/or generate artifacts [@Martinez1993; @Gauzens2013].
-Connectance, a property that resumes the complexity of a food web, 
+The food web of the MPA Namuncurá - Banco Burdwood ecosystem, analysed in this study, is one of the most highly-resolved networks of trophic interactions not only for a high-latitude marine ecosystem but also for a marine protected area worldwide. It is of paramount importance to consider the complexity of species interactions in order to gain insights into the structure and functioning of the ecosystem, since the aggregation of species might mask food web properties and/or produce type II errors (false positive) [@Martinez1993; @Gauzens2013].
 
-Compare network-level properties with other subpolar and polar food webs
-Complexity, connectance
+Food web connectance is a property that resumes the complexity of the network. It contains important information regarding how interactions within an ecological network are distributed, and predicts reasonably well key dynamical properties of ecological networks  also many structural [@Dunne2002a]. More importantly, it is an emergent property of pairwise species interactions [@Poisot2014].
+Complex marine food webs (i.e. with more than 25 trophic species) show connectance values ranging from 0.01 - 0.27 [@Marina2018a]. In particular, food webs from high-latitude regions tend to exhibit a connectance closer to the minimum (between 0.01 and 0.05) [@Santana2013; @Kortsch2015; @Rodriguez2022]. Whether food webs display low or high connectance values helps to better comprehend ecosystem's synthetic properties like robustness. In this sense, empirical analyses support the notion that the robustness of a food web increases with connectance [@Dunne2002; @Montoya2003]. The connectance of the food web of the MPA Namuncurá - Banco Burdwood (0.01) is one of the lowest reported so far for these regions; five times lower than that of Beagle Channel [@Rodriguez2022]. 
 
-The structure of species interactions influences the opportunities for multiple species to persist in the long term and, therefore, their coexistence [@Godoy2018].
-The food web for the MPA N-BB ecosystem, as we showed in this study, presents an asymmetric degree (interaction) distribution. This is a pattern that we have identified at different levels of analysis: food web, predator, prey, and functional group. Such asymmetry is a well-known feature in empirical complex food webs in particular [@Dunne2002a; @Montoya2003; @Stouffer2005], and has received great attention in complex networks in general [@Albert2002; @Newman2003].
-The degree distribution pattern affects the resilience of complex food webs against random failures and intentional attacks: more-skewed distributions, like the one described in this study, are more vulnerable to the removal of the most-connected species or hubs with the potential of producing a catastrophic fragmentation of the network [@Albert2000; @Dunne2002].
-Important to attacks like anthropogenic perturbations: mercury, microplastics
-As Dunne et al. (2002b) have correctly pointed out the anthropogenically caused species and population extinctions are far from being random as human have historically tended to impact higher trophic levels in the ecosystems.
+The degree distribution or the distribution of number of interactions per species is the core for the structure of species interactions, which influences the opportunities for multiple species to persist in the long term and, therefore, their coexistence [@Godoy2018]. The food web for the MPA N-BB presents an asymmetric degree (interaction) distribution. This is a pattern that we have identified at different levels of analysis: food web, predator, prey, and functional group. Such asymmetry is a well-known feature in empirical complex food webs in particular [@Dunne2002a; @Montoya2003; @Stouffer2005], and has received great attention in complex networks in general [@Albert2002; @Newman2003].
+The degree distribution pattern affects the resilience of complex food webs against random failures and intentional attacks: right-skewed distributions, like the one described in this study, are more vulnerable to the removal of the most-connected species or hubs with the potential of producing a catastrophic fragmentation of the network [@Albert2000; @Dunne2002].
+
+Small-world
+The path length, another network-level property we analysed, refers to the average shortest distance between pairs of species in the food web. A short path length implies a rapid spread of an impact (e.g. contaminant, population fluctuation, local extinction) throughout the network [@Williams2002]. In comparison to complex and empirical marine food webs, the food web of the MPA Namuncurá - Banco Burdwood has a long path length (4th longest among 29 food webs) [@Marina2018a].
+
+Omnivory
+
+
+
+Low connectance, 
+Right-skewed degree distribution
+
+combined with vulnerable and fragile species and ongoing anthropogenic impacts [@Cossi2021; @Fioramonti2022], suggest potential ecosystem fragility which need to be addressed.
+
+
+
 
 
 The degree distribution allows identification of important species, such as potential keystone species [@Sole2001; @Dunne2002], generalists, and specialist species [@Kondoh2010].
