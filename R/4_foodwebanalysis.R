@@ -69,6 +69,18 @@ ggplot(data = degree) +
         axis.title.x = element_text(face = "bold", size = 16),
         axis.title.y = element_text(face = "bold", size = 16))
 
+# Small-world
+rnd_g <- lapply(1:100, function (x) {
+  e <- sample_gnm(prop_topol$Size, prop_topol$Links, directed = TRUE)
+  
+  # Check that the ER networks has only one connected component
+  while(components(e)$no > 1)
+    e <- erdos.renyi.game(prop_topol$Size, prop_topol$Links, type = "gnm", 
+                          directed = TRUE)
+  return(e) 
+})
+multiweb::calc_swness_zscore(g, nullDist = rnd_g, weights = NA, ncores = 4)
+
 
 ## Escala subgrupos ----
 
