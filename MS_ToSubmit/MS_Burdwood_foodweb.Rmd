@@ -411,11 +411,14 @@ Overall, the food web of the MPA Namuncurá - Banco Burdwood presents a combinat
 
 ## Species' role
 
-* The food web shows an asymmetry in the distribution of interactions at several levels: food web, functional group, prey and predators. In all of them interactions are concentrated in a few species.
+The degree distribution, a network-level property as defined in this study, also allows to identify important species, such as potential keystone species [@Sole2001; @Dunne2002], generalists/specialist species, and dominant food sources [@Kondoh2010].
 
-The degree distribution allows identification of important species, such as potential keystone species [@Sole2001; @Dunne2002], generalists, and specialist species [@Kondoh2010].
-On one hand, this asymmetry indicates that most consumers have a narrow diet, and few present flexible diets (*Patagonotothen guntheri*, *P. ramsayi*, *Dissostichus eleginoides*, *Bathyraja brachyurops*, *B. griseocauda*).
-On the other hand few prey are consumed by many predators, meaning that there are dominant food sources from which most consumers depend on: detritus, diatoms (benthic, centric, pennate), and species of *Euphausia*.
+We have identified that the majority of the consumers in the food web of the MPA N-BB have a narrow diet or are specialists, while few present a broad diet. *Patagonotothen guntheri*, *P. ramsayi*, *Dissostichus eleginoides*, *Bathyraja brachyurops*, and *B. griseocauda* are the most evident generalist species, with more than 25 potential prey.
+Since these species present mid-trophic positions in the food web (3-4), acting as predator and prey, they might be important links between lower and higher trophic levels. This is in agreement with the sole analysis, using stable isotopes, that exists so far for the trophic structure of the MPA N-BB [@Riccialdelli2020], and resembles other high-latitude marine systems of the Southwest Atlantic and Arctic regions [@Arkhipkin2013; @Kortsch2019]. The importance of these generalist species also arises since they feed on the benthic and pelagic habitats [@Troccoli2020; @CovattiAle2022; @Fischer2022], linking these realms and contributing to the vertical carbon flow.
+
+On the other hand, few prey are consumed by many predators, suggesting that there are dominant food sources from which most consumers depend on, and from where the ecosystem energy is being transferred to the upper trophic levels.
+Food sources identified in Riccialdelli et al. 2020, Bertola et al ?
+detritus, diatoms (benthic, centric, pennate), and species of *Euphausia*.
 
 Our results state that certain species play particular roles in the structure of the food web.
 
