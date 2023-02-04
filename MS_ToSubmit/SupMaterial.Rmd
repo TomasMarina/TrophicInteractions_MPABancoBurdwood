@@ -160,7 +160,10 @@ knitr::kable(spp_total %>%
                                           TRUE ~ TopRole)) %>% 
                dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree, NumPrey, NumPred, Between, Close, TL, meanTrophicSimil, TopRole) %>% 
                arrange(., desc(TotalDegree)) %>% 
-               mutate(across(where(is.numeric), round, 4)), 
+               mutate(across(where(is.numeric), round, 4),
+                      FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
+                                                  TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
+                                                  TRUE ~ FunctionalGroup)), 
              format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Degree","NumPrey","NumPred","Between","Close","TL","TS","TR"), align = "llcccccccc", caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).") %>%
   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4.5)
 
