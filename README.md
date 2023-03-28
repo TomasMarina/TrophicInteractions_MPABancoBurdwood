@@ -2,6 +2,6 @@
 
 Manuscript in construction...
 
-Authors: Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli
+Authors: Tomás I. Marina, Irene R. Schloss, Luciana Riccialdelli ...
 
 Centro Austral de Investigaciones Científicas (CADIC-CONICET), Argentina
