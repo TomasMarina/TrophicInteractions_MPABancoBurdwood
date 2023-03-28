@@ -15,7 +15,7 @@ address:
   - code: 3
     address: INIDEP, UBA-CONICET, IIMyC-CONICET, MACN-CONICET, UNC-CONICET
 abstract: |
-  The abstract goes here.
+  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, the presence of large numbers (or proportions) of endemic species, and/or the presence of high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Banco Burdwood I and II (MPA N-BB), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach with the objective of characterize the food web in terms of complexity and structure, and identify the species' role in such framework.
 
 keywords: 
   - Food web
