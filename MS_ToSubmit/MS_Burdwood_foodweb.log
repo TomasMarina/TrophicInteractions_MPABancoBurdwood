@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  28 MAR 2023 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  29 MAR 2023 10:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,7 +660,11 @@ Package hyperref Info: Link coloring OFF on input line 119.
 \@outlinefile=\write4
 \openout4 = `MS_Burdwood_foodweb.out'.
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 158.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 157.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -668,45 +672,45 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 158.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 158.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 158.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 158.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 158.
+(Font)              <10> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 158.
+(Font)              <7> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 158.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 158.
+(Font)              <5> on input line 191.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 158.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 158.
+(Font)              <8> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 158.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 158.
+(Font)              <6> on input line 191.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 191.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -721,109 +725,105 @@ Overfull \hbox (2.22221pt too wide) has occurred while \output is active
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 215.
+(hyperref)                removing `\mathsurround' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
+(hyperref)                removing `\z@' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
+(hyperref)                removing `superscript' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 215.
+(hyperref)                removing `\mathsurround' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
+(hyperref)                removing `\z@' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
+(hyperref)                removing `superscript' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 215.
+(hyperref)                removing `\mathsurround' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
+(hyperref)                removing `\z@' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
+(hyperref)                removing `superscript' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 215.
+(hyperref)                removing `\mathsurround' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 215.
+(hyperref)                removing `\z@' on input line 220.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 215.
+(hyperref)                removing `superscript' on input line 220.
 
 [1
 
-{/Users/tomasmarina/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 268.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-<MPABurdwood_map.jpg, id=90, 3259.17625pt x 1425.325pt>
+{/Users/tomasmarina/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<MPABurdwood_map.jpg, id=96, 3259.17625pt x 1425.325pt>
 File: MPABurdwood_map.jpg Graphic file (type jpg)
 <use MPABurdwood_map.jpg>
-Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 288.
+Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 321.
 (pdftex.def)             Requested size: 468.0pt x 204.65508pt.
-[2] [3
+[3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.342 
+l.346 
        <./MPABurdwood_map.jpg>] [4] [5] [6]
 <MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf, id=126, 365.365pt x 294.09875pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf  used on input line 503.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf  used on input line 536.
 (pdftex.def)             Requested size: 365.3641pt x 294.09802pt.
 <MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf, id=127, 463.7325pt x 640.3925pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf  used on input line 556.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf  used on input line 589.
 (pdftex.def)             Requested size: 463.73135pt x 640.39093pt.
 
-LaTeX Warning: Float too large for page by 58.89093pt on input line 561.
+LaTeX Warning: Float too large for page by 58.89093pt on input line 594.
 
 [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.564 ...perties}\label{species-level-properties}}
+l.597 ...perties}\label{species-level-properties}}
                                                   
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.564 ...perties}\label{species-level-properties}}
+l.597 ...perties}\label{species-level-properties}}
                                                    <./MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>] [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.564 ...perties}\label{species-level-properties}}
+l.597 ...perties}\label{species-level-properties}}
                                                    <./MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>]
 <MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf, id=159, 463.7325pt x 462.72874pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf  used on input line 622.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf  used on input line 655.
 (pdftex.def)             Requested size: 463.73135pt x 462.72762pt.
 [9] [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.667 
+l.700 
        <./MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>] [11] [12] [13] [14] [15] [16] [17] [18] [19] (./MS_Burdwood_foodweb.aux)
 Package rerunfilecheck Info: File `MS_Burdwood_foodweb.out' has not changed.
 (rerunfilecheck)             Checksum: B69BA13835189B9E511844239939C5A8;2609.
@@ -837,7 +837,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,9n,76p,1016b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
-Output written on MS_Burdwood_foodweb.pdf (19 pages, 1505316 bytes).
+Output written on MS_Burdwood_foodweb.pdf (19 pages, 1511098 bytes).
 PDF statistics:
  628 PDF objects out of 1000 (max. 8388607)
  546 compressed objects within 6 object streams

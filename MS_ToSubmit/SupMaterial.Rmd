@@ -1,6 +1,6 @@
 ---
 title: "Supplementary material for 'The complex network of trophic interactions in a subAntarctic Marine Protected Area'"
-author: "Tomás I. Marina, Irene R. Schloss and Luciana Riccialdelli"
+author: "Tomás I. Marina, Irene R. Schloss, Luciana Riccialdelli, To be continued"
 output: pdf_document
 bibliography: "AMPBancoBurdwood.bib"
 ---
