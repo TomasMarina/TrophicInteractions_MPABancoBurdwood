@@ -4,16 +4,31 @@ title: The complex network of trophic interactions in a subAntarctic Marine Prot
 author:
   - name: Tomás I. Marina^a^
     email: tomasimarina@gmail.com
-  - name: Irene R. Schloss^a^^,^^b^
+  - name: Irene R. Schloss^a^^,^^b^^,^^c^
   - name: Luciana Riccialdelli^a^
-  - name: To be continued(?)^c^
+  - name: Juan Martín Díaz de Astarloa^d^
+  - name: Cintia Fraysse^a^
+  - name: Gustavo A. Lovrich^a^
+  - name: Andrea Raya Rey^a^^,^^c^^,^^e^
+  - name: Mariela L. Spinelli^f^
+  - name: Diego Urteaga^g^
+
 address:
   - code: 1
     address: Centro Austral de Investigaciones Cientificas (CADIC-CONICET), Argentina
   - code: 2
     address: Instituto Antartico Argentino (IAA), Argentina
   - code: 3
-    address: INIDEP, UBA-CONICET, IIMyC-CONICET, MACN-CONICET, UNC-CONICET
+    address: Instituto de Ciencias Polares, Ambiente y Recursos Naturales (ICPA), Universidad de Tierra del Fuego (UNTDF), Argentina
+  - code: 4
+    address: Instituto de Investigaciones Marinas y Costeras (IIMYC), Universidad Nacional de Mar del Plata-CONICET, Argentina
+  - code: 5
+    address: Wildlife Conservation Society, Argentina
+  - code: 6
+    address: Instituto de Biodiversidad y Biología Experimental y Aplicada (IBBEA), Universidad de Buenos Aires-CONICET, Argentina
+  - code: 7
+    address: Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina
+    
 abstract: |
   Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, the presence of large numbers of endemic species, and/or the presence of high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Banco Burdwood I and II (MPA N-BB, 53º–55ºS and 56º–62ºW), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach with the objective of characterizing the food web in terms of complexity and structure, and identifying the species' role in such framework. In terms of complexity, the MPA N-BB food web consisted of 1778 predator-prey interactions and 379 species, with a link density of 4.69 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. All this suggest that the ecosystem might be fragile to external perturbations targeting highly connected species, although structural properties might provide resilience and resistance with the final outcome of a rearrange structure maintaining their functions. On the other hand, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mostly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process. In addition, we propose that other species rather than the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis* should be considered as relevant energy transfers for the ecosystem. Finally, we argue that it is the diversity of species, representing the benthic and pelagic habitats, what maintains the connectivity of the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
 
@@ -463,7 +478,8 @@ We identified several species as important in terms of different aspects of trop
 
 # Acknowledgements
 
-We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research (add names if necessary), and special thanks to GA Lovrich the Scientific Coordinator of the MPA Namuncurá-Burdwood Bank and the MPA N-BB Administrators.
+We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. It is worth to mention the following researchers: Daniel O. Bruno (CADIC-CONICET, Argentina), Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Laura Schejter (INIDEP-CONICET),...
+Special thanks to G.A. Lovrich the Scientific Coordinator of the MPA Namuncurá-Burdwood Bank and the MPA N-BB Administrators.
 This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617), Argentina. This work is contribution no. XX of the MPA Namuncurá (Law 26.875).
 
 # References
