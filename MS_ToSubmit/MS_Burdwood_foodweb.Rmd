@@ -6,6 +6,8 @@ author:
     email: tomasimarina@gmail.com
   - name: Irene R. Schloss^a^^,^^b^^,^^c^
   - name: Luciana Riccialdelli^a^
+  - name: Fabiana L. Capitanio^f^
+  - name: Sergio M. Delpiani^d^
   - name: Juan Martín Díaz de Astarloa^d^
   - name: Cintia Fraysse^a^
   - name: Gustavo A. Lovrich^a^
@@ -13,6 +15,7 @@ author:
   - name: Mariela L. Spinelli^f^
   - name: Diego Urteaga^g^
   - name: Marcos Tatián^h^^,^^i^
+  - name: Virginia A. García Alonso^f^
 
 address:
   - code: 1
