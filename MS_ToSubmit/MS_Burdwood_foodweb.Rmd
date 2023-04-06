@@ -16,6 +16,8 @@ author:
   - name: Diego Urteaga^g^
   - name: Marcos Tatián^h^^,^^i^
   - name: Virginia A. García Alonso^f^
+  - name: Claudia C. Boy^a^
+  - name: Daniel O. Bruno^a^^,^^c^
 
 address:
   - code: 1
@@ -486,7 +488,7 @@ We identified several species as important in terms of different aspects of trop
 
 # Acknowledgements
 
-We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. It is worth to mention the following researchers: Daniel O. Bruno (CADIC-CONICET, Argentina), Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Laura Schejter (INIDEP-CONICET),...
+We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. It is worth to mention the following researchers: Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Laura Schejter (INIDEP-CONICET),...
 Special thanks to G.A. Lovrich the Scientific Coordinator of the MPA Namuncurá-Burdwood Bank and the MPA N-BB Administrators.
 This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617), Argentina. This work is contribution no. XX of the MPA Namuncurá (Law 26.875).
 
