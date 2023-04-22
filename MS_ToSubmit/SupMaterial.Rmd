@@ -130,7 +130,7 @@ sp_list <- df_g[["vertices"]] %>%
                               Species == "Bacteria" ~ "Domain",
                               Species %in% c("Calcarea","Hexactinellida") ~ "Class",
                               Species %in% c("Halichondrida","Haplosclerida","Poecilosclerida","Tetractinellida") ~ "Order",
-                              Species %in% ("Copepodite","Larvae_Fish","Larvae_Nauplii","Eggs_Fish") ~ "Ontogenetic stage",
+                              Species %in% c("Copepodite","Larvae_Fish","Larvae_Nauplii","Eggs_Fish") ~ "Ontogenetic stage",
                               TRUE ~ "Other")) %>%  
   dplyr::select(Species, TaxLevel, FunctionalGroup, Reference, Reference_pres_link, Observation) %>% 
   arrange(., (Species))
