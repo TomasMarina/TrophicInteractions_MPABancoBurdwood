@@ -872,8 +872,8 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 871,Doryteuthis_gahi,Cephalopoda,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,Inferred from Squid
 872,Doryteuthis_gahi,Cephalopoda,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
 873,Campanularia_sp,Cnidaria,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
-874,Obelia_longissima,Cnidaria,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
-875,Obelia_sp,Cnidaria,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
+874,Obelia_longissima,Zooplankton,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
+875,Obelia_sp,Zooplankton,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
 876,Austrodoris_sp,Gastropoda,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
 877,Necromass,Non-living,Daption_capense,SeaBirds,Scavenger,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
 878,Euphausia_spp,Zooplankton,Daption_capense,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Daption%20capense,
@@ -1640,9 +1640,9 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 1639,Phytoplankton *,Phytoplankton,Nuttallochiton_martiali,Polyplacophora,Grazer,Primary producer,Encyclopedia of Life,https://eol.org/pages/7160203,"* Grazing, need to be more specific (which Phytoplankton?)"
 1640,Bryozoa,Bryozoa,Nuttallochiton_martiali,Polyplacophora,Grazer,Heterotroph,Urteaga_pers.com.,NA,"Inferred from Bryozoan colony form (Taylor et al. 2013, https://doi.org/10.1111/sed.12032)"
 1641,Detritus,Non-living,Nuttallochiton_martiali,Polyplacophora,Deposit-feeder,Detritus,Urteaga_pers.com.,NA,Congress abstract got from D Urteaga
-1642,Detritus,Non-living,Obelia_longissima,Cnidaria,Suspension-feeder,Detritus,Encyclopedia of Life,https://eol.org/pages/46551836,
-1643,Zooplankton *,Zooplankton,Obelia_longissima,Cnidaria,Suspension-feeder,Heterotroph,Encyclopedia of Life,https://eol.org/pages/46551836,
-1644,Zooplankton *,Zooplankton,Obelia_sp,Cnidaria,Suspension-feeder,Heterotroph,Encyclopedia of Life,https://eol.org/pages/46551829,
+1642,Detritus,Non-living,Obelia_longissima,Zooplankton,Suspension-feeder,Detritus,Encyclopedia of Life,https://eol.org/pages/46551836,
+1643,Zooplankton *,Zooplankton,Obelia_longissima,Zooplankton,Suspension-feeder,Heterotroph,Encyclopedia of Life,https://eol.org/pages/46551836,
+1644,Zooplankton *,Zooplankton,Obelia_sp,Zooplankton,Suspension-feeder,Heterotroph,Encyclopedia of Life,https://eol.org/pages/46551829,
 1645,Calanus_spp,Copepoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,Croxall_etal_1988,https://doi.org/10.1111/j.1469-7998.1988.tb02417.x,Aggregated: Calanus_australis and Calanus_simillimus
 1646,Clausocalanus_spp,Copepoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,Croxall_etal_1988,https://doi.org/10.1111/j.1469-7998.1988.tb02417.x,Aggregated: Clausocalanus_brevipes and Clausocalanus_laticeps
 1647,Ctenocalanus_vanus,Copepoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,Croxall_etal_1988,https://doi.org/10.1111/j.1469-7998.1988.tb02417.x,
@@ -1653,8 +1653,8 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 1652,Rhincalanus_gigas,Copepoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,Croxall_etal_1988,https://doi.org/10.1111/j.1469-7998.1988.tb02417.x,
 1653,Themisto_gaudichaudii,Zooplankton,Oceanites_sp,SeaBirds,Hunter,Heterotroph,Bocher_etal_2001,https://doi.org/10.3354/meps223261,
 1654,Doryteuthis_gahi,Cephalopoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
-1655,Obelia_longissima,Cnidaria,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
-1656,Obelia_sp,Cnidaria,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
+1655,Obelia_longissima,Zooplankton,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
+1656,Obelia_sp,Zooplankton,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
 1657,Tulpa_tulipifera,Cnidaria,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,
 1658,Isopoda *,Isopoda,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,* need to be more specific (which Isopoda?)
 1659,Polychaeta *,Polychaeta,Oceanites_sp,SeaBirds,Hunter,Heterotroph,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Oceanites,* need to be more specific (which Polychaeta?)
