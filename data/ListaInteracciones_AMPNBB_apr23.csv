@@ -1102,7 +1102,7 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 1101,Bivalvia *,Bivalvia,Falsilunatia_carcellesi,Gastropoda,Hunter,Heterotroph,Pastorino_pers.com.,NA,* shell-drilling spp; need to be more specific (which Bivalvia?)
 1102,Zooplankton *,Zooplankton,Filellum_sp,Cnidaria,Suspension-feeder,Heterotroph,Encyclopedia of Life,https://eol.org/pages/46552138,* need to be more specific (which Zooplankton?)
 1103,Phytoplankton *,Phytoplankton,Fissarcturus_patagonicus,Isopoda,Suspension-feeder,Primary producer,Doti_pers.com.,NA,* consultar por phytoplankton resuspendido
-1104,Phytoplankton *,Phytoplankton,Flabellum_apertum,Cnidaria,Suspension-feeder,Primary producer,Encyclopedia of Life,https://eol.org/pages/2551457,* need to be more specific (which Phytoplankton?)
+1104,Detritus,Non-living,Flabellum_apertum,Cnidaria,Suspension-feeder,Primary producer,Encyclopedia of Life,https://eol.org/pages/2551457,* need to be more specific (which Phytoplankton?)
 1105,Detritus,Non-living,Foraminifera,Foraminifera,Deposit-feeder,Detritus,GloBI,https://www.globalbioticinteractions.org/browse/?interactionType=interactsWith&resultType=json&sourceTaxon=Foraminifera,
 1106,Liothyrella_uva,Brachiopoda,Fuegotrophon_pallidus,Gastropoda,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,Colapsar las 3 sp de Brachiopoda?
 1107,Magellania_venosa,Brachiopoda,Fuegotrophon_pallidus,Gastropoda,Hunter,Heterotroph,Gordillo_etal_2019,https://doi.org/10.1007/s12526-019-00935-1,Colapsar las 3 sp de Brachiopoda?
@@ -1214,16 +1214,16 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 1213,Foraminifera,Foraminifera,Haliclona_sp,Porifera,Suspension-feeder,Heterotroph,Ruppert_etal_2004,"Ruppert, E. E., Fox, R. S., & Barnes, R. D. (2004). Invertebrate zoology: a functional evolutionary approach. Brooks/Cole Publishing Company.",Inferred from Porifera
 1214,Synechococcus_sp,Picophytoplankton,Haliclona_sp,Porifera,Suspension-feeder,Primary producer,Ruppert_etal_2004,"Ruppert, E. E., Fox, R. S., & Barnes, R. D. (2004). Invertebrate zoology: a functional evolutionary approach. Brooks/Cole Publishing Company.",Inferred from Porifera
 1215,Dictyocha_speculum,Silicoflagellates,Haliclona_sp,Porifera,Suspension-feeder,Primary producer,Ruppert_etal_2004,"Ruppert, E. E., Fox, R. S., & Barnes, R. D. (2004). Invertebrate zoology: a functional evolutionary approach. Brooks/Cole Publishing Company.",Inferred from Porifera
-1216,Cyrtostrombidium_sp,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1217,Laboea_strobila,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1218,Lohmanniella_sp,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1219,Strobilidium_sp,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1220,Strombidinopsis_sp,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1221,Strombidium_conicum,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1222,Strombidium_sp,Ciliates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1223,Diatoms_benthic,Diatoms,Halipteris_africana,Cnidaria,Suspension-feeder,Primary producer,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,Inferred from Potter Cove FW (Antarctic Peninsula)
-1224,Dinoflagellates_heterosol,Dinoflagellates,Halipteris_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
-1225,Detritus,Non-living,Halipteris_africana,Cnidaria,Suspension-feeder,Detritus,Baillon_etal_2015,https://doi.org/10.1111/azo.12141,
+1216,Cyrtostrombidium_sp,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1217,Laboea_strobila,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1218,Lohmanniella_sp,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1219,Strobilidium_sp,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1220,Strombidinopsis_sp,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1221,Strombidium_conicum,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1222,Strombidium_sp,Ciliates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1223,Diatoms_benthic,Diatoms,Balticina_africana,Cnidaria,Suspension-feeder,Primary producer,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,Inferred from Potter Cove FW (Antarctic Peninsula)
+1224,Dinoflagellates_heterosol,Dinoflagellates,Balticina_africana,Cnidaria,Suspension-feeder,Heterotroph,Marina_etal_2018,https://doi.org/10.1016/j.ecss.2017.10.015,"Inferred from Malacobelemnon daytoni (Pennatulacea, Potter Cove FW)"
+1225,Detritus,Non-living,Balticina_africana,Cnidaria,Suspension-feeder,Detritus,Baillon_etal_2015,https://doi.org/10.1111/azo.12141,
 1226,Phaeocystis_antarctica,Coccolithophorids,Haplocheira_barbimana_robusta,Amphipoda,Suspension-feeder,Primary producer,GATEWAy,https://doi.org/10.25829/iDiv.283-3-756,Inferred from Haplocheira plumosa
 1227,Diatoms_centric,Diatoms,Haplocheira_barbimana_robusta,Amphipoda,Suspension-feeder,Primary producer,GATEWAy,https://doi.org/10.25829/iDiv.283-3-756,Inferred from Haplocheira plumosa
 1228,Diatoms_pennate,Diatoms,Haplocheira_barbimana_robusta,Amphipoda,Suspension-feeder,Primary producer,GATEWAy,https://doi.org/10.25829/iDiv.283-3-756,Inferred from Haplocheira plumosa
@@ -1272,7 +1272,7 @@ ID,Prey,PreyGroup,Predator,PredGroup,PredStrategy,FoodSource,Reference,Reference
 1271,Primnoella_scotiae,Coral,Hippasteria_falklandica,Echinodermata,Hunter,Heterotroph,Mah_2006,https://repository.si.edu/bitstream/handle/10088/21587/iz_Circeaster_Mah.pdf,Inferred from Octocoral
 1272,Primnoisis_antarctica,Coral,Hippasteria_falklandica,Echinodermata,Hunter,Heterotroph,Mah_2006,https://repository.si.edu/bitstream/handle/10088/21587/iz_Circeaster_Mah.pdf,Inferred from Octocoral
 1273,Detritus,Non-living,Holostylis_uniramosa,Cumacea,Deposit-feeder,Detritus,Blazewicz-Paszkowycz&Ligowski_2002,https://doi.org/10.1017/S0954102002000524,Inferred from Ekleptostylis_debroyeri
-1274,Halipteris_africana,Cnidaria,Hormathia_pectinata,Cnidaria,Suspension-feeder,Heterotroph,Schejter_etal_2018,https://ri.conicet.gov.ar/handle/11336/98394,
+1274,Balticina_africana,Cnidaria,Hormathia_pectinata,Cnidaria,Suspension-feeder,Heterotroph,Schejter_etal_2018,https://ri.conicet.gov.ar/handle/11336/98394,
 1275,Foraminifera,Foraminifera,Hyalinoecia_artifex,Polychaeta,Deposit-feeder,Primary producer,Jumars_etal_2015,https://doi.org/10.1146/annurev-marine-010814-020007,
 1276,Peracarida *,Isopoda,Hyalinoecia_artifex,Polychaeta,Hunter,Heterotroph,Jumars_etal_2015,https://doi.org/10.1146/annurev-marine-010814-020007,* need to be more specific (which Peracarida?)
 1277,Doryteuthis_gahi,Cephalopoda,Hyperoodon_planifrons,MarineMammals_3,Hunter,Heterotroph,Riccialdelli_etal_2017,https://doi.org/10.3354/meps12296,

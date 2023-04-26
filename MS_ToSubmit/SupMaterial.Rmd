@@ -24,7 +24,7 @@ library(tidyverse)
 library(ggplot2)
 
 # Load data
-load("../data/cleaned-data_jan23.rda")
+load("../data/cleaned-data_apr23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -64,7 +64,7 @@ library(kableExtra)
 library(pander)
 
 # Load data
-load("../data/cleaned-data_jan23.rda")
+load("../data/cleaned-data_apr23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -93,10 +93,11 @@ knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = 
 library(knitr)
 library(dplyr)
 library(kableExtra)
+library(stringr)
 
 # Load data
-load("../data/cleaned-data_jan23.rda")
-load("../data/foodweb-data_jan23.rda")
+load("../data/cleaned-data_apr23.rda")
+load("../data/foodweb-data_apr23.rda")
 
 # Tidy data
 df_g <- igraph::as_data_frame(g, 'both')
@@ -157,7 +158,7 @@ Table 3 presents an exhaustive list of the species-level properties for the food
 
 ```{r tableS3, echo=FALSE}
 
-load("../results/summary_results_jan23.rda")
+load("../results/summary_results_apr23.rda")
 
 # Table 2. List of species
 knitr::kable(spp_total %>% 
@@ -188,7 +189,7 @@ library(dplyr)
 library(ggplot2)
 
 # Load data
-load("../results/summary_results_jan23.rda")
+load("../results/summary_results_apr23.rda")
 
 # Topological roles
 top.role.col <- hcl.colors(4, palette = "Purple-Green")

@@ -17,7 +17,7 @@ ipak(packages)
 
 ## Lista de Especies ----
 
-sp_raw <- read.csv("data/ListaEspecies_AMPNBB_jan23.csv")
+sp_raw <- read.csv("data/ListaEspecies_AMPNBB_apr23.csv")
 colnames(sp_raw)
 sp_raw <- sp_raw %>% 
   add_count(FunctionalGroup, name = "Richness") %>% 
@@ -26,7 +26,7 @@ sp_raw <- sp_raw %>%
 
 ## Lista de Interacciones ----
 
-int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jan23.csv")
+int_raw <- read.csv("data/ListaInteracciones_AMPNBB_apr23.csv")
 
 int_raw <- int_raw %>% 
   # low-resolved Phytoplankton
@@ -107,42 +107,42 @@ int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with P
 
 # Check ----
 
-int_good_res <- int_raw %>% 
-  filter(!str_detect(Prey, "\\*$")) %>% 
-  filter(!str_detect(Predator, "\\*$")) %>% 
-  dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
-  distinct(Prey, Predator, .keep_all = TRUE)
-
-library(igraph)
-g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
-sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
-  mutate(across(where(is.factor), as.character)) %>% 
-  relocate(any_of(c("FunctionalGroup", "Zone", "TrophicSpecies"))) %>% rename(id = TrophicSpecies)
-df_g <- igraph::as_data_frame(g, 'both')
-df_g$vertices <- df_g$vertices %>% 
-  left_join(sp_raw_fg, c('name' = 'id'))
-g <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
-
-library(NetIndices)
-adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
-tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
-V(g)$TL <- tl$TL
-V(g)$Omn <- tl$OI
-
-spp_name <- as.data.frame(V(g)$name)
-spp_fg <- as.data.frame(V(g)$FunctionalGroup)
-spp_tl <- as.data.frame(V(g)$TL)
-spp_zone <- as.data.frame(V(g)$Zone)
-spp_db <- bind_cols(spp_name, spp_fg, spp_tl, spp_zone)
-colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL", "Zone")
-
-spp_tl_1 <- spp_db %>% 
-  filter(TL == 1, Zone != "Talud")
-# It should only comprise "Bacteria", "	"Coccolithophorids", "Diatoms", "Dinoflagellates" (Azadinium_sp)
-# "Non-living", "Phytoplankton_Misc", "Silicoflagellates" & "Zooplankton" (Eggs_Fish)
+# int_good_res <- int_raw %>% 
+#   filter(!str_detect(Prey, "\\*$")) %>% 
+#   filter(!str_detect(Predator, "\\*$")) %>% 
+#   dplyr::select(Prey, Predator, PreyGroup, PredGroup, PredStrategy, FoodSource) %>% 
+#   distinct(Prey, Predator, .keep_all = TRUE)
+# 
+# library(igraph)
+# g <- graph_from_edgelist(as.matrix(int_good_res[,1:2]), directed = TRUE)
+# sp_raw_fg <- sp_raw[,c("TrophicSpecies", "FunctionalGroup", "Zone")] %>% 
+#   mutate(across(where(is.factor), as.character)) %>% 
+#   relocate(any_of(c("FunctionalGroup", "Zone", "TrophicSpecies"))) %>% rename(id = TrophicSpecies)
+# df_g <- igraph::as_data_frame(g, 'both')
+# df_g$vertices <- df_g$vertices %>% 
+#   left_join(sp_raw_fg, c('name' = 'id'))
+# g <- graph_from_data_frame(df_g$edges, directed = TRUE, vertices = df_g$vertices)
+# 
+# library(NetIndices)
+# adj_mat <- as_adjacency_matrix(g, sparse = TRUE)
+# tl <- round(TrophInd(as.matrix(adj_mat)), digits = 3)
+# V(g)$TL <- tl$TL
+# V(g)$Omn <- tl$OI
+# 
+# spp_name <- as.data.frame(V(g)$name)
+# spp_fg <- as.data.frame(V(g)$FunctionalGroup)
+# spp_tl <- as.data.frame(V(g)$TL)
+# spp_zone <- as.data.frame(V(g)$Zone)
+# spp_db <- bind_cols(spp_name, spp_fg, spp_tl, spp_zone)
+# colnames(spp_db) <- c("TrophicSpecies", "FunctionalGroup", "TL", "Zone")
+# 
+# spp_tl_1 <- spp_db %>% 
+#   filter(TL == 1, Zone != "Talud")
+# # It should only comprise "Bacteria", "	"Coccolithophorids", "Diatoms", "Dinoflagellates" (Azadinium_sp)
+# # "Non-living", "Phytoplankton_Misc", "Silicoflagellates" & "Zooplankton" (Eggs_Fish)
 
 
 ## Save data ----
 
 save(sp_raw, int_raw,
-     file = "data/cleaned-data_jan23.rda")
+     file = "data/cleaned-data_apr23.rda")
