@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  26 APR 2023 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  28 APR 2023 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,70 +909,70 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 <MPABurdwood_map.jpg, id=101, 3259.17625pt x 1425.325pt>
 File: MPABurdwood_map.jpg Graphic file (type jpg)
 <use MPABurdwood_map.jpg>
-Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 378.
+Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 377.
 (pdftex.def)             Requested size: 468.0pt x 204.65508pt.
 [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.396 
+l.395 
        <./MPABurdwood_map.jpg>] [4] [5] [6] [7]
 <MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf, id=137, 365.365pt x 294.09875pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf  used on input line 603.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf  used on input line 602.
 (pdftex.def)             Requested size: 365.3641pt x 294.09802pt.
 [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.653 
+l.652 
       
 pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.653 
+l.652 
        <./MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>]
 <MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf, id=151, 463.7325pt x 640.3925pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf  used on input line 656.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf  used on input line 655.
 (pdftex.def)             Requested size: 463.73135pt x 640.39093pt.
 
-LaTeX Warning: Float too large for page by 58.89093pt on input line 661.
+LaTeX Warning: Float too large for page by 58.89093pt on input line 660.
 
 <MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf, id=152, 463.7325pt x 462.72874pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf  used on input line 722.
+Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf  used on input line 721.
 (pdftex.def)             Requested size: 463.73135pt x 462.72762pt.
 [9] [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.766 
+l.765 
        <./MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>] [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.766 
-       <./MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] (./MS_Burdwood_foodweb.aux)
+l.765 
+       <./MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] (./MS_Burdwood_foodweb.aux)
 Package rerunfilecheck Info: File `MS_Burdwood_foodweb.out' has not changed.
 (rerunfilecheck)             Checksum: B69BA13835189B9E511844239939C5A8;2609.
  ) 
 Here is how much of TeX's memory you used:
- 16167 strings out of 477989
- 263227 string characters out of 5838217
+ 16185 strings out of 477989
+ 263540 string characters out of 5838217
  1879346 words of memory out of 5000000
  35626 multiletter control sequences out of 15000+600000
- 582038 words of font info for 188 fonts, out of 8000000 for 9000
+ 582016 words of font info for 187 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,9n,76p,1016b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
-Output written on MS_Burdwood_foodweb.pdf (21 pages, 1540317 bytes).
+Output written on MS_Burdwood_foodweb.pdf (22 pages, 1543661 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
- 181 named destinations out of 1000 (max. 500000)
+ 695 PDF objects out of 1000 (max. 8388607)
+ 609 compressed objects within 7 object streams
+ 201 named destinations out of 1000 (max. 500000)
  35989 words of extra memory for PDF output out of 42996 (max. 10000000)
 
