@@ -18,8 +18,8 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_apr23.rda")
-load("data/foodweb-data_apr23.rda")
+load("data/cleaned-data_may23.rda")
+load("data/foodweb-data_may23.rda")
 
 
 # Análisis ----

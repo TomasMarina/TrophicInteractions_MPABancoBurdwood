@@ -40,7 +40,7 @@ address:
     address: Facultad de Ciencias Exactas, Físicas y Naturales, Universidad Nacional de Córdoba (UNC), Argentina
     
 abstract: |
-  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, large numbers of endemic species, and/or high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Banco Burdwood I and II (MPA N-BB, 53º–55ºS and 56º–62ºW, respectively), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here, we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach to characterize the food web in terms of complexity and structure, and identifying the species' role in such a framework. In terms of complexity, the MPA N-BB food web consisted of 1778 predator-prey interactions and 379 species, with a link density of 4.69 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These findings suggest that the ecosystem might be vulnerable to external perturbations targeting highly connected species, although structural properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Furthermore, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mainly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process. In addition, we propose that other species besides the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis* should be considered as relevant energy transfers for the ecosystem. Finally, we argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for seccuring the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
+  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, large numbers of endemic species, and/or high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Banco Burdwood I and II (MPA N-BB, 53º–55ºS and 56º–62ºW, respectively), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here, we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach to characterize the food web in terms of complexity and structure, and identifying the species' role in such a framework. In terms of complexity, the MPA N-BB food web consisted of 1778 predator-prey interactions and 379 species, with a link density of 4.69 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These findings suggest that the ecosystem might be vulnerable to external perturbations targeting highly connected species, although structural properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Furthermore, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mainly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process and that other species, besides the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis*, should be considered as relevant energy transfers for the ecosystem. Finally, we argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for seccuring the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
 
 keywords: 
   - Food web
@@ -189,7 +189,7 @@ In terms of complexity, the MPA Namuncurá - Banco Burdwood food web (N-BB I and
 ```{r figure2, echo=FALSE, fig.width = 5.5, fig.height = 10, fig.align='center', fig.cap="Graph of the food web for the MPA Namuncurá - Banco Burdwood. Circles represent species and arrows trophic interactions. Circle diameter is relative to the number of interactions. Colour gradient indicates the trophic level."}
 # Food web graph
 
-load("../results/summary_results_apr23.rda")
+load("../results/summary_results_may23.rda")
 
 par(cex.axis=0.8, cex.lab=0.8)
 figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
@@ -198,14 +198,14 @@ figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic le
 
 ```{r table2, echo=FALSE}
 
-load("../results/summary_results_apr23.rda")
+load("../results/summary_results_may23.rda")
 
 knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength, Clustering) %>% mutate(SW = "True"), col.names = c("Species","Interactions","Density","Connectance","Omnivory","CPL", "CC", "SW"),
                       caption = "Network-level properties of the MPA Namuncurá - Banco Burdwood food web. CPL: Characteristic Path Length; CC: Clustering Coefficient; SW: Small-World pattern. See table 1 for definitions and ecological relevance.") %>% row_spec(0,bold=TRUE)
 
 ```
 
-The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple preys (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 52 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 153 predators), the three categories of Diatoms considered (benthic, centric and pennate, 72 predators on average), and species of the genus *Euphausia* (Zooplankton, 46 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Themisto gaudichaudii* (Amphipoda), *Zygochlamys patagonica* (Bivalvia), *Aspidostoma giganteum* (Bryozoa), *Munida gregaria* (Decapoda), *Patagonotothen ramsayi* and *Patagonotothen guntheri* (bentho-pelagic fish), *Psychrolutes marmoratus* (demersal fish), and species of *Euphausia* (Zooplankton).
+The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple prey (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 52 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 153 predators), the three categories of Diatoms considered (benthic, centric and pennate, 72 predators on average), and species of the genus *Euphausia* (Zooplankton, 46 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Themisto gaudichaudii* (Amphipoda), *Zygochlamys patagonica* (Bivalvia), *Aspidostoma giganteum* (Bryozoa), *Munida gregaria* (Decapoda), *Patagonotothen ramsayi* and *Patagonotothen guntheri* (bentho-pelagic fish), *Psychrolutes marmoratus* (demersal fish), and species of *Euphausia* (Zooplankton).
 Overall, there is an evident asymmetry in the distribution of interactions among species at different levels in the MPA N-BB food web.
 
 A list of the distribution of interactions per species is presented in Supplementary Material (Table S3).
@@ -262,25 +262,27 @@ plot_preydeg <- spp_total %>%
 #          size = 5, vjust=1, hjust=1))
 
 # Group Degree
-un.prey <- as.data.frame(unique(int_good_res$PreyGroup))  # prey groups
-un.pred <- as.data.frame(unique(int_good_res$PredGroup))  # pred groups
-colnames(un.prey) <- "Group"
-colnames(un.pred) <- "Group"
-unique_FG <- unique(bind_rows(un.pred, un.prey))  # 35 groups
-
-col_palette <- scales::hue_pal()(nrow(unique_FG))
-FGColors <- setNames(col_palette, levels(unique_FG$Group))
-unique_FG <- cbind(unique_FG, as.data.frame(FGColors))
-colnames(unique_FG) <- c("FunctionalGroup", "FGColor")
-
+# RColorBrewer::brewer.pal(11, "RdYlGn")
+# "#A50026" "#D73027" "#F46D43" "#FDAE61" "#FEE08B" "#FFFFBF" "#D9EF8B" "#A6D96A" "#66BD63" "#1A9850" "#006837"
 plot_grpdeg <- spp_total %>% 
     add_count(FunctionalGroup) %>% 
     filter(n > 2) %>% 
     group_by(FunctionalGroup) %>% 
     mutate(TL_fg = mean(TL)) %>% 
-    ggplot(., aes(x = TotalDegree, y = reorder(FunctionalGroup, TL_fg), fill = FunctionalGroup)) + 
-    geom_joy(scale = 3.75) +
-    scale_fill_manual(values = FGColors) +
+    mutate(color = case_when(TL_fg <= 1 ~ "#006837",
+                           between(TL_fg, 1.1, 1.95) ~ "#1A9850",
+                           between(TL_fg, 1.98, 2.05) ~ "#66BD63",
+                           between(TL_fg, 2.06, 2.25) ~ "#A6D96A",
+                           between(TL_fg, 2.26, 2.5) ~ "#D9EF8B",
+                           between(TL_fg, 2.51, 3.0) ~ "#FFFFBF",
+                           between(TL_fg, 3.001, 3.25) ~ "#FEE08B",
+                           between(TL_fg, 3.001, 3.25) ~ "#FDAE61",
+                           between(TL_fg, 3.51, 4.0) ~ "#F46D43",
+                           between(TL_fg, 4.01, 4.49) ~ "#D73027",
+                           TL_fg >= 4.5 ~ "#A50026")) %>% 
+    ggplot(., aes(x = TotalDegree, y = reorder(FunctionalGroup, TL_fg))) + 
+    geom_joy(aes(scale = 3.75, fill = color)) +
+    scale_fill_identity() +
     labs(x = "Number of interactions", y = "Functional group", tag="D") +
     theme_joy(grid = FALSE) +
     theme(legend.position = "none",
@@ -307,18 +309,6 @@ figure_3 <- ggarrange(a,                                                        
           font.label=list(color="black",size=10))
 figure_3
 
-# # Create layout : nrow = 2, ncol = 2
-# pushViewport(viewport(layout = grid.layout(3, 2)))
-# # A helper function to define a region on the layout
-# define_region <- function(row, col){
-#   viewport(layout.pos.row = row, layout.pos.col = col)
-# } 
-# # Arrange the plots
-# print(a, vp = define_region(1, 1:2))
-# print(b, vp = define_region(2, 1))
-# print(c, vp = define_region(2, 2))
-# print(d, vp = define_region(3, 1:2))
-
 ```
 
 ## Species-level properties
@@ -338,7 +328,7 @@ An exhaustive list of the species-level properties is presented in Supplementary
 ```{r figure4, echo=FALSE, fig.width = 6.5, fig.height = 6.5, fig.align='center', fig.cap="Species-level properties by trophic level: (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role. Each point represents a species. Linear regressions for betweenness ($y = x - , R^2 = , p-value < $), closeness ($y = x - , R^2 = , p-value = $) and trophic similarity ($y = x - , R^2 = , p-value = $). Note that for panels A, B and C only species with TLs equal or greater than 2 were considered."}
 # Betweenness, Closeness, Trophic similarity & Topological role by Trophic level
 
-load("../results/summary_results_apr23.rda")
+load("../results/summary_results_may23.rda")
 
 # Betweenness
 plot_sp_bt <- spp_total %>% 

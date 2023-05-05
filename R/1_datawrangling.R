@@ -17,7 +17,7 @@ ipak(packages)
 
 ## Lista de Especies ----
 
-sp_raw <- read.csv("data/ListaEspecies_AMPNBB_apr23.csv")
+sp_raw <- read.csv("data/ListaEspecies_AMPNBB_may23.csv")
 colnames(sp_raw)
 sp_raw <- sp_raw %>% 
   add_count(FunctionalGroup, name = "Richness") %>% 
@@ -26,7 +26,7 @@ sp_raw <- sp_raw %>%
 
 ## Lista de Interacciones ----
 
-int_raw <- read.csv("data/ListaInteracciones_AMPNBB_apr23.csv")
+int_raw <- read.csv("data/ListaInteracciones_AMPNBB_may23.csv")
 
 int_raw <- int_raw %>% 
   # low-resolved Phytoplankton
@@ -145,4 +145,4 @@ int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with P
 ## Save data ----
 
 save(sp_raw, int_raw,
-     file = "data/cleaned-data_apr23.rda")
+     file = "data/cleaned-data_may23.rda")
