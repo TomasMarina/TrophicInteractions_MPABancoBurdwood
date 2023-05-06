@@ -16,7 +16,7 @@ ipak(packages)
 
 
 # Datos ----
-load("results/summary_results_aor23.rda")
+load("results/summary_results_may23.rda")
 
 
 # Linear Regression ----
