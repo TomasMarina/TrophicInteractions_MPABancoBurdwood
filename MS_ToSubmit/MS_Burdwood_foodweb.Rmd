@@ -182,7 +182,7 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ## Network-level properties
 
-In terms of complexity, the MPA Namuncurá - Banco Burdwood food web (N-BB I and II) consisted of 1778 predator-prey interactions and 379 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density (e.g., the average number of interactions per species) of 4.69, and a connectance of 0.01. Almost half of the consumers were omnivores (0.48), feeding on sources at different trophic levels. The food web displayed a small-world pattern, meaning that the path length was lower and the clustering coefficient higher than the random networks (Table 2).
+In terms of complexity, the MPA Namuncurá - Banco Burdwood food web (N-BB I and II) consisted of 1796 predator-prey interactions and 380 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density (e.g., the average number of interactions per species) of 4.73, and a connectance of 0.01. Almost half of the consumers were omnivores (0.48), feeding on sources at different trophic levels. The food web displayed a small-world pattern, meaning that the path length was lower and the clustering coefficient higher than the random networks (Table 2).
 
 \newpage
 
@@ -205,7 +205,7 @@ knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance,
 
 ```
 
-The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple prey (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 52 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 50 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 153 predators), the three categories of Diatoms considered (benthic, centric and pennate, 72 predators on average), and species of the genus *Euphausia* (Zooplankton, 46 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Themisto gaudichaudii* (Amphipoda), *Zygochlamys patagonica* (Bivalvia), *Aspidostoma giganteum* (Bryozoa), *Munida gregaria* (Decapoda), *Patagonotothen ramsayi* and *Patagonotothen guntheri* (bentho-pelagic fish), *Psychrolutes marmoratus* (demersal fish), and species of *Euphausia* (Zooplankton).
+The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple prey (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 50 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 49 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 33 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 155 predators), the three categories of Diatoms considered (benthic, centric and pennate, 75 predators on average), and species of the genus *Euphausia* (Zooplankton, 47 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Doryteuthis gahi* (Cephalopoda), *Grimothea gregaria* (Decapoda), *Patagonotothen ramsayi*, *Patagonotothen guntheri* and *Dissostichus eleginoides* (bentho-pelagic fish), *Sprattus fuegensis* and *Micromesistius australis* (pelagic fish), and species of *Euphausia* and *Themisto gaudichaudii* (Zooplankton).
 Overall, there is an evident asymmetry in the distribution of interactions among species at different levels in the MPA N-BB food web.
 
 A list of the distribution of interactions per species is presented in Supplementary Material (Table S3).
@@ -214,8 +214,8 @@ A list of the distribution of interactions per species is presented in Supplemen
 # Degree distributions: network, predator, prey & group
 # above row (network, prey, predator), below row (group)
 
-load("../data/foodweb-data_apr23.rda")
-load("../results/summary_results_apr23.rda")
+load("../data/foodweb-data_may23.rda")
+load("../results/summary_results_may23.rda")
 
 # Network Degree
 degree <- as.data.frame(degree(g, mode = "total"))
@@ -313,9 +313,9 @@ figure_3
 
 ## Species-level properties
 
-Most species in the food web were consumers, 336 out of 379; the rest were primary producers, such as diatoms (phytoplankton), and non-living food sources like detritus and necromass.
+Most species in the food web were consumers, 339 out of 379; the rest were primary producers, such as diatoms (phytoplankton), and non-living food sources like detritus and necromass.
 
-We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). The most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it is noteworthy to highlight those high-trophic level species with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Phalacrocorax atriceps* and *Eudyptes chrysocome* (sea birds), and *Lagenorhynchus cruciger* and *Mesoplodon bowdoini* (marine mammals) (Table S3).
+We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). The most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it is noteworthy to highlight those high-trophic level species (TL > 3.1) with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Phalacrocorax atriceps* and *Eudyptes chrysocome* (sea birds), and *Lagenorhynchus cruciger* (marine mammals) (Table S3).
 
 We also found a significant negative relationship between TL and closeness, however less evident, meaning that low-TL species are relatively closer to any other species in the food web (Figure 4B). Species of genera *Calanus* and *Euphausia*, and species of Brachiopoda, all with TL < 3, registered the highest closeness values (Table S3).
 

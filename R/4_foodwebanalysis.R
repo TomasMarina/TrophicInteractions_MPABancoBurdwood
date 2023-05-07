@@ -176,11 +176,19 @@ write_csv(spp_total, file = "results/spp_prop_may23.csv")
 
 # Resolución de la red ----
 
-res_sp <- as.data.frame(V(g_up)$name)
+res_sp <- as.data.frame(V(g)$name)
 good_res_sp <- sum(str_detect(res_sp[,1], "_"))
-gen_count <- sum(str_detect(res_sp[,1], "_sp"))
-sp_count <- good_res_sp - gen_count
-sp_prop <- sp_count/vcount(g_up)
+#gen_count <- sum(str_detect(res_sp[,1], "_sp"))
+#agr_count <- sum(str_detect(res_sp[,1], "_spp"))
+sp_prop <- good_res_sp/vcount(g)
+
+
+# Especie más conectada por Grupo Funcional ---
+int_grp <- spp_total %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree) %>% 
+  group_by(FunctionalGroup, TotalDegree, TrophicSpecies) %>% 
+  summarise() %>% 
+  arrange(FunctionalGroup, TotalDegree)
 
 
 # Guardar datos ----
