@@ -1,8 +1,24 @@
 ---
-title: "Supplementary material for 'The complex network of trophic interactions in a subAntarctic Marine Protected Area'"
-author: "Tomás I. Marina, Irene R. Schloss, Luciana Riccialdelli, To be continued"
+title: "Supplementary Material for 'The complex network of trophic interactions in
+  a subAntarctic oceanic Marine Protected Area'"
+author:
+  - Tomás I. Marina
+  - Irene R. Schloss
+  - Luciana Riccialdelli
+  - Fabiana L. Capitanio
+  - Sergio M. Delpiani
+  - Juan Martín Díaz de Astarloa
+  - Cintia Fraysse
+  - Gustavo A. Lovrich
+  - Andrea Raya Rey
+  - Mariela L. Spinelli
+  - Diego Urteaga
+  - Marcos Tatián
+  - Virginia A. García Alonso
+  - Claudia C. Boy
+  - Daniel O. Bruno
+bibliography: AMPBancoBurdwood.bib
 output: pdf_document
-bibliography: "AMPBancoBurdwood.bib"
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +29,7 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 
 ### Food web construction
 
-The following figure and tables summarize the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.
+The following figure and tables summarise the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.
 Figure 1 resumes the type and number of references reviewed. Table 1 is the complete list of trophic interactions and references that confirm each of them. Table 2 is the species list with details on trophic species cases (aggregated taxa).
 
 
@@ -24,7 +40,7 @@ library(tidyverse)
 library(ggplot2)
 
 # Load data
-load("../data/cleaned-data_apr23.rda")
+load("../data/cleaned-data_may23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -64,7 +80,7 @@ library(kableExtra)
 library(pander)
 
 # Load data
-load("../data/cleaned-data_apr23.rda")
+load("../data/cleaned-data_may23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -96,8 +112,8 @@ library(kableExtra)
 library(stringr)
 
 # Load data
-load("../data/cleaned-data_apr23.rda")
-load("../data/foodweb-data_apr23.rda")
+load("../data/cleaned-data_may23.rda")
+load("../data/foodweb-data_may23.rda")
 
 # Tidy data
 df_g <- igraph::as_data_frame(g, 'both')
@@ -158,7 +174,7 @@ Table 3 presents an exhaustive list of the species-level properties for the food
 
 ```{r tableS3, echo=FALSE}
 
-load("../results/summary_results_apr23.rda")
+load("../results/summary_results_may23.rda")
 
 # Table 2. List of species
 knitr::kable(spp_total %>% 
@@ -177,9 +193,9 @@ knitr::kable(spp_total %>%
 
 \newpage
 
-Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 5 species; module connector = 35 species; module hub = 7 species; and module specialist = 332 species.
+Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 4 species; module connector = 37 species; module hub = 8 species; and module specialist = 326 species.
 
-```{r toprole_graph, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green)."}
+```{r toprole_graph, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Circle diameter is relative to the number of interactions."}
 
 # Load packages
 library(igraph)
@@ -189,7 +205,7 @@ library(dplyr)
 library(ggplot2)
 
 # Load data
-load("../results/summary_results_apr23.rda")
+load("../results/summary_results_may23.rda")
 
 # Topological roles
 top.role.col <- hcl.colors(4, palette = "Purple-Green")
