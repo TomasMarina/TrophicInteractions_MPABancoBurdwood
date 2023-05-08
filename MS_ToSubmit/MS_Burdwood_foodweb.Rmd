@@ -313,7 +313,7 @@ figure_3
 
 ## Species-level properties
 
-We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). The most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it is noteworthy to highlight those high-trophic level species (TL > 3.1) with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Phalacrocorax atriceps* and *Eudyptes chrysocome* (seabirds), and *Lagenorhynchus cruciger* (marine mammals) (Table S3).
+We found different relationships between the species trophic level (TL) and the rest of the analysed species-level properties (Figure 4A-D). The most evident significant relationship was with trophic similarity, i.e. the higher the species' TL, the lower the trophic similarity or the higher the uniqueness in terms of trophic role (Figure 4C). Here it is noteworthy to highlight those high-trophic level species (TL > 3.1) with low values of trophic similarity: *Bathyraja macloviana* and *Squalus acanthias* (Chondrichthyans), *Diplopteraster clarki* and *Pteraster sp* (echinoderms), *Daption capense* and *Eudyptes chrysocome* (seabirds), Ziphiidae and *Lagenorhynchus cruciger* (marine mammals) (Table S3).
 
 We also found a significant negative relationship between TL and closeness, however less evident, meaning that low-TL species are relatively closer to any other species in the food web (Figure 4B). Detritus, species of genera *Calanus* and *Euphausia*, and Foraminifera, all with TL < 3, registered the highest closeness values (Table S3).
 
@@ -468,7 +468,7 @@ We identified several species as important regarding different aspects of trophi
 
 # Acknowledgements
 
-We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. It is worth to mention the following researchers: Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Sofía L. Callá (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina),...
+We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. It is worth to mention the following researchers: Brenda L. Doti (IBBEA, CONICET-UBA; Universidad de Buenos Aires, Argentina), Sofía L. Callá (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina) and Luciano Padovani (Instituto Nacional de Investigación y Desarrollo Pesquero, INIDEP, Argentina).
 Special thanks to G.A. Lovrich the Scientific Coordinator of the MPA Namuncurá-Burdwood Bank and the MPA N-BB Administrators.
 This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617), Argentina. This work is contribution no. XX of the MPA Namuncurá (Law 26.875).
 
