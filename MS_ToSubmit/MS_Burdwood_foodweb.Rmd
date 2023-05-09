@@ -5,19 +5,19 @@ author:
   - name: Tomás I. Marina^a^
     email: tomasimarina@gmail.com
   - name: Irene R. Schloss^a^^,^^b^^,^^c^
-  - name: Luciana Riccialdelli^a^
+  - name: Gustavo A. Lovrich^a^
+  - name: Claudia C. Boy^a^
+  - name: Daniel O. Bruno^a^^,^^c^
   - name: Fabiana L. Capitanio^f^
   - name: Sergio M. Delpiani^d^
   - name: Juan Martín Díaz de Astarloa^d^
   - name: Cintia Fraysse^a^
-  - name: Gustavo A. Lovrich^a^
+  - name: Virginia A. García Alonso^f^  
   - name: Andrea Raya Rey^a^^,^^c^^,^^e^
   - name: Mariela L. Spinelli^f^
-  - name: Diego Urteaga^g^
   - name: Marcos Tatián^h^^,^^i^
-  - name: Virginia A. García Alonso^f^
-  - name: Claudia C. Boy^a^
-  - name: Daniel O. Bruno^a^^,^^c^
+  - name: Diego Urteaga^g^
+  - name: Luciana Riccialdelli^a^
 
 address:
   - code: 1

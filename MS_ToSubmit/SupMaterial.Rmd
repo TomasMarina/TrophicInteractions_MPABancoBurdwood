@@ -4,19 +4,19 @@ title: "Supplementary Material for 'The complex network of trophic interactions 
 author:
   - Tomás I. Marina
   - Irene R. Schloss
-  - Luciana Riccialdelli
+  - Gustavo A. Lovrich
+  - Claudia C. Boy
+  - Daniel O. Bruno  
   - Fabiana L. Capitanio
   - Sergio M. Delpiani
   - Juan Martín Díaz de Astarloa
   - Cintia Fraysse
-  - Gustavo A. Lovrich
+  - Virginia A. García Alonso
   - Andrea Raya Rey
   - Mariela L. Spinelli
-  - Diego Urteaga
   - Marcos Tatián
-  - Virginia A. García Alonso
-  - Claudia C. Boy
-  - Daniel O. Bruno
+  - Diego Urteaga
+  - Luciana Riccialdelli
 bibliography: AMPBancoBurdwood.bib
 output: pdf_document
 ---

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  8 MAY 2023 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.2.15)  9 MAY 2023 08:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,8 +915,8 @@ Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 378.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.382 ...onstruction}\label{network-construction}}
-                                                   <./MPABurdwood_map.jpg>] [4] [5] [6] [7]
+l.396 
+       <./MPABurdwood_map.jpg>] [4] [5] [6] [7]
 <MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf, id=137, 365.365pt x 299.1175pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>
@@ -969,7 +969,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,9n,76p,1016b,565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri7.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
-Output written on MS_Burdwood_foodweb.pdf (22 pages, 1542543 bytes).
+Output written on MS_Burdwood_foodweb.pdf (22 pages, 1547267 bytes).
 PDF statistics:
  717 PDF objects out of 1000 (max. 8388607)
  631 compressed objects within 7 object streams
