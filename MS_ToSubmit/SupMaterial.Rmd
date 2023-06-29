@@ -13,6 +13,7 @@ author:
   - Cintia Fraysse
   - Virginia A. García Alonso
   - Andrea Raya Rey
+  - Laura Schejter
   - Mariela L. Spinelli
   - Marcos Tatián
   - Diego Urteaga
@@ -40,7 +41,7 @@ library(tidyverse)
 library(ggplot2)
 
 # Load data
-load("../data/cleaned-data_may23.rda")
+load("../data/cleaned-data_jun23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -80,7 +81,7 @@ library(kableExtra)
 library(pander)
 
 # Load data
-load("../data/cleaned-data_may23.rda")
+load("../data/cleaned-data_jun23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
@@ -112,8 +113,8 @@ library(kableExtra)
 library(stringr)
 
 # Load data
-load("../data/cleaned-data_may23.rda")
-load("../data/foodweb-data_may23.rda")
+load("../data/cleaned-data_jun23.rda")
+load("../data/foodweb-data_jun23.rda")
 
 # Tidy data
 df_g <- igraph::as_data_frame(g, 'both')
@@ -174,7 +175,7 @@ Table 3 presents an exhaustive list of the species-level properties for the food
 
 ```{r tableS3, echo=FALSE}
 
-load("../results/summary_results_may23.rda")
+load("../results/summary_results_jun23.rda")
 
 # Table 2. List of species
 knitr::kable(spp_total %>% 
@@ -193,7 +194,7 @@ knitr::kable(spp_total %>%
 
 \newpage
 
-Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 4 species; module connector = 37 species; module hub = 8 species; and module specialist = 326 species.
+Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 1 species; module connector = 41 species; module hub = 10 species; and module specialist = 328 species.
 
 ```{r toprole_graph, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Circle diameter is relative to the number of interactions."}
 
@@ -205,7 +206,7 @@ library(dplyr)
 library(ggplot2)
 
 # Load data
-load("../results/summary_results_may23.rda")
+load("../results/summary_results_jun23.rda")
 
 # Topological roles
 top.role.col <- hcl.colors(4, palette = "Purple-Green")

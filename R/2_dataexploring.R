@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_apr23.rda")
+load("data/cleaned-data_jun23.rda")
 
 
 # Lista de Especies ----

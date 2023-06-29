@@ -18,8 +18,8 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_may23.rda")
-load("data/foodweb-data_may23.rda")
+load("data/cleaned-data_jun23.rda")
+load("data/foodweb-data_jun23.rda")
 
 
 # Análisis ----
@@ -171,7 +171,7 @@ spp_total <- spp_total %>%
                              FunctionalGroup %in% c("Fish_Demersal") ~ "Demersal"))
 
 
-write_csv(spp_total, file = "results/spp_prop_may23.csv")
+write_csv(spp_total, file = "results/spp_prop_jun23.csv")
 
 
 # Resolución de la red ----
@@ -194,4 +194,4 @@ int_grp <- spp_total %>%
 # Guardar datos ----
 
 save(g_up, g, deg_dist_fit, prop_topol, spp_total, top.role, top.role.df,
-     file = "results/summary_results_may23.rda")
+     file = "results/summary_results_jun23.rda")

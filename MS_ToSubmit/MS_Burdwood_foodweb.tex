@@ -7,15 +7,16 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
   \journal{MEPS, Oikos, Ecological Applications, J of Applied Ecology
 (?)} % Sets Journal name
 
-\usepackage{lineno} % add
-  \linenumbers % turns line numbering on
-
 \usepackage{graphicx}
 %%%%%%%%%%%%%%%% end my additions to header
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
+% TODO: Currently lineno needs to be loaded after amsmath because of conflict
+% https://github.com/latex-lineno/lineno/issues/5
+\usepackage{lineno} % add
+  \linenumbers % turns line numbering on
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 % use upquote if available, for straight quotes in verbatim environments
@@ -99,6 +100,7 @@ authoryear]{elsarticle} %review=doublespace preprint=single 5p=2 column
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -167,15 +169,19 @@ oceanic Marine Protected Area}
   %
   }
   
+    \author[]{Laura Schejter\textsuperscript{h}%
+  %
+  }
+  
     \author[]{Mariela L. Spinelli\textsuperscript{d,e}%
   %
   }
   
-    \author[]{Marcos Tatián\textsuperscript{h,i}%
+    \author[]{Marcos Tatián\textsuperscript{i,j}%
   %
   }
   
-    \author[]{Diego Urteaga\textsuperscript{j}%
+    \author[]{Diego Urteaga\textsuperscript{k}%
   %
   }
   
@@ -195,11 +201,14 @@ Aplicada (IBBEA), Universidad de Buenos Aires-CONICET, Argentina}
     \affiliation[6]{Instituto de Investigaciones Marinas y Costeras
 (IIMYC), Universidad Nacional de Mar del Plata-CONICET, Argentina}
     \affiliation[7]{Wildlife Conservation Society, Argentina}
-    \affiliation[8]{Facultad de Ciencias Exactas, Fisicas y Naturales,
+    \affiliation[8]{Instituto Nacional de Investigacion y Desarrollo
+Pesquero (INIDEP), Consejo Nacional de Investigaciones Cientificas y
+Tecnicas (CONICET), Argentina}
+    \affiliation[9]{Facultad de Ciencias Exactas, Fisicas y Naturales,
 Universidad Nacional de Cordoba (UNC), Argentina}
-    \affiliation[9]{Instituto de Diversidad y Ecologia Animal
+    \affiliation[10]{Instituto de Diversidad y Ecologia Animal
 (IDEA-CONICET)}
-    \affiliation[10]{Museo Argentino de Ciencias Naturales ``Bernardino
+    \affiliation[11]{Museo Argentino de Ciencias Naturales ``Bernardino
 Rivadavia'', Argentina}
     \cortext[cor1]{Corresponding author}
   
@@ -218,9 +227,9 @@ Rivadavia'', Argentina}
   interactions (food web) for the MPA N-BB ecosystem. We applied a
   network approach to characterise the food web in terms of complexity
   and structure, and identifying the species' role in such a framework.
-  In terms of complexity, the MPA N-BB food web consisted of 1780
-  predator-prey interactions and 375 species, with a link density of
-  4.75 and a connectance of 0.01. In terms of structure, almost half of
+  In terms of complexity, the MPA N-BB food web consisted of 1788
+  predator-prey interactions and 380 species, with a link density of
+  4.70 and a connectance of 0.01. In terms of structure, almost half of
   the consumers were omnivores (0.48), and the network displayed a
   small-world pattern. These findings suggest that the ecosystem might
   be vulnerable to external perturbations targeting highly connected
@@ -519,7 +528,7 @@ https://github.com/TomasMarina/Banco-Burdwood.
 \caption{List of network and species-level properties analysed,
 definitions, and relevant ecological implications related to food web
 complexity and structure.}\tabularnewline
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Name}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -529,9 +538,9 @@ complexity and structure.}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 \textbf{Reference}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endfirsthead
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Name}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -541,8 +550,10 @@ complexity and structure.}\tabularnewline
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 \textbf{Reference}
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 \textbf{Number of species} & Number of trophic species in a food web. &
 It represents the species diversity and has implications for the
 persistence of the ecosystem. & May 1973, Tilman 1996 \\
@@ -589,7 +600,6 @@ within and across modules (subgroups of species). & Four roles are
 defined: module hub, module specialist, module connector and network
 connector. Network connector and module connector roles maintain the
 connectivity of the food web. & Guimera \& Nunes Amaral 2005 \\
-\bottomrule()
 \end{longtable}
 
 \hypertarget{results}{%
@@ -599,10 +609,10 @@ connectivity of the food web. & Guimera \& Nunes Amaral 2005 \\
 \subsection{Network-level properties}\label{network-level-properties}}
 
 In terms of complexity, the MPA Namuncurá - Burdwood Bank food web (N-BB
-I and II) consisted of 1780 predator-prey interactions and 375 species,
+I and II) consisted of 1788 predator-prey interactions and 380 species,
 where 93\% of them were defined at the species taxonomical level (Figure
 2, Table S2). The food web presented a link density (e.g., the average
-number of interactions per species) of 4.75, and a connectance of 0.01.
+number of interactions per species) of 4.70, and a connectance of 0.01.
 Almost half of the consumers were omnivores (0.48), feeding on sources
 at different trophic levels. The food web displayed a small-world
 pattern, meaning that the path length was lower and the clustering
@@ -627,7 +637,7 @@ coefficient higher than the random networks (Table 2).
 \hline
 \textbf{Species} & \textbf{Interactions} & \textbf{Density} & \textbf{Connectance} & \textbf{Omnivory} & \textbf{CPL} & \textbf{CC} & \textbf{SW}\\
 \hline
-375 & 1780 & 4.75 & 0.01 & 0.48 & 2.96 & 0.08 & True\\
+380 & 1788 & 4.71 & 0.01 & 0.48 & 2.99 & 0.08 & True\\
 \hline
 \end{tabular}
 \end{table}
@@ -645,10 +655,10 @@ prey), Patagonian toothfish \emph{Dissostichus eleginoides}
 (Notothenioid fish, 30 prey), and graytail skate \emph{Bathyraja
 griseocauda} (Chondrichthyan, 28 prey). Following the same distribution
 pattern, few prey presented multiple predators (Figure 3C). The top-five
-prey in number of predators were: Detritus (Non-living, 155 predators),
+prey in number of predators were: Detritus (Non-living, 153 predators),
 the three categories of Diatoms considered (benthic, centric and
-pennate, 75 predators on average), and species of the genus
-\emph{Euphausia} (Zooplankton, 47 predators). Finally, taking into
+pennate, 72.5 predators on average), and species of the genus
+\emph{Euphausia} (Zooplankton, 46 predators). Finally, taking into
 account the interactions within each functional group, most interactions
 were concentrated in a few species (Figure 3D). The most evident species
 were: \emph{Doryteuthis gahi} (Cephalopoda), \emph{Grimothea gregaria}
@@ -698,30 +708,29 @@ closeness values (Table S3).
 Notably, species of mid-TLs (3-4.2) showed the highest values of
 betweenness, meaning that those species participated in the highest
 number of shortest paths between species (Figure 4A). The following are
-the species with the highest values: \emph{Patagonotothen ramsayi},
-\emph{Salilota australis}, \emph{Dissostichus eleginoides} (fishes),
-\emph{Doryteuthis gahi} (Cephalopoda), and \emph{Patagonotothen
-guntheri} (Notothenioid fish) (Table S3).
+the species with the highest values (descending order):
+\emph{Patagonotothen ramsayi}, \emph{Salilota australis},
+\emph{Dissostichus eleginoides} (fishes), \emph{Doryteuthis gahi}
+(Cephalopoda), and \emph{Patagonotothen guntheri} (Notothenioid fish)
+(Table S3).
 
 Considering the topological role, `module specialist' species were the
-most frequent and presented a wide TL range (1 - 4.7), as well as
-`module hub' species (TL = 1 - 4); `module connector' was constrained to
-mid-TLs (2 - 3.86); and `network connector', the least frequent, had all
-of its species in low-TLs (1 - 2), except for one with TL = 3.48 (Figure
-4D, see Figure S2 for species' topological roles in a food web graph
-framework). Here it is important to highlight the two latter topological
-roles because they are responsible for linking modules and maintaining
-the connectivity of the food web: 41 species (4 network connectors + 37
-module connectors) from 19 different functional groups with a TL range =
-1 - 3.86. The following were the four species with a network connector
-role: detritus, benthic diatoms, Foraminifera and \emph{Patagonotothen
-ramsayi}. The 37 species with a module connector role represented these
-functional groups: Amphipoda, Bivalvia, Brachiopoda, Bryozoa, Hydrozoa
-(as `Cnidaria\_benthic'), Copepoda, Cumacea, Decapoda, diatoms,
-Echinodermata, fish (bentho-pelagic and demersal Osteichthyes, and
-Chondrychthyes), Polychaeta, Porifera, Pycnogonida (as `Benthos\_Misc')
-and zooplankton (see Supplementary Material Table S3 for the identity of
-the species).
+most frequent and presented a wide TL range (1 - 4.78), as well as
+`module hub' species (TL = 1 - 3.9); `module connector' was constrained
+to mid-TLs (2 - 3.86); and `network connector', was represented by only
+one trophic species: detritus (Figure 4D, see Figure S2 for species'
+topological roles in a food web graph framework). Here it is important
+to highlight the two latter topological roles because they are
+responsible for linking modules and maintaining the connectivity of the
+food web: 42 species (1 network connector + 41 module connectors) from
+19 different functional groups with a TL range = 1 - 3.86. The 41
+species with a module connector role represented these functional
+groups: Amphipoda, Bivalvia, Brachiopoda, Bryozoa, Hydrozoa (as
+`Cnidaria\_benthic'), Copepoda, Cumacea, Decapoda, Echinodermata, fish
+(bentho-pelagic and demersal Osteichthyes, and Chondrychthyes),
+Foraminifera, Polychaeta, Porifera, Pycnogonida (as `Benthos\_Misc') and
+zooplankton (see Supplementary Material Table S3 for the identity of the
+species).
 
 An exhaustive list of the species-level properties is presented in
 Supplementary Material (Table S3).
@@ -732,7 +741,7 @@ Supplementary Material (Table S3).
 
 }
 
-\caption{Species-level properties by trophic level: (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role. Each point represents a species. Linear regressions for betweenness ($y = 74.96x - 121.71, R^2 = 0.05, p-value < 0.01$), closeness ($y = 1.01e-05x - 9.48e-4, R^2 = 0.003, p-value = 0.14$) and trophic similarity ($y = -0.02x + 0.11 , R^2 = 0.08, p-value < 0.01$). Note that for panels A, B and C only species with TLs equal or greater than 2 were considered.}\label{fig:figure4}
+\caption{Species-level properties by trophic level: (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role. Each point represents a species. Linear regressions for betweenness ($y = 74.82x - 116.82, R^2 = 0.05, p-value < 0.01$), closeness ($y = 1.04e-05x - 9.25e-4, R^2 = 0.004, p-value = 0.11$) and trophic similarity ($y = -0.02x + 0.1 , R^2 = 0.07, p-value < 0.01$). Note that for panels A, B and C only species with TLs equal or greater than 2 were considered.}\label{fig:figure4}
 \end{figure}
 
 \hypertarget{discussion}{%
@@ -756,7 +765,7 @@ network, but more importantly, it is an emergent property of pairwise
 species interactions (Poisot \& Gravel, 2014). It contains information
 regarding how interactions within an ecological network are distributed
 and predicts reasonably well key dynamical properties of ecological
-networks (Dunne et al., 2002a). Complex marine food webs (i.e.~with more
+networks (Dunne et al., 2002c). Complex marine food webs (i.e.~with more
 than 25 trophic species) show connectance values ranging from 0.01 -
 0.27 (Marina, Saravia, et al., 2018). In particular, food webs from
 high-latitude regions tend to exhibit a connectance closer to the
@@ -767,7 +776,7 @@ like robustness. In this sense, empirical analyses support the notion
 that highly-connected ecological networks are robust against external
 perturbations such as the introduction of new (e.g., invasive) species
 (Smith-Ramesh et al., 2017) as well as species removal (e.g., local
-extinction) (Dunne et al., 2002b; Montoya \& Solé, 2003). The
+extinction) (Dunne et al., 2002a; Montoya \& Solé, 2003). The
 connectance of the food web of the MPA Namuncurá - Burdwood Bank (0.01)
 is one of the lowest reported so far for these regions; in particular,
 it appears to much lower than that of Beagle Channel (0.05), an adjacent
@@ -781,7 +790,7 @@ web for the MPA N-BB presents an asymmetric degree distribution. This
 pattern was identified at different levels of analysis: food web,
 predator, prey, and functional group. Such asymmetry is a well-known
 feature in empirical complex food webs in particular (Dunne et al.,
-2002a; Montoya \& Solé, 2003; Stouffer et al., 2005), and has received
+2002c; Montoya \& Solé, 2003; Stouffer et al., 2005), and has received
 great attention in complex networks in general (Albert \& Barabási,
 2002; Newman, 2003). The degree distribution affects the resilience of
 complex food webs against random failures and pressure on a particular
@@ -789,12 +798,12 @@ component of the web: food webs showing right-skewed distributions, like
 the one described in this study, are more vulnerable to the removal of
 the most connected species or hubs, with the potential of producing
 secondary extinctions and a catastrophic fragmentation of the network
-(Albert et al., 2000; Dunne et al., 2002b; Eklöf \& Ebenman, 2006).
+(Albert et al., 2000; Dunne et al., 2002a; Eklöf \& Ebenman, 2006).
 
 It is suggested that the small-world pattern, i.e., a network with short
 path length and high clustering coefficient, is not frequent in complex
 marine food webs, mainly due to a low clustering coefficient compared to
-random networks (Dunne et al., 2002c; Marina, Saravia, et al., 2018).
+random networks (Dunne et al., 2002b; Marina, Saravia, et al., 2018).
 However, the food web of the MPA N-BB does display a small-world
 pattern. Consequences of this could be of great importance in
 recognizing evolutionary paths and the vulnerability to perturbations
@@ -841,7 +850,7 @@ structure maintaining its functions.
 sources}\label{dominant-consumers-and-food-sources}}
 
 The degree distribution allows identifying important species, such as
-potential keystone species (Dunne et al., 2002b; Solé \& Montoya, 2001),
+potential keystone species (Dunne et al., 2002a; Solé \& Montoya, 2001),
 generalist/specialist species, and dominant food sources (Kondoh et al.,
 2010).
 
@@ -946,17 +955,14 @@ impact on the MPA ecosystem should not be neglected (Martínez et al.,
 
 Species' role can also be assessed in a module-based context. Among the
 varying numbers of topological roles in which species can be divided,
-two are remarkable: `module connector' and `network connector'. Here
-again, the longtail southern cod \emph{Patagonotothen ramsayi} is
-emphasized as an influential species for the connectivity of the food
-web, which agrees with the suggested `wasp-waist' control for the MPA
-N-BB ecosystem (Riccialdelli et al., 2020). But most importantly, our
-results broaden this issue by pointing out that there are other species,
-belonging to a wide range of trophic positions (1 to 3.86) and
-representing 20 different functional groups, that should be considered.
-Thus, we propose that the diversity of species (benthic and pelagic)
-maintains the connectivity of the food web, therefore contributing to
-the trophic structure and ecosystem's stability.
+two are remarkable: `module connector' and `network connector'. Here,
+our results point out that there are several species, belonging to a
+wide range of trophic positions (1 to 3.86) and representing 17
+different functional groups, that should be considered as influential
+species for the connectivity of the food web. Thus, we propose that the
+diversity of species (benthic and pelagic) maintains the connectivity of
+the food web, therefore contributing to the trophic structure and
+ecosystem's stability.
 
 \hypertarget{caveats-and-future-perspectives}{%
 \subsection{Caveats and future
@@ -1262,22 +1268,22 @@ Dormann, C. F., Fründ, J., \& Schaefer, H. M. (2017). Identifying
 Systematics}, \emph{48}, 559--584.
 \url{https://doi.org/10.1146/annurev-ecolsys-110316-022928}
 
-\leavevmode\vadjust pre{\hypertarget{ref-Dunne2002a}{}}%
-Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002a). Food-web
-structure and network theory: {The} role of connectance and size.
-\emph{Proceedings of the National Academy of Sciences}, \emph{99}(20),
-12917--12922. \url{https://doi.org/10.1073/pnas.192407699}
-
 \leavevmode\vadjust pre{\hypertarget{ref-Dunne2002}{}}%
-Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002b). Network
+Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002a). Network
 structure and biodiversity loss in food webs: Robustness increases with
 connectance. \emph{Ecology Letters}, \emph{5}(4), 558--567.
 \url{https://doi.org/10.1046/j.1461-0248.2002.00354.x}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Dunne2002b}{}}%
-Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002c). \emph{Small
+Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002b). \emph{Small
 {Networks} but not {Small Worlds}: {Unique Aspects} of {Food Web
 Structure}}. {Santa Fe Institute}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-Dunne2002a}{}}%
+Dunne, J. A., Williams, R. J., \& Martinez, N. D. (2002c). Food-web
+structure and network theory: {The} role of connectance and size.
+\emph{Proceedings of the National Academy of Sciences}, \emph{99}(20),
+12917--12922. \url{https://doi.org/10.1073/pnas.192407699}
 
 \leavevmode\vadjust pre{\hypertarget{ref-Eklof2006}{}}%
 Eklöf, A., \& Ebenman, B. (2006). Species loss and secondary extinctions

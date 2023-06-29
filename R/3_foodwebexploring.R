@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_may23.rda")
+load("data/cleaned-data_jun23.rda")
 
 
 # Red trófica ----
@@ -114,4 +114,4 @@ plotTrophLevel(g, ylab = "Trophic level")
 # Save data ----
 
 save(g, int_need_res, int_good_res,
-     file = "data/foodweb-data_may23.rda")
+     file = "data/foodweb-data_jun23.rda")

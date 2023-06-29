@@ -18,7 +18,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("results/summary_results_jan23.rda")
+load("results/summary_results_jun23.rda")
 
 
 # Figuras ----
@@ -79,7 +79,7 @@ gen_vul_plot
 
 # Distribución interacciones por GF
 
-load("data/foodweb-data_jan23.rda")
+load("data/foodweb-data_jun23.rda")
 
 # Definir colores para cada GF
 un.prey <- as.data.frame(unique(int_good_res$PreyGroup))  # prey groups

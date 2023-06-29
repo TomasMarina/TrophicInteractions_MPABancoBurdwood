@@ -14,9 +14,10 @@ author:
   - name: Cintia Fraysse^a^
   - name: Virginia A. García Alonso^d^^,^^e^
   - name: Andrea Raya Rey^a^^,^^c^^,^^g^
+  - name: Laura Schejter^h^
   - name: Mariela L. Spinelli^d^^,^^e^
-  - name: Marcos Tatián^h^^,^^i^
-  - name: Diego Urteaga^j^
+  - name: Marcos Tatián^i^^,^^j^
+  - name: Diego Urteaga^k^
   - name: Luciana Riccialdelli^a^
 
 address:
@@ -35,14 +36,16 @@ address:
   - code: 7
     address: Wildlife Conservation Society, Argentina
   - code: 8
-    address: Facultad de Ciencias Exactas, Fisicas y Naturales, Universidad Nacional de Cordoba (UNC), Argentina
+    address: Instituto Nacional de Investigacion y Desarrollo Pesquero (INIDEP), Consejo Nacional de Investigaciones Cientificas y Tecnicas (CONICET), Argentina
   - code: 9
-    address: Instituto de Diversidad y Ecologia Animal (IDEA-CONICET)
+    address: Facultad de Ciencias Exactas, Fisicas y Naturales, Universidad Nacional de Cordoba (UNC), Argentina
   - code: 10
+    address: Instituto de Diversidad y Ecologia Animal (IDEA-CONICET)
+  - code: 11
     address: Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina
     
 abstract: |
-  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, large numbers of endemic species, and/or high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Burdwood Bank I and II (MPA N-BB, 53º–55ºS and 56º–62ºW, respectively), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here, we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach to characterise the food web in terms of complexity and structure, and identifying the species' role in such a framework. In terms of complexity, the MPA N-BB food web consisted of 1780 predator-prey interactions and 375 species, with a link density of 4.75 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These findings suggest that the ecosystem might be vulnerable to external perturbations targeting highly connected species, although structural properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Furthermore, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mainly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process and that other species, besides the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis*, should be considered as relevant energy transfers for the ecosystem. Finally, we argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for seccuring the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
+  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, large numbers of endemic species, and/or high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Burdwood Bank I and II (MPA N-BB, 53º–55ºS and 56º–62ºW, respectively), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here, we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach to characterise the food web in terms of complexity and structure, and identifying the species' role in such a framework. In terms of complexity, the MPA N-BB food web consisted of 1788 predator-prey interactions and 380 species, with a link density of 4.70 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These findings suggest that the ecosystem might be vulnerable to external perturbations targeting highly connected species, although structural properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Furthermore, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mainly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process and that other species, besides the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis*, should be considered as relevant energy transfers for the ecosystem. Finally, we argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for seccuring the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
 
 keywords: 
   - Food web
@@ -184,14 +187,14 @@ pandoc.table(table1, digits = 4, colnames("Property","Definition","Implication",
 
 ## Network-level properties
 
-In terms of complexity, the MPA Namuncurá - Burdwood Bank food web (N-BB I and II) consisted of 1780 predator-prey interactions and 375 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density (e.g., the average number of interactions per species) of 4.75, and a connectance of 0.01. Almost half of the consumers were omnivores (0.48), feeding on sources at different trophic levels. The food web displayed a small-world pattern, meaning that the path length was lower and the clustering coefficient higher than the random networks (Table 2).
+In terms of complexity, the MPA Namuncurá - Burdwood Bank food web (N-BB I and II) consisted of 1788 predator-prey interactions and 380 species, where 93% of them were defined at the species taxonomical level (Figure 2, Table S2). The food web presented a link density (e.g., the average number of interactions per species) of 4.70, and a connectance of 0.01. Almost half of the consumers were omnivores (0.48), feeding on sources at different trophic levels. The food web displayed a small-world pattern, meaning that the path length was lower and the clustering coefficient higher than the random networks (Table 2).
 
 \newpage
 
 ```{r figure2, echo=FALSE, fig.width = 5.5, fig.height = 10, fig.align='center', fig.cap="Graph of the food web for the MPA Namuncurá - Burdwood Bank. Circles represent species and arrows trophic interactions. Circle diameter is relative to the number of interactions. Colour gradient indicates the trophic level."}
 # Food web graph
 
-load("../results/summary_results_may23.rda")
+load("../results/summary_results_jun23.rda")
 
 par(cex.axis=0.8, cex.lab=0.8)
 figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic level")
@@ -200,14 +203,14 @@ figure_2 <- plot_troph_level(g, vertexLabel = F, modules = F, ylab = "Trophic le
 
 ```{r table2, echo=FALSE}
 
-load("../results/summary_results_may23.rda")
+load("../results/summary_results_jun23.rda")
 
 knitr::kable(round(prop_topol,2) %>% dplyr::select(Size, Links, LD, Connectance, Omnivory, PathLength, Clustering) %>% mutate(SW = "True"), col.names = c("Species","Interactions","Density","Connectance","Omnivory","CPL", "CC", "SW"),
                       caption = "Network-level properties of the MPA Namuncurá - Burdwood Bank food web. CPL: Characteristic Path Length; CC: Clustering Coefficient; SW: Small-World pattern. See table 1 for definitions and ecological relevance.") %>% row_spec(0,bold=TRUE)
 
 ```
 
-The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple prey (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 50 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 49 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 33 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 155 predators), the three categories of Diatoms considered (benthic, centric and pennate, 75 predators on average), and species of the genus *Euphausia* (Zooplankton, 47 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Doryteuthis gahi* (Cephalopoda), *Grimothea gregaria* (Decapoda), *Patagonotothen ramsayi*, *Patagonotothen guntheri* and *Dissostichus eleginoides* (bentho-pelagic fish), *Sprattus fuegensis* and *Micromesistius australis* (pelagic fish), and species of *Euphausia* and *Themisto gaudichaudii* (Zooplankton).
+The degree distribution of the food web showed an asymmetric frequency in the number of interactions, where most of the species had a relatively low number of interactions and few species concentrated most of them (Figure 3A). The distribution of prey among predators showed that most consumers fed on a low number of prey whereas few had multiple prey (Figure 3B). The top-five predators in number of prey were: yellowfin notothen *Patagonotothen guntheri* (Notothenioid fish, 50 prey), rock cod *Patagonotothen ramsayi* (Notothenioid fish, 49 prey), broad nose skate *Bathyraja brachyurops* (Chondrichthyan, 33 prey), Patagonian toothfish *Dissostichus eleginoides* (Notothenioid fish, 30 prey), and graytail skate *Bathyraja griseocauda* (Chondrichthyan, 28 prey). Following the same distribution pattern, few prey presented multiple predators (Figure 3C). The top-five prey in number of predators were: Detritus (Non-living, 153 predators), the three categories of Diatoms considered (benthic, centric and pennate, 72.5 predators on average), and species of the genus *Euphausia* (Zooplankton, 46 predators). Finally, taking into account the interactions within each functional group, most interactions were concentrated in a few species (Figure 3D). The most evident species were: *Doryteuthis gahi* (Cephalopoda), *Grimothea gregaria* (Decapoda), *Patagonotothen ramsayi*, *Patagonotothen guntheri* and *Dissostichus eleginoides* (bentho-pelagic fish), *Sprattus fuegensis* and *Micromesistius australis* (pelagic fish), and species of *Euphausia* and *Themisto gaudichaudii* (Zooplankton).
 Overall, there is an evident asymmetry in the distribution of interactions among species at different levels in the MPA N-BB food web.
 
 A list of the distribution of interactions per species is presented in Supplementary Material (Table S3).
@@ -216,8 +219,8 @@ A list of the distribution of interactions per species is presented in Supplemen
 # Degree distributions: network, predator, prey & group
 # above row (network, prey, predator), below row (group)
 
-load("../data/foodweb-data_may23.rda")
-load("../results/summary_results_may23.rda")
+load("../data/foodweb-data_jun23.rda")
+load("../results/summary_results_jun23.rda")
 
 # Network Degree
 degree <- as.data.frame(degree(g, mode = "total"))
@@ -321,14 +324,14 @@ We also found a significant negative relationship between TL and closeness, howe
 
 Notably, species of mid-TLs (3-4.2) showed the highest values of betweenness, meaning that those species participated in the highest number of shortest paths between species (Figure 4A). The following are the species with the highest values (descending order): *Patagonotothen ramsayi*, *Salilota australis*, *Dissostichus eleginoides* (fishes), *Doryteuthis gahi* (Cephalopoda), and *Patagonotothen guntheri* (Notothenioid fish) (Table S3).
 
-Considering the topological role, 'module specialist' species were the most frequent and presented a wide TL range (1 - 4.7), as well as 'module hub' species (TL = 1 - 4); 'module connector' was constrained to mid-TLs (2 - 3.86); and 'network connector', the least frequent, had all of its species in low-TLs (1 - 2), except for one with TL = 3.48 (Figure 4D, see Figure S2 for species' topological roles in a food web graph framework). Here it is important to highlight the two latter topological roles because they are responsible for linking modules and maintaining the connectivity of the food web: 41 species (4 network connectors + 37 module connectors) from 19 different functional groups with a TL range = 1 - 3.86. The following were the four species with a network connector role: detritus, benthic diatoms, Foraminifera and *Patagonotothen ramsayi*. The 37 species with a module connector role represented these functional groups: Amphipoda, Bivalvia, Brachiopoda, Bryozoa, Hydrozoa (as 'Cnidaria_benthic'), Copepoda, Cumacea, Decapoda, diatoms, Echinodermata, fish (bentho-pelagic and demersal Osteichthyes, and Chondrychthyes), Polychaeta, Porifera, Pycnogonida (as 'Benthos_Misc') and zooplankton (see Supplementary Material Table S3 for the identity of the species).
+Considering the topological role, 'module specialist' species were the most frequent and presented a wide TL range (1 - 4.78), as well as 'module hub' species (TL = 1 - 3.9); 'module connector' was constrained to mid-TLs (2 - 3.86); and 'network connector', was represented by only one trophic species: detritus (Figure 4D, see Figure S2 for species' topological roles in a food web graph framework). Here it is important to highlight the two latter topological roles because they are responsible for linking modules and maintaining the connectivity of the food web: 42 species (1 network connector + 41 module connectors) from 19 different functional groups with a TL range = 1 - 3.86. The 41 species with a module connector role represented these functional groups: Amphipoda, Bivalvia, Brachiopoda, Bryozoa, Hydrozoa (as 'Cnidaria_benthic'), Copepoda, Cumacea, Decapoda, Echinodermata, fish (bentho-pelagic and demersal Osteichthyes, and Chondrychthyes), Foraminifera, Polychaeta, Porifera, Pycnogonida (as 'Benthos_Misc') and zooplankton (see Supplementary Material Table S3 for the identity of the species).
 
 An exhaustive list of the species-level properties is presented in Supplementary Material (Table S3).
 
-```{r figure4, echo=FALSE, fig.width = 6.5, fig.height = 6.5, fig.align='center', fig.cap="Species-level properties by trophic level: (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role. Each point represents a species. Linear regressions for betweenness ($y = 74.96x - 121.71, R^2 = 0.05, p-value < 0.01$), closeness ($y = 1.01e-05x - 9.48e-4, R^2 = 0.003, p-value = 0.14$) and trophic similarity ($y = -0.02x + 0.11 , R^2 = 0.08, p-value < 0.01$). Note that for panels A, B and C only species with TLs equal or greater than 2 were considered."}
+```{r figure4, echo=FALSE, fig.width = 6.5, fig.height = 6.5, fig.align='center', fig.cap="Species-level properties by trophic level: (A) betweenness, (B) closeness, (C) trophic similarity, and (D) topological role. Each point represents a species. Linear regressions for betweenness ($y = 74.82x - 116.82, R^2 = 0.05, p-value < 0.01$), closeness ($y = 1.04e-05x - 9.25e-4, R^2 = 0.004, p-value = 0.11$) and trophic similarity ($y = -0.02x + 0.1 , R^2 = 0.07, p-value < 0.01$). Note that for panels A, B and C only species with TLs equal or greater than 2 were considered."}
 # Betweenness, Closeness, Trophic similarity & Topological role by Trophic level
 
-load("../results/summary_results_may23.rda")
+load("../results/summary_results_jun23.rda")
 
 # Betweenness
 plot_sp_bt <- spp_total %>% 
@@ -448,7 +451,7 @@ Otherwise, betweenness measures the number of shortest paths between species, pr
 
 Ecosystems with a pronounced 'wasp-waist' structure are suggested to present a high trophic redundancy, since many species would show similar trophic habits [@Cury2000]. The significant negative relationship between trophic similarity and trophic level enhances the hypothesis of functional similarity at low and mid-TL species compared to higher TL species for the MPA N-BB food web [@Riccialdelli2020]. At the same time, our results highlight the uniqueness in terms of the trophic role of high-TL predators. Here, not only the expected pelagic animals such as marine mammals and seabirds arise as relevant, but also demersal vertebrate (chondrichthyans *Bathyraja macloviana* and *Squalus acanthias*) and benthic invertebrate species (echinoderms *Diplopteraster clarki* and *Pteraster sp*) are noteworthy. The role that such species play in the MPA N-BB ecosystem is unique and perturbations on them might result in unprecedented changes at the trophic structure and functioning level. In this regard, we should mention the potential threat of the fisheries operating in the western section of the MPA N-BB, where this activity is allowed and mostly focuses on the Patagonian toothfish *Dissostichus eleginoides* and the southern blue whiting *Micromesistius australis* [@Martinez2015]. Although the fishing effort is concentrated outside the limits of the MPA N-BB, the impact on the MPA ecosystem should not be neglected [@Martinez2021].
 
-Species' role can also be assessed in a module-based context. Among the varying numbers of topological roles in which species can be divided, two are remarkable: 'module connector' and 'network connector'. Here again, the longtail southern cod *Patagonotothen ramsayi* is emphasized as an influential species for the connectivity of the food web, which agrees with the suggested 'wasp-waist' control for the MPA N-BB ecosystem [@Riccialdelli2020]. But most importantly, our results broaden this issue by pointing out that there are other species, belonging to a wide range of trophic positions (1 to 3.86) and representing 20 different functional groups, that should be considered. Thus, we propose that the diversity of species (benthic and pelagic) maintains the connectivity of the food web, therefore contributing to the trophic structure and ecosystem's stability.
+Species' role can also be assessed in a module-based context. Among the varying numbers of topological roles in which species can be divided, two are remarkable: 'module connector' and 'network connector'. Here, our results point out that there are several species, belonging to a wide range of trophic positions (1 to 3.86) and representing 17 different functional groups, that should be considered as influential species for the connectivity of the food web. Thus, we propose that the diversity of species (benthic and pelagic) maintains the connectivity of the food web, therefore contributing to the trophic structure and ecosystem's stability.
 
 ## Caveats and future perspectives
 
