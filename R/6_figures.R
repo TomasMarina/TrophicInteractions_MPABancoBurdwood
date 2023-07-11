@@ -18,7 +18,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("results/summary_results_jun23.rda")
+load("results/summary_results_jul23.rda")
 
 
 # Figuras ----
@@ -253,6 +253,3 @@ plot_sp_tr <- data_TRColor %>%
         axis.text.y = element_text(size = 15),
         legend.position = "none")
 plot_sp_tr
-
-
-

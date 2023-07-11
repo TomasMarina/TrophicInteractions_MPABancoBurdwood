@@ -26,7 +26,7 @@ sp_raw <- sp_raw %>%
 
 ## Lista de Interacciones ----
 
-int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jun23.csv")
+int_raw <- read.csv("data/ListaInteracciones_AMPNBB_jul23.csv")
 
 int_raw <- int_raw %>% 
   # low-resolved Phytoplankton
@@ -145,4 +145,4 @@ int_raw <- subset(int_raw, !(Prey %in% "Demospongiae *"))  # exclude rows with P
 ## Save data ----
 
 save(sp_raw, int_raw,
-     file = "data/cleaned-data_jun23.rda")
+     file = "data/cleaned-data_jul23.rda")

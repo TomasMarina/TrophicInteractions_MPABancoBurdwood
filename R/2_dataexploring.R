@@ -17,7 +17,7 @@ ipak(packages)
 
 # Cargar datos ----
 
-load("data/cleaned-data_jun23.rda")
+load("data/cleaned-data_jul23.rda")
 
 
 # Lista de Especies ----
@@ -38,7 +38,7 @@ group_count <- sp_raw %>%
 sum(group_count$n)
 
 # Definir colores para cada GF
-col_palette <- scales::hue_pal()(35)
+col_palette <- scales::hue_pal()(38)
 FGColors <- setNames(col_palette, levels(sp_raw$FunctionalGroup))
 
 (plot_grupos <- ggplot(group_count, aes(x = FunctionalGroup, y = n, fill = FunctionalGroup)) + 

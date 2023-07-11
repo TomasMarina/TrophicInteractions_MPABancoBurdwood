@@ -16,7 +16,7 @@ ipak(packages)
 
 
 # Datos ----
-load("results/summary_results_jun23.rda")
+load("results/summary_results_jul23.rda")
 
 
 # Linear Regression ----
@@ -80,4 +80,3 @@ ts_reg <- lm(meanTrophicSimil ~ TL, data = spp_total)
 summary(ts_reg)
 ols_test_normality(ts_reg)  # check normality of residuals
 ols_plot_resid_qq(ts_reg)  # Q-Q plot
-

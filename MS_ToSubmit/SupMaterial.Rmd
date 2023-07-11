@@ -87,6 +87,7 @@ load("../data/cleaned-data_jun23.rda")
 int_good_res <- int_raw %>% 
   filter(!str_detect(Prey, "\\*$")) %>% 
   filter(!str_detect(Predator, "\\*$")) %>% 
+  mutate(Prey = case_when(Prey == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ "Other")) %>%
   dplyr::select(Prey, Predator, Reference, Reference_link) %>% 
   distinct(Prey, Predator, .keep_all = TRUE)
 
