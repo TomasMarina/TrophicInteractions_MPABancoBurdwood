@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.12)  12 JUL 2023 12:42
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.7.12)  15 JUL 2023 10:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -10,15 +10,18 @@ L3 programming layer <2023-06-30>
 Document Class: elsarticle 2020/11/20, 3.3: Elsevier Ltd
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2023-06-30 L3 programming layer (loader) 
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count185
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-04-19 L3 backend support: XeTeX
+\g__graphics_track_int=\count181
 \l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count182
+\g__pdf_backend_annotation_int=\count183
+\g__pdf_backend_link_int=\count184
 )) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-02-02 L3 Experimental document command parser
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count186
+\etb@tempcnta=\count185
 )
 \@bls=\dimen140
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -26,14 +29,14 @@ Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@section=\count188
-\c@subsection=\count189
-\c@subsubsection=\count190
-\c@paragraph=\count191
-\c@subparagraph=\count192
-\c@figure=\count193
-\c@table=\count194
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen141
@@ -49,20 +52,20 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+Package graphics Info: Driver file: xetex.def on input line 107.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen142
 \Gin@req@width=\dimen143
 )
-\c@tnote=\count195
-\c@fnote=\count196
-\c@cnote=\count197
-\c@ead=\count198
-\c@author=\count199
+\c@tnote=\count194
+\c@fnote=\count195
+\c@cnote=\count196
+\c@ead=\count197
+\c@author=\count198
 \@eadauthor=\toks18
-\c@affn=\count266
+\c@affn=\count199
 \absbox=\box52
 \elsarticlehighlightsbox=\box53
 \elsarticlegrabsbox=\box54
@@ -80,7 +83,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count267
+\c@NAT@ctr=\count266
 )
 \splwrite=\write3
 \openout3 = `MS_Burdwood_foodweb.spl'.
@@ -92,9 +95,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count268
-\Gm@cntv=\count269
-\c@Gm@tempcnt=\count270
+\Gm@cnth=\count267
+\Gm@cntv=\count268
+\c@Gm@tempcnt=\count269
 \Gm@bindingoffset=\dimen147
 \Gm@wd@mp=\dimen148
 \Gm@odd@mp=\dimen149
@@ -111,7 +114,10 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -171,14 +177,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count271
+\inf@bad=\count270
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count272
-\leftroot@=\count273
+\uproot@=\count271
+\leftroot@=\count272
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count274
-\DOTSCASE@=\count275
+\classnum@=\count273
+\DOTSCASE@=\count274
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -191,20 +197,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen158
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count276
+\macc@depth=\count275
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count277
+\c@MaxMatrixCols=\count276
 \dotsspace@=\muskip17
-\c@parentequation=\count278
-\dspbrk@lvl=\count279
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
 \tag@help=\toks23
-\row@=\count280
-\column@=\count281
-\maxfields@=\count282
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
 \andhelp@=\toks24
 \eqnshift@=\dimen159
 \alignsep@=\dimen160
@@ -220,6 +226,7 @@ LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+Invalid UTF-8 byte or sequence at line 292 replaced by U+FFFD.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -227,21 +234,21 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-\linenopenalty=\count283
+\linenopenalty=\count282
 \output=\toks27
-\linenoprevgraf=\count284
+\linenoprevgraf=\count283
 \linenumbersep=\dimen165
 \linenumberwidth=\dimen166
-\c@linenumber=\count285
-\c@pagewiselinenumber=\count286
-\c@LN@truepage=\count287
-\c@internallinenumber=\count288
-\c@internallinenumbers=\count289
+\c@linenumber=\count284
+\c@pagewiselinenumber=\count285
+\c@LN@truepage=\count286
+\c@internallinenumber=\count287
+\c@internallinenumbers=\count288
 \quotelinenumbersep=\dimen167
 \bframerule=\dimen168
 \bframesep=\dimen169
 \bframebox=\box60
-\linenoamsmath@ams@eqpen=\count290
+\linenoamsmath@ams@eqpen=\count289
 LaTeX Info: Redefining \\ on input line 3180.
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
@@ -260,28 +267,67 @@ Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks28
-\inpenc@posthook=\toks29
+)) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count290
+\l__fontspec_language_int=\count291
+\l__fontspec_strnum_int=\count292
+\l__fontspec_tmp_int=\count293
+\l__fontspec_tmpa_int=\count294
+\l__fontspec_tmpb_int=\count295
+\l__fontspec_tmpc_int=\count296
+\l__fontspec_em_int=\count297
+\l__fontspec_emdef_int=\count298
+\l__fontspec_strong_int=\count299
+\l__fontspec_strongdef_int=\count300
+\l__fontspec_tmpa_dim=\dimen170
+\l__fontspec_tmpb_dim=\dimen171
+\l__fontspec_tmpc_dim=\dimen172
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/xelatex/xltxtra/xltxtra.sty
+Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/realscripts/realscripts.sty
+Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscripts
+\subsupersep=\dimen173
+) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+\xl@everylogo=\toks28
+\xl@@everylogo=\toks29
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\l__xetex_show_hyphens_wrapping_box=\box61
+\l__xetex_show_hyphens_temp_box=\box62
+\l__xetex_show_hyphens_final_box=\box63
+\g__xetex_show_hyphens_word_box=\box64
+) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many other characters in Unicode lower plane
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+)
+\tipaTiiicode=\count301
+\tipasavetokens=\toks30
+\tipachecktokens=\toks31
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks30
-\MT@tempbox=\box61
-\MT@count=\count291
+\MT@toks=\toks32
+\MT@tempbox=\box65
+\MT@count=\count302
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks31
+\MT@prot@toks=\toks33
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
-\MT@outer@kern=\dimen170
+\MT@outer@kern=\dimen174
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count292
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype-pdftex.def
-File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
-LaTeX Info: Redefining \lsstyle on input line 902.
-LaTeX Info: Redefining \lslig on input line 902.
-\MT@outer@space=\skip57
+\MT@listname@count=\count303
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 238.
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
@@ -295,7 +341,7 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
+Package pdftexcmds Info: \pdfdraftmode not found.
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -313,25 +359,26 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count293
+\c@section@level=\count304
 )
-\@linkdim=\dimen171
-\Hy@linkcounter=\count294
-\Hy@pagecounter=\count295
+\@linkdim=\dimen175
+\Hy@linkcounter=\count305
+\Hy@pagecounter=\count306
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
-Now handling font encoding PD1 ...
-... no UTF-8 mapping file for font encoding PD1
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count296
+\Hy@SavedSpaceFactor=\count307
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `unicode' set `true' on input line 4050.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/greek-fontenc/puenc-greek.def
+File: puenc-greek.def 2023/03/08 2.2.1 Greek LICRs for PDF strings
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+File: greek-fontenc.def 2023-06-01 2.3 Common Greek font encoding definitions
+)))
+Package hyperref Info: Option `setpagesize' set `false' on input line 4050.
+Package hyperref Info: Option `unicode' set `false' on input line 4050.
 Package hyperref Info: Hyper figures OFF on input line 4167.
 Package hyperref Info: Link nesting OFF on input line 4172.
 Package hyperref Info: Hyper index ON on input line 4175.
@@ -339,17 +386,17 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count297
+\c@Hy@tempcnt=\count308
 LaTeX Info: Redefining \url on input line 4772.
-\XeTeXLinkMargin=\dimen172
+\XeTeXLinkMargin=\dimen176
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count298
-\Field@Width=\dimen173
-\Fld@charsize=\dimen174
+\Fld@menulength=\count309
+\Field@Width=\dimen177
+\Fld@charsize=\dimen178
 Package hyperref Info: Hyper figures OFF on input line 6051.
 Package hyperref Info: Link nesting OFF on input line 6056.
 Package hyperref Info: Hyper index ON on input line 6059.
@@ -361,120 +408,128 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count299
-\c@Item=\count300
-\c@Hfootnote=\count301
+\Hy@abspage=\count310
+\c@Item=\count311
+\c@Hfootnote=\count312
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2023-07-08 v7.01b Hyperref driver for pdfTeX
+Package hyperref Info: Driver: hxetex.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-07-08 v7.01b Hyperref driver for XeTeX
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box66
+\c@Hy@AnnotLevel=\count313
+\HyField@AnnotCount=\count314
+\Fld@listcount=\count315
+\c@bookmark@seq@number=\count316
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
-)
-\Fld@listcount=\count302
-\c@bookmark@seq@number=\count303
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip58
+\Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 51.
+Package hyperref Info: Option `breaklinks' set `true' on input line 49.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 51.
+(hyperref)                setting the option has no effect on input line 49.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 51.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/stringenc/se-ascii-print.def
+File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
+)
+Package hyperref Info: Option `colorlinks' set `false' on input line 49.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip59
-\LTright=\skip60
-\LTpre=\skip61
-\LTpost=\skip62
-\LTchunksize=\count304
-\LTcapwidth=\dimen175
-\LT@head=\box62
-\LT@firsthead=\box63
-\LT@foot=\box64
-\LT@lastfoot=\box65
-\LT@gbox=\box66
-\LT@cols=\count305
-\LT@rows=\count306
-\c@LT@tables=\count307
-\c@LT@chunks=\count308
-\LT@p@ftn=\toks32
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count317
+\LTcapwidth=\dimen179
+\LT@head=\box67
+\LT@firsthead=\box68
+\LT@foot=\box69
+\LT@lastfoot=\box70
+\LT@gbox=\box71
+\LT@cols=\count318
+\LT@rows=\count319
+\c@LT@tables=\count320
+\c@LT@chunks=\count321
+\LT@p@ftn=\toks34
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen176
-\lightrulewidth=\dimen177
-\cmidrulewidth=\dimen178
-\belowrulesep=\dimen179
-\belowbottomsep=\dimen180
-\aboverulesep=\dimen181
-\abovetopsep=\dimen182
-\cmidrulesep=\dimen183
-\cmidrulekern=\dimen184
-\defaultaddspace=\dimen185
-\@cmidla=\count309
-\@cmidlb=\count310
-\@aboverulesep=\dimen186
-\@belowrulesep=\dimen187
-\@thisruleclass=\count311
-\@lastruleclass=\count312
-\@thisrulewidth=\dimen188
+\heavyrulewidth=\dimen180
+\lightrulewidth=\dimen181
+\cmidrulewidth=\dimen182
+\belowrulesep=\dimen183
+\belowbottomsep=\dimen184
+\aboverulesep=\dimen185
+\abovetopsep=\dimen186
+\cmidrulesep=\dimen187
+\cmidrulekern=\dimen188
+\defaultaddspace=\dimen189
+\@cmidla=\count322
+\@cmidlb=\count323
+\@aboverulesep=\dimen190
+\@belowrulesep=\dimen191
+\@thisruleclass=\count324
+\@lastruleclass=\count325
+\@thisrulewidth=\dimen192
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen189
-\ar@mcellbox=\box67
-\extrarowheight=\dimen190
-\NC@list=\toks33
-\extratabsurround=\skip63
-\backup@length=\skip64
-\ar@cellbox=\box68
+\col@sep=\dimen193
+\ar@mcellbox=\box72
+\extrarowheight=\dimen194
+\NC@list=\toks35
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box73
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count313
-\calc@Bcount=\count314
-\calc@Adimen=\dimen191
-\calc@Bdimen=\dimen192
-\calc@Askip=\skip65
-\calc@Bskip=\skip66
+\calc@Acount=\count326
+\calc@Bcount=\count327
+\calc@Adimen=\dimen195
+\calc@Bdimen=\dimen196
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count315
-\calc@Cskip=\skip67
+\calc@Ccount=\count328
+\calc@Cskip=\skip66
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
 Package: footnote 1997/01/28 1.13 Save footnotes around boxes
-\fn@notes=\box69
-\fn@width=\dimen193
+\fn@notes=\box74
+\fn@width=\dimen197
 )
-\cslhangindent=\skip68
-\csllabelwidth=\skip69
-\cslentryspacingunit=\skip70
+\cslhangindent=\skip67
+\csllabelwidth=\skip68
+\cslentryspacingunit=\skip69
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip71
-\multirow@cntb=\count316
-\multirow@dima=\skip72
-\bigstrutjot=\dimen194
+\multirow@colwidth=\skip70
+\multirow@cntb=\count329
+\multirow@dima=\skip71
+\bigstrutjot=\dimen198
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen195
-\WF@size=\dimen196
-\c@WF@wrappedlines=\count317
-\WF@box=\box70
-\WF@everypar=\toks34
+\wrapoverhang=\dimen199
+\WF@size=\dimen256
+\c@WF@wrappedlines=\count330
+\WF@box=\box75
+\WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count318
-\float@exts=\toks35
-\float@box=\box71
-\@float@everytoks=\toks36
-\@floatcapt=\box72
+\c@float@type=\count331
+\float@exts=\toks37
+\float@box=\box76
+\@float@everytoks=\toks38
+\@floatcapt=\box77
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
@@ -482,11 +537,11 @@ Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package color Info: Driver file: pdftex.def on input line 149.
+Package color Info: Driver file: xetex.def on input line 149.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-\everycr=\toks37
-\minrowclearance=\skip73
-\rownum=\count319
+\everycr=\toks39
+\minrowclearance=\skip72
+\rownum=\count332
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
@@ -494,41 +549,41 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box73
-\sift@deathcycles=\count320
-\@vwid@loff=\dimen197
-\@vwid@roff=\dimen198
+\@vwid@box=\box78
+\sift@deathcycles=\count333
+\@vwid@loff=\dimen257
+\@vwid@roff=\dimen258
 )
-\c@taburow=\count321
-\tabu@nbcols=\count322
-\tabu@cnt=\count323
-\tabu@Xcol=\count324
-\tabu@alloc=\count325
-\tabu@nested=\count326
-\tabu@target=\dimen199
-\tabu@spreadtarget=\dimen256
-\tabu@naturalX=\dimen257
-\tabucolX=\dimen258
-\tabu@Xsum=\dimen259
-\extrarowdepth=\dimen260
-\abovetabulinesep=\dimen261
-\belowtabulinesep=\dimen262
-\tabustrutrule=\dimen263
-\tabu@thebody=\toks38
-\tabu@footnotes=\toks39
-\tabu@box=\box74
-\tabu@arstrutbox=\box75
-\tabu@hleads=\box76
-\tabu@vleads=\box77
-\tabu@cellskip=\skip74
+\c@taburow=\count334
+\tabu@nbcols=\count335
+\tabu@cnt=\count336
+\tabu@Xcol=\count337
+\tabu@alloc=\count338
+\tabu@nested=\count339
+\tabu@target=\dimen259
+\tabu@spreadtarget=\dimen260
+\tabu@naturalX=\dimen261
+\tabucolX=\dimen262
+\tabu@Xsum=\dimen263
+\extrarowdepth=\dimen264
+\abovetabulinesep=\dimen265
+\belowtabulinesep=\dimen266
+\tabustrutrule=\dimen267
+\tabu@thebody=\toks40
+\tabu@footnotes=\toks41
+\tabu@box=\box79
+\tabu@arstrutbox=\box80
+\tabu@hleads=\box81
+\tabu@vleads=\box82
+\tabu@cellskip=\skip73
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box78
+\@tempboxb=\box83
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttablex.sty
 Package: threeparttablex 2013/07/23 v0.3 by daleif
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
@@ -536,33 +591,32 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\TPTL@width=\skip75
+\TPTL@width=\skip74
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box79
-\UL@hyphenbox=\box80
-\UL@skip=\skip76
-\UL@hook=\toks40
-\UL@height=\dimen264
-\UL@pe=\count327
-\UL@pixel=\dimen265
-\ULC@box=\box81
+\UL@box=\box84
+\UL@hyphenbox=\box85
+\UL@skip=\skip75
+\UL@hook=\toks42
+\UL@height=\dimen268
+\UL@pe=\count340
+\UL@pixel=\dimen269
+\ULC@box=\box86
 Package: ulem 2019/11/18
-\ULdepth=\dimen266
+\ULdepth=\dimen270
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen267
-\c@nlinenum=\count328
-\TeXr@lab=\toks41
+\rotheadsize=\dimen271
+\c@nlinenum=\count341
+\TeXr@lab=\toks43
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Driver file: xetex.def on input line 227.
 LaTeX Info: Redefining \color on input line 711.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
 Package xcolor Info: Model `RGB' extended on input line 1369.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
@@ -570,42 +624,43 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 121.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-No file MS_Burdwood_foodweb.aux.
+) (./MS_Burdwood_foodweb.aux)
 \openout1 = `MS_Burdwood_foodweb.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
-LaTeX Font Info:    ... okay on input line 121.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 119.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 119.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 119.
+LaTeX Font Info:    Trying to load font information for T3+cmr on input line 119.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 119.
+LaTeX Font Info:    ... okay on input line 119.
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: xetex
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -638,347 +693,191 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 121.
-Package microtype Info: Applying patch `item' on input line 121.
-Package microtype Info: Applying patch `toc' on input line 121.
-Package microtype Info: Applying patch `eqnum' on input line 121.
-Package microtype Info: Applying patch `footnote' on input line 121.
-Package microtype Info: Applying patch `verbatim' on input line 121.
-Package microtype Info: Generating PDF output.
+LaTeX Info: Redefining \microtypecontext on input line 119.
+Package microtype Info: Applying patch `item' on input line 119.
+Package microtype Info: Applying patch `toc' on input line 119.
+Package microtype Info: Applying patch `eqnum' on input line 119.
+Package microtype Info: Applying patch `footnote' on input line 119.
+Package microtype Info: Applying patch `verbatim' on input line 119.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: Automatic font expansion enabled (level 2),
-(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
-Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 121.
 Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of interword spacing.
-Package microtype Info: No adjustment of character kerning.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
 )
-Package hyperref Info: Link coloring OFF on input line 121.
+Package hyperref Info: Link coloring OFF on input line 119.
+(./MS_Burdwood_foodweb.out) (./MS_Burdwood_foodweb.out)
 \@outlinefile=\write4
 \openout4 = `MS_Burdwood_foodweb.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 223.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 256.
-(/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: T1).
+(microtype)             `lmss' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 256.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 256.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 256.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 256.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 256.
+(Font)              <10> on input line 249.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 256.
+(Font)              <7> on input line 249.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 256.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 256.
+(Font)              <5> on input line 249.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 256.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 249.
 (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/Users/tomasmarina/Library/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 256.
+(Font)              <8> on input line 249.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 256.
+(Font)              <6> on input line 249.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-Overfull \hbox (2.22221pt too wide) has occurred while \output is active
+Overfull \hbox (2.22pt too wide) has occurred while \output is active
 [] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+(hyperref)                removing `\<def>-command' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+(hyperref)                removing `\cnotenum' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+(hyperref)                removing `\<def>-command' on input line 267.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+(hyperref)                removing `\@corref' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 274.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 274.
+Package hyperref Warning: Glyph not defined in PU encoding,
+(hyperref)                removing `\textsuperscript' on input line 267.
 
 [1
 
-{/Users/tomasmarina/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2]
-<MPABurdwood_map.jpg, id=38, 3259.17625pt x 1425.325pt>
-File: MPABurdwood_map.jpg Graphic file (type jpg)
-<use MPABurdwood_map.jpg>
-Package pdftex.def Info: MPABurdwood_map.jpg  used on input line 402.
-(pdftex.def)             Requested size: 468.0pt x 204.65508pt.
-[3] [4
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.477 
-      {/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/tomasmarina/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc} <./MPABurdwood_map.jpg>] [5] [6] [7]
-<MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf, id=80, 365.365pt x 294.09875pt>
+] [2]
+File: MPABurdwood_map.jpg Graphic file (type bmp)
+<MPABurdwood_map.jpg>
+[3] [4] [5] [6] [7]
 File: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf  used on input line 629.
-(pdftex.def)             Requested size: 365.3641pt x 294.09802pt.
-[8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.679 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.679 
-       <./MS_Burdwood_foodweb_files/figure-latex/figure2-1.pdf>]
-<MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf, id=94, 463.7325pt x 640.3925pt>
+[8]
 File: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf  used on input line 682.
-(pdftex.def)             Requested size: 463.73135pt x 640.39093pt.
 
-LaTeX Warning: Float too large for page by 68.39093pt on input line 687.
+LaTeX Warning: Float too large for page by 68.39093pt on input line 682.
 
-<MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf, id=95, 463.7325pt x 462.72874pt>
 File: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf Graphic file (type pdf)
 <use MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>
-Package pdftex.def Info: MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf  used on input line 744.
-(pdftex.def)             Requested size: 463.73135pt x 462.72762pt.
-[9] [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.789 
-       <./MS_Burdwood_foodweb_files/figure-latex/figure3-1.pdf>] [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.789 
-       <./MS_Burdwood_foodweb_files/figure-latex/figure4-1.pdf>] [12] [13] [14]
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1090 Argentina). We thank the MPA Namuncurá −
-                                                   Burdwood Bank administrat... 
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] (./MS_Burdwood_foodweb.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-06-30>
+ ***********
+Package rerunfilecheck Info: File `MS_Burdwood_foodweb.out' has not changed.
+(rerunfilecheck)             Checksum: 90642CA2CEA6DAB3F191AE5DF3A0CB51;1373.
+ ) 
 Here is how much of TeX's memory you used:
- 15887 strings out of 477197
- 253223 string characters out of 5813013
- 1943244 words of memory out of 5000000
- 36330 multiletter control sequences out of 15000+600000
- 624798 words of font info for 171 fonts, out of 8000000 for 9000
+ 21393 strings out of 477889
+ 392849 string characters out of 5822567
+ 1940875 words of memory out of 5000000
+ 41934 multiletter control sequences out of 15000+600000
+ 581911 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,9n,79p,1016b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,9n,79p,1016b,454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-!  ==> Fatal error occurred, no output PDF file produced!
+Output written on MS_Burdwood_foodweb.pdf (21 pages).

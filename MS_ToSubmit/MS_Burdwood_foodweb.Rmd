@@ -1,16 +1,16 @@
 ---
-title: The complex network of trophic interactions in a subAntarctic oceanic Marine Protected
-  Area
+title: The complex network of trophic interactions in a subAntarctic oceanic Marine Protected Area
 author:
   - name: Tomás I. Marina^a^
     email: tomasimarina@gmail.com
+    correspondingauthor: true
   - name: Irene R. Schloss^a^^,^^b^^,^^c^
   - name: Gustavo A. Lovrich^a^
   - name: Claudia C. Boy^a^
   - name: Daniel O. Bruno^a^^,^^c^
   - name: Fabiana L. Capitanio^d^^,^^e^
   - name: Sergio M. Delpiani^f^
-  - name: Juan Martín Díaz de Astarloa^e^
+  - name: Juan Martín Díaz de Astarloa^f^
   - name: Cintia Fraysse^a^
   - name: Virginia A. García Alonso^d^^,^^e^
   - name: Andrea Raya Rey^a^^,^^c^^,^^g^
@@ -22,51 +22,48 @@ author:
 
 address:
   - code: 1
-    address: Centro Austral de Investigaciones Cientificas (CADIC-CONICET), Argentina
+    address: Centro Austral de Investigaciones Científicas (CADIC-CONICET), Ushuaia, Argentina
   - code: 2
-    address: Instituto Antartico Argentino (IAA), Argentina
+    address: Instituto Antártico Argentino (IAA), CABA, Argentina
   - code: 3
-    address: Instituto de Ciencias Polares, Ambiente y Recursos Naturales (ICPA), Universidad de Tierra del Fuego (UNTDF), Argentina
+    address: Instituto de Ciencias Polares, Ambiente y Recursos Naturales (ICPA), Universidad de Tierra del Fuego (UNTDF), Ushuaia, Argentina
   - code: 4
-    address: Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA), Argentina
+    address: Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires (UBA), CABA, Argentina
   - code: 5
-    address: Instituto de Biodiversidad y Biologia Experimental y Aplicada (IBBEA), Universidad de Buenos Aires-CONICET, Argentina
+    address: Instituto de Biodiversidad y Biología Experimental y Aplicada (IBBEA), Universidad de Buenos Aires-CONICET, CABA, Argentina
   - code: 6
-    address: Instituto de Investigaciones Marinas y Costeras (IIMYC), Universidad Nacional de Mar del Plata-CONICET, Argentina
+    address: Instituto de Investigaciones Marinas y Costeras (IIMYC), Universidad Nacional de Mar del Plata-CONICET, Mar del Plata, Argentina
   - code: 7
     address: Wildlife Conservation Society, Argentina
   - code: 8
-    address: Instituto Nacional de Investigacion y Desarrollo Pesquero (INIDEP), Consejo Nacional de Investigaciones Cientificas y Tecnicas (CONICET), Argentina
+    address: Instituto Nacional de Investigación y Desarrollo Pesquero (INIDEP), Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Mar del Plata, Argentina
   - code: 9
-    address: Facultad de Ciencias Exactas, Fisicas y Naturales, Universidad Nacional de Cordoba (UNC), Argentina
+    address: Facultad de Ciencias Exactas, Físicas y Naturales, Universidad Nacional de Córdoba (UNC), Córdoba, Argentina
   - code: 10
-    address: Instituto de Diversidad y Ecologia Animal (IDEA-CONICET)
+    address: Instituto de Diversidad y Ecología Animal (IDEA-CONICET), Córdoba, Argentina
   - code: 11
-    address: Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina
-    
+    address: Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, CABA, Argentina
 abstract: |
-  Globally, the total area of the world ocean designated under marine protection has increased in the recent decades. The majority of these Marine Protected Areas (MPAs) focus on the presence of particularly vulnerable, keystone, or charismatic species, large numbers of endemic species, and/or high biodiversity across taxonomic levels. In the sub-Antarctic region, the level of ocean protection is mainly associated to oceanic islands, except for the MPAs Namuncurá - Burdwood Bank I and II (MPA N-BB, ~53º–55ºS and ~56º–62ºW), which are associated to a submarine plateau and its southern adjacent deep slope region, respectively. Here, we present the first detailed analysis of the network of predator-prey interactions (food web) for the MPA N-BB ecosystem. We applied a network approach to characterise the food web in terms of complexity and structure, and identifying the species' role in such a framework. In terms of complexity, the MPA N-BB food web consisted of 1788 predator-prey interactions and 379 species, with a link density of 4.72 and a connectance of 0.01. In terms of structure, almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These findings suggest that the ecosystem might be vulnerable to external perturbations targeting highly connected species, although other properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Furthermore, we identified several species as important in terms of different aspects of trophic structure and functioning, and response to perturbations. We suggest that generalist species, mainly fishes, play a crucial role in the ecosystem's bentho-pelagic coupling process and that other species, besides the longtail southern cod *Patagonotothen ramsayi* and the Fueguian sprat *Sprattus fuegensis*, should be considered as relevant energy transfers for the ecosystem. Finally, we argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for seccuring the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
-
+  Abstract: The total area of the world ocean designated under marine protection has increased recently. Most Marine Protected Areas (MPAs) target vulnerable, keystone, charismatic and or endemic species. In the sub-Antarctic, ocean protection is associated to oceanic islands,except for MPAs Namuncurá - Burdwood Bank I and II (MPA N-BB, ~53º–55ºS and ~56º–62ºW), which are associated to a submarine plateau and its southern adjacent deep slope, respectively. Here, we present the first analysis of the network of predator-prey interactions for the MPA N-BB. We applied a network approach to characterise the complexity and structure of the food web, and identify the species' role in such a framework. The MPA N-BB food web consisted of 1788 interactions and 379 species, with a connectance of 0.01. Almost half of the consumers were omnivores (0.48), and the network displayed a small-world pattern. These suggest that the ecosystem might be vulnerable to perturbations targeting highly connected species, although other properties might provide resilience and resistance, resulting in a rearranged structure that preserves its original functions. Several species arose as important in terms of different aspects of trophic structure and functioning, and response to perturbations. Generalist species, mainly fishes, play a crucial role in the ecosystem's benthopelagic coupling and should be considered as relevant energy transfers for the ecosystem. We argue that the diversity of species, including both the benthic and pelagic habitats, is responsible for securing the connectivity within the food web against perturbations, therefore contributing to the structure and stability of the ecosystem.
 keywords: 
-  - Food web
+  - Food Web
   - Complexity
   - Structure
   - Burdwood Bank
   - Southwest Atlantic
-journal: "MEPS, Oikos, Ecological Applications, J of Applied Ecology (?)"
-date: "`r Sys.Date()`"
 classoption: preprint, 3p, authoryear
 bibliography: AMPBancoBurdwood.bib
-#nocite: '@*' cites all references in .bib file
 linenumbers: true
 numbersections: true
 # Use a CSL with `citation_package = "default"`
-csl: "apa.csl"
+csl: "elsevier-harvard2.csl"
 output: 
   rticles::elsevier_article:
+    latex_engine: xelatex
     keep_tex: true
     citation_package: "default"
 ---
+
 
 ```{r setup, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(warning = FALSE, message = FALSE)
@@ -475,4 +472,4 @@ We identified several species as important regarding different aspects of trophi
 
 We are indebted to all those experts of the working group 'Banco Burdwood' who humbly provided their knowledge to enhance the quality of the present research. Although most of them are authors of the present work, it is worth to mention the following researchers: Brenda L. Doti (IBBEA, CONICET-UBA; Universidad de Buenos Aires, Argentina), Sofía L. Callá (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina), Sandra Gordillo (IDACOR-CONICET; Universidad Nacional de Córdoba, Argentina), Mariano I. Martinez (Museo Argentino de Ciencias Naturales “Bernardino Rivadavia”, Argentina) and Luciano Padovani (Instituto Nacional de Investigación y Desarrollo Pesquero, INIDEP, Argentina). We thank the MPA Namuncurá − Burdwood Bank administration. Research cruises were funded by national funds by the Law 26.875. This study was funded by Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET) and Agencia Nacional de Promoción Científica y Tecnológica (PICT 2020-SERIEA-01617), Argentina. This work is contribution no. XX of the MPA Namuncurá (Law 26.875).
 
-# References
+# Literature Cited
