@@ -39,6 +39,7 @@ plot_sp_bt <- spp_total %>%
 btw_reg <- lm(Between ~ TL, data = spp_total)
 summary(btw_reg)
 ols_test_normality(btw_reg)  # check normality of residuals
+shapiro.test(spp_total$Between)  # if p-value > alfa, normality is reached
 ols_plot_resid_qq(btw_reg)  # Q-Q plot
 
 
@@ -59,6 +60,7 @@ plot_sp_cl <- spp_total %>%
 clo_reg <- lm(Close ~ TL, data = spp_total)
 summary(clo_reg)
 ols_test_normality(clo_reg)  # check normality of residuals
+shapiro.test(spp_total$Close)
 ols_plot_resid_qq(clo_reg)  # Q-Q plot
 
 
@@ -79,4 +81,5 @@ plot_sp_ts <- spp_total %>%
 ts_reg <- lm(meanTrophicSimil ~ TL, data = spp_total)
 summary(ts_reg)
 ols_test_normality(ts_reg)  # check normality of residuals
+shapiro.test(spp_total$meanTrophicSimil)
 ols_plot_resid_qq(ts_reg)  # Q-Q plot
