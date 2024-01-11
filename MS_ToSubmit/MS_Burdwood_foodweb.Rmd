@@ -401,12 +401,12 @@ plot_sp_tr <- spp_total %>%
 # Move to a new page
 grid.newpage()
 # Arrange figure
-figure_ab <- ggarrange(plot_sp_bt + rremove("xlab"), plot_sp_cl + rremove("xlab"),
+figure_ab <- ggarrange(plot_sp_ts + rremove("xlab"), plot_sp_cl + rremove("xlab"),
                       labels = c("A","B"), ncol=2,
                       font.label = list(size = 10, color = "black"))
 figure_ab <- annotate_figure(figure_ab, bottom = textGrob("Trophic level", gp = gpar(fontface="bold", col="black", fontsize=10)))
 figure_4 <- ggarrange(figure_ab,                                                                                         # First row
-          ggarrange(plot_sp_ts, plot_sp_tr, ncol = 2, labels = c("C", "D"), font.label=list(color="black",size=10)),                                            
+          ggarrange(plot_sp_bt, plot_sp_tr, ncol = 2, labels = c("C", "D"), font.label=list(color="black",size=10)),                                            
           nrow = 2)
 figure_4
 
