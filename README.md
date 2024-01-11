@@ -2,10 +2,9 @@
 
 Manuscript in revision in Marine Ecology Progress Series.
 
-Authors
-Tomás I. Marina^1^, Irene R. Schloss^1^^,^^2^^,^^3^, Gustavo A. Lovrich^1^, Claudia C. Boy^1^, Daniel O. Bruno^1^^,^^3^, Fabiana L. Capitanio^4^^,^^5^, Sergio M. Delpiani^6^, Juan Martín Díaz de Astarloa^6^, Cintia Fraysse^1^, Virginia A. García Alonso^4^^,^^5^, Andrea Raya Rey^1^^,^^3^^,^^7^, Laura Schejter^8^, Mariela L. Spinelli^4^^,^^5^, Marcos Tatián^9^^,^^10^, Diego Urteaga^11^, Luciana Riccialdelli^1^
+Authors: Tomás I. Marina 1; Irene R. Schloss 1,2,3; Gustavo A. Lovrich 1; Claudia C. Boy 1; Daniel O. Bruno 1,3; Fabiana L. Capitanio 4,5; Sergio M. Delpiani 6; Juan Martín Díaz de Astarloa 6; Cintia Fraysse 1; Virginia A. García Alonso 4,5; Andrea Raya Rey 1,3,7; Laura Schejter 8; Mariela L. Spinelli 4,5; Marcos Tatián 9,10; Diego Urteaga 11; Luciana Riccialdelli 1
 
-Affiliations
+Affiliations:
 1 Centro Austral de Investigaciones Científicas (CADIC-CONICET), Ushuaia, Argentina
 2 Instituto Antártico Argentino (IAA), CABA, Argentina
 3 Instituto de Ciencias Polares, Ambiente y Recursos Naturales (ICPA), Universidad de Tierra del Fuego (UNTDF), Ushuaia, Argentina
