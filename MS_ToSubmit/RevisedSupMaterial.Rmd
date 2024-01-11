@@ -1,0 +1,270 @@
+---
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: yes
+  word_document: default
+# classoption: landscape
+bibliography: AMPBancoBurdwood.bib
+csl: "elsevier-harvard2.csl"
+documentclass: article
+geometry:
+- vmargin=1in
+- hmargin=1in
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{pdflscape,booktabs}
+- \usepackage{lscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+- \usepackage[running]{lineno}
+- \linenumbers
+---
+
+# Supplementary Material for 'The complex network of trophic interactions in a subAntarctic oceanic Marine Protected Area'
+
+## Methodology
+
+### Food web construction
+
+The following figure and tables summarise the data we used to build the network of trophic (predator-prey) interactions for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem.
+Figure 2 resumes the type and number of references reviewed. Table 1 is the complete list of trophic interactions and references that confirm each of them. Table 2 is the species list with details on trophic species cases (aggregated taxa).
+
+With the gathered trophic data, we constructed a matrix of pairwise interactions; a value of 1 or 0 was assigned to each element a_ij of the matrix depending on whether the predator j preyed or not on the prey i. Then we transformed such a matrix into an oriented graph with L trophic interactions between S nodes or species (Figure 1).
+
+```{r, out.width = "12cm", echo = FALSE, message=FALSE, fig.align = 'center', fig.cap = "Matrix of pairwise interactions and the oriented graph (food web) derived from it. Number of species S = 9, number of interactions (L) = 15."}
+library(knitr)
+knitr::include_graphics("FigS1.png")
+```
+
+### Network analysis
+
+Trophic level
+
+Trophic levels (TL) of species were calculated using the shortweighted TL formula of @Williams2004. Shortweighted trophic level is defined as the average of the shortest TL and prey-averaged TL. Shortest TL of a consumer in a food web is equal to 1 + the shortest chain length from this consumer to any basal species [@Williams2004]. Prey averaged TL is equal to 1 + the mean TL of all consumer's trophic resources, calculated as:
+
+\begin{equation}
+TL_j = 1 + \sum_{i = 1}^{S} l_{ij} \frac{TL_i}{n_j}
+\end{equation}
+
+where $TL_j$ is the trophic level of species $j$; $S$ is the number of species in the food web; $l_{ij}$ is the connection matrix with $S$ rows and $S$ columns, in which for column $j$ and row $i$, $l_{ij}$ = 1 if species $j$ consumes species $i$ and $l_{ij}$ = 0 if not; and $n_j$ is the number of prey species in the diet of species $j$. For basal species TL = 1 given that they have no prey.
+
+Topological roles
+
+Beforehand, we need to calculate modularity. Modularity was calculated as the difference between realized and expected within-modules interactions, divided by the total number of interactions. We used a stochastic algorithm called “simulated annealing” [@Guimera2005], that assumes that the nodes of the same module have more links than one would expect in a random network. The modules are obtained from dividing all the nodes in the network to maximize modularity. In this way, the modularity index is defined as:
+
+\begin{equation}
+M = \sum_{s} (\frac{I_s}{L} - (\frac{d_s}{2L})^2)
+\end{equation}
+
+where $s$ is the number of modules or compartments, $I_s$ is the number of links between species in the modules, $d_s$ is the sum of degrees for all species in module $s$ and $L$ is the total number of links.
+
+Species topological roles were calculated using the method of functional cartography [@Guimera2005]. Roles are determined according to two parameters:
+
+a) the standardized within-module degree (dz), a z-score that reflects how well a species is connected to other species inside the module, relative to other species within its own module:
+
+\begin{equation}
+dz_i = \frac{k_{is}-k_s} {ks}
+\end{equation}
+
+where $k_{is}$ is the number of links of species $i$ within its own module $s$, and $ks$ are the average and standard deviation of $k_{is}$ over all species in $s$, respectively.
+
+b) the participation coefficient $PC$, estimates the links distribution of species $i$ among modules:
+
+\begin{equation}
+PC_i = 1 - \sum_{S} \frac{k_{is}}{k_i}
+\end{equation}
+
+where $k_i$ is the total number of links of species $i$ and $k_{is}$ is the number of links of species $i$ to species in module $s$.
+To determine the role of each species, the $dz$ − $PC$ parameters space was divided into four regions [@Kortsch2015], with two threshold values: $dz$ = 2.5 and $PC$ = 0.625. Thus, the species were classified as follows:
+
+* Module hub ($dz$ ≥ 2.5, $PC$ < 0.625): The species has a relatively high number of links, but at least 60% within its own module.
+
+* Module specialist ($dz$ < 2.5, $PC$ < 0.625): The species has relatively few links and most within its own module.
+
+* Module connector ($dz$ < 2.5, $PC$ ≥ 0.625): The species has relatively few links and most between modules.
+
+* Network connector ($dz$ ≥ 2.5, $PC$ ≥ 0.625): The species has a high connectivity between and within the modules.
+
+\newpage
+\blandscape
+
+```{r tableS1, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+# Load packages
+require(tidyverse)
+require(knitr)
+require(dplyr)
+require(kableExtra)
+require(pander)
+
+# Load data
+load("../data/cleaned-data_jul23.rda")
+
+# Discard low resolution interactions
+int_good_res <- int_raw %>% 
+  dplyr::filter(!str_detect(Prey, "\\*$")) %>% 
+  dplyr::filter(!str_detect(Predator, "\\*$")) %>% 
+  mutate(Prey = case_when(Prey == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ Prey)) %>%
+  dplyr::select(Prey, Predator, Reference, Reference_link) %>% 
+  distinct(Prey, Predator, .keep_all = TRUE)
+
+# Table S1. List of interactions
+# knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by predator.") %>%
+#    column_spec(1:3, width="2cm") %>%
+#    column_spec(4, width="14cm") %>%
+#    kableExtra::kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4) %>%
+#    kableExtra::landscape()
+
+pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link), Reference = paste('\\tiny', Reference), Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator)) %>% rename("Link"="Reference_link"), style="multiline", split.tables = Inf, justify = c("left","left","center","right"),
+             caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
+
+```
+
+\newpage
+
+```{r tableS2, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+
+# Load packages
+# library(knitr)
+# library(dplyr)
+# library(kableExtra)
+# library(stringr)
+
+# Load data
+load("../data/cleaned-data_jul23.rda")
+load("../data/foodweb-data_jul23.rda")
+
+# Tidy data
+df_g <- igraph::as_data_frame(g, 'both')
+sp_list <- df_g[["vertices"]] %>% 
+  rename("TrophicSpecies" = "name") %>% 
+  left_join(sp_raw) %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, Reference_pres, Reference_pres_link, Observation) %>% 
+  rename("Species" = "TrophicSpecies", "Reference" = "Reference_pres") %>% 
+  mutate(Observation = case_when(Observation %in% c("Registrado Psolus_sp; Martinez sugiere presencia de P. segregatus", "Registrado Psolus_sp; Martinez sugiere presencia de P. patagonicus", "Registrado Psolus_sp; Martinez sugiere presencia de P. antarcticus", "Lista de sp no publicada provista por Díaz de Astarloa", "Info from Sup Info (Teso_etal_2019)", "AMPNBB-II", "Abundance data available ?", "Esquema trófico", "Depredadores tope", "Copepoda", "Benthic. Not recorded", "Cirripedia") ~ "", 
+                                 Species == "Campylaspis_spp" ~ "Aggregated: Campylaspis_frigida & Campylaspis_bacescui",
+                                 Species == "Ophiactis_sp" ~ "Aggregated: Ophiactis_asperula & Ophiactis_spp",
+                                 Species == "Brachiopoda_spp" ~ "Aggregated: Magellania_venosa, Liothyrella_uva & Terebratella_dorsata",
+                                 Species == "Enteroctopodidae" ~ "Aggregated: Enteroctopus_megalocyathus & Muusoctopus_longibrachus",
+                                 TRUE ~ Observation),
+         Reference = case_when(Species == "Bacteria" ~ "Guinder_etal_2020",
+                               Species == "Necromass" ~ "Riccialdelli_etal_2017", 
+                               Species == "Syllidae" ~ "Schejter_etal_2016; Bremec_etal_2019",
+                               Species == "Sabellidae" ~ "Schejter_etal_2016; Bremec_etal_2019; Spinelli_etal_2020",
+                               Species == "Ophiactis_sp" ~ "Schejter_etal_2016; 2020a; Brogger_pers.com.",
+                               Species == "Campylaspis_spp" ~ "Doti_etal_2020",
+                               Species == "Brachiopoda_spp" ~ "Schejter_etal_2016", 
+                               Species == "Salpa_thompsoni" ~ "Capitanio_pers.com.",
+                               TRUE ~ Reference),
+         FunctionalGroup = case_when(Species == "Campylaspis_spp" ~ "Cumacea",
+                                     Species == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ FunctionalGroup)) %>% 
+  mutate(TaxLevel = case_when(str_detect(Species, "_") | str_detect(Species, "_spp") ~ "Species",
+                              str_detect(Species, "_sp") ~ "Genus",
+                              str_detect(Species, "dae$") ~ "Family",
+                              Species %in% c("Detritus","Necromass") ~ "NA",
+                              Species == "Foraminifera" ~ "Phylum",
+                              Species == "Bacteria" ~ "Domain",
+                              Species %in% c("Calcarea","Hexactinellida") ~ "Class",
+                              Species %in% c("Halichondrida","Haplosclerida","Poecilosclerida","Tetractinellida") ~ "Order",
+                              Species %in% c("Copepodite","Larvae_Fish","Larvae_Nauplii","Eggs_Fish") ~ "Ontogenetic stage",
+                              TRUE ~ "Other")) %>%  
+  dplyr::select(Species, TaxLevel, FunctionalGroup, Reference, Reference_pres_link, Observation) %>% 
+  arrange(., (Species))
+
+# Food web resolution
+res_sp <- sum(sp_list$TaxLevel == "Species") / nrow(sp_list)
+
+# Table 2. List of species
+# knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Taxonomy","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.") %>%
+#   column_spec(1:3, width="2cm") %>%
+#   column_spec(4, width="3cm") %>% 
+#   column_spec(5:6, width="5cm") %>% 
+#   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
+#   landscape()
+
+pandoc.table(sp_list %>% arrange(., (Species)) %>% mutate(Species = paste('\\tiny', Species), TaxLevel = paste('\\tiny', TaxLevel), FunctionalGroup = paste('\\tiny', FunctionalGroup), Reference = paste('\\tiny', Reference), Reference_pres_link = paste('\\tiny', Reference_pres_link), Observation = paste('\\tiny', Observation)) %>% rename("Taxonomy"="TaxLevel", "Group"="FunctionalGroup", "Link"="Reference_pres_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","left","left","left"),
+             caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.")
+
+```
+
+\newpage
+
+## Results
+
+Table 3 presents an exhaustive list of the species-level properties for the food web of the MPA Namuncurá - Banco Burdwood I ecosystem.
+
+```{r tableS3, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+require(kableExtra)
+
+load("../results/summary_results_jul23.rda")
+
+# Table 3. List of species
+tbl_3 <- spp_total %>% 
+  mutate(TopRole = case_when(TopRole == "hubcon" ~ "netcon", TRUE ~ TopRole)) %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree, NumPrey, NumPred, Between, Close, TL, meanTrophicSimil, TopRole) %>% 
+  arrange(., desc(TotalDegree)) %>% 
+  mutate(across(where(is.numeric), round, 4),
+         FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
+                                     TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
+                                     TRUE ~ FunctionalGroup))
+
+pandoc.table(tbl_3 %>% arrange(., (TotalDegree)) %>% rename("Species"="TrophicSpecies", "Group"="FunctionalGroup", "Degree"="TotalDegree", "TS"="meanTrophicSimil", "TR"="TopRole"), style="multiline", split.tables = Inf, justify = c("left","left","center","left","left","left","left","left","left","left"),
+             caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).")
+
+```
+
+\elandscape
+\newpage
+
+Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 1 species; module connector = 41 species; module hub = 10 species; and module specialist = 328 species.
+
+```{r toprole_graph, echo=FALSE, message=FALSE, warning=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Circle diameter is relative to the number of interactions."}
+
+# Load packages
+library(igraph)
+library(multiweb)
+library(grid)
+library(dplyr)
+library(ggplot2)
+
+# Load data
+load("../results/summary_results_jul23.rda")
+
+# Topological roles
+top.role.col <- hcl.colors(4, palette = "Purple-Green")
+TRColor <- setNames(top.role.col, levels(as.factor(V(g_up)$TopRole)))
+TRColor <- as.data.frame(TRColor) %>% 
+  mutate(TopRole = c("hubcon", "modcon", "modhub", "modspe"))
+#show_col(top.role.col)  # shows color & code
+data_TRColor <- spp_total %>% 
+  dplyr::select(TopRole, everything()) %>% 
+  left_join(TRColor)
+g_up_c <- g_up %>% 
+  set_vertex_attr("TRColor", value = data_TRColor$TRColor)
+
+# Number of species by Role
+TR_table <- spp_total %>% 
+  group_by(TopRole) %>% 
+  summarise(n = n()) %>%
+  mutate(freq = n / sum(n)) %>% 
+  mutate(TopRole = case_when(TopRole == "hubcon" ~ "Network connector",
+                             TopRole == "modcon" ~ "Module connector",
+                             TopRole == "modhub" ~ "Module hub",
+                             TopRole == "modspe" ~ "Module specialist"))
+
+# Filter network connectors ('hubcon') & module connectors ('modcon'). Violet & pink respectively
+sp_con <- spp_total %>% 
+  filter(TopRole == "hubcon" | TopRole == "modcon")
+
+# Move to a new page
+grid.newpage()
+# Arrange figure
+par(cex.axis=1.5, cex.lab=1.5)
+plot_troph_level(g_up_c, vertexLabel = F, modules = F, vertex.color = V(g_up_c)$TRColor, ylab = "Trophic level")
+
+```
+
+\newpage
+
+## References
