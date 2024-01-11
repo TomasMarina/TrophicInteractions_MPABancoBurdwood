@@ -1,30 +1,27 @@
 ---
-title: "Supplementary Material for 'The complex network of trophic interactions in
-  a subAntarctic oceanic Marine Protected Area'"
-author:
-  - Tomás I. Marina
-  - Irene R. Schloss
-  - Gustavo A. Lovrich
-  - Claudia C. Boy
-  - Daniel O. Bruno  
-  - Fabiana L. Capitanio
-  - Sergio M. Delpiani
-  - Juan Martín Díaz de Astarloa
-  - Cintia Fraysse
-  - Virginia A. García Alonso
-  - Andrea Raya Rey
-  - Laura Schejter
-  - Mariela L. Spinelli
-  - Marcos Tatián
-  - Diego Urteaga
-  - Luciana Riccialdelli
+output:
+  pdf_document:
+    latex_engine: xelatex
+    keep_tex: yes
+  word_document: default
+# classoption: landscape
 bibliography: AMPBancoBurdwood.bib
-output: pdf_document
+csl: "elsevier-harvard2.csl"
+documentclass: article
+geometry:
+- vmargin=1in
+- hmargin=1in
+header-includes:
+- \usepackage{amsmath}
+- \usepackage{pdflscape,booktabs}
+- \usepackage{lscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+- \usepackage[running]{lineno}
+- \linenumbers
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
-```
+# Supplementary Material for 'The complex network of trophic interactions in a subAntarctic oceanic Marine Protected Area'
 
 ## Methodology
 
@@ -34,7 +31,7 @@ The following figure and tables summarise the data we used to build the network 
 Figure 1 resumes the type and number of references reviewed. Table 1 is the complete list of trophic interactions and references that confirm each of them. Table 2 is the species list with details on trophic species cases (aggregated taxa).
 
 
-```{r ref_plot, echo=FALSE, fig.cap="Summary of references used to build the network of trophic (predator-prey) interactions for the MPAN-BB ecosystem."}
+```{r ref_plot, echo=FALSE, message=FALSE, fig.cap="Summary of references used to build the network of trophic (predator-prey) interactions for the MPAN-BB ecosystem."}
 
 # Load packages
 library(tidyverse)
@@ -71,47 +68,48 @@ ggplot(biblio) +
 ```
 
 \newpage
+\blandscape
 
-```{r tableS1, echo=FALSE, results='asis'}
+```{r tableS1, echo=FALSE, message=FALSE, results='asis'}
 
 # Load packages
-library(knitr)
-library(dplyr)
-library(kableExtra)
-library(pander)
+require(tidyverse)
+require(knitr)
+require(dplyr)
+require(kableExtra)
+require(pander)
 
 # Load data
 load("../data/cleaned-data_jul23.rda")
 
 # Discard low resolution interactions
 int_good_res <- int_raw %>% 
-  filter(!str_detect(Prey, "\\*$")) %>% 
-  filter(!str_detect(Predator, "\\*$")) %>% 
-  mutate(Prey = case_when(Prey == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ "Other")) %>%
+  dplyr::filter(!str_detect(Prey, "\\*$")) %>% 
+  dplyr::filter(!str_detect(Predator, "\\*$")) %>% 
+  mutate(Prey = case_when(Prey == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ Prey)) %>%
   dplyr::select(Prey, Predator, Reference, Reference_link) %>% 
   distinct(Prey, Predator, .keep_all = TRUE)
 
 # Table 1. List of interactions
-knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", longtable = T, col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by predator.") %>% 
-  column_spec(1:3, width="2cm") %>% 
-  column_spec(4, width="14cm") %>% 
-  kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4) %>% 
-  landscape()
+# landscape(knitr::kable(int_good_res %>% arrange(., (Predator), booktabs = TRUE, format = "latex", longtable = T, col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by predator.") %>%
+#              column_spec(1:3, width="2cm") %>% 
+#              column_spec(4, width="14cm") %>% 
+#              kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4))
 
-# pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link)) %>% rename("Link"="Reference_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","right"),
-#              caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
+pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator), Reference = paste('\\tiny', Reference), Reference_link = paste('\\tiny', Reference_link)) %>% rename("Link"="Reference_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","right"),
+             caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
 
 ```
 
 \newpage
 
-```{r tableS2, echo=FALSE, results='asis'}
+```{r tableS2, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 
 # Load packages
-library(knitr)
-library(dplyr)
-library(kableExtra)
-library(stringr)
+# library(knitr)
+# library(dplyr)
+# library(kableExtra)
+# library(stringr)
 
 # Load data
 load("../data/cleaned-data_jul23.rda")
@@ -158,13 +156,15 @@ sp_list <- df_g[["vertices"]] %>%
 res_sp <- sum(sp_list$TaxLevel == "Species") / nrow(sp_list)
 
 # Table 2. List of species
-knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Taxonomy","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.") %>%
-  column_spec(1:3, width="2cm") %>%
-  column_spec(4, width="3cm") %>% 
-  column_spec(5:6, width="5cm") %>% 
-  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
-  landscape()
+# knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Taxonomy","Group","Reference","Link","Observation"), caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.") %>%
+#   column_spec(1:3, width="2cm") %>%
+#   column_spec(4, width="3cm") %>% 
+#   column_spec(5:6, width="5cm") %>% 
+#   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
+#   landscape()
 
+pandoc.table(sp_list %>% arrange(., (Species)) %>% mutate(Species = paste('\\tiny', Species), TaxLevel = paste('\\tiny', TaxLevel), FunctionalGroup = paste('\\tiny', FunctionalGroup), Reference = paste('\\tiny', Reference), Reference_pres_link = paste('\\tiny', Reference_pres_link), Observation = paste('\\tiny', Observation)) %>% rename("Taxonomy"="TaxLevel", "Group"="FunctionalGroup", "Link"="Reference_pres_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","right","right","left"),
+             caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.")
 
 ```
 
@@ -174,30 +174,33 @@ knitr::kable(sp_list, format = "latex", booktabs = TRUE, linesep = "", longtable
 
 Table 3 presents an exhaustive list of the species-level properties for the food web of the MPA Namuncurá - Banco Burdwood I ecosystem.
 
-```{r tableS3, echo=FALSE}
+```{r tableS3, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
 
 load("../results/summary_results_jul23.rda")
 
-# Table 2. List of species
-knitr::kable(spp_total %>% 
-               mutate(TopRole = case_when(TopRole == "hubcon" ~ "netcon",
-                                          TRUE ~ TopRole)) %>% 
-               dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree, NumPrey, NumPred, Between, Close, TL, meanTrophicSimil, TopRole) %>% 
-               arrange(., desc(TotalDegree)) %>% 
-               mutate(across(where(is.numeric), round, 4),
-                      FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
-                                                  TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
-                                                  TRUE ~ FunctionalGroup)), 
-             format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Degree","NumPrey","NumPred","Between","Close","TL","TS","TR"), align = "llcccccccc", caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).") %>%
-  kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4.5)
+# Table 3. List of species
+tbl_3 <- spp_total %>% 
+  mutate(TopRole = case_when(TopRole == "hubcon" ~ "netcon", TRUE ~ TopRole)) %>% 
+  dplyr::select(TrophicSpecies, FunctionalGroup, TotalDegree, NumPrey, NumPred, Between, Close, TL, meanTrophicSimil, TopRole) %>% 
+  arrange(., desc(TotalDegree)) %>% 
+  mutate(across(where(is.numeric), round, 4),
+         FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
+                                     TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
+                                     TRUE ~ FunctionalGroup))
+# tbl_31 <- kableExtra::kbl(tbl_3, format = "latex", booktabs = TRUE, linesep = "", longtable = TRUE, col.names = c("Species","Group","Degree","NumPrey","NumPred","Between","Close","TL","TS","TR"), align = "llcccccccc", caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).")
+# tbl_32 <- kableExtra::kable_styling(tbl_31, latex_options = c("hold_position", "repeat_header"), font_size = 4.5)
+
+pandoc.table(tbl_3 %>% arrange(., (TotalDegree)) %>% rename("Species"="TrophicSpecies", "Group"="FunctionalGroup", "Degree"="TotalDegree", "TS"="meanTrophicSimil", "TR"="TopRole"), style="multiline", split.tables = Inf, justify = c("left","left","center","left","left","left","left","left","left","left"),
+             caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).")
 
 ```
 
+\elandscape
 \newpage
 
 Figure 2 shows the species' topological roles in the food web graph. Species, represented by circles, are coloured by role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Network connector = 1 species; module connector = 41 species; module hub = 10 species; and module specialist = 328 species.
 
-```{r toprole_graph, echo=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Circle diameter is relative to the number of interactions."}
+```{r toprole_graph, echo=FALSE, message=FALSE, warning=FALSE, fig.width = 20, fig.height=20, fig.cap="Graph of the food web showing species coloured by topological role: network connector (dark purple), module connector (light pink), module hub (light green), and module specialist (dark green). Circle diameter is relative to the number of interactions."}
 
 # Load packages
 library(igraph)
