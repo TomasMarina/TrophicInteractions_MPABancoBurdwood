@@ -1,9 +1,9 @@
 ---
 output:
-  word_document: default
   pdf_document:
     latex_engine: xelatex
     keep_tex: yes
+  word_document: default
 bibliography: AMPBancoBurdwood.bib
 csl: "elsevier-harvard2.csl"
 documentclass: article
@@ -16,6 +16,7 @@ header-includes:
 - \newcommand{\blandscape}{\begin{landscape}}
 - \newcommand{\elandscape}{\end{landscape}}
 - \usepackage[running]{lineno}
+- \usepackage{listings}
 - \linenumbers
 ---
 
