@@ -1,9 +1,9 @@
 ---
 output:
+  word_document: default
   pdf_document:
     latex_engine: xelatex
     keep_tex: yes
-  word_document: default
 # classoption: landscape
 bibliography: AMPBancoBurdwood.bib
 csl: "elsevier-harvard2.csl"
@@ -34,7 +34,7 @@ With the gathered trophic data, we constructed a matrix of pairwise interactions
 
 ```{r, out.width = "12cm", echo = FALSE, message=FALSE, fig.align = 'center', fig.cap = "Matrix of pairwise interactions and the oriented graph (food web) derived from it. Number of species S = 9, number of interactions (L) = 15."}
 library(knitr)
-knitr::include_graphics("FigS1.png")
+knitr::include_graphics("../Figures/Figure S1 final.png")
 ```
 
 ### Network analysis
@@ -107,7 +107,8 @@ int_good_res <- int_raw %>%
   dplyr::filter(!str_detect(Predator, "\\*$")) %>% 
   mutate(Prey = case_when(Prey == "Brachiopoda_spp" ~ "Brachiopoda", TRUE ~ Prey)) %>%
   dplyr::select(Prey, Predator, Reference, Reference_link) %>% 
-  distinct(Prey, Predator, .keep_all = TRUE)
+  distinct(Prey, Predator, .keep_all = TRUE) %>% 
+  rename(., Link = Reference_link)
 
 # Table S1. List of interactions
 # knitr::kable(int_good_res %>% arrange(., (Predator)), booktabs = TRUE, format = "latex", col.names = c("Prey","Predator","Reference", "Link"), caption = "List of predator-prey (trophic) interactions for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Alphabetically ordered by predator.") %>%
@@ -116,7 +117,9 @@ int_good_res <- int_raw %>%
 #    kableExtra::kable_styling(latex_options = c("hold_position","repeat_header"), font_size = 4) %>%
 #    kableExtra::landscape()
 
-pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link), Reference = paste('\\tiny', Reference), Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator)) %>% rename("Link"="Reference_link"), style="multiline", split.tables = Inf, justify = c("left","left","center","right"),
+# write.csv(int_good_res %>% arrange(., (Predator)), file = "TableS1_14600.csv")
+
+pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link), Reference = paste('\\tiny', Reference), Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator)), style="multiline", split.tables = Inf, justify = c("left","left","center","right"),
              caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
 
 ```
@@ -183,6 +186,8 @@ res_sp <- sum(sp_list$TaxLevel == "Species") / nrow(sp_list)
 #   kable_styling(latex_options = c("hold_position", "repeat_header"), font_size = 4) %>% 
 #   landscape()
 
+# write.csv(sp_list %>% arrange(., (Species)) %>% rename("Taxonomy"="TaxLevel", "Group"="FunctionalGroup", "Link"="Reference_pres_link"), file = "TableS2_14600.csv")
+
 pandoc.table(sp_list %>% arrange(., (Species)) %>% mutate(Species = paste('\\tiny', Species), TaxLevel = paste('\\tiny', TaxLevel), FunctionalGroup = paste('\\tiny', FunctionalGroup), Reference = paste('\\tiny', Reference), Reference_pres_link = paste('\\tiny', Reference_pres_link), Observation = paste('\\tiny', Observation)) %>% rename("Taxonomy"="TaxLevel", "Group"="FunctionalGroup", "Link"="Reference_pres_link"), style="multiline", split.tables = Inf, justify = c("left","left","left","left","left","left"),
              caption = "List of species for the food web of the Marine Protected Areas Namuncurá - Banco Burdwood I and II ecosystem. Alphabetically ordered by species.")
 
@@ -208,6 +213,8 @@ tbl_3 <- spp_total %>%
          FunctionalGroup = case_when(TrophicSpecies == "Brachiopoda_spp" ~ "Brachiopoda",
                                      TrophicSpecies == "Campylaspis_spp" ~ "Cumacea",
                                      TRUE ~ FunctionalGroup))
+
+# write.csv(tbl_3 %>% arrange(., (TotalDegree)) %>% rename("Species"="TrophicSpecies", "Group"="FunctionalGroup", "Degree"="TotalDegree", "TS"="meanTrophicSimil", "TR"="TopRole"), file = "TableS3_14600.csv")
 
 pandoc.table(tbl_3 %>% arrange(., (TotalDegree)) %>% rename("Species"="TrophicSpecies", "Group"="FunctionalGroup", "Degree"="TotalDegree", "TS"="meanTrophicSimil", "TR"="TopRole"), style="multiline", split.tables = Inf, justify = c("left","left","center","left","left","left","left","left","left","left"),
              caption = "Species-level properties for the food web of the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem. Ordered by degree (total number of interactions). Between: betweenness; Close: closeness; TL: trophic level; TS: trophic similarity; TR: topological role (netcon = network connector, modcon = module connector, modhub = module hub, modspe = module specialist).")
