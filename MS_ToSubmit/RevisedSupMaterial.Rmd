@@ -39,17 +39,37 @@ knitr::include_graphics("../Figures/Figure S1 final.png")
 
 ### Network analysis
 
-Trophic level
+#### Betweenness
 
-Trophic levels (TL) of species were calculated using the shortweighted TL formula of @Williams2004. Shortweighted trophic level is defined as the average of the shortest TL and prey-averaged TL. Shortest TL of a consumer in a food web is equal to 1 + the shortest chain length from this consumer to any basal species [@Williams2004]. Prey averaged TL is equal to 1 + the mean TL of all consumer's trophic resources, calculated as:
+It is the frequency with which a node is on the shortest path between any other pair of nodes [@Freeman1978]. A node will have high betweenness when it appears on many shortest paths between other pairs of nodes. It is calculated as:
 
 \begin{equation}
-TL_j = 1 + \sum_{i = 1}^{S} l_{ij} \frac{TL_i}{n_j}
+BC_i = \sum \frac{g_{vij}} {g_{vj}}
 \end{equation}
 
-where $TL_j$ is the trophic level of species $j$; $S$ is the number of species in the food web; $l_{ij}$ is the connection matrix with $S$ rows and $S$ columns, in which for column $j$ and row $i$, $l_{ij}$ = 1 if species $j$ consumes species $i$ and $l_{ij}$ = 0 if not; and $n_j$ is the number of prey species in the diet of species $j$. For basal species TL = 1 given that they have no prey.
+being $v \neq j, v \neq i, j \neq i$, where $BC_i$ is the betweenness for species $i$; $g_{vj}$ is the number of shortest paths between nodes $v$ and $j$; and $g_{vij}$ is the number of shortest paths which pass through node $i$.
 
-Topological roles
+#### Closeness
+
+It is the number of steps required to reach every other node from a given node in the network [@Freeman1978]. It is calculated as the inverse of distances (number of interactions) to all other nodes in the network:
+
+\begin{equation}
+C_i = \frac{1} {\sum d_{ij}}
+\end{equation}
+
+being $i \neq j$, where $d_{ji}$ is the distance between node $j$ and $i$.
+
+#### Trophic similarity
+
+It measures the trophic overlap based on shared and unique resources (prey) and consumers (predators) of a species. It is calculated as:
+
+\begin{equation}
+TS_i = \frac{c} {(a+b+c)}
+\end{equation}
+
+where $a$ is the number of prey and predators unique to one node, $b$ is number of prey and predators unique to the other node and $c$ is the number of prey and predators common to both nodes. Where two nodes have exactly the same set of prey and predators, $TS$ = 1; where two nodes have no prey or predators in common, $TS$ = 0.
+
+#### Topological roles
 
 Beforehand, we need to calculate modularity. Modularity was calculated as the difference between realized and expected within-modules interactions, divided by the total number of interactions. We used a stochastic algorithm called “simulated annealing” [@Guimera2005], that assumes that the nodes of the same module have more links than one would expect in a random network. The modules are obtained from dividing all the nodes in the network to maximize modularity. In this way, the modularity index is defined as:
 
@@ -86,6 +106,16 @@ To determine the role of each species, the $dz$ − $PC$ parameters space was di
 
 * Network connector ($dz$ ≥ 2.5, $PC$ ≥ 0.625): The species has a high connectivity between and within the modules.
 
+#### Trophic level
+
+Trophic levels (TL) of species were calculated using the shortweighted TL formula of @Williams2004. Shortweighted trophic level is defined as the average of the shortest TL and prey-averaged TL. Shortest TL of a consumer in a food web is equal to 1 + the shortest chain length from this consumer to any basal species [@Williams2004]. Prey averaged TL is equal to 1 + the mean TL of all consumer's trophic resources, calculated as:
+
+\begin{equation}
+TL_j = 1 + \sum_{i = 1}^{S} l_{ij} \frac{TL_i}{n_j}
+\end{equation}
+
+where $TL_j$ is the trophic level of species $j$; $S$ is the number of species in the food web; $l_{ij}$ is the connection matrix with $S$ rows and $S$ columns, in which for column $j$ and row $i$, $l_{ij}$ = 1 if species $j$ consumes species $i$ and $l_{ij}$ = 0 if not; and $n_j$ is the number of prey species in the diet of species $j$. For basal species TL = 1 given that they have no prey.
+
 \newpage
 \blandscape
 
@@ -119,7 +149,7 @@ int_good_res <- int_raw %>%
 
 # write.csv(int_good_res %>% arrange(., (Predator)), file = "TableS1_14600.csv")
 
-pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Reference_link = paste('\\tiny', Reference_link), Reference = paste('\\tiny', Reference), Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator)), style="multiline", split.tables = Inf, justify = c("left","left","center","right"),
+pandoc.table(int_good_res %>% arrange(., (Predator)) %>% mutate(Link = paste('\\tiny', Link), Reference = paste('\\tiny', Reference), Prey = paste('\\tiny', Prey), Predator = paste('\\tiny', Predator)), style="multiline", split.tables = Inf, justify = c("left","left","center","right"),
              caption = "List of predator-prey (trophic) interactions used to build the network for the Marine Protected Area Namuncurá - Banco Burdwood I ecosystem (MPAN-BB).")
 
 ```
