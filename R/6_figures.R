@@ -26,10 +26,10 @@ load("data/foodweb-data_jul23.rda")
 
 ## Figure 2 ----
 
-col <- RColorBrewer::brewer.pal(11, "RdYlBu") # PuOr, RdBu, RdYlBu
-#par(cex.axis=0.8, cex.lab=0.8)
+col <- RColorBrewer::brewer.pal(11, "RdYlGn") # PuOr, RdBu, RdYlBu
+par(cex.axis=0.8, cex.lab=0.8)
 figure_2 <- plot_troph_level(g, vertexLabel = F, edge.arrow.size = .1, modules = F,
-                             tk = F, bpal = col)
+                             tk = F, bpal = col, ylab = "Trophic level")
 
 
 ## Figure 3 ----
